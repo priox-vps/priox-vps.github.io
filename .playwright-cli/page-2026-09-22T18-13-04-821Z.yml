@@ -1,0 +1,585 @@
+- generic [active] [ref=f3e1]:
+  - link "Zum Inhalt springen" [ref=f3e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f3e5]:
+    - generic [ref=f3e6]: Berlin & Unterfranken · seit 2021
+    - link "+49 160 966 787 17" [ref=f3e7] [cursor=pointer]:
+      - /url: tel:+4916096678717
+    - link "hello@deal-makers.de" [ref=f3e8] [cursor=pointer]:
+      - /url: mailto:hello@deal-makers.de
+  - banner [ref=f3e9]:
+    - generic [ref=f3e10]:
+      - link "DEALMAKERS" [ref=f3e11] [cursor=pointer]:
+        - /url: /
+      - navigation "Hauptnavigation" [ref=f3e12]:
+        - link "Leistungen" [ref=f3e13] [cursor=pointer]:
+          - /url: /leistungen/
+        - link "Outsourcing" [ref=f3e14] [cursor=pointer]:
+          - /url: /vertriebsoutsourcing/
+        - link "Kaltakquise" [ref=f3e15] [cursor=pointer]:
+          - /url: /kaltakquise-agentur/
+        - link "Beratung" [ref=f3e16] [cursor=pointer]:
+          - /url: /vertriebsberatung/
+        - link "Training" [ref=f3e17] [cursor=pointer]:
+          - /url: /vertriebstraining-b2b/
+        - link "Gespräch vereinbaren" [ref=f3e18] [cursor=pointer]:
+          - /url: /kontakt/
+  - navigation "Brotkrumen" [ref=f3e19]:
+    - list [ref=f3e21]:
+      - listitem [ref=f3e22]:
+        - link "Start" [ref=f3e23] [cursor=pointer]:
+          - /url: /
+        - text: ›
+      - listitem [ref=f3e24]: B2B Vertriebstraining
+  - main [ref=f3e25]:
+    - generic [ref=f3e27]:
+      - generic [ref=f3e28]:
+        - paragraph [ref=f3e29]: Vertriebsschulung für B2B-Teams
+        - heading "B2B Vertriebstraining, das am echten Zielkunden stattfindet" [level=1] [ref=f3e30]
+        - paragraph [ref=f3e31]: Dieses B2B Vertriebstraining trainiert an Ihren Zielkunden und Gesprächsanlässen. Wir arbeiten an Einstieg, Bedarfsanalyse, Einwänden und Abschluss; bei Live-Telefonie macht der Trainer den Anfang selbst. Verkaufstraining B2B für Teams, die im nächsten Gespräch anders handeln müssen.
+        - generic [ref=f3e32]:
+          - link "Training besprechen" [ref=f3e33] [cursor=pointer]:
+            - /url: https://calendar.app.google/CUn3btn6t7fnfRjt8
+          - link "+49 160 966 787 17" [ref=f3e34] [cursor=pointer]:
+            - /url: tel:+4916096678717
+      - figure "Ein Verkaufsgespräch scheitert selten an nur einem Satz. Das Training verbindet die sechs Schritte zu einem nachvollziehbaren Ablauf." [ref=f3e35]:
+        - img "Sechs Bausteine eines B2B-Verkaufsgesprächs vom Einstieg bis zum Abschluss" [ref=f3e37]:
+          - generic [ref=f3e38]:
+            - generic [ref=f3e39]: DAS GESPRÄCH WIRD IN SECHS SCHRITTEN TRAINIERBAR
+            - generic [ref=f3e47]:
+              - generic [ref=f3e48]: "1"
+              - generic [ref=f3e49]: "2"
+              - generic [ref=f3e50]: "3"
+              - generic [ref=f3e51]: "4"
+              - generic [ref=f3e52]: "5"
+              - generic [ref=f3e53]: "6"
+            - generic [ref=f3e54]:
+              - generic [ref=f3e55]: Einstieg
+              - generic [ref=f3e56]: Vorzimmer
+              - generic [ref=f3e57]: Bedarf
+              - generic [ref=f3e58]: Einwand
+              - generic [ref=f3e59]: Preis
+              - generic [ref=f3e60]: Abschluss
+            - generic [ref=f3e61]:
+              - generic [ref=f3e62]: Anlass nennen
+              - generic [ref=f3e63]: Weg zum Kontakt
+              - generic [ref=f3e64]: Fragen stellen
+              - generic [ref=f3e65]: prüfen, nicht kämpfen
+              - generic [ref=f3e66]: Wert klären
+              - generic [ref=f3e67]: Schritt fixieren
+            - generic [ref=f3e69]: Jeder Schritt wird mit eigenen Formulierungen, Rückfragen und
+            - generic [ref=f3e70]: echten Gesprächsnotizen geübt – nicht mit einem Text zum Auswendiglernen.
+    - navigation "Inhaltsverzeichnis" [ref=f3e74]:
+      - paragraph [ref=f3e75]: Inhalt
+      - list [ref=f3e76]:
+        - listitem [ref=f3e77]:
+          - link "Warum Training oft verpufft" [ref=f3e78] [cursor=pointer]:
+            - /url: "#warum-training-oft-verpufft"
+        - listitem [ref=f3e79]:
+          - link "Das Handbuch dahinter" [ref=f3e80] [cursor=pointer]:
+            - /url: "#das-handbuch-dahinter"
+        - listitem [ref=f3e81]:
+          - link "Die sechs Trainingsbausteine" [ref=f3e82] [cursor=pointer]:
+            - /url: "#trainingsbausteine"
+        - listitem [ref=f3e83]:
+          - link "Der erste Satz" [ref=f3e84] [cursor=pointer]:
+            - /url: "#der-erste-satz"
+        - listitem [ref=f3e85]:
+          - link "Anlassbezogene Ansprache" [ref=f3e86] [cursor=pointer]:
+            - /url: "#anlassbezogene-ansprache"
+        - listitem [ref=f3e87]:
+          - link "Einwand-Bibliothek" [ref=f3e88] [cursor=pointer]:
+            - /url: "#einwand-bibliothek"
+        - listitem [ref=f3e89]:
+          - link "Formate" [ref=f3e90] [cursor=pointer]:
+            - /url: "#formate"
+        - listitem [ref=f3e91]:
+          - link "Ablauf" [ref=f3e92] [cursor=pointer]:
+            - /url: "#ablauf"
+        - listitem [ref=f3e93]:
+          - link "Wirkung messen" [ref=f3e94] [cursor=pointer]:
+            - /url: "#wirkung-messen"
+        - listitem [ref=f3e95]:
+          - link "Für wen es nicht geeignet ist" [ref=f3e96] [cursor=pointer]:
+            - /url: "#nicht-geeignet"
+        - listitem [ref=f3e97]:
+          - link "FAQ" [ref=f3e98] [cursor=pointer]:
+            - /url: "#faq"
+        - listitem [ref=f3e99]:
+          - link "Training besprechen" [ref=f3e100] [cursor=pointer]:
+            - /url: "#training-besprechen"
+    - generic [ref=f3e102]:
+      - generic [ref=f3e103]:
+        - paragraph [ref=f3e104]: Das Transferproblem
+        - heading "Warum die meisten Vertriebstrainings nichts ändern" [level=2] [ref=f3e105]
+      - generic [ref=f3e106]:
+        - generic [ref=f3e107]:
+          - heading "Der Fall ist erfunden" [level=3] [ref=f3e108]
+          - paragraph [ref=f3e109]: Im Rollenspiel weiß jeder, dass der Kollege gleich widersprechen soll. Das trainiert Höflichkeit, nicht Reaktion. Am Montag ist der echte Kunde, die echte Branche und der echte Einwand wieder da. Deshalb stehen im Training Zielkunden, Gesprächsnotizen und vorhandene Angebote auf dem Tisch.
+        - generic [ref=f3e110]:
+          - heading "Der Transfer fehlt" [level=3] [ref=f3e111]
+          - paragraph [ref=f3e112]: Ein guter Satz im Seminarraum ist noch kein guter Satz am Hörer. Ohne Vorbereitung des nächsten Calls, Beobachtung und Rückmeldung bleibt das Wissen bei der Folie. Wir übersetzen jede Erkenntnis in einen konkreten nächsten Gesprächsschritt.
+        - generic [ref=f3e113]:
+          - heading "Der eine Tag endet zu früh" [level=3] [ref=f3e114]
+          - paragraph [ref=f3e115]: Ein Tag kann Begriffe klären und Verhalten anstoßen. Er ersetzt keine Wiederholung. Wenn nach dem Training keine Gespräche besprochen werden, setzt sich das alte Muster oft durch. Deshalb gehört bei Bedarf eine kurze Nachbegleitung dazu.
+      - 'figure "Die Kurven sind eine Darstellung des Prinzips, keine gemessene Studie: Wiederholung an echten Gesprächen hält neue Routinen im Einsatz." [ref=f3e116]':
+        - img "Vergessenskurve ohne und mit Nachbegleitung nach einem Training" [ref=f3e118]:
+          - generic [ref=f3e119]:
+            - generic [ref=f3e120]: Anwendung
+            - generic [ref=f3e121]: Zeit nach Training
+            - generic [ref=f3e128]: nur Trainingstag
+            - generic [ref=f3e129]: Training + Gesprächsauswertung
+            - generic [ref=f3e130]: Nachtermin
+            - generic [ref=f3e131]: Nachtermin
+            - generic [ref=f3e132]: Nachtermin
+    - generic [ref=f3e135]:
+      - generic [ref=f3e136]:
+        - paragraph [ref=f3e137]: Die Grundlage
+        - heading "Das Handbuch hinter dem Training" [level=2] [ref=f3e138]
+      - generic [ref=f3e139]:
+        - figure [ref=f3e140]:
+          - img "Das Methodenhandbuch The Magic of Sales – Emotional Resonance von Florian Weippert" [ref=f3e142]
+        - generic [ref=f3e143]:
+          - paragraph [ref=f3e144]:
+            - text: "Ein Training ist so gut wie das System dahinter. Unseres ist aufgeschrieben: 383 Seiten, entstanden 2021, zuletzt im November 2022 überarbeitet."
+            - emphasis [ref=f3e145]: The Magic of Sales – Emotional Resonance
+            - text: ordnet, was in knapp zwanzig Jahren B2B-Vertrieb tatsächlich funktioniert hat – Psychologie des Kaufentscheids, Gesprächsaufbau, Fragetechnik, Einwände, Verhandlung.
+          - paragraph [ref=f3e146]: "Das Buch war nie im Handel; es ist kein Verlagsprojekt, sondern unser Arbeitsmittel. Für Sie heißt das: Die sechs Bausteine unten sind kein Seminarkonzept, das für Sie neu zusammengestellt wurde, sondern ein Auszug aus einem System, das seit Jahren im Einsatz ist und laufend an echten Gesprächen korrigiert wird."
+          - paragraph [ref=f3e147]: Florian Weippert · 383 Seiten · Fassung November 2022
+    - generic [ref=f3e149]:
+      - generic [ref=f3e150]:
+        - paragraph [ref=f3e151]: Vertriebstraining B2B
+        - heading "Die sechs Trainingsbausteine" [level=2] [ref=f3e152]
+        - paragraph [ref=f3e153]: Wir trainieren das Gespräch als Abfolge. Jede Formulierung muss zum Angebot, zum Ansprechpartner und zum nächsten Schritt passen.
+      - generic [ref=f3e154]:
+        - generic [ref=f3e155]:
+          - heading "1. Einstieg und Opener" [level=3] [ref=f3e156]
+          - paragraph [ref=f3e157]: "Der Einstieg nennt den Anlass und bittet um eine kurze Einordnung: „Sie haben für Ihren Standort in Wien zwei Vertriebsstellen ausgeschrieben. Ich möchte verstehen, ob Sie den Aufbau intern stemmen oder dafür gerade externe Unterstützung prüfen.“ Kein allgemeiner Nutzen-Satz vor der Frage."
+        - generic [ref=f3e158]:
+          - heading "2. Vorzimmer und Erreichbarkeit" [level=3] [ref=f3e159]
+          - paragraph [ref=f3e160]: "Am Vorzimmer hilft Klarheit: „Es geht um den angekündigten Standort in Wien und eine Frage zur Vertriebsorganisation. Wer verantwortet das bei Ihnen?“ Bei Rückrufbarrieren trainieren wir Zeitfenster, Namen und eine Notiz, die dem Entscheider einen Grund gibt zurückzurufen."
+        - generic [ref=f3e161]:
+          - heading "3. Bedarfsanalyse mit Fragetechnik" [level=3] [ref=f3e162]
+          - paragraph [ref=f3e163]: "Statt zu präsentieren, wird die Lage geklärt: „Woran merken Sie heute, dass der Vertriebsaufbau funktioniert?“ Danach: „Wo geht aktuell Zeit verloren?“ und „Wer entscheidet mit, wenn Sie daran etwas ändern?“ Fragen sollen eine Entscheidung sichtbar machen, nicht einen Fragenkatalog erfüllen."
+        - generic [ref=f3e164]:
+          - heading "4. Einwandbehandlung" [level=3] [ref=f3e165]
+          - paragraph [ref=f3e166]: "Einwand zuerst prüfen: „Wenn Sie sagen, kein Bedarf: Ist das Thema grundsätzlich erledigt oder nur für dieses Quartal nicht auf Ihrer Liste?“ Erst nach der Antwort folgt eine Erwiderung. So wird aus dem Reflex eine belastbare Information."
+        - generic [ref=f3e167]:
+          - heading "5. Preisgespräch" [level=3] [ref=f3e168]
+          - paragraph [ref=f3e169]: "Der Preis steht nicht allein: „Bevor wir über einen Rahmen sprechen: Was würde es intern kosten, wenn die offenen Regionen noch ein Quartal ohne klare Ansprache bleiben?“ Das ist keine Fangfrage. Es klärt, ob überhaupt ein wirtschaftliches Problem vorliegt."
+        - generic [ref=f3e170]:
+          - heading "6. Nachfassen und Abschluss" [level=3] [ref=f3e171]
+          - paragraph [ref=f3e172]: "Nachfassen knüpft an eine Vereinbarung an: „Sie wollten die Unterlagen mit Ihrer Vertriebsleitung prüfen. Passt es, wenn wir am Donnerstag um 10 Uhr zehn Minuten abgleichen?“ Der Abschluss ist ein fester Schritt mit Termin, Beteiligten und Zweck."
+    - generic [ref=f3e174]:
+      - generic [ref=f3e175]:
+        - paragraph [ref=f3e176]: Einstieg trainieren
+        - heading "Der erste Satz" [level=2] [ref=f3e177]
+        - paragraph [ref=f3e178]: Der erste Satz macht aus einer Liste einen Gesprächsgrund. Trainiert wird, aus einem öffentlich sichtbaren Auslöser eine sachliche Eröffnung zu bauen.
+      - table [ref=f3e180]:
+        - rowgroup [ref=f3e181]:
+          - row [ref=f3e182]:
+            - columnheader "Auslöser" [ref=f3e183]
+            - columnheader "Möglicher Eröffnungssatz" [ref=f3e184]
+        - rowgroup [ref=f3e185]:
+          - row [ref=f3e186]:
+            - cell "Zwei neue Vertriebsstellen in Wien" [ref=f3e187]
+            - cell "„Sie haben letzte Woche zwei Stellen für den Vertrieb in Wien ausgeschrieben. Wie organisieren Sie den Marktstart, bis das Team vollständig besetzt ist?“" [ref=f3e188]
+          - row [ref=f3e189]:
+            - cell "Neue Vertriebsleitung angekündigt" [ref=f3e190]
+            - cell "„Ihre neue Vertriebsleitung hat den Start öffentlich angekündigt. Welche Themen stehen in den ersten Monaten im Vertrieb ganz oben?“" [ref=f3e191]
+          - row [ref=f3e192]:
+            - cell "Neuer Standort eröffnet" [ref=f3e193]
+            - cell "„Sie haben den neuen Standort in Leipzig eröffnet. Wer bündelt dort gerade die Ansprache neuer Geschäftskunden?“" [ref=f3e194]
+          - row [ref=f3e195]:
+            - cell "Produktstart mit Datum" [ref=f3e196]
+            - cell "„Für Ihr neues Produkt ist der Marktstart im Oktober angekündigt. Wie weit ist die Ansprache der ersten Zielgruppe vorbereitet?“" [ref=f3e197]
+          - row [ref=f3e198]:
+            - cell "Finanzierungsrunde kommuniziert" [ref=f3e199]
+            - cell "„Sie haben die Finanzierungsrunde im Juni veröffentlicht. Welche Vertriebsziele sollen damit als Nächstes beschleunigt werden?“" [ref=f3e200]
+          - row [ref=f3e201]:
+            - cell "Neue Partnerschaft veröffentlicht" [ref=f3e202]
+            - cell "„Die Partnerschaft mit Ihrem neuen Technologieanbieter wurde diese Woche bekanntgegeben. Wer verantwortet, daraus neue Kundengespräche zu entwickeln?“" [ref=f3e203]
+      - paragraph [ref=f3e204]: Der Satz nennt immer den konkreten, öffentlich einsehbaren Anlass, nie das Muster dahinter. „Sie posten seit Monaten weniger“ wirkt überwacht; „Sie haben letzte Woche zwei Stellen in Wien ausgeschrieben“ wirkt aufmerksam, weil der Angerufene das Ereignis selbst kennt. Ausgewertet werden ausschließlich öffentlich zugängliche Quellen.
+      - paragraph [ref=f3e205]: "Seniorität ist praktisch: Der Trainer telefoniert vor, weil er selbst seit Jahren B2B-Gespräche führt. Das Team hört einen echten Anfang, bespricht ihn unmittelbar und übernimmt keine ungetestete Theorie."
+    - generic [ref=f3e207]:
+      - generic [ref=f3e208]:
+        - paragraph [ref=f3e209]: Zielkunden priorisieren
+        - heading "Anlassbezogene Ansprache statt Listenroutine" [level=2] [ref=f3e210]
+        - paragraph [ref=f3e211]:
+          - link "Signal Based Selling" [ref=f3e212] [cursor=pointer]:
+            - /url: /#signal-based-selling
+          - text: "heißt: Nicht die Liste bestimmt, wen man anruft, sondern das Ereignis. Die deutsche Entsprechung lautet anlassbezogene Ansprache."
+      - paragraph [ref=f3e213]: Für ein Telefontraining B2B sind nicht alle Anlässe gleich nützlich. Die folgende Auswahl deutet eher auf ein Können- als auf ein Kapazitätsproblem im Vertrieb hin. Sie dient im Training als Material für Einstiege, Fragen und Einwände.
+      - table [ref=f3e215]:
+        - rowgroup [ref=f3e216]:
+          - row [ref=f3e217]:
+            - columnheader "Öffentlich sichtbares Signal" [ref=f3e218]
+            - columnheader "Was es in der Regel bedeutet" [ref=f3e219]
+            - columnheader "Typisches Zeitfenster" [ref=f3e220]
+        - rowgroup [ref=f3e221]:
+          - row [ref=f3e222]:
+            - cell "Erste Vertriebsführung eingestellt" [ref=f3e223]
+            - cell "Vertrieb wird neu strukturiert; Gesprächsstandards werden relevant" [ref=f3e224]
+            - cell "erste Monate nach Start" [ref=f3e225]
+          - row [ref=f3e226]:
+            - cell "Mehrere Vertriebsstellen zugleich ausgeschrieben" [ref=f3e227]
+            - cell "Neue Mitarbeiter müssen rasch in eine gemeinsame Arbeitsweise kommen" [ref=f3e228]
+            - cell "2–8 Wochen" [ref=f3e229]
+          - row [ref=f3e230]:
+            - cell "Neue Vertriebsakademie oder Enablement-Rolle ausgeschrieben" [ref=f3e231]
+            - cell "Wissen und Methodik sollen im Team systematischer werden" [ref=f3e232]
+            - cell "1–3 Monate" [ref=f3e233]
+          - row [ref=f3e234]:
+            - cell "CRM- oder Sales-Operations-Rolle ausgeschrieben" [ref=f3e235]
+            - cell "Steuerung und Gesprächsqualität werden sichtbarer gemacht" [ref=f3e236]
+            - cell "1–3 Monate" [ref=f3e237]
+          - row [ref=f3e238]:
+            - cell "Neue Preis- oder Paketstruktur veröffentlicht" [ref=f3e239]
+            - cell "Vertrieb muss Nutzen und Preis neu erklären können" [ref=f3e240]
+            - cell "bis 3 Monate" [ref=f3e241]
+          - row [ref=f3e242]:
+            - cell "Neues Produkt mit Markteintritt angekündigt" [ref=f3e243]
+            - cell "Team braucht eine klare Erstansprache für eine neue Zielgruppe" [ref=f3e244]
+            - cell "bis zum Starttermin" [ref=f3e245]
+          - row [ref=f3e246]:
+            - cell "Neue Vertriebsregion eröffnet" [ref=f3e247]
+            - cell "Vorzimmer, Ansprache und Übergaben werden neu aufgebaut" [ref=f3e248]
+            - cell "1–4 Monate" [ref=f3e249]
+          - row [ref=f3e250]:
+            - cell "Neuer Partnerkanal vorgestellt" [ref=f3e251]
+            - cell "Direktvertrieb und Partneransprache müssen sauber abgegrenzt werden" [ref=f3e252]
+            - cell "1–3 Monate" [ref=f3e253]
+      - paragraph [ref=f3e254]: Beispiele, keine abschließende Liste.
+      - paragraph [ref=f3e255]: "Wunsch-Signale entstehen aus dem Markt des Kunden: ein auslaufender Rahmenvertrag, eine verlorene Zertifizierung, eine Normänderung oder der Wegfall einer Förderung. Sie werden vor dem Training gemeinsam präzisiert, weil nur das Team selbst einschätzen kann, welches Ereignis einen echten Gesprächsgrund liefert."
+      - paragraph [ref=f3e256]:
+        - text: Manche Teams haben bereits ein Scoring im CRM, in HubSpot oder in einer Tabelle. Das System bleibt bestehen; wir schärfen es für die Trainingsarbeit nach, indem Fit und aktueller Anlass getrennt betrachtet werden. Live-Signale altern, und für die Spitze wird aus der Recherche ein erster Satz. Wer diese Priorisierung im eigenen Team vertiefen will, findet sie bei
+        - link "PrioX Lead-Scoring" [ref=f3e257] [cursor=pointer]:
+          - /url: https://priox.ai/lead-scoring
+        - text: ; die Software hat DEALMAKERS selbst gebaut und setzt sie selbst ein.
+    - generic [ref=f3e259]:
+      - generic [ref=f3e260]:
+        - paragraph [ref=f3e261]: Kein Einwandkatalog zum Ablesen
+        - heading "Einwand-Bibliothek für echte Gespräche" [level=2] [ref=f3e262]
+        - paragraph [ref=f3e263]: Einwände sind Hinweise auf eine offene Frage. Wir trainieren die Gegenfrage vor der Erwiderung, damit der Verkäufer nicht gegen etwas argumentiert, das der Gesprächspartner gar nicht meinte.
+      - table [ref=f3e265]:
+        - rowgroup [ref=f3e266]:
+          - row [ref=f3e267]:
+            - columnheader "Häufigster Einwand" [ref=f3e268]
+            - columnheader "Was dahintersteckt" [ref=f3e269]
+            - columnheader "Mögliche Erwiderung" [ref=f3e270]
+        - rowgroup [ref=f3e271]:
+          - row [ref=f3e272]:
+            - cell "„Kein Bedarf.“" [ref=f3e273]
+            - cell "Kein Thema, falscher Zeitpunkt oder schneller Schutzreflex" [ref=f3e274]
+            - cell "„Ist das Thema grundsätzlich erledigt oder nur gerade nicht priorisiert?“" [ref=f3e275]
+          - row [ref=f3e276]:
+            - cell "„Schicken Sie mal etwas.“" [ref=f3e277]
+            - cell "Höfliche Vertagung oder Wunsch nach einem konkreten Bezug" [ref=f3e278]
+            - cell "„Gern. Welche Frage soll die Unterlage für Sie beantworten, damit sie nicht allgemein bleibt?“" [ref=f3e279]
+          - row [ref=f3e280]:
+            - cell "„Wir machen das intern.“" [ref=f3e281]
+            - cell "Stolz, Kapazitätsplanung oder fehlende Klarheit über das Angebot" [ref=f3e282]
+            - cell "„Was soll intern genau gelöst werden, und wo wird es im Ablauf heute eng?“" [ref=f3e283]
+          - row [ref=f3e284]:
+            - cell "„Wir haben schon einen Anbieter.“" [ref=f3e285]
+            - cell "Bestehende Bindung oder Zufriedenheit" [ref=f3e286]
+            - cell "„Woran würden Sie merken, dass ein Vergleich trotzdem sinnvoll wäre?“" [ref=f3e287]
+          - row [ref=f3e288]:
+            - cell "„Dafür haben wir kein Budget.“" [ref=f3e289]
+            - cell "Kein freigegebener Rahmen oder kein sichtbarer Nutzen" [ref=f3e290]
+            - cell "„Ist der fehlende Rahmen das Thema, oder ist der Nutzen noch nicht klar genug?“" [ref=f3e291]
+          - row [ref=f3e292]:
+            - cell "„Rufen Sie nächstes Quartal an.“" [ref=f3e293]
+            - cell "Zeitpunkt passt nicht oder Gespräch soll beendet werden" [ref=f3e294]
+            - cell "„Was verändert sich bis dahin konkret, damit ich dann nicht wieder allgemein anrufe?“" [ref=f3e295]
+          - row [ref=f3e296]:
+            - cell "„Dafür bin ich nicht zuständig.“" [ref=f3e297]
+            - cell "Tatsächliche Zuständigkeit oder Abwehr ohne Weitergabe" [ref=f3e298]
+            - cell "„Wer entscheidet darüber, und wie beschreibe ich den Anlass am besten für diese Person?“" [ref=f3e299]
+          - row [ref=f3e300]:
+            - cell "„Wir brauchen erst mehr Leads.“" [ref=f3e301]
+            - cell "Pipelineproblem wird mit Gesprächsproblem vermischt" [ref=f3e302]
+            - 'cell "„Wo verlieren Sie heute die passenden Gespräche: vor dem Anruf, im Erstgespräch oder nach dem Angebot?“" [ref=f3e303]'
+      - figure "Der Einwand wird nicht überfahren. Erst die Bedeutung klären, dann einen passenden nächsten Schritt vereinbaren." [ref=f3e304]:
+        - img "Entscheidungsbaum zur Behandlung eines Einwands mit Prüfen, Einordnen und nächstem Schritt" [ref=f3e306]:
+          - generic [ref=f3e307]:
+            - generic [ref=f3e309]: Einwand kommt
+            - generic [ref=f3e312]: Mit Gegenfrage prüfen
+            - generic [ref=f3e314]:
+              - generic [ref=f3e316]: Zeitpunkt?
+              - generic [ref=f3e317]: Termin oder Wiedervorlage
+              - generic [ref=f3e319]: Inhalt oder Zuständigkeit?
+              - generic [ref=f3e320]: Frage klären oder weiterleiten
+            - generic [ref=f3e323]: Nächsten Schritt vereinbaren
+    - generic [ref=f3e326]:
+      - generic [ref=f3e327]:
+        - paragraph [ref=f3e328]: Passend zum Arbeitsalltag
+        - heading "Formate für Vertriebsschulung und Verkaufstraining B2B" [level=2] [ref=f3e329]
+      - table [ref=f3e331]:
+        - rowgroup [ref=f3e332]:
+          - row [ref=f3e333]:
+            - columnheader "Format" [ref=f3e334]
+            - columnheader "Dauer" [ref=f3e335]
+            - columnheader "Teilnehmerzahl" [ref=f3e336]
+            - columnheader "Eignung" [ref=f3e337]
+        - rowgroup [ref=f3e338]:
+          - row [ref=f3e339]:
+            - cell "Inhouse-Training" [ref=f3e340]
+            - cell "Halber oder ganzer Tag" [ref=f3e341]
+            - cell "4–12" [ref=f3e342]
+            - cell "Gemeinsame Sprache, neue Argumentation und Team-Übergaben" [ref=f3e343]
+          - row [ref=f3e344]:
+            - cell "Live-Telefontraining am echten Hörer" [ref=f3e345]
+            - cell "Halber oder ganzer Tag" [ref=f3e346]
+            - cell "1–6" [ref=f3e347]
+            - cell "Opener, Erreichbarkeit und Einwände sofort in echten Calls testen" [ref=f3e348]
+          - row [ref=f3e349]:
+            - cell "1:1-Coaching" [ref=f3e350]
+            - cell "Einzeltermine" [ref=f3e351]
+            - cell "1" [ref=f3e352]
+            - cell "Geschäftsführung, Key Account oder gezielte Gesprächsmuster" [ref=f3e353]
+          - row [ref=f3e354]:
+            - cell "Begleitung über Wochen" [ref=f3e355]
+            - cell "Trainingstag plus Nachtermine" [ref=f3e356]
+            - cell "4–8" [ref=f3e357]
+            - cell "Verhalten festigen und ausgewählte Gespräche auswerten" [ref=f3e358]
+      - figure "Je mehr Feedback aus echten Gesprächen zurückfließt, desto tiefer wird die Veränderung. Das passende Format hängt von Ziel und Teamgröße ab." [ref=f3e359]:
+        - img "Matrix mit vier Trainingsformaten nach Dauer und Trainingstiefe" [ref=f3e361]:
+          - generic [ref=f3e362]:
+            - generic [ref=f3e363]: "Dauer: kurz bis länger"
+            - generic [ref=f3e364]: Tiefe
+            - generic [ref=f3e370]:
+              - generic [ref=f3e371]: Inhouse
+              - generic [ref=f3e372]: Live-Call
+              - generic [ref=f3e373]: 1:1
+              - generic [ref=f3e374]: Wochen
+            - generic [ref=f3e375]: hoch
+            - generic [ref=f3e376]: niedrig
+            - generic [ref=f3e377]: kurz
+            - generic [ref=f3e378]: länger
+    - generic [ref=f3e381]:
+      - generic [ref=f3e382]:
+        - paragraph [ref=f3e383]: Vom Vorgespräch bis zur Nachkontrolle
+        - heading "So läuft ein Training ab" [level=2] [ref=f3e384]
+      - list [ref=f3e385]:
+        - listitem [ref=f3e386]:
+          - strong [ref=f3e387]: "Vorgespräch:"
+          - text: Wir klären Angebot, Zielkunden, typische Gesprächssituationen und die Frage, an der das Team gerade hängt.
+        - listitem [ref=f3e388]:
+          - strong [ref=f3e389]: "Material vorbereiten:"
+          - text: Sie bringen Zielkundenliste, Gesprächsnotizen, E-Mails und vorhandene Argumentation ein. Daraus wählen wir echte Fälle.
+        - listitem [ref=f3e390]:
+          - strong [ref=f3e391]: "Training durchführen:"
+          - text: Einstieg, Fragen, Einwände und Abschluss werden trainiert. Bei vereinbarter Live-Telefonie telefoniert der Trainer vor und erklärt die Entscheidungen danach.
+        - listitem [ref=f3e392]:
+          - strong [ref=f3e393]: "Nächste Gespräche festlegen:"
+          - text: Jeder Teilnehmer verlässt den Termin mit konkreten Kontakten, einem Opener und einem nächsten Schritt.
+        - listitem [ref=f3e394]:
+          - strong [ref=f3e395]: "Nachkontrolle:"
+          - text: Ausgewählte Gespräche werden besprochen. Wir unterscheiden dabei Gesprächstechnik von Problemen in Liste, Angebot oder Prozess.
+      - paragraph [ref=f3e396]:
+        - text: Wenn nicht Können, sondern schlicht Kapazität fehlt, ist eine
+        - link "Telefonakquise-Agentur" [ref=f3e397] [cursor=pointer]:
+          - /url: /telefonakquise-agentur/
+        - text: oder eine
+        - link "Kaltakquise-Agentur" [ref=f3e398] [cursor=pointer]:
+          - /url: /kaltakquise-agentur/
+        - text: oft die ehrlichere Antwort. Für die Frage, wie Angebot, Prozess und Mannschaft zusammenspielen, ist
+        - link "Vertriebsberatung" [ref=f3e399] [cursor=pointer]:
+          - /url: /vertriebsberatung/
+        - text: die passende Vertiefung.
+    - generic [ref=f3e401]:
+      - generic [ref=f3e402]:
+        - paragraph [ref=f3e403]: Nicht nur Stimmung abfragen
+        - heading "Wie wir Wirkung messen" [level=2] [ref=f3e404]
+        - paragraph [ref=f3e405]: Ein Training ist dann wirksam, wenn Verhalten im nächsten Gespräch erkennbar anders ist und ein sauberer nächster Schritt entsteht.
+      - generic [ref=f3e406]:
+        - generic [ref=f3e407]:
+          - heading "Vorher und nachher hören" [level=3] [ref=f3e408]
+          - paragraph [ref=f3e409]: "Wir vergleichen ausgewählte Gespräche nach klaren Kriterien: Anlass im Einstieg, Anzahl und Qualität der Fragen, Umgang mit Einwänden, Gesprächsanteil und Vereinbarung eines nächsten Schritts. Das ist aussagekräftiger als eine allgemeine Zufriedenheitsfrage direkt nach dem Seminar."
+        - generic [ref=f3e410]:
+          - heading "Ergebnisse richtig einordnen" [level=3] [ref=f3e411]
+          - paragraph [ref=f3e412]: Termine und Angebote werden mit betrachtet, aber nicht isoliert dem Training zugeschrieben. Zielkundenqualität, Preis, Markt und Erreichbarkeit wirken mit. Der Vergleich zeigt, ob das Team seine vereinbarte Arbeitsweise nutzt und wo das nächste Hindernis liegt.
+      - 'figure "Die Darstellung zeigt die gewünschte Richtung, keine feste Quote: Gute Bedarfsanalyse schafft Raum für die Perspektive des Kunden." [ref=f3e413]':
+        - img "Vergleich des Gesprächsanteils Reden und Zuhören vor und nach dem Training" [ref=f3e415]:
+          - generic [ref=f3e416]:
+            - generic [ref=f3e417]: Vorher
+            - generic [ref=f3e418]: Nachher
+            - generic [ref=f3e423]: Verkäufer redet
+            - generic [ref=f3e424]: Kunde
+            - generic [ref=f3e425]: Kunde fragt
+            - generic [ref=f3e426]: Verkäufer
+            - generic [ref=f3e427]: "Beobachtung:"
+            - generic [ref=f3e428]: Vorher wird Nutzen zu früh erklärt.
+            - generic [ref=f3e429]: "Training:"
+            - generic [ref=f3e430]: Mehr Fragen vor der Lösung, ohne einen Sollwert vorzuschreiben.
+      - paragraph [ref=f3e432]:
+        - text: Eine
+        - link "Übersicht unserer Leistungen" [ref=f3e433] [cursor=pointer]:
+          - /url: /leistungen/
+        - text: "hilft bei der Einordnung: Training löst Gesprächskönnen,"
+        - link "Vertriebsoutsourcing" [ref=f3e434] [cursor=pointer]:
+          - /url: /vertriebsoutsourcing/
+        - text: schafft zusätzliche Kapazität. Beides kann sinnvoll sein, ist aber nicht dasselbe Problem.
+    - generic [ref=f3e436]:
+      - generic [ref=f3e437]:
+        - paragraph [ref=f3e438]: Klare Grenze
+        - heading "Für wen dieses B2B Vertriebstraining nicht geeignet ist" [level=2] [ref=f3e439]
+      - list [ref=f3e440]:
+        - listitem [ref=f3e441]: Für Teams, die ein universelles Skript ohne Bezug zu Zielkunden, Angebot und Gesprächssituationen erwarten.
+        - listitem [ref=f3e442]: Für Organisationen, die nur einen motivierenden Vortrag suchen und anschließend keine Gespräche oder nächsten Schritte auswerten wollen.
+        - listitem [ref=f3e443]: Wenn das Angebot selbst noch unklar ist. Dann muss zuerst die Positionierung geklärt werden, nicht der Opener trainiert werden.
+        - listitem [ref=f3e444]: Wenn allein Anrufkapazität fehlt. Dann prüfen wir gemeinsam, ob ein eigener Vertrieb oder externe Unterstützung sinnvoller ist.
+      - paragraph [ref=f3e445]:
+        - text: Ein Erstgespräch klärt das ohne Umweg. Sie erreichen uns telefonisch, per E-Mail oder über den
+        - link "Kontakt zu DEALMAKERS" [ref=f3e446] [cursor=pointer]:
+          - /url: /kontakt/
+        - text: .
+    - generic [ref=f3e448]:
+      - generic [ref=f3e449]:
+        - paragraph [ref=f3e450]: Häufige Fragen
+        - heading "Fragen zum B2B Vertriebstraining" [level=2] [ref=f3e451]
+      - generic [ref=f3e452]:
+        - group [ref=f3e453]:
+          - generic "Was kostet ein B2B-Vertriebstraining? +" [ref=f3e454] [cursor=pointer]
+        - group [ref=f3e455]:
+          - generic "Wie viele Teilnehmer sind sinnvoll? +" [ref=f3e456] [cursor=pointer]
+        - group [ref=f3e457]:
+          - generic "Wie lange dauert ein Training? +" [ref=f3e458] [cursor=pointer]
+        - group [ref=f3e459]:
+          - generic "Findet das Training bei uns im Haus statt? +" [ref=f3e460] [cursor=pointer]
+        - group [ref=f3e461]:
+          - generic "Trainieren Sie auch online? +" [ref=f3e462] [cursor=pointer]
+        - group [ref=f3e463]:
+          - generic "Was unterscheidet B2B-Vertriebstraining von klassischem Verkaufstraining? +" [ref=f3e464] [cursor=pointer]
+        - group [ref=f3e465]:
+          - generic "Funktioniert Training auch bei erfahrenen Verkäufern? +" [ref=f3e466] [cursor=pointer]
+        - group [ref=f3e467]:
+          - generic "Was passiert nach dem Trainingstag? +" [ref=f3e468] [cursor=pointer]
+        - group [ref=f3e469]:
+          - generic "Können Sie auch nur Telefonakquise trainieren? +" [ref=f3e470] [cursor=pointer]
+        - group [ref=f3e471]:
+          - generic "Trainieren Sie auch Geschäftsführer, die selbst verkaufen? +" [ref=f3e472] [cursor=pointer]
+        - group [ref=f3e473]:
+          - generic "Wie messen Sie den Erfolg? +" [ref=f3e474] [cursor=pointer]
+        - group [ref=f3e475]:
+          - generic "Bekommen die Teilnehmer Unterlagen? +" [ref=f3e476] [cursor=pointer]
+    - generic [ref=f3e479]:
+      - heading "Den nächsten echten Call besser führen" [level=2] [ref=f3e480]
+      - paragraph [ref=f3e481]: Besprechen Sie Zielkunden, Team und gewünschtes Trainingsformat direkt mit uns. Kein Formular, sondern Telefon, E-Mail oder Kalender.
+      - generic [ref=f3e482]:
+        - link "+49 160 966 787 17" [ref=f3e483] [cursor=pointer]:
+          - /url: tel:+4916096678717
+        - link "hello@deal-makers.de" [ref=f3e484] [cursor=pointer]:
+          - /url: mailto:hello@deal-makers.de
+        - link "Termin im Kalender wählen" [ref=f3e485] [cursor=pointer]:
+          - /url: https://calendar.app.google/CUn3btn6t7fnfRjt8
+  - contentinfo [ref=f3e486]:
+    - generic [ref=f3e487]:
+      - generic [ref=f3e488]:
+        - generic [ref=f3e489]:
+          - link "DEALMAKERS" [ref=f3e490] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f3e491]: B2B-Vertrieb aus Berlin und Unterfranken. Seit 2021.
+          - paragraph [ref=f3e492]: Am Postbahnhof 23, 10243 Berlin Kissinger Straße 19, 97714 Oerlenbach
+          - paragraph [ref=f3e493]:
+            - link "+49 160 966 787 17" [ref=f3e494] [cursor=pointer]:
+              - /url: tel:+4916096678717
+            - link "hello@deal-makers.de" [ref=f3e495] [cursor=pointer]:
+              - /url: mailto:hello@deal-makers.de
+        - generic [ref=f3e496]:
+          - heading "Vertrieb auslagern" [level=3] [ref=f3e497]
+          - list [ref=f3e498]:
+            - listitem [ref=f3e499]:
+              - link "Vertriebsoutsourcing" [ref=f3e500] [cursor=pointer]:
+                - /url: /vertriebsoutsourcing/
+            - listitem [ref=f3e501]:
+              - link "Vertrieb auslagern" [ref=f3e502] [cursor=pointer]:
+                - /url: /vertrieb-auslagern/
+            - listitem [ref=f3e503]:
+              - link "Externer Vertrieb" [ref=f3e504] [cursor=pointer]:
+                - /url: /externer-vertrieb/
+            - listitem [ref=f3e505]:
+              - link "Kosten & Modelle" [ref=f3e506] [cursor=pointer]:
+                - /url: /vertriebsoutsourcing-kosten/
+        - generic [ref=f3e507]:
+          - heading "Neukunden gewinnen" [level=3] [ref=f3e508]
+          - list [ref=f3e509]:
+            - listitem [ref=f3e510]:
+              - link "Kaltakquise-Agentur" [ref=f3e511] [cursor=pointer]:
+                - /url: /kaltakquise-agentur/
+            - listitem [ref=f3e512]:
+              - link "Telefonakquise-Agentur" [ref=f3e513] [cursor=pointer]:
+                - /url: /telefonakquise-agentur/
+            - listitem [ref=f3e514]:
+              - link "Neukundenakquise" [ref=f3e515] [cursor=pointer]:
+                - /url: /neukundenakquise-agentur/
+            - listitem [ref=f3e516]:
+              - link "Leadgenerierung" [ref=f3e517] [cursor=pointer]:
+                - /url: /leadgenerierung-agentur/
+            - listitem [ref=f3e518]:
+              - link "B2B-Vertriebsagentur" [ref=f3e519] [cursor=pointer]:
+                - /url: /b2b-vertriebsagentur/
+        - generic [ref=f3e520]:
+          - heading "Beratung & Training" [level=3] [ref=f3e521]
+          - list [ref=f3e522]:
+            - listitem [ref=f3e523]:
+              - link "Vertriebsberatung" [ref=f3e524] [cursor=pointer]:
+                - /url: /vertriebsberatung/
+            - listitem [ref=f3e525]:
+              - link "B2B Vertriebstraining" [ref=f3e526] [cursor=pointer]:
+                - /url: /vertriebstraining-b2b/
+            - listitem [ref=f3e527]:
+              - link "Vertriebscoaching" [ref=f3e528] [cursor=pointer]:
+                - /url: /vertriebscoaching/
+            - listitem [ref=f3e529]:
+              - link "Alle Leistungen" [ref=f3e530] [cursor=pointer]:
+                - /url: /leistungen/
+            - listitem [ref=f3e531]:
+              - link "Kontakt" [ref=f3e532] [cursor=pointer]:
+                - /url: /kontakt/
+        - generic [ref=f3e533]:
+          - heading "Ratgeber" [level=3] [ref=f3e534]
+          - list [ref=f3e535]:
+            - listitem [ref=f3e536]:
+              - link "Alle Ratgeber" [ref=f3e537] [cursor=pointer]:
+                - /url: /ratgeber/
+            - listitem [ref=f3e538]:
+              - link "Kaltakquise" [ref=f3e539] [cursor=pointer]:
+                - /url: /kaltakquise/
+            - listitem [ref=f3e540]:
+              - link "Telefonakquise" [ref=f3e541] [cursor=pointer]:
+                - /url: /telefonakquise/
+            - listitem [ref=f3e542]:
+              - link "Neukundengewinnung" [ref=f3e543] [cursor=pointer]:
+                - /url: /neukundengewinnung/
+            - listitem [ref=f3e544]:
+              - 'link "Akquise: Definition" [ref=f3e545] [cursor=pointer]':
+                - /url: /akquise/
+            - listitem [ref=f3e546]:
+              - link "B2B-Vertrieb" [ref=f3e547] [cursor=pointer]:
+                - /url: /b2b-vertrieb/
+      - generic [ref=f3e548]:
+        - generic [ref=f3e549]: © 2026 DEALMAKERS – Digitale Vertriebsagentur
+        - generic [ref=f3e550]:
+          - link "Impressum" [ref=f3e551] [cursor=pointer]:
+            - /url: /impressum/
+          - text: ·
+          - link "Datenschutz" [ref=f3e552] [cursor=pointer]:
+            - /url: /datenschutz/
+          - text: ·
+          - button "Cookie-Einstellungen" [ref=f3e553] [cursor=pointer]
+          - text: ·
+          - link "PrioX" [ref=f3e554] [cursor=pointer]:
+            - /url: https://priox.ai/
+  - dialog "Hinweis zu Cookies und Messung" [ref=f3e555]:
+    - generic [ref=f3e556]:
+      - paragraph [ref=f3e557]:
+        - strong [ref=f3e558]: Kurz zu Cookies.
+        - text: Diese Website kommt ohne Werbe-Netzwerke, ohne Tracking-Dienste und ohne Profilbildung aus – technisch notwendig ist hier nichts weiter als Ihre Entscheidung auf dieser Leiste, die wir lokal in Ihrem Browser merken. Falls wir später eine einfache Reichweitenmessung einsetzen, gilt dafür, was Sie hier auswählen. Details in der
+        - link "Datenschutzerklärung" [ref=f3e559] [cursor=pointer]:
+          - /url: /datenschutz/
+        - text: .
+      - generic [ref=f3e560]:
+        - button "Nur notwendige" [ref=f3e561] [cursor=pointer]
+        - button "Einverstanden" [ref=f3e562] [cursor=pointer]

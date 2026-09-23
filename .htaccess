@@ -1,0 +1,30 @@
+ErrorDocument 404 /404.html
+
+Options -Indexes
+
+# Alte Adressen der bisherigen Website dauerhaft (301) auf die neuen Seiten umleiten.
+# Ohne diese Zeilen landen Besucher und Google nach dem Upload auf einer Fehlerseite.
+RedirectMatch 301 ^/vertriebsagentur/?$              /b2b-vertriebsagentur/
+RedirectMatch 301 ^/vertriebscoaching/?$             /vertriebstraining-b2b/
+RedirectMatch 301 ^/performance-marketing-agentur/?$ /leadgenerierung-agentur/
+RedirectMatch 301 ^/emotional-resonance/?$           /warum-wir/
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript image/svg+xml
+</IfModule>
+
+# WebP-Bilder: manche Apache-Installationen kennen den Typ nicht von Haus aus.
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>

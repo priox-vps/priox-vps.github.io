@@ -1,0 +1,510 @@
+- generic [active] [ref=e1]:
+  - link "Zum Inhalt springen" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e5]:
+    - generic [ref=e6]: Berlin & Unterfranken · seit 2021
+    - link "+49 160 966 787 17" [ref=e7] [cursor=pointer]:
+      - /url: tel:+4916096678717
+    - link "hello@deal-makers.de" [ref=e8] [cursor=pointer]:
+      - /url: mailto:hello@deal-makers.de
+  - banner [ref=e9]:
+    - generic [ref=e10]:
+      - link "DEALMAKERS" [ref=e11] [cursor=pointer]:
+        - /url: /
+      - navigation "Hauptnavigation" [ref=e12]:
+        - link "Leistungen" [ref=e13] [cursor=pointer]:
+          - /url: /leistungen/
+        - link "Outsourcing" [ref=e14] [cursor=pointer]:
+          - /url: /vertriebsoutsourcing/
+        - link "Kaltakquise" [ref=e15] [cursor=pointer]:
+          - /url: /kaltakquise-agentur/
+        - link "Beratung" [ref=e16] [cursor=pointer]:
+          - /url: /vertriebsberatung/
+        - link "Training" [ref=e17] [cursor=pointer]:
+          - /url: /vertriebstraining-b2b/
+        - link "Ratgeber" [ref=e18] [cursor=pointer]:
+          - /url: /ratgeber/
+        - link "Gespräch vereinbaren" [ref=e19] [cursor=pointer]:
+          - /url: /kontakt/
+  - navigation "Brotkrumen" [ref=e20]:
+    - list [ref=e22]:
+      - listitem [ref=e23]:
+        - link "Start" [ref=e24] [cursor=pointer]:
+          - /url: /
+        - text: ›
+      - listitem [ref=e25]: Warum DEALMAKERS
+  - main [ref=e26]:
+    - generic [ref=e28]:
+      - paragraph [ref=e29]: Menschen, Methode und Nachweise
+      - heading "Warum DEALMAKERS" [level=1] [ref=e30]
+      - paragraph [ref=e31]: Sie kaufen keine Agentur, Sie kaufen Menschen am Telefon. Deshalb zeigen wir offen, wer ein Projekt vorbereitet, wer später anruft und woran Sie unsere Erfahrung messen können. Signale sagen, wann man anruft. Gesprächsführung sagt, wie.
+      - generic [ref=e32]:
+        - link "30-Minuten-Erstgespräch" [ref=e33] [cursor=pointer]:
+          - /url: /kontakt/
+        - link "Leistungen prüfen" [ref=e34] [cursor=pointer]:
+          - /url: /leistungen/
+    - navigation "Inhaltsverzeichnis" [ref=e37]:
+      - heading "Inhalt" [level=2] [ref=e38]
+      - list [ref=e39]:
+        - listitem [ref=e40]:
+          - link "Inhalt" [ref=e41] [cursor=pointer]:
+            - /url: "#inhalt"
+        - listitem [ref=e42]:
+          - link "Warum diese Seite" [ref=e43] [cursor=pointer]:
+            - /url: "#warum-diese-seite"
+        - listitem [ref=e44]:
+          - link "Wer hier tatsächlich arbeitet" [ref=e45] [cursor=pointer]:
+            - /url: "#wer-hier-tatsaechlich-arbeitet"
+        - listitem [ref=e46]:
+          - link "Fast 20 Jahre, jede Stufe selbst" [ref=e47] [cursor=pointer]:
+            - /url: "#18-jahre-jede-stufe-selbst"
+        - listitem [ref=e48]:
+          - link "Woran Sie uns messen können" [ref=e49] [cursor=pointer]:
+            - /url: "#woran-sie-uns-messen-koennen"
+        - listitem [ref=e50]:
+          - link "Einarbeitung in Tagen" [ref=e51] [cursor=pointer]:
+            - /url: "#einarbeitung-in-tagen-nicht-monaten"
+        - listitem [ref=e52]:
+          - link "Gesprächsführung mit Nachweis" [ref=e53] [cursor=pointer]:
+            - /url: "#gespraechsfuehrung-mit-nachweis"
+        - listitem [ref=e54]:
+          - link "Die Methode steht geschrieben" [ref=e55] [cursor=pointer]:
+            - /url: "#die-methode-steht-geschrieben"
+        - listitem [ref=e56]:
+          - link "Was Sie behalten" [ref=e57] [cursor=pointer]:
+            - /url: "#was-sie-behalten-wenn-wir-gehen"
+        - listitem [ref=e58]:
+          - link "Das Signalsystem" [ref=e59] [cursor=pointer]:
+            - /url: "#signal-based-selling"
+        - listitem [ref=e60]:
+          - link "Der Blick des Käufers" [ref=e61] [cursor=pointer]:
+            - /url: "#der-blick-des-kaeufers"
+        - listitem [ref=e62]:
+          - link "Die falsche Wahl" [ref=e63] [cursor=pointer]:
+            - /url: "#wofuer-wir-die-falsche-wahl-sind"
+        - listitem [ref=e64]:
+          - link "Ausbildungen" [ref=e65] [cursor=pointer]:
+            - /url: "#ausbildungen-im-ueberblick"
+        - listitem [ref=e66]:
+          - link "FAQ" [ref=e67] [cursor=pointer]:
+            - /url: "#haeufige-fragen"
+        - listitem [ref=e68]:
+          - link "Erstgespräch" [ref=e69] [cursor=pointer]:
+            - /url: "#erstgespraech"
+    - generic [ref=e71]:
+      - heading "Warum diese Seite" [level=2] [ref=e72]
+      - paragraph [ref=e73]:
+        - text: Nach der Beschreibung von
+        - link "unseren Leistungen" [ref=e74] [cursor=pointer]:
+          - /url: /leistungen/
+        - text: "bleibt eine vernünftige Frage: Wer macht die Arbeit eigentlich? Timing aus Daten haben inzwischen viele. Der öffentlich sichtbare Anlass kann den ersten Satz begründen, aber er führt kein Gespräch, hört keinen Einwand und entscheidet nicht, wann eine Nachfrage sinnvoll ist. Diese zweite Hälfte gehört auf den Prüfstand. Für ein Erstgespräch stehen die direkten Wege unter"
+        - link "Kontakt" [ref=e75] [cursor=pointer]:
+          - /url: /kontakt/
+        - text: .
+      - figure "Ein Anlass erzeugt Aufmerksamkeit. Ob daraus ein belastbares Gespräch wird, entscheidet die Gesprächsführung." [ref=e76]:
+        - 'img "Zwei Hälften: Signal bestimmt wann, Gesprächsführung bestimmt wie; die Gesprächsführung ist hervorgehoben" [ref=e78]':
+          - generic [ref=e79]:
+            - generic [ref=e82]: WANN
+            - generic [ref=e83]: Signal
+            - generic [ref=e84]: Anlass zum Anrufen
+            - generic [ref=e85]: WIE
+            - generic [ref=e86]: Gesprächsführung
+            - generic [ref=e87]: Verstehen und weiterführen
+            - generic [ref=e88]: DEALMAKERS verantwortet die rechte Hälfte.
+    - generic [ref=e91]:
+      - heading "Wer hier tatsächlich arbeitet" [level=2] [ref=e92]
+      - paragraph [ref=e93]: "Florian Weippert arbeitet sich in jedes Projekt persönlich ein: Zielkunden, Angebot, Einwände und Playbook. Danach übergibt er an ein Team, das je Projekt aus erfahrenen Freelancern zusammengestellt wird. Bei einfachen Fällen geht es direkt an dieses Team. Die Teamgröße liegt je Projekt bei 5 bis 10 Personen."
+      - paragraph [ref=e94]:
+        - strong [ref=e95]: "Was das für Sie heißt:"
+        - text: Kein Werkstudent sitzt am Hörer, kein wechselndes Karussell arbeitet eine Liste ab. Gleichzeitig telefoniert der Gründer nicht dauerhaft selbst. Das wäre für eine skalierbare Vertriebsleistung die falsche Zusage. Seine Rolle ist, das Projekt so vorzubereiten und zu führen, dass die Gesprächsqualität nicht an einer einzigen Person hängt.
+      - paragraph [ref=e96]:
+        - text: Alle Anrufer bringen jahrelange eigene B2B-Vertriebserfahrung mit. Sie lesen kein Skript vor, sondern führen ein inhaltliches Gespräch. Das ist gerade bei einer
+        - link "Telefonakquise-Agentur" [ref=e97] [cursor=pointer]:
+          - /url: /telefonakquise-agentur/
+        - text: "kein Detail: Nach dem zweiten Einwand beginnt erst die Arbeit, die ein einfaches Callcenter nicht abdeckt."
+    - generic [ref=e99]:
+      - generic [ref=e100]:
+        - heading "Fast 20 Jahre, jede Stufe selbst" [level=2] [ref=e101]
+        - paragraph [ref=e102]: Der Werdegang deckt Aufbau, Führung, Training und Prüfung von Vertrieb ab. Das ist kein Ersatz für die Prüfung Ihres konkreten Projekts, aber der Hintergrund für die Standards im Playbook.
+      - table [ref=e104]:
+        - rowgroup [ref=e105]:
+          - row [ref=e106]:
+            - columnheader "Station" [ref=e107]
+            - columnheader "Rolle" [ref=e108]
+            - columnheader "Was daraus für Kunden folgt" [ref=e109]
+        - rowgroup [ref=e110]:
+          - row [ref=e111]:
+            - cell "NOVUSTEL ab 2006" [ref=e112]
+            - cell "SaaS/Telematik, Team 10, P&L" [ref=e113]
+            - cell "Vertrieb und Verantwortung für das eigene Geschäft gehören zusammen." [ref=e114]
+          - row [ref=e115]:
+            - cell "Couplink Group AG" [ref=e116]
+            - cell "Head of Sales, Team 6" [ref=e117]
+            - cell "Führung, Struktur und Marktveränderung müssen gleichzeitig funktionieren." [ref=e118]
+          - row [ref=e119]:
+            - cell "PayPal" [ref=e120]
+            - cell "Sales Manager & Trainer" [ref=e121]
+            - cell "Leistung lässt sich im Vertrieb nur an sauberer Umsetzung trainieren." [ref=e122]
+          - row [ref=e123]:
+            - cell "Billie" [ref=e124]
+            - cell "Director Business Development" [ref=e125]
+            - cell "Geschäftsentwicklung verlangt einen belastbaren Weg vom Gespräch zur Pipeline." [ref=e126]
+          - row [ref=e127]:
+            - cell "DEALMAKERS seit 2021" [ref=e128]
+            - cell "Gründer" [ref=e129]
+            - cell "Die Arbeitsweise wird in Kundenprojekten selbst umgesetzt." [ref=e130]
+          - row [ref=e131]:
+            - cell "S&B Strategy" [ref=e132]
+            - cell "M&A" [ref=e133]
+            - cell "Pipeline muss einer kommerziellen Prüfung standhalten." [ref=e134]
+      - figure "Die Stationen verbinden eigene Verantwortung, Führung, operative Gespräche und die Prüfung einer Pipeline." [ref=e135]:
+        - img "Zeitstrahl der beruflichen Stationen von NOVUSTEL über Couplink, PayPal und Billie zu DEALMAKERS und S und B Strategy" [ref=e137]:
+          - generic [ref=e138]:
+            - generic [ref=e146]:
+              - generic [ref=e147]: NOVUSTEL
+              - generic [ref=e148]: Team 10, P&L
+              - generic [ref=e149]: Couplink
+              - generic [ref=e150]: Head of Sales
+              - generic [ref=e151]: PayPal
+              - generic [ref=e152]: Sales & Training
+              - generic [ref=e153]: Billie
+              - generic [ref=e154]: Business Dev.
+              - generic [ref=e155]: DEALMAKERS
+              - generic [ref=e156]: seit 2021
+              - generic [ref=e157]: S&B
+              - generic [ref=e158]: M&A
+            - generic [ref=e159]: Stationen zeigen Rollen und Verantwortung, nicht eine Garantie für spätere Ergebnisse.
+    - generic [ref=e162]:
+      - generic [ref=e163]:
+        - heading "Woran Sie uns messen können" [level=2] [ref=e164]
+        - paragraph [ref=e165]: Die folgenden Werte sind belegt. Sie stehen bewusst mit Kontext da, damit sie nicht als Versprechen für ein fremdes Produkt missverstanden werden.
+      - table [ref=e167]:
+        - rowgroup [ref=e168]:
+          - row [ref=e169]:
+            - columnheader "Nachweis" [ref=e170]
+            - columnheader "Wert" [ref=e171]
+        - rowgroup [ref=e172]:
+          - row [ref=e173]:
+            - cell "Zielerreichung bei PayPal" [ref=e174]
+            - cell "dauerhaft über 200 %, in Spitzenzeiträumen knapp 400 %" [ref=e175]
+          - row [ref=e176]:
+            - cell "Zielerreichung bei Billie" [ref=e177]
+            - cell "über 150 %" [ref=e178]
+          - row [ref=e179]:
+            - cell "Auszeichnung" [ref=e180]
+            - cell "mehrfach Spot-Award als Top-Sales-Performer DACH" [ref=e181]
+          - row [ref=e182]:
+            - cell "Couplink" [ref=e183]
+            - cell "Unternehmensumsatz innerhalb von 10 Monaten verdoppelt, trotz rückläufigem Markt" [ref=e184]
+          - row [ref=e185]:
+            - cell "Trainings" [ref=e186]
+            - cell "nach intern verantworteten Trainings +35 % messbare Leistungssteigerung" [ref=e187]
+          - row [ref=e188]:
+            - cell "Kundenarbeit" [ref=e189]
+            - cell "20+ betreute Kunden aus SaaS, Beratung und Fintech" [ref=e190]
+          - row [ref=e191]:
+            - cell "Abschlüsse" [ref=e192]
+            - cell "Dealgrößen zwischen 30.000 und 500.000 EUR Jahresumsatz je Abschluss" [ref=e193]
+      - paragraph [ref=e194]:
+        - strong [ref=e195]: "Was diese Zahlen für Sie bedeuten – und was nicht:"
+        - text: "Es sind persönliche Zielerreichungswerte aus angestellten Vertriebsrollen, kein Versprechen, dass Ihr Umsatz um 200 % steigt. Ihr Nutzen liegt darin, wo diese Zahlen entstanden sind: unter echtem Quotendruck, mit echten Absagen, im selben Marktsegment. Die Gesprächsführung, die später in Ihrem Playbook steht, ist dort entstanden und nicht im Seminarraum. Wer seine eigene Zahl fast 20 Jahre lang liefern musste, baut andere Playbooks als jemand, der Vertrieb nur unterrichtet hat. Was wir Ihnen versprechen, sind nicht Prozentzahlen, sondern nachvollziehbare Aktivität, saubere Gespräche und Termine mit Entscheidern."
+      - figure "Die Balken zeigen persönliche Zielerreichung aus früheren Rollen, kein Kundenergebnis und keine Umsatzprognose." [ref=e196]:
+        - 'img "Balkenvergleich für persönliche Zielerreichung: Ziel gleich 100 Prozent, PayPal über 200 bis knapp 400 Prozent, Billie über 150 Prozent" [ref=e198]':
+          - generic [ref=e199]:
+            - generic [ref=e200]: Ziel = 100 %
+            - generic [ref=e201]: 100 %
+            - generic [ref=e202]: 200 %
+            - generic [ref=e203]: 300 %
+            - generic [ref=e204]: 400 %
+            - generic [ref=e205]: PayPal
+            - generic [ref=e207]: über 200 %, in der Spitze knapp 400 %
+            - generic [ref=e208]: Billie
+            - generic [ref=e210]: über 150 %
+    - generic [ref=e213]:
+      - heading "Einarbeitung in Tagen, nicht Monaten" [level=2] [ref=e214]
+      - paragraph [ref=e215]: "SaaS, Fintech, Telematik, Bau und Infrastruktur, Unternehmensberatung und Personal: Die Branchenbreite ersetzt keine Vorbereitung, sie verkürzt den Weg zu den richtigen Fragen. Zuerst wird der Zielkundenkreis eingegrenzt. Danach zerlegen wir Angebot und Nutzen in Formulierungen, die ein Entscheider ohne Fachvortrag versteht. Anschließend sammeln wir typische Einwände, prüfen öffentlich sichtbare Anlässe und legen fest, wann ein Gespräch nicht passt."
+      - paragraph [ref=e216]:
+        - text: Ein öffentlich sichtbares Signal ist dabei nur ein konkreter Anlass, etwa eine ausgeschriebene Stelle, ein neuer Standort oder eine Produktankündigung –
+        - strong [ref=e217]: Beispiele, nicht als abschließende Liste.
+        - text: „Sie haben letzte Woche zwei Stellen in Wien ausgeschrieben. Wie organisieren Sie die Ansprache für den neuen Markt?“ ist ein möglicher Einstieg. „Ihre neue Produktlinie ist öffentlich angekündigt. Wer verantwortet, dass die ersten Gespräche dazu entstehen?“ ist ein zweiter.
+      - paragraph [ref=e218]: Die genannten Ereignisse kommen ausschließlich aus öffentlich zugänglichen Quellen. Wir nennen im Gespräch nur den konkreten Anlass, nie ein länger beobachtetes Muster. So bleibt der Einstieg nachvollziehbar und wirkt nicht wie Überwachung.
+      - table [ref=e220]:
+        - rowgroup [ref=e221]:
+          - row [ref=e222]:
+            - columnheader "Öffentlich sichtbares Signal" [ref=e223]
+            - columnheader "Was es in der Regel bedeutet" [ref=e224]
+            - columnheader "Typisches Zeitfenster" [ref=e225]
+        - rowgroup [ref=e226]:
+          - row [ref=e227]:
+            - cell "Erste Vertriebsleitungsstelle ausgeschrieben" [ref=e228]
+            - cell "Vertrieb wird als eigene Aufgabe organisiert." [ref=e229]
+            - cell "1–3 Monate" [ref=e230]
+          - row [ref=e231]:
+            - cell "Stellen für einen neuen Ländermarkt" [ref=e232]
+            - cell "Der Markteintritt benötigt Gespräche und Struktur." [ref=e233]
+            - cell "2–8 Wochen" [ref=e234]
+          - row [ref=e235]:
+            - cell "Neuer Standort angekündigt" [ref=e236]
+            - cell "Prozesse und Verantwortlichkeiten werden neu verteilt." [ref=e237]
+            - cell "1–4 Monate" [ref=e238]
+          - row [ref=e239]:
+            - cell "Ausstellerprofil auf einer neuen Fachmesse" [ref=e240]
+            - cell "Ein Markt oder eine Zielgruppe wird aktiv bearbeitet." [ref=e241]
+            - cell "4 Wochen vor bis 6 Wochen nach der Messe" [ref=e242]
+          - row [ref=e243]:
+            - cell "Neue Produktseite mit festem Starttermin" [ref=e244]
+            - cell "Bis zum Termin muss eine Gesprächsbasis entstehen." [ref=e245]
+            - cell "bis zum Termin" [ref=e246]
+          - row [ref=e247]:
+            - cell "Neues Partnerprogramm veröffentlicht" [ref=e248]
+            - cell "Neue Vertriebskanäle oder Multiplikatoren werden gesucht." [ref=e249]
+            - cell "1–3 Monate" [ref=e250]
+          - row [ref=e251]:
+            - cell "Neue Geschäfts- oder Vertriebsleitung vorgestellt" [ref=e252]
+            - cell "Aufgaben und Prioritäten werden früh neu gesetzt." [ref=e253]
+            - cell "erste 90 Tage" [ref=e254]
+          - row [ref=e255]:
+            - cell "Öffentliche Ausschreibung mit Frist" [ref=e256]
+            - cell "Ein konkreter Bedarf hat einen definierten Zeitpunkt." [ref=e257]
+            - cell "bis zur Frist" [ref=e258]
+      - paragraph [ref=e259]: "Beispiele, keine abschließende Liste. Zusätzlich definieren wir Wunsch-Signale, wenn sie im Markt eines Kunden eine besondere Bedeutung haben: etwa ein auslaufender Rahmenvertrag, eine verlorene Zertifizierung, eine Normänderung oder der Wegfall einer Förderung."
+      - figure "Die Reihenfolge verhindert, dass ein Team mit einer beliebigen Liste und einem vagen Skript startet." [ref=e260]:
+        - 'img "Ablauf der Einarbeitung: Kickoff, Zielbild, Einwände, Anlasslogik, erste Termine" [ref=e262]':
+          - generic [ref=e270]:
+            - generic [ref=e271]: "1"
+            - generic [ref=e272]: "2"
+            - generic [ref=e273]: "3"
+            - generic [ref=e274]: "4"
+            - generic [ref=e275]: "5"
+            - generic [ref=e276]: Kickoff
+            - generic [ref=e277]: Zielbild
+            - generic [ref=e278]: Einwände
+            - generic [ref=e279]: Anlasslogik
+            - generic [ref=e280]: erste Termine
+            - generic [ref=e281]: Vor der Ansprache stehen Sprache, Zielkunden und ein überprüfbarer Gesprächsgrund.
+    - generic [ref=e284]:
+      - heading "Gesprächsführung mit Nachweis" [level=2] [ref=e285]
+      - paragraph [ref=e286]: "Die ersten 20 Sekunden eines Anrufs entscheiden nicht alles, aber sie entscheiden, ob ein Gespräch beginnen darf. Ein konkreter Anlass öffnet die Tür. Danach geht es um Sprachmuster, die Widerstand nicht erst erzeugen: eine Frage statt einer Behauptung, eine Pause statt eines Nachschiebens, eine Klärung statt eines Gegenarguments. Zuhören auf Stimmlage und Zögern, Einwände als Information behandeln und ohne Rabattreflex verhandeln – das ist lernbar und trainierbar."
+      - paragraph [ref=e287]: "Die Grundlagen sind belegt: NLP-Master (DVNLP), systemische und hypnosystemische Gesprächsführung, Mimikresonanz und Emotionserkennung (Eilert Akademie), Sozialpsychologie (University of Queensland), das Verhandlungssystem des NASHER Negotiation Institute sowie Trainings bei Tim Taxis und Umberto Saxer. Entscheidend ist nicht die Liste der Ausbildungen, sondern ihre Übersetzung in ein Gespräch, das die andere Seite ernst nimmt."
+      - paragraph [ref=e289]:
+        - strong [ref=e290]: "Was wir ausdrücklich nicht tun:"
+        - text: Wir bringen niemanden zu einer Entscheidung, die ihm nicht nützt. Psychologie sorgt dafür, dass ein gutes Angebot verstanden wird, nicht dafür, dass ein schlechtes durchgeht.
+      - paragraph [ref=e291]:
+        - text: Für ein Team, das neben externer Kapazität eigenes Können aufbauen will, verbinden wir diese Arbeit auch mit
+        - link "B2B-Vertriebstraining" [ref=e292] [cursor=pointer]:
+          - /url: /vertriebstraining-b2b/
+        - text: . Beim
+        - link "externen Vertrieb" [ref=e293] [cursor=pointer]:
+          - /url: /externer-vertrieb/
+        - text: "bleibt dieselbe Regel gültig: Die Argumentation muss zum Angebot passen, nicht zum Wunsch nach einer schnellen Zusage."
+    - generic [ref=e295]:
+      - heading "Die Methode steht geschrieben" [level=2] [ref=e296]
+      - generic [ref=e297]:
+        - figure [ref=e298]:
+          - img "Das Methodenhandbuch The Magic of Sales – Emotional Resonance von Florian Weippert" [ref=e300]
+        - generic [ref=e301]:
+          - paragraph [ref=e302]:
+            - text: "Gesprächsführung kann jeder behaupten. Wir können sie nachschlagen. 383 Seiten, entstanden 2021 und im November 2022 zuletzt überarbeitet:"
+            - emphasis [ref=e303]: The Magic of Sales – Emotional Resonance
+            - text: ist das Handbuch, aus dem unsere Gespräche kommen – vom ersten Satz über die Bedarfsfrage und den Umgang mit Einwänden bis zur Verhandlung.
+          - paragraph [ref=e304]:
+            - text: "Das Buch war nie im Handel. Es ist kein Verlagsprojekt, sondern der Versuch, knapp zwanzig Jahre Vertriebspraxis so zu ordnen, dass man sie weitergeben kann: an die Menschen, die bei uns telefonieren, und an die Teams, die wir trainieren. Deshalb steht darin auch ausführlich, was"
+            - emphasis [ref=e305]: nicht
+            - text: funktioniert.
+          - paragraph [ref=e306]: Florian Weippert · 383 Seiten · Fassung November 2022
+      - paragraph [ref=e308]:
+        - strong [ref=e309]: "Was das für Sie bedeutet:"
+        - text: Wenn Sie fragen, warum ein Anruf so und nicht anders geführt wurde, bekommen Sie von uns eine Begründung statt einer Meinung. Und wenn wir Ihr Team
+        - link "trainieren" [ref=e310] [cursor=pointer]:
+          - /url: /vertriebstraining-b2b/
+        - text: ", trainieren wir aus einem geordneten System, nicht aus einer Foliensammlung."
+    - generic [ref=e312]:
+      - heading "Was Sie behalten, wenn wir gehen" [level=2] [ref=e313]
+      - paragraph [ref=e314]: Die Leistung soll nicht mit dem letzten Anruf verschwinden. Sie behalten ein Sales Playbook, einen definierten Zielkundenkreis, eine Einwandbibliothek, einen aufgeräumten Nachfassprozess und ein geschultes eigenes Team. Florian Weippert war bei PayPal Mitgründer der Inside-Sales-Academy mit 25+ ausgebildeten Vertrieblern und 300+ persönlichen Coachings.
+      - paragraph [ref=e315]:
+        - text: Das unterscheidet die Arbeit von einer Lead-Fabrik, bei der nach Vertragsende nur ein Export und die Erinnerung an geführte Gespräche übrig bleiben. Wenn Sie eher eine Strukturfrage als zusätzliche Kapazität haben, ist
+        - link "Vertriebsberatung" [ref=e316] [cursor=pointer]:
+          - /url: /vertriebsberatung/
+        - text: oft der passendere Anfang als ein ausgelagertes Projekt.
+    - generic [ref=e318]:
+      - 'heading "Signal Based Selling: Das Ereignis bestimmt den Anruf" [level=2] [ref=e319]'
+      - paragraph [ref=e320]:
+        - text: Das heißt auf Deutsch anlassbezogene Ansprache. Den vollständigen Signalkatalog finden Sie auf der
+        - link "Startseite" [ref=e321] [cursor=pointer]:
+          - /url: /#signal-based-selling
+        - text: . Der Gründer ist Mitgründer von PrioX, dem System, das DEALMAKERS selbst gebaut hat und selbst nutzt, um diese Anlässe zu finden und zu bewerten. Wir empfehlen keine Methode, die wir nicht selbst betreiben.
+      - paragraph [ref=e322]:
+        - text: Das Signal ersetzt nicht das Gespräch. Es liefert den Anlass; die Person am Telefon macht daraus eine faire, konkrete Prüfung, ob ein Austausch sinnvoll ist. Das gilt auch für eine
+        - link "Kaltakquise-Agentur" [ref=e323] [cursor=pointer]:
+          - /url: /kaltakquise-agentur/
+        - text: ": Ohne Anlass bleibt der Zeitpunkt zufällig, mit Anlass bleibt die Gesprächsqualität dennoch entscheidend."
+    - generic [ref=e325]:
+      - heading "Der Blick des Käufers" [level=2] [ref=e326]
+      - paragraph [ref=e327]: "Aus der M&A-Arbeit bei S&B Strategy in Buy-and-Build und Commercial Due Diligence folgt ein zusätzlicher Maßstab: Eine Pipeline ist erst dann wertvoll, wenn sie einer Prüfung standhält. Sie muss wiederkehrend sein, dokumentiert und nicht an einer Person hängen. Für Inhaber mit Verkaufsabsicht in drei bis fünf Jahren ist das keine Vertriebsromantik, sondern Substanz."
+      - paragraph [ref=e328]:
+        - text: Genau deshalb dokumentieren wir Zielkundenkreis, Gesprächsgründe und Nachfassprozess. Auch bei
+        - link "Vertriebsoutsourcing" [ref=e329] [cursor=pointer]:
+          - /url: /vertriebsoutsourcing/
+        - text: sollte nachvollziehbar bleiben, was angesprochen wurde, was daraus folgte und wo das eigene Team wieder übernehmen kann.
+    - generic [ref=e331]:
+      - heading "Wofür wir die falsche Wahl sind" [level=2] [ref=e332]
+      - paragraph [ref=e333]: Wir passen nicht zu reinem Endkundengeschäft. Wir passen auch nicht, wenn Abschlüsse in Woche zwei erwartet werden, obwohl Angebot, Zielkunden und Gesprächsweg erst geklärt werden müssen. Ein Produkt ohne klaren Nutzen lässt sich nicht durch bessere Formulierungen retten. Und wer vor allem den billigsten Anbieter sucht, findet bei uns nicht das passende Modell.
+      - paragraph [ref=e334]:
+        - text: Das ist keine Abwertung anderer Wege. Es ist eine Grenze, die vor einem Projekt sichtbar sein muss. Für die Wahl zwischen Kapazität, Beratung und Training hilft der Überblick unter
+        - link "Leistungen" [ref=e335] [cursor=pointer]:
+          - /url: /leistungen/
+        - text: ; eine Zusammenarbeit sollte erst beginnen, wenn das Problem sauber benannt ist.
+    - generic [ref=e337]:
+      - heading "Ausbildungen im Überblick" [level=2] [ref=e338]
+      - list [ref=e339]:
+        - listitem [ref=e340]: MSc Business Management (Oxford Brookes, Auszeichnung als Jahrgangsbester 5 %)
+        - listitem [ref=e341]: MBAI „Master Business with AI“ (Hochschule Fresenius, 2025)
+        - listitem [ref=e342]: Sozialpsychologie (University of Queensland)
+        - listitem [ref=e343]: NLP-Master DVNLP und systemische Arbeit
+        - listitem [ref=e344]: Mimikresonanz (Eilert Akademie)
+        - listitem [ref=e345]: NASHER Negotiation Institute
+        - listitem [ref=e346]: Tim Taxis
+        - listitem [ref=e347]: Umberto Saxer
+        - listitem [ref=e348]: Digitales Storytelling (121WATT)
+    - generic [ref=e350]:
+      - heading "Häufige Fragen" [level=2] [ref=e351]
+      - generic [ref=e352]:
+        - group [ref=e353]:
+          - generic "Wer telefoniert am Ende wirklich für uns? +" [ref=e354] [cursor=pointer]
+        - group [ref=e355]:
+          - generic "Telefoniert der Gründer selbst? +" [ref=e356] [cursor=pointer]
+        - group [ref=e357]:
+          - generic "Was unterscheidet Sie von einem Callcenter? +" [ref=e358] [cursor=pointer]
+        - group [ref=e359]:
+          - generic "Sie nennen Zielerreichungswerte über 200 % – gilt das auch für unseren Umsatz? +" [ref=e360] [cursor=pointer]
+        - group [ref=e361]:
+          - generic "Woher stammen die Zahlen, die Sie auf dieser Seite nennen? +" [ref=e362] [cursor=pointer]
+        - group [ref=e363]:
+          - generic "Arbeiten Sie auch in Branchen, die Sie noch nicht kennen? +" [ref=e364] [cursor=pointer]
+        - group [ref=e365]:
+          - generic "Wie lange dauert die Einarbeitung, bis die ersten Gespräche laufen? +" [ref=e366] [cursor=pointer]
+        - group [ref=e367]:
+          - generic "Was tun Sie ausdrücklich nicht? +" [ref=e368] [cursor=pointer]
+        - group [ref=e369]:
+          - generic "Was passiert, wenn die vereinbarten Ziele nicht erreicht werden? +" [ref=e370] [cursor=pointer]
+        - group [ref=e371]:
+          - generic "Wie fangen wir an? +" [ref=e372] [cursor=pointer]
+    - generic [ref=e375]:
+      - heading "30 Minuten reichen für eine ehrliche Prüfung." [level=2] [ref=e376]
+      - paragraph [ref=e377]: Wir klären Angebot, Zielkunden und die Frage, ob wir die passende Wahl sind. Telefon, E-Mail und Kalender stehen Ihnen direkt offen.
+      - generic [ref=e378]:
+        - link "+49 160 966 787 17" [ref=e379] [cursor=pointer]:
+          - /url: tel:+4916096678717
+        - link "hello@deal-makers.de" [ref=e380] [cursor=pointer]:
+          - /url: mailto:hello@deal-makers.de
+        - link "Termin im Kalender wählen" [ref=e381] [cursor=pointer]:
+          - /url: https://calendar.app.google/CUn3btn6t7fnfRjt8
+  - contentinfo [ref=e382]:
+    - generic [ref=e383]:
+      - generic [ref=e384]:
+        - generic [ref=e385]:
+          - link "DEALMAKERS" [ref=e386] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e387]: B2B-Vertrieb aus Berlin und Unterfranken. Seit 2021.
+          - paragraph [ref=e388]: Am Postbahnhof 23, 10243 Berlin Kissinger Straße 19, 97714 Oerlenbach
+          - paragraph [ref=e389]:
+            - link "+49 160 966 787 17" [ref=e390] [cursor=pointer]:
+              - /url: tel:+4916096678717
+            - link "hello@deal-makers.de" [ref=e391] [cursor=pointer]:
+              - /url: mailto:hello@deal-makers.de
+        - generic [ref=e392]:
+          - heading "Vertrieb auslagern" [level=3] [ref=e393]
+          - list [ref=e394]:
+            - listitem [ref=e395]:
+              - link "Vertriebsoutsourcing" [ref=e396] [cursor=pointer]:
+                - /url: /vertriebsoutsourcing/
+            - listitem [ref=e397]:
+              - link "Vertrieb auslagern" [ref=e398] [cursor=pointer]:
+                - /url: /vertrieb-auslagern/
+            - listitem [ref=e399]:
+              - link "Externer Vertrieb" [ref=e400] [cursor=pointer]:
+                - /url: /externer-vertrieb/
+            - listitem [ref=e401]:
+              - link "Kosten & Modelle" [ref=e402] [cursor=pointer]:
+                - /url: /vertriebsoutsourcing-kosten/
+        - generic [ref=e403]:
+          - heading "Neukunden gewinnen" [level=3] [ref=e404]
+          - list [ref=e405]:
+            - listitem [ref=e406]:
+              - link "Kaltakquise-Agentur" [ref=e407] [cursor=pointer]:
+                - /url: /kaltakquise-agentur/
+            - listitem [ref=e408]:
+              - link "Telefonakquise-Agentur" [ref=e409] [cursor=pointer]:
+                - /url: /telefonakquise-agentur/
+            - listitem [ref=e410]:
+              - link "Neukundenakquise" [ref=e411] [cursor=pointer]:
+                - /url: /neukundenakquise-agentur/
+            - listitem [ref=e412]:
+              - link "Leadgenerierung" [ref=e413] [cursor=pointer]:
+                - /url: /leadgenerierung-agentur/
+            - listitem [ref=e414]:
+              - link "B2B-Vertriebsagentur" [ref=e415] [cursor=pointer]:
+                - /url: /b2b-vertriebsagentur/
+        - generic [ref=e416]:
+          - heading "Beratung & Training" [level=3] [ref=e417]
+          - list [ref=e418]:
+            - listitem [ref=e419]:
+              - link "Vertriebsberatung" [ref=e420] [cursor=pointer]:
+                - /url: /vertriebsberatung/
+            - listitem [ref=e421]:
+              - link "B2B Vertriebstraining" [ref=e422] [cursor=pointer]:
+                - /url: /vertriebstraining-b2b/
+            - listitem [ref=e423]:
+              - link "Vertriebscoaching" [ref=e424] [cursor=pointer]:
+                - /url: /vertriebscoaching/
+            - listitem [ref=e425]:
+              - link "Alle Leistungen" [ref=e426] [cursor=pointer]:
+                - /url: /leistungen/
+            - listitem [ref=e427]:
+              - link "Kontakt" [ref=e428] [cursor=pointer]:
+                - /url: /kontakt/
+        - generic [ref=e429]:
+          - heading "Ratgeber" [level=3] [ref=e430]
+          - list [ref=e431]:
+            - listitem [ref=e432]:
+              - link "Alle Ratgeber" [ref=e433] [cursor=pointer]:
+                - /url: /ratgeber/
+            - listitem [ref=e434]:
+              - link "Kaltakquise" [ref=e435] [cursor=pointer]:
+                - /url: /kaltakquise/
+            - listitem [ref=e436]:
+              - link "Telefonakquise" [ref=e437] [cursor=pointer]:
+                - /url: /telefonakquise/
+            - listitem [ref=e438]:
+              - link "Neukundengewinnung" [ref=e439] [cursor=pointer]:
+                - /url: /neukundengewinnung/
+            - listitem [ref=e440]:
+              - 'link "Akquise: Definition" [ref=e441] [cursor=pointer]':
+                - /url: /akquise/
+            - listitem [ref=e442]:
+              - link "B2B-Vertrieb" [ref=e443] [cursor=pointer]:
+                - /url: /b2b-vertrieb/
+      - generic [ref=e444]:
+        - generic [ref=e445]: © 2026 DEALMAKERS – Digitale Vertriebsagentur
+        - generic [ref=e446]:
+          - link "Impressum" [ref=e447] [cursor=pointer]:
+            - /url: /impressum/
+          - text: ·
+          - link "Datenschutz" [ref=e448] [cursor=pointer]:
+            - /url: /datenschutz/
+          - text: ·
+          - button "Cookie-Einstellungen" [ref=e449] [cursor=pointer]
+          - text: ·
+          - link "PrioX" [ref=e450] [cursor=pointer]:
+            - /url: https://priox.ai/
+  - dialog "Hinweis zu Cookies und Messung" [ref=e451]:
+    - generic [ref=e452]:
+      - paragraph [ref=e453]:
+        - strong [ref=e454]: Kurz zu Cookies.
+        - text: Diese Website kommt ohne Werbe-Netzwerke, ohne Tracking-Dienste und ohne Profilbildung aus – technisch notwendig ist hier nichts weiter als Ihre Entscheidung auf dieser Leiste, die wir lokal in Ihrem Browser merken. Falls wir später eine einfache Reichweitenmessung einsetzen, gilt dafür, was Sie hier auswählen. Details in der
+        - link "Datenschutzerklärung" [ref=e455] [cursor=pointer]:
+          - /url: /datenschutz/
+        - text: .
+      - generic [ref=e456]:
+        - button "Nur notwendige" [ref=e457] [cursor=pointer]
+        - button "Einverstanden" [ref=e458] [cursor=pointer]
