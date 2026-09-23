@@ -520,12 +520,33 @@ h1, h2 { position: relative; }
 .buch__meta { margin-top: 1.2rem; font-family: var(--font-mono); font-size: .72rem;
               letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
               line-height: 2; }
-.buch--slim { grid-template-columns: 172px minmax(0,1fr); gap: 20px;
+.buch--slim { grid-template-columns: 250px minmax(0,1fr); gap: 32px;
               align-items: center; }
+
+/* Traegerplatte fuer den Buchblock auf der Startseite. Auf dunklem Grund ging
+   das Mockup unter - die Platte hebt es mit warmem Schein, feiner Goldkante
+   und einem eigenen Schlagschatten am Buch heraus. */
+.buch-plate { position: relative; margin-left: auto; margin-right: auto;
+              padding: clamp(1.5rem, 3vw, 2.4rem) clamp(1.5rem, 3vw, 2.6rem);
+              border: 1px solid rgba(201,186,119,.3); border-radius: var(--radius);
+              background:
+                radial-gradient(120% 150% at 16% 0%, rgba(201,186,119,.14), rgba(201,186,119,0) 62%),
+                linear-gradient(180deg, var(--surface-2), var(--surface));
+              box-shadow: 0 24px 60px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.05); }
+.buch-plate::before { content: ""; position: absolute; left: -1px; top: 12%; bottom: 12%;
+              width: 2px; background: linear-gradient(180deg,
+                rgba(201,186,119,0), var(--gold), rgba(201,186,119,0)); }
+.buch-plate .buch { margin: 0; }
+.buch-plate .buch img { filter: drop-shadow(0 20px 40px rgba(0,0,0,.65))
+                                drop-shadow(0 0 26px rgba(201,186,119,.18)); }
+.buch-plate__label { color: var(--gold); margin-bottom: 1.2rem; }
+.buch-plate .buch__meta { margin-top: .9rem; }
 @media (max-width: 720px) {
   .buch { grid-template-columns: 1fr; gap: 20px; }
   .buch figure { max-width: 260px; }
   .buch--slim { grid-template-columns: 1fr; }
+  .buch-plate { padding: 1.4rem 1.2rem; }
+  .buch-plate .buch figure { margin: 0 auto; }
 }
 
 /* Wechselndes Goldwort in der Startseiten-Überschrift.
