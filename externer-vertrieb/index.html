@@ -252,10 +252,12 @@
 
 <main id="main">
   <section class="hero">
-    <div class="wrap hero-grid">
+  <canvas class="dm-dots" data-dm-dots aria-hidden="true"></canvas>
+  <div class="dm-ghost" data-dm-ghost aria-hidden="true">DEALMAKERS</div>
+    <div class="wrap" style="max-width:900px" data-dm-hero-inner>
       <div>
         <p class="eyebrow" data-dm-scramble>B2B-Vertrieb flexibel ergänzen</p>
-        <h1>Externer Vertrieb: Welches Modell wirklich zu Ihnen passt</h1>
+        <h1>Externer Vertrieb: Welches Modell wirklich zu Ihnen passt<span class="dm-sweep" data-dm-sweep aria-hidden="true"></span></h1>
         <p class="lead">Externer Vertrieb bedeutet, den Verkauf ganz oder teilweise an Dritte zu geben – an Handelsvertreter, Freelancer, eine Vertriebsagentur, ein Callcenter oder einen Interim-Manager. Die Modelle unterscheiden sich stark in Kontrolle, Kosten, Risiko und darin, wem die Kundenbeziehung am Ende gehört.</p>
         <p>Externer Vertrieb ist kein einzelnes Angebot, sondern fünf sehr unterschiedliche Modelle. Die richtige Wahl entscheidet darüber, wer verkauft, wie viel Kontrolle Sie behalten, wem die Kundenbeziehung gehört und welches Risiko Sie tragen. Für komplexe B2B-Angebote ist die Rollenklärung wichtiger als eine schnelle Preiszusage.</p>
         <div class="btn-row">
@@ -263,7 +265,69 @@
           <a class="btn btn-ghost" href="/vertrieb-auslagern/">Entscheidung vorbereiten</a>
         </div>
       </div>
-      <figure class="fig" data-dm-reveal style="margin:0">
+
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div style="max-width:760px">
+        <h2 id="was-externer-vertrieb-bedeutet" data-dm-reveal="head">Was externer Vertrieb bedeutet – und was nicht: Signal Based Selling</h2>
+        <p>Vertrieb extern zu organisieren heißt nicht automatisch, einen Verkäufer „von außen“ einzukaufen. Ein Handelsvertreter vermittelt Geschäfte selbstständig, ein Reseller verkauft auf eigene Rechnung, ein freier Vertriebsmitarbeiter liefert Kapazität, eine Agentur übernimmt einen abgestimmten Prozess und eine Interim-Vertriebsleitung führt zeitweise Ihr Team. Allen gemeinsam ist nur: Die Leistung liegt nicht auf Ihrer Lohnliste.</p>
+        <p><a href="/signal-based-selling/">Signal Based Selling</a> heißt: Nicht die Liste bestimmt, wen man anruft, sondern das Ereignis. Die deutsche Entsprechung ist anlassbezogene Ansprache. Vor einem Erstkontakt prüfen wir deshalb, was beim Zielunternehmen öffentlich passiert ist: etwa eine neue Ausschreibung, ein Standort, eine Produktlinie oder ein Führungswechsel. Das sind Beispiele, nicht als abschließende Liste zu verstehen.</p>
+        <p>Das ist etwas anderes als ein Callcenter mit festem Stundenkontingent. Dort lautet die operative Frage oft: Wie viele Wählversuche wurden gemacht? Im B2B sollte sie lauten: Warum ist dieser Ansprechpartner heute relevant? DEALMAKERS setzt dafür selbst entwickelte Software ein: <a href="https://priox.ai/lead-scoring" rel="noopener">PrioX schärft bestehendes Lead-Scoring</a>, ohne CRM oder vorhandene Bewertung zu ersetzen. Fit bleibt die langfristige Passung; ein frischer Anlass entscheidet über die Reihenfolge. Für die Spitze wird der erste Satz von Hand geprüft.</p>
+      </div>
+      <nav class="toc" aria-label="Inhaltsverzeichnis">
+        <p style="font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:#96a0bb;font-weight:700;margin-bottom:.8rem">Inhalt</p>
+        <ol>
+          <li><a href="#was-externer-vertrieb-bedeutet">Bedeutung und Begriffe</a></li>
+          <li><a href="#modelle-im-vergleich">Fünf Modelle</a></li>
+          <li><a href="#handelsvertreter">Handelsvertreter</a></li>
+          <li><a href="#freier-vertriebsmitarbeiter">Freier Vertriebsmitarbeiter</a></li>
+          <li><a href="#vertriebsagentur">Vertriebsagentur</a></li>
+          <li><a href="#kosten">Kosten</a></li>
+          <li><a href="#auswahlfragen">Sieben Auswahlfragen</a></li>
+          <li><a href="#typische-fehler">Typische Fehler</a></li>
+          <li><a href="#faq-fragen">FAQ</a></li>
+          <li><a href="#kontaktaufnahme">Kontakt</a></li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-soft">
+    <div class="wrap">
+      <h2 id="modelle-im-vergleich" data-dm-reveal="head">Die fünf Modelle im Vergleich</h2>
+      <p style="max-width:760px">Die Vergleichsfrage „Wer ruft eigentlich an?“ gehört auf den Tisch. Bei einem Callcenter oder einer einzeln gebuchten Stundenkraft kann die Person wechseln und arbeitet oft nach enger Vorgabe. Beim Handelsvertreter bringt der Inhaber meist sein eigenes Netzwerk ein. Bei DEALMAKERS telefonieren Menschen mit jahrelanger eigener B2B-Erfahrung, die ein Gespräch inhaltlich führen können. Und sie rufen mit Anlass an, nicht mit einer gekauften Liste.</p>
+      <div class="table-scroll" data-dm-reveal>
+        <table>
+          <thead><tr><th scope="col">Modell</th><th scope="col">Bezahlung</th><th scope="col">Bindung</th><th scope="col">Kundenbeziehung gehört wem?</th><th scope="col">Risiko</th><th scope="col">Wann sinnvoll</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Handelsvertreter</strong></td><td>meist Provision</td><td>laufende Vertretung</td><td>Vertrag meist beim Unternehmer; Vertreter wirbt</td><td>Abhängigkeit, mögliche Ansprüche am Ende</td><td>klare Produkte, Region oder definierte Kundengruppe</td></tr>
+            <tr><td><strong>Freier Vertriebler</strong></td><td>Tagessatz, Retainer oder Provision</td><td>flexibel vereinbar</td><td>vertraglich klären</td><td>Steuerung und Scheinselbstständigkeit</td><td>punktuelle Kapazität oder vorhandener Prozess</td></tr>
+            <tr><td><strong>Vertriebsagentur</strong></td><td>Grundbetrag, oft Erfolgsanteil</td><td>Projekt oder Retainer</td><td>Unternehmen; Daten- und Übergabeprozess schriftlich</td><td>schwache Briefings oder falsche Übergabe</td><td>Neukundenprozess soll aufgebaut und geführt werden</td></tr>
+            <tr><td><strong>Interim-Vertriebsleiter</strong></td><td>Tagessatz oder Monatsmandat</td><td>befristete Führungsrolle</td><td>Unternehmen</td><td>Wissen bleibt nicht automatisch</td><td>Führung, Struktur, Forecast und Teamsteuerung fehlen</td></tr>
+            <tr><td><strong>Vertriebspartner / Reseller</strong></td><td>Marge zwischen Ein- und Verkauf</td><td>Partnervertrag</td><td>häufig Partner zum Endkunden</td><td>weniger Preiskontrolle und Kundenzugang</td><td>Marktzugang und Lieferung aus einer Hand wichtiger sind</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="fig" data-dm-reveal>
+        <div class="fig-box">
+          <svg viewBox="0 0 560 260" role="img" aria-label="Diagramm zur Kundenbeziehung bei Reseller, Handelsvertreter, Vertriebsagentur und Interim-Vertriebsleitung">
+            <title>Die Nähe zur Kundenbeziehung unterscheidet die Vertriebsmodelle</title>
+            <g font-family="sans-serif">
+              <text x="18" y="28" font-size="12" fill="#96a0bb">ZUGRIFF AUF DIE KUNDENBEZIEHUNG</text>
+              <g font-size="12.5" fill="#cdd4e6"><text x="18" y="72">Reseller</text><text x="18" y="112">Handelsvertreter</text><text x="18" y="152">Vertriebsagentur</text><text x="18" y="192">Interim-Leitung</text></g>
+              <g stroke="#222a4d" stroke-width="16"><line x1="170" y1="66" x2="510" y2="66"/><line x1="170" y1="106" x2="510" y2="106"/><line x1="170" y1="146" x2="510" y2="146"/><line x1="170" y1="186" x2="510" y2="186"/></g>
+              <g stroke="#c9ba77" stroke-width="16"><line x1="170" y1="66" x2="270" y2="66"/><line x1="170" y1="106" x2="350" y2="106"/><line x1="170" y1="146" x2="440" y2="146"/><line x1="170" y1="186" x2="505" y2="186"/></g>
+              <g font-size="11.5" fill="#96a0bb"><text x="170" y="232">überwiegend beim Partner</text><text x="510" y="232" text-anchor="end">überwiegend im eigenen Haus</text></g>
+            </g>
+          </svg>
+        </div>
+        <figcaption>Je mehr die Kundenbeziehung im eigenen Haus bleiben soll, desto präziser müssen CRM-Zugriff, Übergabe und Außenauftritt vereinbart sein.</figcaption>
+      </figure>
+    
+      <figure class="fig" style="margin:0">
         <div class="fig-box" style="background:#0c1230;border-color:rgba(255,255,255,.14)">
           <svg viewBox="0 0 560 280" role="img" aria-label="Fünf Modelle des externen Vertriebs auf einer Achse von ganz extern bis ganz intern">
             <title>Die fünf Modelle liegen unterschiedlich nah am eigenen Unternehmen</title>
@@ -295,67 +359,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="was-externer-vertrieb-bedeutet">Was externer Vertrieb bedeutet – und was nicht: Signal Based Selling</h2>
-        <p>Vertrieb extern zu organisieren heißt nicht automatisch, einen Verkäufer „von außen“ einzukaufen. Ein Handelsvertreter vermittelt Geschäfte selbstständig, ein Reseller verkauft auf eigene Rechnung, ein freier Vertriebsmitarbeiter liefert Kapazität, eine Agentur übernimmt einen abgestimmten Prozess und eine Interim-Vertriebsleitung führt zeitweise Ihr Team. Allen gemeinsam ist nur: Die Leistung liegt nicht auf Ihrer Lohnliste.</p>
-        <p><a href="/signal-based-selling/">Signal Based Selling</a> heißt: Nicht die Liste bestimmt, wen man anruft, sondern das Ereignis. Die deutsche Entsprechung ist anlassbezogene Ansprache. Vor einem Erstkontakt prüfen wir deshalb, was beim Zielunternehmen öffentlich passiert ist: etwa eine neue Ausschreibung, ein Standort, eine Produktlinie oder ein Führungswechsel. Das sind Beispiele, nicht als abschließende Liste zu verstehen.</p>
-        <p>Das ist etwas anderes als ein Callcenter mit festem Stundenkontingent. Dort lautet die operative Frage oft: Wie viele Wählversuche wurden gemacht? Im B2B sollte sie lauten: Warum ist dieser Ansprechpartner heute relevant? DEALMAKERS setzt dafür selbst entwickelte Software ein: <a href="https://priox.ai/lead-scoring" rel="noopener">PrioX schärft bestehendes Lead-Scoring</a>, ohne CRM oder vorhandene Bewertung zu ersetzen. Fit bleibt die langfristige Passung; ein frischer Anlass entscheidet über die Reihenfolge. Für die Spitze wird der erste Satz von Hand geprüft.</p>
-      </div>
-      <nav class="toc" aria-label="Inhaltsverzeichnis">
-        <p style="font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:#96a0bb;font-weight:700;margin-bottom:.8rem">Inhalt</p>
-        <ol>
-          <li><a href="#was-externer-vertrieb-bedeutet">Bedeutung und Begriffe</a></li>
-          <li><a href="#modelle-im-vergleich">Fünf Modelle</a></li>
-          <li><a href="#handelsvertreter">Handelsvertreter</a></li>
-          <li><a href="#freier-vertriebsmitarbeiter">Freier Vertriebsmitarbeiter</a></li>
-          <li><a href="#vertriebsagentur">Vertriebsagentur</a></li>
-          <li><a href="#kosten">Kosten</a></li>
-          <li><a href="#auswahlfragen">Sieben Auswahlfragen</a></li>
-          <li><a href="#typische-fehler">Typische Fehler</a></li>
-          <li><a href="#faq-fragen">FAQ</a></li>
-          <li><a href="#kontaktaufnahme">Kontakt</a></li>
-        </ol>
-      </nav>
-    </div>
-  </section>
-
-  <section class="bg-soft">
-    <div class="wrap">
-      <h2 id="modelle-im-vergleich">Die fünf Modelle im Vergleich</h2>
-      <p style="max-width:760px">Die Vergleichsfrage „Wer ruft eigentlich an?“ gehört auf den Tisch. Bei einem Callcenter oder einer einzeln gebuchten Stundenkraft kann die Person wechseln und arbeitet oft nach enger Vorgabe. Beim Handelsvertreter bringt der Inhaber meist sein eigenes Netzwerk ein. Bei DEALMAKERS telefonieren Menschen mit jahrelanger eigener B2B-Erfahrung, die ein Gespräch inhaltlich führen können. Und sie rufen mit Anlass an, nicht mit einer gekauften Liste.</p>
-      <div class="table-scroll" data-dm-reveal>
-        <table>
-          <thead><tr><th scope="col">Modell</th><th scope="col">Bezahlung</th><th scope="col">Bindung</th><th scope="col">Kundenbeziehung gehört wem?</th><th scope="col">Risiko</th><th scope="col">Wann sinnvoll</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Handelsvertreter</strong></td><td>meist Provision</td><td>laufende Vertretung</td><td>Vertrag meist beim Unternehmer; Vertreter wirbt</td><td>Abhängigkeit, mögliche Ansprüche am Ende</td><td>klare Produkte, Region oder definierte Kundengruppe</td></tr>
-            <tr><td><strong>Freier Vertriebler</strong></td><td>Tagessatz, Retainer oder Provision</td><td>flexibel vereinbar</td><td>vertraglich klären</td><td>Steuerung und Scheinselbstständigkeit</td><td>punktuelle Kapazität oder vorhandener Prozess</td></tr>
-            <tr><td><strong>Vertriebsagentur</strong></td><td>Grundbetrag, oft Erfolgsanteil</td><td>Projekt oder Retainer</td><td>Unternehmen; Daten- und Übergabeprozess schriftlich</td><td>schwache Briefings oder falsche Übergabe</td><td>Neukundenprozess soll aufgebaut und geführt werden</td></tr>
-            <tr><td><strong>Interim-Vertriebsleiter</strong></td><td>Tagessatz oder Monatsmandat</td><td>befristete Führungsrolle</td><td>Unternehmen</td><td>Wissen bleibt nicht automatisch</td><td>Führung, Struktur, Forecast und Teamsteuerung fehlen</td></tr>
-            <tr><td><strong>Vertriebspartner / Reseller</strong></td><td>Marge zwischen Ein- und Verkauf</td><td>Partnervertrag</td><td>häufig Partner zum Endkunden</td><td>weniger Preiskontrolle und Kundenzugang</td><td>Marktzugang und Lieferung aus einer Hand wichtiger sind</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <figure class="fig" data-dm-reveal>
-        <div class="fig-box">
-          <svg viewBox="0 0 560 260" role="img" aria-label="Diagramm zur Kundenbeziehung bei Reseller, Handelsvertreter, Vertriebsagentur und Interim-Vertriebsleitung">
-            <title>Die Nähe zur Kundenbeziehung unterscheidet die Vertriebsmodelle</title>
-            <g font-family="sans-serif">
-              <text x="18" y="28" font-size="12" fill="#96a0bb">ZUGRIFF AUF DIE KUNDENBEZIEHUNG</text>
-              <g font-size="12.5" fill="#cdd4e6"><text x="18" y="72">Reseller</text><text x="18" y="112">Handelsvertreter</text><text x="18" y="152">Vertriebsagentur</text><text x="18" y="192">Interim-Leitung</text></g>
-              <g stroke="#222a4d" stroke-width="16"><line x1="170" y1="66" x2="510" y2="66"/><line x1="170" y1="106" x2="510" y2="106"/><line x1="170" y1="146" x2="510" y2="146"/><line x1="170" y1="186" x2="510" y2="186"/></g>
-              <g stroke="#c9ba77" stroke-width="16"><line x1="170" y1="66" x2="270" y2="66"/><line x1="170" y1="106" x2="350" y2="106"/><line x1="170" y1="146" x2="440" y2="146"/><line x1="170" y1="186" x2="505" y2="186"/></g>
-              <g font-size="11.5" fill="#96a0bb"><text x="170" y="232">überwiegend beim Partner</text><text x="510" y="232" text-anchor="end">überwiegend im eigenen Haus</text></g>
-            </g>
-          </svg>
-        </div>
-        <figcaption>Je mehr die Kundenbeziehung im eigenen Haus bleiben soll, desto präziser müssen CRM-Zugriff, Übergabe und Außenauftritt vereinbart sein.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div style="max-width:760px">
-        <h2 id="handelsvertreter">Handelsvertreter: das Wichtigste zu § 84 HGB</h2>
+        <h2 id="handelsvertreter" data-dm-reveal="head">Handelsvertreter: das Wichtigste zu § 84 HGB</h2>
         <p>Ein Handelsvertreter ist nach § 84 HGB ein selbstständiger Gewerbetreibender, der ständig damit betraut ist, für einen Unternehmer Geschäfte zu vermitteln oder in dessen Namen abzuschließen. Selbstständig ist, wer seine Tätigkeit und Arbeitszeit im Wesentlichen frei gestalten kann. Das passt nicht zu einer Rolle, die täglich wie ein interner Mitarbeiter eingetaktet wird.</p>
         <p>Die Vergütung ist typischerweise Provision. Das verschiebt das Kostenrisiko, ersetzt aber keine Führung: Produkt, Gebiet, Kundenschutz, Provisionsauslöser, Storno, Dokumentation und Bearbeitung von Bestandskunden gehören schriftlich geregelt. Ein Vertreter kann Zugang zu einem Markt bringen; er baut jedoch nicht automatisch Ihren Prozess, Ihre Datenqualität oder Ihre interne Abschlussfähigkeit auf.</p>
         <p>Nach Vertragsende kann unter den Voraussetzungen des § 89b HGB ein angemessener Ausgleichsanspruch entstehen, wenn der Unternehmer aus den neu geworbenen Kunden weiter erhebliche Vorteile hat und die Zahlung der Billigkeit entspricht. Die Details und Grenzen sind einzelfallabhängig. Das ist Orientierung, keine Rechtsberatung; vor Vertragsabschluss oder Kündigung gehört der konkrete Fall in fachkundige Prüfung.</p>
@@ -366,7 +370,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="freier-vertriebsmitarbeiter">Freier Vertriebsmitarbeiter: Kapazität mit klaren Grenzen</h2>
+        <h2 id="freier-vertriebsmitarbeiter" data-dm-reveal="head">Freier Vertriebsmitarbeiter: Kapazität mit klaren Grenzen</h2>
         <p>Ein freier Vertriebsmitarbeiter kann sinnvoll sein, wenn Ihre Zielgruppe, Argumentation und Übergabe bereits stehen und Ihnen schlicht Kapazität fehlt. Er arbeitet häufig gegen Tagessatz, Monatskontingent oder Erfolgskomponente. Der Vorteil: Sie können gezielt Fachwissen einkaufen. Der Nachteil: Eine einzelne Person ist kein Vertriebssystem und kein Ersatz für Priorisierung oder Führung.</p>
         <p>Scheinselbstständigkeit ist dabei ein echtes Risiko. Nicht das Etikett im Vertrag entscheidet, sondern die tatsächliche Zusammenarbeit. Wer dauerhaft nur für einen Auftraggeber arbeitet, feste Arbeitszeiten übernimmt, eng in Weisungen und Organisation eingebunden ist, kann sozialversicherungsrechtlich anders beurteilt werden als vorgesehen. Auch diese Hinweise sind keine Rechtsberatung; lassen Sie Gestaltung und Praxis bei Grenzfällen prüfen.</p>
       </div>
@@ -376,7 +380,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="vertriebsagentur">Vertriebsagentur: Prozess statt Einzelperson</h2>
+        <h2 id="vertriebsagentur" data-dm-reveal="head">Vertriebsagentur: Prozess statt Einzelperson</h2>
         <p>Eine Vertriebsagentur bündelt Recherche, Ansprache, Qualifizierung, Dokumentation und Übergabe. Sie ist sinnvoll, wenn Sie nicht nur jemanden zum Telefonieren suchen, sondern einen reproduzierbaren Weg zu neuen Gesprächen. Wie das Agenturmodell im Detail funktioniert, beschreibt unsere Seite zum <a href="/vertriebsoutsourcing/">Vertriebsoutsourcing</a>; für die grundsätzliche Make-or-buy-Entscheidung hilft <a href="/vertrieb-auslagern/">Vertrieb auslagern</a>. Für die konkrete Erstansprache lesen Sie auch, worauf es bei einer <a href="/kaltakquise-agentur/">Kaltakquise-Agentur</a> und einer <a href="/b2b-vertriebsagentur/">B2B-Vertriebsagentur</a> ankommt.</p>
         <p>Eine Agentur kann qualifizierte Erstgespräche schaffen und auf Wunsch bis zum Abschluss weiterführen, aber sie ersetzt kein scharfes Angebot und keinen belastbaren Preisrahmen. Sie sollte nicht behaupten, beliebige Zielgruppen mit einem Skript zu öffnen. Bei uns beginnt die Arbeit mit einem Anlass aus öffentlichen Quellen und einer klaren Übergabe. Der Anrufer nennt nur das konkrete, sichtbare Ereignis, nie ein vermeintliches Verhaltensmuster über Monate.</p>
         <p>Zum Beispiel: „Sie haben seit letzter Woche zwei Vertriebsstellen für Wien ausgeschrieben. Wer entscheidet bei Ihnen, ob der Markteintritt zusätzlich externe Akquise-Kapazität braucht?“ Oder: „Für den neuen Standort in Linz suchen Sie aktuell eine Betriebsleitung. Ist die Gewinnung neuer Gewerbekunden in der Aufbauphase bereits verteilt?“ Beide Sätze bleiben bei dem, was öffentlich zu sehen ist.</p>
@@ -405,7 +409,7 @@
 
   <section class="bg-soft">
     <div class="wrap">
-      <h2 id="kosten">Kosten der Modelle im Vergleich</h2>
+      <h2 id="kosten" data-dm-reveal="head">Kosten der Modelle im Vergleich</h2>
       <p style="max-width:760px">Eine fixe Zahl ohne Angebot, Zielgruppe und Verkaufszyklus wäre irreführend. Vergleichen Sie daher Kostenarten: Was zahlen Sie sicher, was erst bei Ergebnis, was bleibt intern und welche Folgekosten entstehen nach einer Übergabe? Eine ausführlichere Einordnung finden Sie bei <a href="/vertriebsoutsourcing-kosten/">Kosten für Vertriebsoutsourcing</a>.</p>
       <div class="table-scroll" data-dm-reveal>
         <table>
@@ -440,7 +444,7 @@
 
   <section>
     <div class="wrap">
-      <h2 id="auswahlfragen">Die sieben Fragen vor der Auswahl</h2>
+      <h2 id="auswahlfragen" data-dm-reveal="head">Die sieben Fragen vor der Auswahl</h2>
       <ol style="max-width:760px">
         <li><strong>Welche Aufgabe fehlt wirklich?</strong> Kapazität, Führung, Marktzugang oder ein kompletter Akquiseprozess sind vier verschiedene Probleme.</li>
         <li><strong>Wer führt das Gespräch nach dem Erstkontakt?</strong> Wenn intern niemand Zeit für Angebote hat, löst mehr Terminierung nichts.</li>
@@ -474,7 +478,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="typische-fehler">Typische Fehler beim Vertrieb extern</h2>
+        <h2 id="typische-fehler" data-dm-reveal="head">Typische Fehler beim Vertrieb extern</h2>
         <h3>Den Preis vor der Aufgabe vergleichen</h3>
         <p>„Was kostet ein externer Vertriebsmitarbeiter?“ ist sinnvoll, aber erst nach der Rollenklärung. Ein günstiger Tagessatz kann teuer werden, wenn intern täglich Material, Listen und Entscheidungen fehlen. Eine hohe Provision kann sinnvoll sein, wenn sie nur auf sauber definierte Geschäfte anfällt. Vergleichen Sie immer dieselbe Aufgabe.</p>
         <h3>Kontakte ohne Übergabe erzeugen</h3>
@@ -502,7 +506,7 @@
 
   <section id="faq">
     <div class="wrap narrow">
-      <h2 id="faq-fragen">Häufige Fragen zum externen Vertrieb</h2>
+      <h2 id="faq-fragen" data-dm-reveal="head">Häufige Fragen zum externen Vertrieb</h2>
       <div class="faq">
         <details><summary>Was ist externer Vertrieb?</summary><p>Externer Vertrieb bedeutet, dass ein selbstständiger oder beauftragter Dritter Vertriebsaufgaben übernimmt. Das kann die Vermittlung von Geschäften, die Ansprache neuer Kunden, die Terminierung oder die Führung eines Vertriebsteams sein. Entscheidend ist der Vertrag: Er regelt Leistung, Vergütung, Laufzeit, Datenzugriff und ob der Dritte im eigenen oder im Namen des Auftraggebers handelt.</p></details>
         <details><summary>Was kostet ein externer Vertriebsmitarbeiter?</summary><p>Die Kosten hängen vom Modell ab. Ein Handelsvertreter arbeitet oft provisionsbasiert, ein Freelancer mit Tagessatz oder Monatskontingent, eine Vertriebsagentur mit monatlichem Grundbetrag und gegebenenfalls Erfolgsanteil. Vergleichen Sie nicht nur den Preis pro Monat, sondern auch Steuerung, Einarbeitung, Ausfallrisiko und die Kosten eines schlechten oder unbesetzten Vertriebsplatzes.</p></details>
@@ -523,7 +527,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div class="cta">
-        <h2 id="kontaktaufnahme">Klärung vor dem ersten Auftrag</h2>
+        <h2 id="kontaktaufnahme" data-dm-reveal="head">Klärung vor dem ersten Auftrag</h2>
         <p class="lead" style="color:#cdd4e6;max-width:620px;margin:0 auto">Wir besprechen mit Ihnen, welche Rolle fehlt und ob externer Vertrieb dafür die passende Lösung ist. Telefon, E-Mail oder Kalender reichen.</p>
         <div class="btn-row">
           <a class="btn btn-primary" data-dm-magnetic href="tel:+4916096678717">+49 160 966 787 17</a>

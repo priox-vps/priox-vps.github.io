@@ -21,6 +21,7 @@
 <meta name="twitter:title" content="Verkaufspsychologie im B2B: warum Kunden kaufen">
 <meta name="twitter:description" content="Verkaufspsychologie im B2B: warum Druck nie vom Verkäufer kommt, wie Sympathie und Ruhe wirken - und wie Sie Gefühlsregungen wahrnehmen und ruhig benennen.">
 <link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/dm-effects.css">
 <link rel="icon" href="/assets/favicon.png" sizes="48x48">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -235,6 +236,9 @@
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
+<div class="dm-progress" aria-hidden="true"><div data-dm-progress></div></div>
+<div class="dm-glow" data-dm-glow aria-hidden="true"></div>
+<div class="dm-cursor" data-dm-cursor aria-hidden="true"></div>
 
 <div class="topbar">
   <div class="wrap">
@@ -271,14 +275,16 @@
 
 <main id="main">
   <section class="hero">
-    <div class="wrap" style="max-width:960px">
-      <p class="eyebrow">Ratgeber für B2B-Vertrieb</p>
-      <h1>Verkaufspsychologie: warum Menschen kaufen – und wann sie es nicht tun</h1>
+  <canvas class="dm-dots" data-dm-dots aria-hidden="true"></canvas>
+  <div class="dm-ghost" data-dm-ghost aria-hidden="true">DEALMAKERS</div>
+    <div class="wrap" style="max-width:960px" data-dm-hero-inner>
+      <p class="eyebrow" data-dm-scramble>Ratgeber für B2B-Vertrieb</p>
+      <h1>Verkaufspsychologie: warum Menschen kaufen – und wann sie es nicht tun<span class="dm-sweep" data-dm-sweep aria-hidden="true"></span></h1>
       <p class="lead">Verkaufspsychologie beschreibt, welche psychologischen Vorgänge eine Kaufentscheidung auslösen: Sicherheit im Gespräch, Sympathie und der Druck, der aus der Lage des Kunden entsteht – nicht aus dem Verhalten des Verkäufers. Wer das versteht, beruhigt das Gespräch, statt zu drängen.</p>
       <p class="small muted">Von <a href="/warum-wir/">Florian Weippert</a>, Inhaber von DEALMAKERS – seit rund 20 Jahren im B2B-Vertrieb.</p>
       <p>Eine Kaufentscheidung ist selten eine Rechenaufgabe. Menschen entscheiden, wenn sie sich im Gespräch sicher genug fühlen, die eigene Lage Veränderung nötig macht und die Person gegenüber nicht gegen sie arbeitet. Gute Verkaufspsychologie baut deshalb Ruhe auf, klärt das Problem und lässt die Wahl beim Kunden.</p>
       <nav class="toc" aria-label="Inhaltsverzeichnis">
-        <h2>Inhalt</h2>
+        <h2 data-dm-reveal="head">Inhalt</h2>
         <ol>
           <li><a href="#risikoentscheidung">Kaufentscheidungen als Risiko</a></li>
           <li><a href="#nervensystem-beruhigen">Das Nervensystem beruhigen</a></li>
@@ -301,7 +307,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="risikoentscheidung">Der Ausgangspunkt: eine Kaufentscheidung ist eine Risikoentscheidung, keine Rechenaufgabe</h2>
+        <h2 id="risikoentscheidung" data-dm-reveal="head">Der Ausgangspunkt: eine Kaufentscheidung ist eine Risikoentscheidung, keine Rechenaufgabe</h2>
         <p>Im B2B muss die kaufende Person Budget, Zeit und Umstellung intern vertreten. Ein Angebot kann auf dem Papier besser sein und trotzdem scheitern: Was kann beim Wechsel schiefgehen, wer muss zustimmen und kann ich diese Entscheidung begründen?</p>
         <p>Das erklärt ein verbreitetes Missverständnis der Psychologie im Verkauf. Es geht nicht darum, einen Menschen mit dem richtigen Reiz zu einem Ja zu bewegen. Es geht darum, die drei Schwellen einer echten Entscheidung zu beachten: Ruhe im Kontakt, Druck aus der Lage und Sympathie beziehungsweise Vertrauen in die Person. Fehlt eine, wird gerechnet, vertagt oder abgewehrt.</p>
       </div>
@@ -328,7 +334,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="nervensystem-beruhigen">Erstens: das Nervensystem beruhigen – warum Tempo, Pause und Erlaubnis mehr bewirken als Argumente</h2>
+        <h2 id="nervensystem-beruhigen" data-dm-reveal="head">Erstens: das Nervensystem beruhigen – warum Tempo, Pause und Erlaubnis mehr bewirken als Argumente</h2>
         <p>Ein schneller Pitch ist oft eigene Anspannung. Wer sofort Nutzen, Referenzen und Termine aufzählt, fordert Aufmerksamkeit, bevor der andere einordnen konnte, worum es geht. Sprechen Sie langsamer, enden Sie Sätze klar und lassen Sie nach einer Frage wirklich Luft. Eine Pause ist Verarbeitungszeit.</p>
         <p>Praktisch beginnt das mit einer begrenzten Bitte: „Ich sage es Ihnen in einem Satz. Dann entscheiden Sie, ob es für Sie relevant ist.“ Nach einem Einwand hilft es, ein Schlüsselwort ruhig aufzugreifen: „Intern nicht durchsetzbar?“ Erst danach fragen Sie nach. Die Pause darf nicht zur auffälligen Technik werden; sie dient dem Zuhören, nicht dem Vorführen.</p>
       </div>
@@ -349,7 +355,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="druck-aus-der-lage">Zweitens: Druck als Auslöser – und die Regel, dass er nie vom Verkäufer kommt</h2>
+        <h2 id="druck-aus-der-lage" data-dm-reveal="head">Zweitens: Druck als Auslöser – und die Regel, dass er nie vom Verkäufer kommt</h2>
         <p>Menschen handeln selten, weil ein Verkäufer mehr Nachdruck ausübt. Sie handeln, weil eine eigene Lage Folgen hat: eine offene Schlüsselrolle, ein Ziel, das ohne Kapazität nicht erreichbar ist, oder ein Prozess, der intern Zeit frisst. Der Verkäufer darf diese Lage nicht überzeichnen. Er darf sie präzise untersuchen.</p>
         <p>Das ist die Regel: Ruhe gegenüber der Person, Schärfe gegenüber dem Problem. „Wenn Sie das heute nicht entscheiden, verlieren Sie Umsatz“ ist eine unprüfbare Behauptung. „Was passiert mit Ihrem Ziel, wenn die Rolle noch ein Quartal offen bleibt?“ ist eine Frage. Die Antwort gehört dem Kunden. Für weitere praktische Reaktionen auf Abwehr und Vertagung hilft die Seite zur <a href="/einwandbehandlung/">Einwandbehandlung im Vertrieb</a>.</p>
       </div>
@@ -376,7 +382,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="sympathie-im-b2b">Drittens: ohne Sympathie kein Verkauf – was Sympathie im B2B konkret heißt (und was sie nicht heißt)</h2>
+        <h2 id="sympathie-im-b2b" data-dm-reveal="head">Drittens: ohne Sympathie kein Verkauf – was Sympathie im B2B konkret heißt (und was sie nicht heißt)</h2>
         <p>Sympathie heißt im B2B nicht Small Talk, ähnliches Hobby oder demonstrative Begeisterung. Sie heißt: Der Kunde merkt, dass Sie seine Worte nicht verdrehen, seine Rolle respektieren und fachlich folgen können. Wer nach der zweiten Rückfrage sofort wieder in seine Präsentation springt, wirkt nicht interessiert, sondern auf Termin fixiert.</p>
         <p>Greifen Sie deshalb tragende Begriffe auf und fassen Sie den Zusammenhang in eigenen Worten zusammen: „Sie wollen die Umstellung nicht wieder am Fachbereich vorbei entscheiden und brauchen vorher Klarheit über die Verantwortlichen. Habe ich das richtig verstanden?“ Ein echtes „Genau“ ist mehr wert als ein höfliches „Sie haben recht“. Die Gesprächsführung braucht Erfahrung; am Telefon sollten keine eingelernten Kräfte ein Skript ablesen, sondern Menschen mit eigener B2B-Praxis.</p>
       </div>
@@ -386,7 +392,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="konsequenzfrage">Verlust wiegt schwerer als Gewinn: die Konsequenzfrage, und warum der Kunde die Folge selbst aussprechen muss</h2>
+        <h2 id="konsequenzfrage" data-dm-reveal="head">Verlust wiegt schwerer als Gewinn: die Konsequenzfrage, und warum der Kunde die Folge selbst aussprechen muss</h2>
         <p>Ein möglicher Gewinn ist angenehm. Eine konkret drohende Folge wird oft dringlicher geprüft. Daraus folgt aber nicht, dass Sie Verluste behaupten oder Angst auslösen sollen. Die Konsequenzfrage macht ausschließlich sichtbar, was bereits in der Situation steckt. Sie bleibt offen und nimmt eine Antwort nicht vorweg.</p>
         <p>Die Reihenfolge zählt: erst Ist-Zustand verstehen, dann nach der Folge fragen, danach schweigen. Wenn der Kunde sagt, dass eine offene Stelle das Quartalsziel nicht berührt, ist das kein Einwand zum Wegdrücken, sondern eine wichtige Information. Für die Formulierung und Reihenfolge solcher Fragen finden Sie mehr bei <a href="/fragetechniken/">Fragetechniken im Vertrieb</a>.</p>
       </div>
@@ -422,7 +428,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="nutzen-formulieren">Warum der Kunde den Nutzen formulieren muss und nicht der Verkäufer</h2>
+        <h2 id="nutzen-formulieren" data-dm-reveal="head">Warum der Kunde den Nutzen formulieren muss und nicht der Verkäufer</h2>
         <p>Ein Verkäufer kann zehn Vorteile nennen und trotzdem nichts treffen. Der Kunde kennt dagegen die internen Kriterien: Welche Rolle muss zustimmen, welcher Ablauf darf nicht brechen, woran wird Erfolg gemessen? Fragen holen diese Kriterien heraus und verhindern, dass Sie für eine Lösung argumentieren, die am eigentlichen Problem vorbeigeht.</p>
         <p>Fragen Sie konkret: „Angenommen, Sie hätten dort früh Klarheit: Was würde das in Ihrem Bereich ermöglichen?“ Oder: „Woran würden Sie nach dem ersten Monat erkennen, dass sich der nächste Schritt gelohnt hat?“ Notieren Sie die Wörter des Kunden. Beim Zusammenfassen dürfen sie wieder auftauchen. Erst dann zeigen Sie, ob Ihr Angebot dazu passt.</p>
       </div>
@@ -432,7 +438,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="hypothese-statt-behauptung">Hypothese statt Behauptung: der Satz „Kann sein, dass ich falsch liege“ und was er im Gespräch auflöst</h2>
+        <h2 id="hypothese-statt-behauptung" data-dm-reveal="head">Hypothese statt Behauptung: der Satz „Kann sein, dass ich falsch liege“ und was er im Gespräch auflöst</h2>
         <p>Behauptungen über den Kunden zwingen ihn in die Verteidigung: „Bei Ihnen ist die Priorisierung sicher unklar.“ Eine Hypothese öffnet dagegen eine Korrektur: „Kann sein, dass ich falsch liege: Ist die Priorisierung für dieses Thema bereits geklärt?“ Der Unterschied ist nicht höfliche Verpackung. Er ist Ergebnisoffenheit. Wer die Antwort schon zu kennen scheint, bekommt selten eine ehrliche.</p>
         <p>Josh Braun beschreibt diese Haltung als Sortieren statt Überzeugen. Chris Voss arbeitet mit kalibrierten Fragen und taktischer Empathie. Beide Wege führen praktisch zum selben Punkt: sichtbarer Kontext ist eine Vorbereitung für eine Frage, kein Beweis über Motive. Die eigene Methodengrundlage ist auf <a href="/warum-wir/">unserem Ansatz für wirksame Vertriebsarbeit</a> erläutert.</p>
       </div>
@@ -442,7 +448,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="autonomie">Autonomie: warum ein ausdrückliches „Sie dürfen Nein sagen“ die Abschlussquote nicht senkt</h2>
+        <h2 id="autonomie" data-dm-reveal="head">Autonomie: warum ein ausdrückliches „Sie dürfen Nein sagen“ die Abschlussquote nicht senkt</h2>
         <p>Ein Nein zu erlauben nimmt nicht den Bedarf aus dem Gespräch. Es nimmt den Kampf heraus. Sagen Sie nur dann „Sie können auch Nein sagen“, wenn Sie das Nein tatsächlich akzeptieren. Danach dürfen Sie eine klare Frage stellen: „Es kann gut sein, dass das bei Ihnen sauber läuft. Wie lösen Sie es heute?“ Das Gegenüber muss nicht zustimmen, um kompetent zu wirken.</p>
         <p>Auch ein nächster Schritt bleibt freiwillig: „Wenn wir in einem zweiten Gespräch prüfen, ob das passt: Was müsste bis dahin geklärt sein?“ So wird aus einem Abschlussdruck eine gemeinsame Prüfung. Ein klares Nein spart beiden Seiten Zeit; ein ausweichendes Ja ohne innere Zustimmung schafft nur eine schlechte Pipeline.</p>
       </div>
@@ -452,7 +458,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="mimik-und-labeling">Mimik lesen und benennen: wahrnehmen, verstehen, ansprechen</h2>
+        <h2 id="mimik-und-labeling" data-dm-reveal="head">Mimik lesen und benennen: wahrnehmen, verstehen, ansprechen</h2>
         <p>Im persönlichen Gespräch entscheidet oft nicht der Satz, sondern die Regung davor. Ein kurzes Zögern beim Preis, ein Aufatmen beim Zeitplan, ein Wegsehen bei der Frage nach dem Entscheidungsweg: Das Gesicht zeigt eine Gefühlsregung, bevor der Kunde sie in Worte fasst. Diese Regungen wahrzunehmen ist eine Fähigkeit, die man trainieren kann – und der Zweck ist, den Menschen besser zu verstehen, nicht ihn zu entlarven.</p>
         <p>Der praktische Anschluss daran heißt Benennen, im angelsächsischen Raum <em>Labeling</em>. Sie sprechen das Wahrgenommene ruhig und ausdrücklich als Vermutung aus: „Es wirkt, als wäre der Zeitpunkt gerade das eigentliche Thema.“ Oder: „Ich habe den Eindruck, die Frage nach dem Budget ist die unangenehmere von beiden.“ Damit geben Sie dem Gegenüber die Möglichkeit, zu bestätigen oder zu korrigieren – beides bringt Sie weiter. Chris Voss, früher Chefverhandler des FBI für Geiselnahmen, hat dieses Vorgehen bekannt gemacht: Wer ein Gefühl benennt, statt es zu übergehen, senkt die Anspannung, statt neue zu erzeugen.</p>
         <p>Entscheidend ist die Reihenfolge. Zuerst wahrnehmen, dann als Vermutung benennen, dann die Antwort abwarten und die eigene Annahme korrigieren. Wer die Reihenfolge umdreht und aus der Beobachtung sofort eine Schlussfolgerung macht, liegt regelmäßig falsch und wirkt übergriffig. Drei Sätze, die den Unterschied machen: „Kann sein, dass ich falsch liege …“, „Es klingt, als ob …“, „Wie sehen Sie das?“</p>
@@ -495,7 +501,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="grenze-zur-taeuschung">Die Grenze: wo Verkaufspsychologie aufhört und Täuschung beginnt</h2>
+        <h2 id="grenze-zur-taeuschung" data-dm-reveal="head">Die Grenze: wo Verkaufspsychologie aufhört und Täuschung beginnt</h2>
         <p>Die Grenze ist klar: Sie dürfen eine Lage verstehen helfen, aber keine Lage erfinden. Keine falschen Verluste, keine künstlichen Fristen, keine Behauptungen über Wettbewerber und kein vorgespieltes Interesse. Auch eine Frage kann täuschen, wenn sie eine unbelegte Tatsache als Voraussetzung einschmuggelt. Das ist nicht nur schlechter Stil; irreführende Angaben können nach § 5 UWG rechtlich relevant sein.</p>
         <p>Bleiben Sie beim Prüfen: „Wodurch ist diese Frist festgelegt?“ statt „Dann verlieren Sie den Auftrag.“ Diese Hinweise sind eine sachliche Orientierung und keine Rechtsberatung. Für konkrete Ansprache, Angebot und Kanal braucht es eine Prüfung des Einzelfalls.</p>
       </div>
@@ -505,7 +511,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="nicht-selbst-machen">Wenn Sie das nicht selbst machen wollen</h2>
+        <h2 id="nicht-selbst-machen" data-dm-reveal="head">Wenn Sie das nicht selbst machen wollen</h2>
         <p>Die beschriebenen Gespräche brauchen Vorbereitung, Übung und eine ehrliche Nachbesprechung. Wenn Ihr Team die Methodik nicht allein aufbauen soll, kann ein <a href="/vertriebstraining-b2b/">B2B-Vertriebstraining für anspruchsvolle Gespräche</a> die eigenen Fälle, Fragen und Pausen systematisch trainieren. Die Arbeit bleibt dabei beim Inhalt des Kunden, nicht bei einer Trickliste. Den Anlass für ein Gespräch nehmen wir aus öffentlich sichtbaren Signalen statt aus einer Liste – diesen Ansatz nennen wir <a href="/signal-based-selling/">Signal Based Selling</a>.</p>
         <p>DEALMAKERS arbeitet selbst mit Menschen, die jahrelange eigene B2B-Vertriebserfahrung mitbringen. Das ist wichtig, weil eine Konsequenzfrage nur dann hilft, wenn der Einwand danach verstanden und nicht abgelesen beantwortet wird.</p>
       </div>
@@ -513,10 +519,10 @@
   </section>
 
   <section class="tight"><div class="wrap"><p class="small muted" data-dm-reveal>Weiterlesen: <a href="/preisverhandlung/">Preisverhandlung</a> · <a href="/einwandbehandlung/">Einwandbehandlung</a> · <a href="/fragetechniken/">Fragetechniken</a></p></div></section>
-  <section class="tight"><div class="wrap"><div class="card" data-dm-reveal style="max-width:760px"><p class="eyebrow">Über den Autor</p><h2 id="autor">Florian Weippert</h2><p>Inhaber von DEALMAKERS und seit rund 20 Jahren im B2B-Vertrieb. Bei PayPal hat er die Inside-Sales-Academy mit aufgebaut und über 25 Vertriebler ausgebildet, beim Fintech Billie als Director Business Development Abschlüsse zwischen 30.000 und 500.000 Euro verantwortet und bei der Couplink Group AG den Umsatz in zehn Monaten verdoppelt. Seit 2021 baut er mit DEALMAKERS Vertriebsgebiete für über 20 B2B-Unternehmen auf.</p><p>Seine Gesprächsführung stützt sich auf Ausbildungen bei Tim Taxis (Kaltakquise), Umberto Saxer (Sales-Cybernetics), NASHER Negotiation, der Eilert-Akademie (Mimikresonanz) und dem NLP-Zentrum Berlin (NLP-Master DVNLP), dazu ein MSc Business Management der Oxford Brookes University. Über 300 Coaching-Sessions mit Vertriebsleuten und Führungskräften.</p><p class="small"><a class="more" href="/warum-wir/">Mehr über die Menschen hinter DEALMAKERS</a></p></div></div></section>
+  <section class="tight"><div class="wrap"><div class="card" data-dm-reveal style="max-width:760px"><p class="eyebrow" data-dm-scramble>Über den Autor</p><h2 id="autor" data-dm-reveal="head">Florian Weippert</h2><p>Inhaber von DEALMAKERS und seit rund 20 Jahren im B2B-Vertrieb. Bei PayPal hat er die Inside-Sales-Academy mit aufgebaut und über 25 Vertriebler ausgebildet, beim Fintech Billie als Director Business Development Abschlüsse zwischen 30.000 und 500.000 Euro verantwortet und bei der Couplink Group AG den Umsatz in zehn Monaten verdoppelt. Seit 2021 baut er mit DEALMAKERS Vertriebsgebiete für über 20 B2B-Unternehmen auf.</p><p>Seine Gesprächsführung stützt sich auf Ausbildungen bei Tim Taxis (Kaltakquise), Umberto Saxer (Sales-Cybernetics), NASHER Negotiation, der Eilert-Akademie (Mimikresonanz) und dem NLP-Zentrum Berlin (NLP-Master DVNLP), dazu ein MSc Business Management der Oxford Brookes University. Über 300 Coaching-Sessions mit Vertriebsleuten und Führungskräften.</p><p class="small"><a class="more" href="/warum-wir/">Mehr über die Menschen hinter DEALMAKERS</a></p></div></div></section>
   <section>
     <div class="wrap" style="max-width:760px">
-      <h2 id="faq">Häufige Fragen zur Verkaufspsychologie</h2>
+      <h2 id="faq" data-dm-reveal="head">Häufige Fragen zur Verkaufspsychologie</h2>
       <section class="faq">
         <details><summary>Ist Verkaufspsychologie Manipulation?</summary><p>Nein, sofern sie dazu dient, eine Lage zu verstehen und eine freie Entscheidung zu ermöglichen. Manipulation beginnt dort, wo Informationen verschwiegen, Folgen erfunden oder künstliche Fristen gesetzt werden. Seriöse Verkaufspsychologie stellt Fragen, fasst richtig zusammen und akzeptiert ein Nein. Sie nutzt keinen Druck gegen die Person, sondern macht nur sichtbar, was das Nichtstun in deren eigener Lage bedeuten könnte.</p></details>
         <details><summary>Warum kaufen Menschen nicht, obwohl das Angebot objektiv besser ist?</summary><p>Weil eine bessere Leistung allein das wahrgenommene Risiko nicht beantwortet. Der Kunde muss intern erklären können, warum er etwas ändert, wer mitträgt und was beim Wechsel schiefgehen könnte. Fehlen Ruhe, Vertrauen oder ein eigener Anlass, bleibt selbst ein gutes Angebot eine zusätzliche Aufgabe. Erst wenn der Kunde Nutzen und Konsequenz in seinen Worten beschreiben kann, entsteht eine belastbare Entscheidung.</p></details>
@@ -534,7 +540,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div class="cta">
-        <h2 id="naechster-schritt">Den nächsten Schritt ruhig prüfen</h2>
+        <h2 id="naechster-schritt" data-dm-reveal="head">Den nächsten Schritt ruhig prüfen</h2>
         <p class="lead" style="color:#cdd4e6;max-width:620px;margin:0 auto">Sie möchten Ihre Gesprächsführung mit konkreten Fällen prüfen? Rufen Sie an, schreiben Sie uns oder wählen Sie einen Termin im Kalender.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="tel:+4916096678717">+49 160 966 787 17</a>
@@ -642,5 +648,6 @@ function ccOpen(){document.getElementById('cookie-hinweis').hidden=false;}
 (function(){var w=null;try{w=localStorage.getItem('dm-consent');}catch(e){}
   if(!w){document.getElementById('cookie-hinweis').hidden=false;}else if(w==='ja'){ccStart();}})();
 </script>
+<script src="/assets/dm-effects.js" defer></script>
 </body>
 </html>

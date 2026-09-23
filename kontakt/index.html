@@ -204,10 +204,12 @@
 
 <main id="main">
   <section class="hero">
-    <div class="wrap hero-grid">
+  <canvas class="dm-dots" data-dm-dots aria-hidden="true"></canvas>
+  <div class="dm-ghost" data-dm-ghost aria-hidden="true">DEALMAKERS</div>
+    <div class="wrap hero-grid" data-dm-hero-inner>
       <div>
         <p class="eyebrow" data-dm-scramble>Kontakt</p>
-        <h1>Sprechen wir 30 Minuten – ohne Formular</h1>
+        <h1>Sprechen wir 30 Minuten – ohne Formular<span class="dm-sweep" data-dm-sweep aria-hidden="true"></span></h1>
         <p class="lead">Rufen Sie an, schreiben Sie uns oder wählen Sie direkt einen Termin im Kalender. Das Erstgespräch dauert 30 Minuten, ist kostenfrei und ohne Verpflichtung. Wir klären, welche Aufgabe vor Ihnen liegt und ob wir dafür passen.</p>
         <div class="btn-row">
           <a class="btn btn-primary" data-dm-magnetic href="tel:+4916096678717">Jetzt anrufen</a>
@@ -226,7 +228,7 @@
   <section class="tight">
     <div class="wrap" style="max-width:900px">
       <nav class="toc" aria-label="Inhaltsverzeichnis">
-        <h2 id="inhaltsverzeichnis">Auf dieser Seite</h2>
+        <h2 id="inhaltsverzeichnis" data-dm-reveal="head">Auf dieser Seite</h2>
         <ol>
           <li><a href="#inhaltsverzeichnis">Inhaltsverzeichnis</a></li>
           <li><a href="#drei-wege-zu-uns">Drei Wege zu uns</a></li>
@@ -438,7 +440,7 @@
 
   <section class="cta">
     <div class="wrap">
-      <h2 id="jetzt-sprechen">Jetzt direkt sprechen</h2>
+      <h2 id="jetzt-sprechen" data-dm-reveal="head">Jetzt direkt sprechen</h2>
       <p class="lead" style="color:#cdd4e6;max-width:620px;margin:0 auto">Telefon oder E-Mail genügen für den ersten Schritt.</p>
       <div class="btn-row">
         <a class="btn btn-primary" data-dm-magnetic href="tel:+4916096678717">+49 160 966 787 17</a>

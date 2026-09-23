@@ -22,6 +22,7 @@
 <meta name="twitter:title" content="Preisverhandlung im B2B: tauschen statt nachlassen">
 <meta name="twitter:description" content="Preisverhandlung B2B: wie Sie vor dem Termin Zielpreis und Ausstiegspunkt festlegen, kein Zugeständnis ohne Gegenleistung geben und den Preis ruhig verteidigen.">
 <link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/dm-effects.css">
 <link rel="icon" href="/assets/favicon.png" sizes="48x48">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -236,6 +237,9 @@
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
+<div class="dm-progress" aria-hidden="true"><div data-dm-progress></div></div>
+<div class="dm-glow" data-dm-glow aria-hidden="true"></div>
+<div class="dm-cursor" data-dm-cursor aria-hidden="true"></div>
 
 <div class="topbar">
   <div class="wrap">
@@ -272,14 +276,16 @@
 
 <main id="main">
   <section class="hero">
-    <div class="wrap" style="max-width:920px">
-      <p class="eyebrow">Ratgeber für B2B-Vertrieb</p>
-      <h1>Preisverhandlung im B2B: vorbereiten, tauschen, ruhig bleiben</h1>
+  <canvas class="dm-dots" data-dm-dots aria-hidden="true"></canvas>
+  <div class="dm-ghost" data-dm-ghost aria-hidden="true">DEALMAKERS</div>
+    <div class="wrap" style="max-width:920px" data-dm-hero-inner>
+      <p class="eyebrow" data-dm-scramble>Ratgeber für B2B-Vertrieb</p>
+      <h1>Preisverhandlung im B2B: vorbereiten, tauschen, ruhig bleiben<span class="dm-sweep" data-dm-sweep aria-hidden="true"></span></h1>
       <p class="lead">Preisverhandlung im B2B heißt nicht, den Preis zu verteidigen, sondern ihn vorzubereiten: Zielpreis, Ausstiegspunkt und mögliche Tausche stehen vor dem Termin fest. Im Gespräch klären Sie zuerst den Vergleichsmaßstab des Kunden und geben anschließend kein Zugeständnis ohne eine konkrete Gegenleistung.</p>
       <p class="small muted">Von <a href="/warum-wir/">Florian Weippert</a>, Inhaber von DEALMAKERS – seit rund 20 Jahren im B2B-Vertrieb.</p>
       <p>Rabatte entstehen selten aus einer schlechten Zahl. Meist fehlt vor der Zahl ein klarer Maßstab: Wogegen wird verglichen, was soll abgesichert sein, und was passiert ohne Lösung? Wer Zielpreis, Ausstiegspunkt und mögliche Tausche vor dem Termin festlegt, kann den Preis ruhig vertreten, statt ihn im Gespräch zu verteidigen.</p>
       <nav class="toc" aria-label="Inhaltsverzeichnis">
-        <h2 id="inhalt">Inhalt</h2>
+        <h2 id="inhalt" data-dm-reveal="head">Inhalt</h2>
         <ol>
           <li><a href="#inhalt">Inhaltsverzeichnis</a></li>
           <li><a href="#preis-ist-selten-das-thema">Was hinter „zu teuer“ steckt</a></li>
@@ -303,7 +309,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="preis-ist-selten-das-thema">Preis ist selten das Thema: die drei Dinge hinter „zu teuer“</h2>
+        <h2 id="preis-ist-selten-das-thema" data-dm-reveal="head">Preis ist selten das Thema: die drei Dinge hinter „zu teuer“</h2>
         <p>„Zu teuer“ klingt nach einer Preisfrage, ist aber zunächst nur ein Etikett. Dahinter steckt meist ein unsicherer Wertnachweis, ein fehlendes Budget oder das Bedürfnis, ein Risiko abzusichern. Wer sofort nachlässt, beantwortet alle drei Varianten mit derselben, oft falschen Reaktion.</p>
         <p>Erstens kann der Kunde nicht sehen, woran er den Nutzen messen soll. Dann gehört die Frage vor die Lösung: „Was müsste am Ende anders sein, damit sich dieser Aufwand für Sie rechnet?“ Zweitens kann ein Budget begrenzen. Das ist kein Einwand gegen den Wert, sondern eine Vorgabe für Umfang, Zeitpunkt oder Freigabe. Drittens kann ein Vergleichsangebot Druck erzeugen. Dann muss geklärt werden, ob wirklich derselbe Umfang, dieselbe Verantwortung und derselbe Start verglichen werden.</p>
         <p>Trennen Sie die Person vom Problem. Sagen Sie nicht, der Kunde verstehe den Preis nicht. Fragen Sie nach der Konsequenz: „Wenn wir den Umfang so weit reduzieren, dass er in den Rahmen passt: Was fehlt Ihnen dann für Ihr Ziel?“ Der Kunde beschreibt die Folge selbst. Das schafft Klarheit ohne Panikmache und ohne erfundene Wirtschaftlichkeitsrechnung.</p>
@@ -324,7 +330,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="vor-dem-termin">Vor dem Termin: Zielpreis, Ausstiegspunkt und die Tauschliste – eine halbe Seite, die alles entscheidet</h2>
+        <h2 id="vor-dem-termin" data-dm-reveal="head">Vor dem Termin: Zielpreis, Ausstiegspunkt und die Tauschliste – eine halbe Seite, die alles entscheidet</h2>
         <p>Bereiten Sie nicht nur das Angebot vor, sondern Ihren Handlungsspielraum. Notieren Sie den Wunschpreis, den Zielpreis, die Schmerzgrenze und den Ausstiegspunkt. Der Wunschpreis ist der gute Abschluss. Der Zielpreis ist die Vereinbarung, die Sie vertreten wollen. Die Schmerzgrenze zeigt, wo die Lösung für Sie unangenehm wird. Unter dem Ausstiegspunkt wird nicht mehr verhandelt, sondern Umfang oder Zusammenarbeit enden.</p>
         <p>Diese Begriffe sind nicht gleich. Wer sie vermischt, gibt in einem stillen Moment den Zielpreis als Rabatt frei und merkt erst später, dass die eigene Grenze unterschritten ist. Prüfen Sie außerdem Ihre beste Alternative: Was tun Sie, wenn es keine Einigung gibt? Eine volle Pipeline, ein anderer Auftrag oder schlicht die Entscheidung, keine unpassende Leistung zu verkaufen, nimmt Nervosität aus dem Raum.</p>
         <p>Schreiben Sie daneben auf, was Sie geben <em>können</em> und was Sie dafür brauchen. Nicht jede Forderung ist Geld. Laufzeit, Vorauszahlung, verbindliches Volumen, ein benannter Ansprechpartner, ein früher Termin oder eine Referenz können für eine Seite wertvoll sein. Ohne diese Liste wird im Gespräch zu schnell am Preis gedreht.</p>
@@ -358,7 +364,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="vergleichsmassstab">Woran sich der Preis misst: den Vergleichsmaßstab des Kunden erfragen, bevor man ihn liefert</h2>
+        <h2 id="vergleichsmassstab" data-dm-reveal="head">Woran sich der Preis misst: den Vergleichsmaßstab des Kunden erfragen, bevor man ihn liefert</h2>
         <p>Bevor Sie einen Nutzen beziffern, finden Sie heraus, woran der Kunde misst. Die entscheidende Rückfrage lautet: „Woran machen Sie konkret fest, dass der Preis zu hoch ist – am Umfang, am Vergleichsangebot oder am erwarteten Ergebnis?“ Danach hören Sie zu. Eine schnelle Rechtfertigung nimmt Ihnen die Information, die Sie für eine passende Antwort brauchen.</p>
         <p>Bei einem Budget vergleichen Sie nicht mit einem künstlich aufgeblasenen Nutzen, sondern besprechen eine passende Konfiguration. Bei einem Wettbewerber vergleichen Sie die Bausteine. Bei einer Sorge vergleichen Sie die Absicherung: Wer trägt welches Risiko, wie wird Erfolg geprüft, wer entscheidet im Zweifel? Erst wenn der Maßstab klar ist, darf der Preis an diesen Maßstab gekoppelt werden.</p>
         <p>Ein begründeter Anker ist etwas anderes als eine Fantasiezahl. Sie können sagen: „Für den vollständigen Umfang liegt der Preis bei X. Wenn wir den Umfang auf Y reduzieren, verändert sich der Preis nachvollziehbar auf Z.“ Die Werte müssen aus Ihrem Angebotsmodell stammen. Behauptungen über Kosten, Einsparungen oder Wettbewerber ohne Beleg gehören nicht in die Verhandlung.</p>
@@ -370,7 +376,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="kein-zugestaendnis-ohne-gegenleistung">Die Regel, die die Marge rettet: kein Zugeständnis ohne Gegenleistung</h2>
+        <h2 id="kein-zugestaendnis-ohne-gegenleistung" data-dm-reveal="head">Die Regel, die die Marge rettet: kein Zugeständnis ohne Gegenleistung</h2>
         <p>Ein Zugeständnis ist kein Zeichen von Großzügigkeit, wenn es ohne Tausch erfolgt. Es signalisiert vielmehr, dass der vorherige Preis beweglich war. Machen Sie jedes Entgegenkommen sichtbar, klein und bedingt: „Wenn wir das ermöglichen, brauchen wir im Gegenzug …“ So verhandeln Sie nicht gegen den Kunden, sondern über ein Paket von Interessen.</p>
         <p>Die Gegenleistung muss konkret, prüfbar und für Sie tatsächlich wertvoll sein. Ein vages „Dann arbeiten wir künftig mehr zusammen“ ist kein Tausch. Eine feste Laufzeit, eine Freigabe bis zu einem Termin oder ein verbindliches Volumen ist es nur, wenn die zuständige Person es zusagen kann. Verhandeln Sie wichtige Punkte vor Kick-off, Testzugang oder Sonderaufwand; danach ist Ihre Position regelmäßig schwächer.</p>
       </div>
@@ -414,7 +420,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="wer-nennt-die-zahl-zuerst">Wer nennt die Zahl zuerst? Was dafür und was dagegen spricht</h2>
+        <h2 id="wer-nennt-die-zahl-zuerst" data-dm-reveal="head">Wer nennt die Zahl zuerst? Was dafür und was dagegen spricht</h2>
         <p>Die erste Zahl setzt einen Referenzpunkt. Deshalb ist es sinnvoll, selbst zu eröffnen, wenn Sie den Umfang verstanden haben, die Entscheidungskriterien kennen und ein belastbares Angebotsmodell besitzen. Verbinden Sie die Zahl mit dem Umfang: „Für den vollständigen Umfang liegt der Preis bei X.“ Dann ist klar, was die Zahl meint.</p>
         <p>Warten ist besser, wenn wesentliche Informationen fehlen: Budget, Entscheider, Alternative, benötigter Start oder die Leistung, die tatsächlich verglichen wird. Fragen Sie dann: „Angenommen, die Erwartungen sind erfüllt: Welchen wirtschaftlichen Rahmen hat das Thema?“ Die Frage zwingt nicht zur Preisgabe, zeigt aber, ob ein Gespräch über Umfang überhaupt sinnvoll ist.</p>
         <p>Kein Anker rechtfertigt Extreme. Eine hohe Zahl ohne Bezug wirkt willkürlich und lädt zum Gegenschlag ein. Der belastbare Anker kommt aus dem Scope, dem realen Aufwand oder einer echten Alternative. Wenn Ihr Angebot keine nachvollziehbare Begründung zulässt, ist nicht die Verhandlung das Problem, sondern die Vorbereitung.</p>
@@ -425,7 +431,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="preis-ruhig-nennen">Den Preis ruhig nennen: der Satz, die Pause, und warum man danach nichts mehr sagt</h2>
+        <h2 id="preis-ruhig-nennen" data-dm-reveal="head">Den Preis ruhig nennen: der Satz, die Pause, und warum man danach nichts mehr sagt</h2>
         <p>Ein Preis braucht keinen Monolog. Nennen Sie erst den Umfang, dann die Zahl, dann schweigen Sie. Zum Beispiel: „Für Recherche, Entscheiderdossier, Ansprache und den vereinbarten Review liegt der Preis bei X.“ Hängen Sie keine Entschuldigung an, keine unaufgeforderte Rabattoption und keine Kette weiterer Vorteile. Die Pause gibt dem Gegenüber Raum, die Zahl einzuordnen und die eigentliche Frage auszusprechen.</p>
         <p>Kommt sofort „zu teuer“, verteidigen Sie nicht reflexhaft. Antworten Sie: „Verstehe. Im Vergleich wozu wirkt der Betrag zu hoch?“ Das ist keine rhetorische Falle, sondern die Rückkehr zur Sache. Sie können erst dann sagen, ob ein anderer Umfang, ein anderer Termin oder eine andere Absicherung möglich ist.</p>
       </div>
@@ -451,7 +457,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="rabattforderung">Wenn Rabatt gefordert wird: vier Antworten im Wortlaut</h2>
+        <h2 id="rabattforderung" data-dm-reveal="head">Wenn Rabatt gefordert wird: vier Antworten im Wortlaut</h2>
         <p>Wählen Sie keine Antwort aus einer Liste, ohne den Kontext zu prüfen. Die vier Varianten unten führen vom Verstehen über den Vergleich bis zur klaren Grenze. Sie sind bewusst sachlich formuliert. Der Ton entscheidet: langsam, ohne Ironie und ohne den Eindruck, der Kunde müsse sich rechtfertigen.</p>
       </div>
       <div class="table-scroll">
@@ -472,7 +478,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="fristen">Verknappung und Fristen: was zulässig ist, was wirkt, und warum erfundene Fristen das Gespräch kippen</h2>
+        <h2 id="fristen" data-dm-reveal="head">Verknappung und Fristen: was zulässig ist, was wirkt, und warum erfundene Fristen das Gespräch kippen</h2>
         <p>Eine Frist wirkt nur, wenn sie aus der Sache kommt. Ein tatsächlich freier Starttermin, eine begrenzte Kapazität oder eine verbindliche Produktionsplanung sind Gründe, die Sie offen nennen können. Sagen Sie etwa: „Wenn die Freigabe diese Woche kommt, können wir den vereinbarten Start einplanen. Danach ist der nächste freie Termin später.“</p>
         <p>Eine erfundene Deadline ist keine Verhandlungstechnik. Sie macht aus einer sachlichen Entscheidung einen Vertrauensbruch, sobald sie sichtbar wird. Auch angebliche Vergleichspreise, nicht belegte Einsparungen oder Behauptungen über Wettbewerber gehören nicht in den Raum. Rechtlich ist das unter anderem mit Blick auf irreführende Angaben relevant; dies ist eine Orientierung und keine Rechtsberatung.</p>
         <p>Prüfen Sie außerdem, ob die Frist dem Kunden überhaupt hilft. Wenn sie nur Ihren Abschlussdruck löst, ist sie kein brauchbarer Grund. Der Druck soll aus der Lage des Kunden kommen: Welche Entscheidung, welcher Start oder welche Konsequenz ist für ihn tatsächlich zeitkritisch?</p>
@@ -483,7 +489,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="abbruch">Der Abbruch: wie man eine Verhandlung beendet, ohne die Beziehung zu beenden</h2>
+        <h2 id="abbruch" data-dm-reveal="head">Der Abbruch: wie man eine Verhandlung beendet, ohne die Beziehung zu beenden</h2>
         <p>Ein Abbruch ist kein Scheitern, wenn die Bedingungen nicht zusammenpassen. Er schützt Zeit, Leistung und die spätere Beziehung. Brechen Sie nicht ab, weil der Kunde verhandelt. Brechen Sie ab, wenn Ihr Ausstiegspunkt erreicht ist, wiederholt Forderungen ohne Gegenleistung kommen oder die zuständigen Entscheider nicht an den Tisch kommen.</p>
         <p>Bleiben Sie konkret: „Unter diesem Preis können wir den vereinbarten Umfang nicht verantworten. Wenn sich Ihr Rahmen oder der Umfang ändert, sprechen wir gern wieder.“ Das ist klarer als ein dramatisches Nein und lässt die Tür offen. Wer nach dem Abbruch doch weiterverhandelt, macht die Grenze im Nachhinein unglaubwürdig.</p>
         <p>Der gleiche Grundsatz gilt, wenn kurz vor Schluss ein neuer Einkaufspartner auftaucht: Fassen Sie den bisherigen Konsens zusammen, fragen Sie nach der noch offenen kaufmännischen Bedingung und klären Sie Entscheidungskompetenz. Starten Sie nicht wieder bei null.</p>
@@ -494,7 +500,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="nach-der-verhandlung">Nach der Verhandlung: was man festhalten muss, damit die nächste besser läuft</h2>
+        <h2 id="nach-der-verhandlung" data-dm-reveal="head">Nach der Verhandlung: was man festhalten muss, damit die nächste besser läuft</h2>
         <p>Notieren Sie direkt nach dem Gespräch Zielpreis, erreichten Preis, Zugeständnisse, Gegenleistungen und offenen Punkt. Ergänzen Sie den Vergleichsmaßstab des Kunden: Budget, alternative Lösung, Risiko oder erwartetes Ergebnis. Notieren Sie auch, wer entschieden hat und wer beim nächsten Termin dabei sein muss. Eine Erinnerung wie „Kunde wollte Rabatt“ hilft später nicht.</p>
         <p>Wichtig ist der Zeitpunkt, an dem der Preis unter Druck geriet. War die Leistung nicht klar genug? Wurde nach dem Preis weitergeredet? Wurde eine Gegenleistung nicht verbindlich? Diese Fragen machen aus einer verlorenen Marge eine Übung für das nächste Gespräch. Eine Beispielrechnung zeigt, weshalb kleine Nachlässe nicht klein bleiben.</p>
       </div>
@@ -521,7 +527,7 @@
   <section>
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="nicht-selbst-machen">Wenn Sie das nicht selbst machen wollen</h2>
+        <h2 id="nicht-selbst-machen" data-dm-reveal="head">Wenn Sie das nicht selbst machen wollen</h2>
         <p>Preisgespräche lassen sich trainieren, wenn sie mit echten Angeboten, tatsächlichen Grenzen und wiederkehrenden Einwänden geübt werden. Ein <a href="/vertriebstraining-b2b/">B2B-Vertriebstraining für Preisverhandlungen</a> ist dann sinnvoll, wenn Ihr Team den Preis kennt, aber bei der ersten Forderung zu schnell nachgibt oder im Gegenzug keine klare Zusage einholt. Wer mit einem echten Anlass ins Gespräch geht, verhandelt von vornherein über weniger Preis und mehr Sache – woher wir diesen Anlass nehmen, steht unter <a href="/signal-based-selling/">Signal Based Selling</a>.</p>
         <p>Entscheidend ist die Übung am Wortlaut: Preis nennen, Pause halten, Vergleichsmaßstab fragen, Tausch formulieren und bei Bedarf sauber beenden. Das ersetzt kein Kalkulationsmodell. Es sorgt aber dafür, dass ein vorhandener Rahmen im Gespräch nicht aus Unsicherheit aufgegeben wird. Wie Anbieter ihre Modelle nachvollziehbar offenlegen können, zeigt etwa die Darstellung zu <a href="/vertriebsoutsourcing-kosten/">Kosten und Modellen im Vertriebsoutsourcing</a>.</p>
         <p>Diese Disziplin beginnt vor dem Preisgespräch: DEALMAKERS arbeitet in der Ansprache mit konkreten, öffentlich sichtbaren Anlässen statt mit gekauften Listen. Am Telefon sitzen Menschen mit jahrelanger eigener B2B-Vertriebserfahrung, die ein Gespräch inhaltlich führen und nicht nach dem zweiten Einwand bei einem Skript stehen bleiben.</p>
@@ -530,11 +536,11 @@
   </section>
 
   <section class="tight"><div class="wrap"><p class="small muted" data-dm-reveal>Weiterlesen: <a href="/einwandbehandlung/">Einwandbehandlung</a> · <a href="/verkaufspsychologie/">Verkaufspsychologie</a> · <a href="/b2b-vertrieb/">B2B-Vertrieb</a></p></div></section>
-  <section class="tight"><div class="wrap"><div class="card" data-dm-reveal style="max-width:760px"><p class="eyebrow">Über den Autor</p><h2 id="autor">Florian Weippert</h2><p>Inhaber von DEALMAKERS und seit rund 20 Jahren im B2B-Vertrieb. Bei PayPal hat er die Inside-Sales-Academy mit aufgebaut und über 25 Vertriebler ausgebildet, beim Fintech Billie als Director Business Development Abschlüsse zwischen 30.000 und 500.000 Euro verantwortet und bei der Couplink Group AG den Umsatz in zehn Monaten verdoppelt. Seit 2021 baut er mit DEALMAKERS Vertriebsgebiete für über 20 B2B-Unternehmen auf.</p><p>Seine Gesprächsführung stützt sich auf Ausbildungen bei Tim Taxis (Kaltakquise), Umberto Saxer (Sales-Cybernetics), NASHER Negotiation, der Eilert-Akademie (Mimikresonanz) und dem NLP-Zentrum Berlin (NLP-Master DVNLP), dazu ein MSc Business Management der Oxford Brookes University. Über 300 Coaching-Sessions mit Vertriebsleuten und Führungskräften.</p><p class="small"><a class="more" href="/warum-wir/">Mehr über die Menschen hinter DEALMAKERS</a></p></div></div></section>
+  <section class="tight"><div class="wrap"><div class="card" data-dm-reveal style="max-width:760px"><p class="eyebrow" data-dm-scramble>Über den Autor</p><h2 id="autor" data-dm-reveal="head">Florian Weippert</h2><p>Inhaber von DEALMAKERS und seit rund 20 Jahren im B2B-Vertrieb. Bei PayPal hat er die Inside-Sales-Academy mit aufgebaut und über 25 Vertriebler ausgebildet, beim Fintech Billie als Director Business Development Abschlüsse zwischen 30.000 und 500.000 Euro verantwortet und bei der Couplink Group AG den Umsatz in zehn Monaten verdoppelt. Seit 2021 baut er mit DEALMAKERS Vertriebsgebiete für über 20 B2B-Unternehmen auf.</p><p>Seine Gesprächsführung stützt sich auf Ausbildungen bei Tim Taxis (Kaltakquise), Umberto Saxer (Sales-Cybernetics), NASHER Negotiation, der Eilert-Akademie (Mimikresonanz) und dem NLP-Zentrum Berlin (NLP-Master DVNLP), dazu ein MSc Business Management der Oxford Brookes University. Über 300 Coaching-Sessions mit Vertriebsleuten und Führungskräften.</p><p class="small"><a class="more" href="/warum-wir/">Mehr über die Menschen hinter DEALMAKERS</a></p></div></div></section>
   <section class="faq">
     <div class="wrap">
       <div style="max-width:760px">
-        <h2 id="faq">Häufige Fragen zur Preisverhandlung im B2B</h2>
+        <h2 id="faq" data-dm-reveal="head">Häufige Fragen zur Preisverhandlung im B2B</h2>
         <details><summary>Wer soll den Preis zuerst nennen?</summary><p>Nennen Sie den Preis zuerst, wenn Sie Umfang, Nutzen und Vergleichsmaßstab sauber verstanden haben und Ihren Preis begründen können. Das setzt einen nachvollziehbaren Referenzpunkt. Fehlen diese Informationen noch, ist eine Zahl bloß ein Ratespiel. Fragen Sie dann zuerst, welches Budget, welche Alternative oder welches erwartete Ergebnis den Vergleich bestimmt.</p></details>
         <details><summary>Wie reagiere ich auf eine Rabattforderung, ohne den Preis zu senken?</summary><p>Behandeln Sie die Forderung zunächst als Information, nicht als Befehl. Fragen Sie: „Womit vergleichen Sie den Betrag genau?“ oder „Was müsste sich ändern, damit der Umfang für Sie passt?“ Erst wenn klar ist, ob Budget, Risiko oder eine Alternative dahintersteht, verhandeln Sie über einen Tausch. Ein reflexhafter Nachlass entwertet den vorher genannten Preis.</p></details>
         <details><summary>Was kann ich statt eines Rabatts anbieten?</summary><p>Bieten Sie nur Punkte an, die für den Kunden einen erkennbaren Wert haben und für Sie vertretbar sind: einen anderen Starttermin, einen kleineren Umfang, eine längere Laufzeit gegen Planungssicherheit oder eine klar geregelte Vorauszahlung. Jede Bewegung braucht eine Gegenleistung. Wenn keine Gegenleistung möglich ist, bleibt der vereinbarte Umfang zum vereinbarten Preis stehen.</p></details>
@@ -550,7 +556,7 @@
 
   <section class="cta">
     <div class="wrap">
-      <h2 id="gespraech">Preisgespräche am eigenen Angebot üben</h2>
+      <h2 id="gespraech" data-dm-reveal="head">Preisgespräche am eigenen Angebot üben</h2>
       <p class="lead" style="color:#cdd4e6;max-width:620px;margin:0 auto">Telefon, E-Mail oder Kalender: Wählen Sie den Weg, der für Sie passt.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="tel:+4916096678717">+49 160 966 787 17</a>
@@ -657,5 +663,6 @@ function ccOpen(){document.getElementById('cookie-hinweis').hidden=false;}
 (function(){var w=null;try{w=localStorage.getItem('dm-consent');}catch(e){}
   if(!w){document.getElementById('cookie-hinweis').hidden=false;}else if(w==='ja'){ccStart();}})();
 </script>
+<script src="/assets/dm-effects.js" defer></script>
 </body>
 </html>

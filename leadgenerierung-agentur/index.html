@@ -289,9 +289,11 @@
 
 <main id="main">
   <section class="hero">
-    <div class="wrap" style="max-width:940px">
+  <canvas class="dm-dots" data-dm-dots aria-hidden="true"></canvas>
+  <div class="dm-ghost" data-dm-ghost aria-hidden="true">DEALMAKERS</div>
+    <div class="wrap" style="max-width:940px" data-dm-hero-inner>
       <p class="eyebrow" data-dm-scramble>B2B Leadgenerierung</p>
-      <h1>Leadgenerierung-Agentur für B2B: Qualität schlägt Menge</h1>
+      <h1>Leadgenerierung-Agentur für B2B: Qualität schlägt Menge<span class="dm-sweep" data-dm-sweep aria-hidden="true"></span></h1>
       <p class="lead">Eine Leadgenerierung-Agentur beschafft keine Adressen, sondern Gesprächschancen: ein passendes Unternehmen, ein nachvollziehbarer Anlass und die zuständige Person. Wertvoll wird ein Lead erst, wenn Ihr Vertrieb daran anknüpfen kann – deshalb entscheidet die Übergabe genauso über das Ergebnis wie die Menge.</p>
       <p>Eine Adresse ist kein Lead. Wertvoll wird ein Kontakt durch Passung, Anlass und die zuständige Person. Entscheidend ist, was der Vertrieb daraus machen kann.</p>
       <div class="btn-row">
@@ -304,7 +306,7 @@
   <section class="tight bg-soft">
     <div class="wrap" style="max-width:940px">
       <nav class="toc" aria-label="Inhaltsverzeichnis">
-        <h2 id="inhaltsverzeichnis">Inhalt</h2>
+        <h2 id="inhaltsverzeichnis" data-dm-reveal="head">Inhalt</h2>
         <ol>
           <li><a href="#inhaltsverzeichnis">Inhaltsverzeichnis</a></li>
           <li><a href="#was-ein-lead-ist">Was ein Lead ist</a></li>
@@ -326,7 +328,7 @@
     <div class="wrap">
       <div style="max-width:760px">
         <p class="eyebrow" data-dm-scramble>Begriffe ohne Nebel</p>
-        <h2 id="was-ein-lead-ist">Was ein Lead ist – und was nur eine Adresse ist</h2>
+        <h2 id="was-ein-lead-ist" data-dm-reveal="head">Was ein Lead ist – und was nur eine Adresse ist</h2>
         <p>Eine gekaufte Tabelle kann 10.000 Firmen enthalten. Sie beantwortet nicht, wer gerade zuständig ist und ob der Moment passt. Eine Adresse ohne Anlass ist nur eine Zeile in einer Tabelle: nützlich für Recherche, zu wenig als qualifizierter Lead.</p>
         <p>Ein B2B-Lead hat einen Gesprächsgrund. Bei aktiver Ansprache ist das oft ein öffentlich sichtbares Ereignis: Stelle, Produktlinie, Standort oder Führungswechsel. Das sind Beispiele, nicht als abschließende Liste. Der Anlass macht den Kontakt heute wertvoller als vorige Woche.</p>
         <p>Wir nennen das <a href="/signal-based-selling/">Signal Based Selling</a>: Nicht die Liste bestimmt den Anruf, sondern das Ereignis. Auf Deutsch: anlassbezogene Ansprache. Ausgewertet werden nur öffentliche Quellen. Im Gespräch nennen wir nur das einzelne Ereignis, nie ein Muster aus Beobachtungen.</p>
@@ -412,7 +414,7 @@
   <section class="bg-soft">
     <div class="wrap" style="max-width:760px">
       <p class="eyebrow" data-dm-scramble>Der falsche Einkauf</p>
-      <h2 id="gekaufte-listen">Warum gekaufte Listen fast immer enttäuschen</h2>
+      <h2 id="gekaufte-listen" data-dm-reveal="head">Warum gekaufte Listen fast immer enttäuschen</h2>
       <p>Listenverkäufer liefern Reichweite. Der Vertrieb braucht Relevanz im richtigen Moment. Eine Datei enthält selten den Grund, warum ein Unternehmen heute zuhören sollte. Sie kann veraltet, mehrfach verkauft oder mit falschen Rollen gefüllt sein. Der Preis pro Datensatz verdeckt die Nacharbeit.</p>
       <p>Als Startpunkt für Marktanalyse kann eine externe Datenquelle helfen, aber nicht als Qualitätsversprechen. Wer <a href="/neukundenakquise-agentur/">Neukundenakquise</a> plant, sollte Zielbild, Anlass und Übergabe definieren. Für aktiv eröffnete Gespräche beschreiben wir die <a href="/kaltakquise-agentur/">Kaltakquise-Agentur</a>.</p>
       <p>DEALMAKERS ruft mit Anlass an, nicht mit einer gekauften Liste. Die Menschen am Telefon haben jahrelange eigene B2B-Vertriebserfahrung, lesen kein kurzfristiges Skript ab und bleiben auch nach Einwänden im Gespräch.</p>
@@ -517,7 +519,7 @@
   <section class="bg-soft">
     <div class="wrap" style="max-width:760px">
       <p class="eyebrow" data-dm-scramble>Sachlich einordnen</p>
-      <h2 id="datenschutz">Datenschutz: welche Daten man wie verarbeiten darf</h2>
+      <h2 id="datenschutz" data-dm-reveal="head">Datenschutz: welche Daten man wie verarbeiten darf</h2>
       <p>Daten zweckgebunden verarbeiten, Herkunft dokumentieren und Löschprozesse vorsehen. Bei öffentlichen Kontaktdaten kommt es auf Rechtsgrundlage und Nutzungskontext an. Eine Adresse aus einem Impressum ist keine Werbeerlaubnis.</p>
       <p>Für Werbeansprache gilt das UWG. Telefonische Ansprache kann bei sachlichem Bezug zulässig sein. Werbe-E-Mails sind strenger zu beurteilen. Das ist Orientierung, keine Rechtsberatung.</p>
     </div>
@@ -526,7 +528,7 @@
   <section class="faq">
     <div class="wrap" style="max-width:820px">
       <p class="eyebrow" data-dm-scramble>Häufige Fragen</p>
-      <h2 id="faq">Fragen zur B2B-Leadgenerierung</h2>
+      <h2 id="faq" data-dm-reveal="head">Fragen zur B2B-Leadgenerierung</h2>
       <details><summary>Was ist ein B2B-Lead?</summary><p>Ein B2B-Lead ist ein Kontakt zu einem Unternehmen, bei dem ein sachlicher Grund für ein Gespräch besteht. Das kann eine Anfrage sein, ein öffentlich sichtbarer Anlass oder ein erkennbares Interesse. Name, E-Mail-Adresse und Firmenname allein machen noch keinen Lead. Entscheidend sind Passung, aktueller Anlass und die Chance, die zuständige Person sinnvoll zu erreichen.</p></details>
       <details><summary>Was kostet ein qualifizierter B2B-Lead?</summary><p>Das hängt von Angebot, Zielgruppe und Reifegrad ab. Sinnvoll ist nicht der billigste Datensatz, sondern die Rechnung bis zum Abschluss: Gesamtkosten geteilt durch qualifizierte Leads, Termine und gewonnene Kunden. In unserer Beispielrechnung kosten 20 qualifizierte Leads zusammen 4.000 Euro, also 200 Euro je Lead, und führen bei den dort angenommenen Quoten zu einem Abschluss.</p></details>
       <details><summary>Was ist der Unterschied zwischen Lead und Termin?</summary><p>Ein Lead ist ein Kontakt mit nachvollziehbarer Passung oder Anlass. Ein Termin ist die verbindliche Vereinbarung, dass die zuständige Person zu einem konkreten Zeitpunkt über das Thema spricht. Dazwischen liegen Prüfung, Gespräch und Qualifizierung. Ein Termin ist deshalb nicht automatisch ein guter Lead, und ein guter Lead ist noch kein Termin.</p></details>
@@ -546,7 +548,7 @@
   <section class="bg-soft">
     <div class="wrap">
       <div class="cta">
-        <h2 id="erstgespraech">Ein Lead muss im Vertrieb ankommen, nicht in einer Liste verschwinden.</h2>
+        <h2 id="erstgespraech" data-dm-reveal="head">Ein Lead muss im Vertrieb ankommen, nicht in einer Liste verschwinden.</h2>
         <p class="lead" style="color:#cdd4e6;max-width:620px;margin:0 auto">Sprechen Sie mit uns über Zielgruppe, Anlässe und die Übergabe an Ihr Team.</p>
         <div class="btn-row">
           <a class="btn btn-primary" data-dm-magnetic href="tel:+4916096678717">+49 160 966 787 17</a>
