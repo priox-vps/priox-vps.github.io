@@ -1,0 +1,648 @@
+- generic [active] [ref=e1]:
+  - link "Zum Inhalt springen" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e5]:
+    - generic [ref=e6]: Berlin & Unterfranken · seit 2021
+    - link "+49 160 966 787 17" [ref=e7] [cursor=pointer]:
+      - /url: tel:+4916096678717
+    - link "hello@deal-makers.de" [ref=e8] [cursor=pointer]:
+      - /url: mailto:hello@deal-makers.de
+  - banner [ref=e9]:
+    - generic [ref=e10]:
+      - link "DEALMAKERS" [ref=e11] [cursor=pointer]:
+        - /url: /
+      - navigation "Hauptnavigation" [ref=e12]:
+        - link "Leistungen" [ref=e13] [cursor=pointer]:
+          - /url: /leistungen/
+        - link "Outsourcing" [ref=e14] [cursor=pointer]:
+          - /url: /vertriebsoutsourcing/
+        - link "Kaltakquise" [ref=e15] [cursor=pointer]:
+          - /url: /kaltakquise-agentur/
+        - link "Beratung" [ref=e16] [cursor=pointer]:
+          - /url: /vertriebsberatung/
+        - link "Training" [ref=e17] [cursor=pointer]:
+          - /url: /vertriebstraining-b2b/
+        - link "Ratgeber" [ref=e18] [cursor=pointer]:
+          - /url: /ratgeber/
+        - link "Gespräch vereinbaren" [ref=e19] [cursor=pointer]:
+          - /url: /kontakt/
+  - navigation "Brotkrumen" [ref=e20]:
+    - list [ref=e22]:
+      - listitem [ref=e23]:
+        - link "Start" [ref=e24] [cursor=pointer]:
+          - /url: /
+        - text: ›
+      - listitem [ref=e25]: Telefonakquise-Agentur
+  - main [ref=e26]:
+    - generic [ref=e29]:
+      - paragraph [ref=e30]: Telefonakquise im B2B
+      - 'heading "Telefonakquise-Agentur: Menschen am Hörer, kein Callcenter-Skript" [level=1] [ref=e31]'
+      - paragraph [ref=e32]: "Wir übernehmen Ihre B2B-Telefonakquise: Anlass recherchieren, die zuständige Person direkt anrufen, das Erstgespräch führen, qualifizieren und einen Termin mit Notiz übergeben. Am Hörer sitzen erfahrene Vertriebsleute, kein Schichtbetrieb mit Stückzahlvorgabe."
+      - paragraph [ref=e33]: "Wir starten nicht mit einer Vorstellungsrunde, sondern mit einem überprüfbaren Anlass aus öffentlichen Quellen. Wie weit wir gehen, legen Sie fest: bis zum Termin, bis zur Qualifizierung oder auf Wunsch bis zum Abschluss."
+      - generic [ref=e34]:
+        - link "+49 160 966 787 17" [ref=e35] [cursor=pointer]:
+          - /url: tel:+4916096678717
+        - link "Erstgespräch im Kalender" [ref=e36] [cursor=pointer]:
+          - /url: https://calendar.app.google/CUn3btn6t7fnfRjt8
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - paragraph [ref=e40]: Wer hier anruft
+        - heading "Am Hörer sitzt jemand, der seine eigene Zahl 20 Jahre lang liefern musste" [level=2] [ref=e41]
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - heading "Fast 20 Jahre B2B" [level=3] [ref=e44]
+          - paragraph [ref=e45]: Aufbau, Führung, Training und eigene Quote – bei NOVUSTEL, Couplink, PayPal und Billie. Kaltakquise ist bei uns kein Einstiegsjob, sondern das Handwerk der erfahrensten Person im Team.
+        - generic [ref=e46]:
+          - heading "über 200 % Zielerreichung" [level=3] [ref=e47]
+          - paragraph [ref=e48]: Persönliche Zielerreichung bei PayPal, in Spitzenzeiträumen knapp 400 %, bei Billie über 150 %, dazu mehrfach Spot-Award als Top-Sales-Performer DACH. Entstanden unter echtem Quotendruck, nicht im Seminarraum.
+        - generic [ref=e49]:
+          - heading "seit 2021 DEALMAKERS" [level=3] [ref=e50]
+          - paragraph [ref=e51]: 20+ betreute Kunden aus SaaS, Beratung und Fintech, Dealgrößen zwischen 30.000 und 500.000 EUR Jahresumsatz. Bei Couplink wurde der Unternehmensumsatz in 10 Monaten verdoppelt – in einem rückläufigen Markt.
+        - generic [ref=e52]:
+          - heading "bis zu 60 % erreicht" [level=3] [ref=e53]
+          - paragraph [ref=e54]:
+            - text: Wo Anlass, Direktnummer und freies Kalenderfenster zusammenkommen, erreichen wir in Projekten teilweise 60 % der Angerufenen und machen aus 40 % dieser Gespräche einen Termin. Wie das geht, steht
+            - link "weiter unten" [ref=e55] [cursor=pointer]:
+              - /url: "#quoten"
+            - text: .
+      - paragraph [ref=e56]:
+        - text: Die Prozentwerte sind belegte persönliche Zielerreichungen aus früheren Rollen und Spitzenwerte aus Projekten – kein Durchschnitt und keine Zusage für Ihr Produkt. Der vollständige Werdegang mit allen Nachweisen steht unter
+        - link "Warum wir" [ref=e57] [cursor=pointer]:
+          - /url: /warum-wir/
+        - text: .
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - paragraph [ref=e60]: Stationen und Projekte unseres Gründers
+        - paragraph [ref=e61]: Unternehmen, für die unser Gründer im Vertrieb tätig war oder die er in Projekten betreut hat – teils angestellt, teils als Dienstleister.
+      - 'img "Stationen und Projekte unseres Gründers: PayPal, Bosch, Siemens, Hays, WeWork, Formlabs, Billie, Couplink Group, WERK1, SundB Strategy, Denton Systems, Mobile Objects, MyFlexHome, Condor Electronics, Benhamadi-Gruppe, Moving Image, Innoloft" [ref=e62]':
+        - generic [ref=e63]:
+          - generic [ref=e64]:
+            - generic [ref=e65]: PayPal
+            - generic [ref=e66]: Bosch
+            - generic [ref=e67]: Siemens
+            - generic [ref=e68]: Hays
+            - generic [ref=e69]: WeWork
+            - generic [ref=e70]: Formlabs
+            - generic [ref=e71]: Billie
+            - generic [ref=e72]: Couplink Group
+            - generic [ref=e73]: WERK1
+          - generic [ref=e74]:
+            - generic [ref=e75]: PayPal
+            - generic [ref=e76]: Bosch
+            - generic [ref=e77]: Siemens
+            - generic [ref=e78]: Hays
+            - generic [ref=e79]: WeWork
+            - generic [ref=e80]: Formlabs
+            - generic [ref=e81]: Billie
+            - generic [ref=e82]: Couplink Group
+            - generic [ref=e83]: WERK1
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - generic [ref=e86]: S&B Strategy
+            - generic [ref=e87]: Denton Systems
+            - generic [ref=e88]: Mobile Objects
+            - generic [ref=e89]: MyFlexHome
+            - generic [ref=e90]: Condor Electronics
+            - generic [ref=e91]: Benhamadi-Gruppe
+            - generic [ref=e92]: Moving Image
+            - generic [ref=e93]: Innoloft
+          - generic [ref=e94]:
+            - generic [ref=e95]: S&B Strategy
+            - generic [ref=e96]: Denton Systems
+            - generic [ref=e97]: Mobile Objects
+            - generic [ref=e98]: MyFlexHome
+            - generic [ref=e99]: Condor Electronics
+            - generic [ref=e100]: Benhamadi-Gruppe
+            - generic [ref=e101]: Moving Image
+            - generic [ref=e102]: Innoloft
+    - navigation "Inhaltsverzeichnis" [ref=e105]:
+      - paragraph [ref=e106]: Inhalt
+      - list [ref=e107]:
+        - listitem [ref=e108]:
+          - link "Agentur oder Callcenter" [ref=e109] [cursor=pointer]:
+            - /url: "#agentur-oder-callcenter"
+        - listitem [ref=e110]:
+          - link "Warum das Telefon funktioniert" [ref=e111] [cursor=pointer]:
+            - /url: "#telefon-im-b2b"
+        - listitem [ref=e112]:
+          - link "Gesprächsaufbau" [ref=e113] [cursor=pointer]:
+            - /url: "#gespraechsaufbau"
+        - listitem [ref=e114]:
+          - link "Vorzimmer und Stimme" [ref=e115] [cursor=pointer]:
+            - /url: "#vorzimmer"
+        - listitem [ref=e116]:
+          - link "Der richtige Zeitpunkt" [ref=e117] [cursor=pointer]:
+            - /url: "#erreichbarkeit"
+        - listitem [ref=e118]:
+          - link "Einwände" [ref=e119] [cursor=pointer]:
+            - /url: "#einwaende"
+        - listitem [ref=e120]:
+          - link "Standardagentur vs. DEALMAKERS" [ref=e121] [cursor=pointer]:
+            - /url: "#quoten"
+        - listitem [ref=e122]:
+          - link "Qualität sichern" [ref=e123] [cursor=pointer]:
+            - /url: "#qualitaet"
+        - listitem [ref=e124]:
+          - link "FAQ" [ref=e125] [cursor=pointer]:
+            - /url: "#faq"
+        - listitem [ref=e126]:
+          - link "Erstgespräch" [ref=e127] [cursor=pointer]:
+            - /url: "#erstgespraech"
+    - generic [ref=e129]:
+      - generic [ref=e130]:
+        - paragraph [ref=e131]: Abgrenzung
+        - 'heading "Telefonakquise-Agentur oder Callcenter: Der Unterschied beginnt vor dem Anruf" [level=2] [ref=e132]'
+      - paragraph [ref=e133]: "Ein Callcenter organisiert Reichweite. Das kann für Service oder einfache Abfragen passen. In der B2B-Terminierung für erklärungsbedürftige Angebote liegt die Arbeit jedoch im Gespräch: Anlass verstehen, Rollen einordnen, Rückfragen aufnehmen und nach dem zweiten Einwand nicht in den nächsten Datensatz wechseln. Dafür braucht es Menschen mit eigener Vertriebspraxis."
+      - paragraph [ref=e134]: Bei DEALMAKERS arbeiten feste Vertriebspartner aus dem eigenen Netzwerk. Sie haben jahrelange eigene B2B-Vertriebserfahrung. Es gibt keine kurzfristig eingelernten Kräfte, keine Anwahlmaschine und keine Vorgabe für Gespräche pro Stunde. Wer nur den nächsten Haken sucht, hört den Unterschied zwischen einem endgültigen und einem noch unklaren Nein nicht.
+      - figure "Telefonakquise wird dann zur Vertriebsarbeit, wenn Vorbereitung und Gesprächsführung mehr zählen als bloße Anwahlmenge." [ref=e135]:
+        - img "Gegenüberstellung von Agentur und Callcenter anhand von Gesprächsführung, Vorbereitung und Erfolgsmessung" [ref=e137]:
+          - generic [ref=e138]:
+            - generic [ref=e141]: DEALMAKERS
+            - generic [ref=e142]: Callcenter-Modell
+            - generic [ref=e143]:
+              - generic [ref=e144]: Anlass vor dem Anruf
+              - generic [ref=e145]: erfahrene B2B-Vertriebspraxis
+              - generic [ref=e146]: Gesprächsrahmen, kein Skript
+              - generic [ref=e147]: Pausen und Rückfragen möglich
+              - generic [ref=e148]: Terminqualität und Notizen
+              - generic [ref=e149]: feste Partner, kein Schichtbetrieb
+              - generic [ref=e150]: Liste und Anwahlvolumen zuerst
+              - generic [ref=e151]: kurze Einarbeitung möglich
+              - generic [ref=e152]: Wortfolge vorgegeben
+              - generic [ref=e153]: Taktung vor Gespräch
+              - generic [ref=e154]: Anzahl Kontakte im Fokus
+              - generic [ref=e155]: wechselnde Schichten möglich
+      - table [ref=e158]:
+        - rowgroup [ref=e159]:
+          - row [ref=e160]:
+            - columnheader "Merkmal" [ref=e161]
+            - columnheader "Telefonakquise-Agentur" [ref=e162]
+            - columnheader "Callcenter-Logik" [ref=e163]
+        - rowgroup [ref=e164]:
+          - row [ref=e165]:
+            - cell "Ausgangspunkt" [ref=e166]
+            - cell "Konkreter Anlass und Zielbild" [ref=e167]
+            - cell "Liste und Kontaktmenge" [ref=e168]
+          - row [ref=e169]:
+            - cell "Besetzung" [ref=e170]
+            - cell "Erfahrene B2B-Vertriebsleute" [ref=e171]
+            - cell "Häufig wechselnde Schichten" [ref=e172]
+          - row [ref=e173]:
+            - cell "Gespräch" [ref=e174]
+            - cell "Rahmen mit eigenen Formulierungen" [ref=e175]
+            - cell "Skript mit vorgegebener Wortfolge" [ref=e176]
+          - row [ref=e177]:
+            - cell "Tempo" [ref=e178]
+            - cell "Folgt dem Gespräch" [ref=e179]
+            - cell "Folgt der Taktung" [ref=e180]
+          - row [ref=e181]:
+            - cell "Zweiter Einwand" [ref=e182]
+            - cell "Wird inhaltlich eingeordnet" [ref=e183]
+            - cell "Führt oft zum Abbruchpfad" [ref=e184]
+          - row [ref=e185]:
+            - cell "Zugang zum Entscheider" [ref=e186]
+            - cell "Person, Thema und oft die Durchwahl sind vorab bekannt" [ref=e187]
+            - cell "Durchstellung als Kennzahl" [ref=e188]
+          - row [ref=e189]:
+            - cell "Erfolg" [ref=e190]
+            - cell "Qualifizierter Termin und Kontext" [ref=e191]
+            - cell "Kontakt, Gespräch oder Anwahl" [ref=e192]
+          - row [ref=e193]:
+            - cell "Dokumentation" [ref=e194]
+            - cell "Notiz für den nächsten Schritt" [ref=e195]
+            - cell "Abschlusscode im System" [ref=e196]
+      - paragraph [ref=e197]:
+        - text: Wenn Sie Akquise als Gesamtprozess mit Kanalwahl und rechtlichem Rahmen aufsetzen wollen, passt unsere
+        - link "Kaltakquise-Agentur für B2B" [ref=e198] [cursor=pointer]:
+          - /url: /kaltakquise-agentur/
+        - text: . Diese Seite bleibt bewusst beim Handwerk am Hörer.
+    - generic [ref=e200]:
+      - generic [ref=e201]:
+        - paragraph [ref=e202]: Anlass vor Liste
+        - heading "Warum das Telefon im B2B weiterhin funktioniert" [level=2] [ref=e203]
+      - paragraph [ref=e204]: Ein Telefonat klärt in wenigen Sätzen, ob ein Thema jetzt, später oder gar nicht relevant ist. Das funktioniert nicht durch Lautstärke oder Hartnäckigkeit, sondern wenn der Einstieg ein öffentliches Ereignis nachvollziehbar mit dem Angebot verbindet.
+      - paragraph [ref=e205]:
+        - text: "Wir rufen nicht nach Liste an, sondern nach Anlass. Welche Firma gerade dran ist, meldet unser eigenes Central-Sales-Intelligence-System: Es wertet laufend Millionen von Quellen mit relevanten Daten aus und erkennt mehr als 40 Arten von Anlässen – und wenn Ihr Markt 100 davon braucht, werden es 100. Wie diese Ebene arbeitet, zeigt"
+        - link "PrioX" [ref=e206] [cursor=pointer]:
+          - /url: https://priox.ai/
+        - text: ; die Software haben wir selbst gebaut. Der Ansatz dahinter heißt
+        - link "Signal Based Selling" [ref=e207] [cursor=pointer]:
+          - /url: /signal-based-selling/
+        - text: .
+      - paragraph [ref=e208]: "Der erste Satz nennt nur dieses einzelne, offen sichtbare Ereignis, nie ein beobachtetes Muster. Etwa: „Sie haben letzte Woche zwei Stellen für den Vertrieb in Wien ausgeschrieben. Wer verantwortet bei Ihnen die Entscheidung, wie die ersten Gespräche dort entstehen?“ Oder: „Auf Ihrer Website ist die neue Produktlinie seit Montag angekündigt. Ist die Pipeline dafür bereits ein Thema bei Ihnen?“ Beide Sätze bleiben beim Anlass und überziehen ihn nicht mit einer Deutung."
+      - table [ref=e210]:
+        - rowgroup [ref=e211]:
+          - row [ref=e212]:
+            - columnheader "Öffentlich sichtbares Signal" [ref=e213]
+            - columnheader "Was es in der Regel bedeutet" [ref=e214]
+            - columnheader "Typisches Zeitfenster" [ref=e215]
+        - rowgroup [ref=e216]:
+          - row [ref=e217]:
+            - cell "Zwei neue Vertriebsstellen ausgeschrieben" [ref=e218]
+            - cell "Vertriebskapazität wird aufgebaut" [ref=e219]
+            - cell "2–8 Wochen" [ref=e220]
+          - row [ref=e221]:
+            - cell "Neue Stelle für Sales Operations" [ref=e222]
+            - cell "Prozess und Pipeline werden strukturierter" [ref=e223]
+            - cell "1–3 Monate" [ref=e224]
+          - row [ref=e225]:
+            - cell "Vertriebsleitung öffentlich neu besetzt" [ref=e226]
+            - cell "Agenda und Prioritäten werden neu gesetzt" [ref=e227]
+            - cell "erste 90 Tage" [ref=e228]
+          - row [ref=e229]:
+            - cell "Neuer Standort eröffnet" [ref=e230]
+            - cell "Region, Team oder Lieferanten werden aufgebaut" [ref=e231]
+            - cell "1–4 Monate" [ref=e232]
+          - row [ref=e233]:
+            - cell "Neue Produktlinie angekündigt" [ref=e234]
+            - cell "Es braucht erste Marktgespräche" [ref=e235]
+            - cell "1–3 Monate" [ref=e236]
+          - row [ref=e237]:
+            - cell "Kapitalerhöhung veröffentlicht" [ref=e238]
+            - cell "Investitionen können zeitnah anstehen" [ref=e239]
+            - cell "1–6 Monate" [ref=e240]
+          - row [ref=e241]:
+            - cell "Rahmenvertrag öffentlich ausgeschrieben" [ref=e242]
+            - cell "Konkreter Bedarf mit Frist" [ref=e243]
+            - cell "bis zur Frist" [ref=e244]
+      - paragraph [ref=e245]:
+        - strong [ref=e246]: Das ist ein Beispiel-Set, keine Liste, die wir abarbeiten.
+        - text: "Welche Anlässe für Sie zählen, legen wir vor dem Start gemeinsam fest – Ihre Konfiguration sieht mit hoher Wahrscheinlichkeit völlig anders aus als diese Tabelle. Der Grundsatz dahinter ist einfach: Was irgendwo öffentlich sichtbar ist, lässt sich als Anlass nutzen. Stellenanzeige, Pressemitteilung, Handelsregister, Messeauftritt, Podcast, Beitrag auf einem Karrierenetzwerk, geänderte Preisseite, neue Zertifizierung. Wenn Sie uns sagen, worauf Ihr Markt reagiert, nehmen wir es auf."
+      - paragraph [ref=e247]: "Dazu kommen Ihre Wunsch-Signale, die nur in Ihrem Markt etwas bedeuten: ein auslaufender Rahmenvertrag, eine verlorene Zertifizierung, eine Normänderung, der Wegfall einer Förderung. Sagen Sie uns, worauf Ihr Markt reagiert – wir nehmen es auf."
+    - generic [ref=e249]:
+      - generic [ref=e250]:
+        - paragraph [ref=e251]: Das Handwerk
+        - heading "Der Gesprächsaufbau in fünf Phasen" [level=2] [ref=e252]
+      - paragraph [ref=e253]:
+        - strong [ref=e254]: Wir bleiben im Beispiel von oben
+        - text: – der ausgeschriebenen Vertriebsstelle für den neuen Standort. Die Sätze in den folgenden Karten dienen nur der Verdeutlichung; in Ihrem Fall steht dort ein anderer Anlass, eine andere Rolle und eine andere Frage. Der Ablauf bleibt, die Inhalte werden für Ihren Markt neu geschrieben.
+      - paragraph [ref=e255]: Ein gutes Erstgespräch braucht keinen Monolog, sondern einen Rahmen. Die ersten zwanzig Sekunden schaffen Erlaubnis, nicht Abschlussdruck. Erst wenn Rolle und Anlass bestätigt oder korrigiert sind, ist eine Terminfrage sinnvoll.
+      - generic [ref=e256]:
+        - generic [ref=e257]:
+          - 'heading "1. Anlass nennen: 0:00–0:20" [level=3] [ref=e258]'
+          - paragraph [ref=e259]: "Der Satz ist kurz und überprüfbar: „Sie haben die Leitung für den neuen Standort ausgeschrieben.“ Dann folgt die Frage nach Zuständigkeit. Keine versteckte Rechercheleistung, keine Bewertung des Unternehmens."
+        - generic [ref=e260]:
+          - 'heading "2. Erlaubnis holen: 0:20–0:40" [level=3] [ref=e261]'
+          - paragraph [ref=e262]: „Habe ich Sie für zwei kurze Fragen zur Vertriebsseite erwischt?“ Das gibt dem Gesprächspartner eine Ausstiegsmöglichkeit. Wer sie nicht gibt, bekommt selten brauchbare Antworten.
+        - generic [ref=e263]:
+          - 'heading "3. Lage klären: 0:40–1:30" [level=3] [ref=e264]'
+          - paragraph [ref=e265]: "Eine offene Frage reicht: „Wie gewinnen Sie für die neue Region aktuell Ersttermine?“ Dann zuhören. Die Pause nach der Frage ist Teil des Gesprächs, kein Fehler."
+        - generic [ref=e266]:
+          - 'heading "4. Einwand verstehen: 1:30–3:00" [level=3] [ref=e267]'
+          - paragraph [ref=e268]: "„Kein Bedarf“ kann heißen: falscher Zeitpunkt, falsche Rolle oder echte Absage. Erfahrung zeigt sich darin, erst nachzufragen und nicht sofort den nächsten Satz des Skripts abzulesen."
+        - generic [ref=e269]:
+          - 'heading "5. Nächsten Schritt vereinbaren: bis 4:00" [level=3] [ref=e270]'
+          - paragraph [ref=e271]: "Wenn Thema und Rolle passen, wird der Termin konkret: Teilnehmer, Dauer, Fragestellung und Zeitpunkt. Wenn nicht, wird ein späteres Fenster oder ein sauberer Abschluss notiert."
+        - generic [ref=e272]:
+          - heading "Stimme, Tempo, Pause" [level=3] [ref=e273]
+          - paragraph [ref=e274]: Eine ruhige Stimme ersetzt keine Substanz, macht sie aber hörbar. Menschen mit Vertriebserfahrung variieren Tempo und Formulierung, statt jede Pause mit einem Argument zuzuschütten.
+      - paragraph [ref=e275]:
+        - text: Das ist ein anderer Auftrag als
+        - link "Neukundenakquise als Gesamtleistung" [ref=e276] [cursor=pointer]:
+          - /url: /neukundenakquise-agentur/
+        - text: ": Hier wird besonders sichtbar, ob die Person am Hörer fachlich führen kann. Ein erfahrener Anrufer reagiert auf den zweiten Einwand mit einer Frage oder einem ehrlichen Abbruch. Ein Skript liefert oft nur den nächsten vorformulierten Satz."
+      - paragraph [ref=e277]: "Wir hören auch nicht zwingend beim Termin auf. Auf Wunsch führen wir den Zyklus weiter: Angebot begleiten, nachfassen, verhandeln und innerhalb des Preisrahmens abschließen, den Sie freigeben. Für tiefe fachliche Fragen holen wir Ihre Leute dazu. Nur die Betreuung Ihrer Bestandskunden übernehmen wir nicht – das ist Account-Management und lebt von Historie und gewachsener Beziehung."
+    - generic [ref=e279]:
+      - generic [ref=e280]:
+        - paragraph [ref=e281]: Kein Trick nötig
+        - heading "Warum das Vorzimmer bei uns selten vorkommt" [level=2] [ref=e282]
+      - paragraph [ref=e283]: "Die halbe Branche trainiert, wie man an der Zentrale vorbeikommt. Wir stellen die Frage davor: Warum landen wir überhaupt dort? In der Regel wissen wir, wer zuständig ist und was diese Person gerade beschäftigt, und wir haben Durchwahl oder Mobilnummer. Damit ist das Vorzimmer schlicht nicht im Spiel – es gibt nichts zu umgehen."
+      - paragraph [ref=e284]: "Und wenn doch jemand dazwischensteht, entscheidet kein Trick, sondern der Anlass. „Es geht um die Vertriebsstelle für Wien, die seit Montag ausgeschrieben ist“ ist für eine Assistenz etwas völlig anderes als „Ich hätte da mal eine Frage zum Thema Vertrieb“. Ein konkreter, überprüfbarer Grund gibt ihr eine Grundlage zu entscheiden – und genau dieser Grund trägt später auch den Termin. Kein falscher Name, kein erfundener Rückruf: Wer so etwas braucht, hat keinen Anlass."
+      - heading "Die Stimme entscheidet mit – in den ersten drei Sekunden" [level=3] [ref=e285]
+      - paragraph [ref=e286]:
+        - text: Bevor Ihr Gegenüber den ersten Satz inhaltlich bewertet hat, hat er den Anrufer längst einsortiert. Das läuft über die Tonhöhe am Satzende. Geht sie nach oben, klingt jeder Satz wie eine Bitte um Erlaubnis – der typische Klang des 0815-Verkäufers, der selbst nicht sicher ist, ob er stören darf. Wir arbeiten bewusst mit der abfallenden Stimmführung, der
+        - strong [ref=e287]: Downwards Inflection
+        - text: ": Der Satz endet tiefer, als er begonnen hat. Das ist der Tonfall, in dem Menschen Auskunft geben, statt um etwas zu bitten."
+      - figure "„Passt Ihnen Dienstag um zehn?“ – derselbe Wortlaut, zwei völlig verschiedene Antworten. Die Tonhöhe am Satzende entscheidet, ob es nach Bitte oder nach Vorschlag klingt." [ref=e288]:
+        - 'img "Zwei Tonhöhenverläufe: oben steigt die Stimme am Satzende an, unten fällt sie ab" [ref=e290]':
+          - generic [ref=e291]:
+            - generic [ref=e292]: DERSELBE SATZ, ZWEI TONHÖHENVERLÄUFE
+            - generic [ref=e293]: "0815-Verkäufer: Stimme steigt am Satzende"
+            - generic [ref=e295]: wirkt wie eine Bitte um Erlaubnis – leicht abzulehnen
+            - generic [ref=e296]: "Downwards Inflection: Stimme fällt am Satzende"
+            - generic [ref=e298]: wirkt wie ein Vorschlag unter Berufstätigen – wird eher angenommen
+      - paragraph [ref=e300]: "Chris Voss, jahrelang Verhandlungsführer des FBI, nennt die ruhige, warme, nach unten geführte Variante die „Late-Night-FM-DJ-Stimme“: langsam, warm, fallend. Sie nimmt Tempo aus dem Gespräch, statt es hochzudrehen – und ein ruhiges Gegenüber ist die Voraussetzung dafür, dass überhaupt zugehört wird. Drei Stellen machen dabei den Unterschied: die eigene Namensnennung, der Anlasssatz und die Terminfrage. Besonders die Terminfrage. Das lässt sich nicht als Skript ausgeben, das muss jemand können – und es ist einer der Gründe, warum bei uns keine Aushilfe am Hörer sitzt."
+    - generic [ref=e302]:
+      - generic [ref=e303]:
+        - paragraph [ref=e304]: Der Hebel vor dem Anruf
+        - heading "Wir rufen an, wenn jemand wirklich am Platz ist" [level=2] [ref=e305]
+      - paragraph [ref=e306]: Der häufigste Grund, warum ein Anruf scheitert, ist nicht der Mensch am anderen Ende, sondern der Zeitpunkt. Wer eine Liste von oben nach unten durchwählt, trifft einen großen Teil seiner Zielgruppe mitten im Termin. Deshalb raten wir nicht, wann jemand frei ist – wir prüfen es. Wir setzen Werkzeuge ein, die Kalenderverfügbarkeiten auch fremder Kalender auslesen, und legen den Anruf gezielt in ein offenes Fenster.
+      - figure "Ein Anruf im freien Fenster erreicht jemanden am Schreibtisch, kein Freizeichen und keine Mailbox." [ref=e307]:
+        - img "Tagesleiste eines Entscheiders mit belegten Terminblöcken und einem freien Fenster, in das der Anruf gelegt wird" [ref=e309]:
+          - generic [ref=e310]:
+            - generic [ref=e311]: KALENDER DES ENTSCHEIDERS, DIENSTAG
+            - generic [ref=e317]:
+              - generic [ref=e318]: 9:00
+              - generic [ref=e319]: 10:30
+              - generic [ref=e320]: 11:15
+              - generic [ref=e321]: 14:00
+              - generic [ref=e322]: 15:00
+            - generic [ref=e323]:
+              - generic [ref=e324]: belegt
+              - generic [ref=e325]: belegt
+              - generic [ref=e326]: belegt
+            - generic [ref=e328]: "Anruf: 10:40"
+            - generic [ref=e329]: Freie Fenster sind golden umrandet. Dort klingelt das Telefon, nicht davor und nicht mitten im Meeting.
+            - generic [ref=e330]: Beispieltag zur Verdeutlichung – Ihre Zielgruppe hat andere Rhythmen.
+      - paragraph [ref=e332]: "Zusammen mit der Durchwahl oder Mobilnummer ist das der eigentliche Hebel hinter unserer Call-to-Connect-Rate: Wer gerade nicht in einem Meeting sitzt und dessen Telefon direkt klingelt, geht in aller Regel ran. Ob aus dem Gespräch ein Termin wird, entscheidet danach der Anlass – aber zuerst muss überhaupt jemand abnehmen. Was das in Zahlen bedeutet, steht im nächsten Abschnitt."
+    - generic [ref=e334]:
+      - generic [ref=e335]:
+        - paragraph [ref=e336]: Das Handwerk dahinter
+        - heading "Einwandbehandlung, die nicht nach Einwandbehandlung klingt" [level=2] [ref=e337]
+      - paragraph [ref=e338]: "Was Sie kennen: Der Anrufer hört „kein Bedarf“ und legt eine auswendig gelernte Gegenrede nach. Das ist die Standardschule – und sie scheitert genau daran, dass Ihr Gegenüber sie nach zwei Sekunden erkennt. Bei uns ist ein Einwand keine Aussage, die widerlegt werden muss, sondern die einzige echte Information, die wir in diesem Moment bekommen. Drei Sätze tragen unsere Gesprächsführung:"
+      - generic [ref=e339]:
+        - generic [ref=e340]:
+          - heading "Erst beruhigen, dann reden" [level=3] [ref=e341]
+          - paragraph [ref=e342]: Solange jemand im Abwehrmodus ist, hört er keine Argumente – er sucht den Ausgang. Die erste Aufgabe am Telefon ist nicht Überzeugung, sondern ein ruhiges Gegenüber. Alles andere kommt danach oder gar nicht.
+        - generic [ref=e343]:
+          - heading "Druck kommt nie von uns" [level=3] [ref=e344]
+          - paragraph [ref=e345]: Wir erzeugen keine Dringlichkeit, wir machen die vorhandene sichtbar. Der Grund zu handeln liegt in seiner Lage, nicht in unserem Angebot. Wer das begriffen hat, muss nie drücken – und wird deshalb auch nie abgewimmelt.
+        - generic [ref=e346]:
+          - heading "Sympathie ist Vorbedingung" [level=3] [ref=e347]
+          - paragraph [ref=e348]: Niemand kauft von jemandem, den er als Gegner erlebt. Deshalb widersprechen wir am Telefon praktisch nie. Zustimmen und trotzdem weiterkommen ist eine Technik, kein Charakterzug.
+      - paragraph [ref=e349]: "Konkret heißt das im Gespräch:"
+      - table [ref=e351]:
+        - rowgroup [ref=e352]:
+          - row [ref=e353]:
+            - columnheader "Situation" [ref=e354]
+            - columnheader "Was die meisten tun" [ref=e355]
+            - columnheader "Was wir stattdessen tun" [ref=e356]
+        - rowgroup [ref=e357]:
+          - row [ref=e358]:
+            - cell "Noch bevor ein Einwand kommt" [ref=e359]
+            - cell "direkt in den Pitch" [ref=e360]
+            - 'cell "Wir sprechen den schlimmsten Gedanken selbst aus: „Sie bekommen vermutlich drei solcher Anrufe am Tag, und die meisten sind Zeitverschwendung.“ Ein Vorwurf, den man selbst ausspricht, kann nicht mehr gegen einen verwendet werden." [ref=e361]'
+          - row [ref=e362]:
+            - cell "„Kein Interesse.“" [ref=e363]
+            - cell "noch ein Nutzenargument nachlegen" [ref=e364]
+            - 'cell "Wir fragen nach vorn statt nach dem Warum: „Was müsste sich konkret verbessern, damit ein Gespräch sich für Sie lohnt?“ Ein „Warum“ erzeugt Rechtfertigung, eine Zukunftsfrage erzeugt Kriterien." [ref=e365]'
+          - row [ref=e366]:
+            - cell "„Wir haben schon einen Dienstleister.“" [ref=e367]
+            - cell "den Wettbewerber schlechtreden" [ref=e368]
+            - 'cell "Wir trennen zuerst Vorwand von Einwand: „Angenommen, das wäre gelöst – wäre es dann ein Thema für Sie?“ Nur ein echter Einwand ist verhandelbar, ein Vorwand kostet nur Zeit." [ref=e369]'
+          - row [ref=e370]:
+            - cell "„Wir verlieren zu viel Zeit in der Abstimmung.“" [ref=e371]
+            - cell "sofort eine Lösung anbieten" [ref=e372]
+            - 'cell "Wir spiegeln die letzten Worte und schweigen: „Zeit in der Abstimmung?“ – dann Pause. Was Ihr Gegenüber in diese Stille hineinsagt, ist mehr wert als jedes Argument, das wir hätten vorbringen können." [ref=e373]'
+          - row [ref=e374]:
+            - cell "„Schicken Sie mir eine E-Mail.“" [ref=e375]
+            - cell "ein PDF senden und nie wieder etwas hören" [ref=e376]
+            - 'cell "„Eine E-Mail – damit ich Ihnen nichts Irrelevantes schicke: Darf ich zwei kurze Fragen stellen?“ Und wenn es doch eine höfliche Abfuhr war, machen wir den Ausstieg leicht: „Wenn Sie einfach irgendetwas meinen, ist das auch ein Nein – völlig in Ordnung. Trifft das eher zu?“" [ref=e377]'
+          - row [ref=e378]:
+            - cell "„Jetzt gerade nicht, vielleicht nächstes Quartal.“" [ref=e379]
+            - cell "„Wann darf ich denn wieder anrufen?“" [ref=e380]
+            - 'cell "Wir lassen ihn die Folge selbst aussprechen: „Wenn das bis zum nächsten Quartal so bleibt – was heißt das für Ihre Zielerreichung?“ Diese eine Frage ist der Punkt, an dem sich alle ernsthaften Verkaufsschulen einig sind." [ref=e381]'
+          - row [ref=e382]:
+            - cell "Zustimmung, die keine ist" [ref=e383]
+            - cell "schnell den Termin festzurren" [ref=e384]
+            - cell "Wir fassen seine Lage so lange zusammen, bis er „genau“ sagt. Vorher ist es Höflichkeit, danach ist es Übereinstimmung – und ein Termin auf Höflichkeit platzt." [ref=e385]
+          - row [ref=e386]:
+            - cell "Ein Ja, das zu leicht kam" [ref=e387]
+            - cell "sich freuen" [ref=e388]
+            - 'cell "Wir bieten ein schützendes Nein an: „Wäre es völlig verkehrt, sich das in 20 Minuten gemeinsam anzusehen?“ Wer Nein sagen darf, fühlt sich sicher – und sagt danach erstaunlich oft Ja." [ref=e389]'
+      - paragraph [ref=e390]:
+        - text: Diese Techniken stammen aus der Verhandlungsführung und der Verkaufspsychologie, nicht aus Callcenter-Leitfäden, und sie lassen sich nicht als Skript verteilen – sie funktionieren nur, wenn jemand sie tausendfach geübt hat. Genau das geben wir im
+        - link "B2B-Vertriebstraining" [ref=e391] [cursor=pointer]:
+          - /url: /vertriebstraining-b2b/
+        - text: auch an Ihr Team weiter. Mehr dazu im Ratgeber
+        - link "Einwandbehandlung" [ref=e392] [cursor=pointer]:
+          - /url: /einwandbehandlung/
+        - text: .
+    - generic [ref=e394]:
+      - generic [ref=e395]:
+        - paragraph [ref=e396]: Der Unterschied in Zahlen
+        - 'heading "Standardagentur und DEALMAKERS: gleicher Tag, andere Zahlen" [level=2] [ref=e397]'
+      - paragraph [ref=e398]: "Eine klassische Telefonakquise-Agentur arbeitet eine Liste ab: Zentrale anrufen, Vorzimmer überzeugen, Pitch aufsagen, nächste Nummer. So braucht es 60 bis 100 Wählversuche, um auf 8 bis 20 Gespräche und ein bis drei Termine am Tag zu kommen. Das ist der ehrliche Branchenwert – und der Grund, warum Telefonakquise als reines Zahlenspiel gilt."
+      - paragraph [ref=e399]: "Wir drehen drei Stellschrauben, bevor überhaupt gewählt wird: Wir rufen nur an, wenn die Person gerade erreichbar ist. Wir haben Durchwahl oder Mobilnummer, also keine Zentrale dazwischen. Und wir haben einen Anlass, der den Termin von allein trägt. Wo alle drei zusammenkommen, erreichen wir teilweise 60 Prozent der Angerufenen – und aus 40 Prozent dieser Gespräche wird ein Termin."
+      - 'figure "Nicht mehr wählen, sondern anders wählen: Derselbe Aufwand ergibt ein anderes Ergebnis, wenn Zeitpunkt, Nummer und Anlass vorher stimmen." [ref=e400]':
+        - 'img "Vergleich aus 100 Wählversuchen: Standardagentur erreicht 15 Personen und 2 Termine, DEALMAKERS erreicht 60 Personen und 24 Termine" [ref=e402]':
+          - generic [ref=e403]:
+            - generic [ref=e404]: AUS 100 WÄHLVERSUCHEN AN EINEM TAG
+            - generic [ref=e405]: Personen erreicht
+            - generic [ref=e407]: 15 – Standardagentur
+            - generic [ref=e409]: 60 – DEALMAKERS
+            - generic [ref=e410]: Termine daraus
+            - generic [ref=e412]: 2 – Standardagentur
+            - generic [ref=e414]: 24 – DEALMAKERS
+            - generic [ref=e415]: Spitzenwerte aus Projekten mit Anlass, Direktnummer und freiem Kalenderfenster – kein Durchschnitt.
+      - table [ref=e418]:
+        - rowgroup [ref=e419]:
+          - row [ref=e420]:
+            - columnheader "Was den Tag bestimmt" [ref=e421]
+            - columnheader "Standardagentur" [ref=e422]
+            - columnheader "DEALMAKERS" [ref=e423]
+        - rowgroup [ref=e424]:
+          - row [ref=e425]:
+            - cell "Zugang zur Person" [ref=e426]
+            - cell "Zentrale und Vorzimmer, Name oft unbekannt" [ref=e427]
+            - cell "Person namentlich bekannt, meist Durchwahl oder Mobilnummer" [ref=e428]
+          - row [ref=e429]:
+            - cell "Zeitpunkt des Anrufs" [ref=e430]
+            - cell "Liste von oben nach unten" [ref=e431]
+            - cell "gezielt in ein freies Fenster im Kalender des Entscheiders" [ref=e432]
+          - row [ref=e433]:
+            - cell "Gesprächseinstieg" [ref=e434]
+            - cell "Vorstellung und Pitch" [ref=e435]
+            - cell "ein überprüfbarer Anlass aus öffentlichen Quellen" [ref=e436]
+          - row [ref=e437]:
+            - cell "Call-to-Connect-Rate" [ref=e438]
+            - cell "einstellig bis rund 20 %" [ref=e439]
+            - cell "teilweise bis 60 %" [ref=e440]
+          - row [ref=e441]:
+            - cell "Termine aus Gesprächen" [ref=e442]
+            - cell "wenige Prozent" [ref=e443]
+            - cell "teilweise bis 40 %" [ref=e444]
+          - row [ref=e445]:
+            - cell "Wer am Hörer sitzt" [ref=e446]
+            - cell "Schichtbetrieb mit Stückzahlvorgabe" [ref=e447]
+            - cell "Vertriebsleute mit eigener Abschlusserfahrung" [ref=e448]
+          - row [ref=e449]:
+            - cell "Was bei Ihnen ankommt" [ref=e450]
+            - cell "Adressliste und Rohtermine" [ref=e451]
+            - cell "Termin mit Anlass, Notiz und nächstem Schritt" [ref=e452]
+      - paragraph [ref=e453]: Die 60 und die 40 Prozent sind Spitzenwerte aus Projekten, in denen Zielgruppe und Datenlage sehr gut waren – kein Durchschnitt und keine Zusage. Vor dem Start nennen wir Ihnen die Bandbreite für Ihre Zielgruppe, statt eine feste Terminzahl zu versprechen und sie später über die Definition von „Termin“ zu erreichen. Bei sehr enger Zielgruppe oder hoher Komplexität liegen die Werte darunter – dafür steigt der Wert je Termin.
+    - generic [ref=e455]:
+      - generic [ref=e456]:
+        - paragraph [ref=e457]: Transparenz
+        - heading "Wie wir Qualität sichern" [level=2] [ref=e458]
+      - paragraph [ref=e459]: Telefonakquise darf nicht im Bericht verschwinden. Qualität wird am Gespräch und am Übergang gemessen, nicht nur an Wählversuchen. Wir hören zu Beginn und bei Bedarf in Gespräche hinein, prüfen Notizen und besprechen wöchentlich Formulierungen, Einwände, Erreichbarkeit und Terminqualität.
+      - paragraph [ref=e460]: Notizen halten Anlass, Rolle, Einwand, Terminstatus und nächsten Schritt fest. So kann Ihr Vertrieb anschließen. Das verhindert Kalenderplätze ohne Kontext.
+      - paragraph [ref=e461]:
+        - text: "Viele Teams haben bereits ein Lead-Scoring im CRM, in HubSpot oder in einer Tabelle. Das bleibt bestehen. Wir schärfen es nach: Der Fit beschreibt, ob ein Unternehmen grundsätzlich passt; der Anlass beschreibt, ob gerade etwas passiert ist. Live-Signale aus öffentlichen Quellen haben eigene Zeitfenster, weil Ereignisse altern. Für die Spitze folgt Tiefenrecherche, damit ein erster Satz entsteht, nicht nur eine Zahl. So werden auch passende Unternehmen sichtbar, die noch nicht im CRM stehen. Wie diese Ebene arbeitet, beschreibt"
+        - link "Lead-Scoring von PrioX" [ref=e462] [cursor=pointer]:
+          - /url: https://priox.ai/lead-scoring
+        - text: ; die Software haben wir selbst gebaut und setzen sie selbst ein.
+      - paragraph [ref=e463]:
+        - text: Wenn Sie keine eigene Akquise-Kapazität aufbauen wollen, ordnet
+        - link "Vertriebsoutsourcing" [ref=e464] [cursor=pointer]:
+          - /url: /vertriebsoutsourcing/
+        - text: Telefonie, Recherche und Übergabe als Prozess. Die Bausteine stehen unter
+        - link "Kosten für Vertriebsoutsourcing" [ref=e465] [cursor=pointer]:
+          - /url: /vertriebsoutsourcing-kosten/
+        - text: .
+    - generic [ref=e467]:
+      - generic [ref=e468]:
+        - paragraph [ref=e469]: Häufige Fragen
+        - heading "Fragen zur Telefonakquise-Agentur" [level=2] [ref=e470]
+      - group [ref=e471]:
+        - generic "Was kostet Telefonakquise pro Termin? +" [ref=e472] [cursor=pointer]
+      - group [ref=e473]:
+        - generic "Wie viele Anrufe braucht es für einen Termin? +" [ref=e474] [cursor=pointer]
+      - group [ref=e475]:
+        - generic "Wann ist die beste Zeit für B2B-Anrufe? +" [ref=e476] [cursor=pointer]
+      - group [ref=e477]:
+        - generic "Arbeiten Sie mit Skripten? +" [ref=e478] [cursor=pointer]
+      - group [ref=e479]:
+        - generic "Telefonieren Sie unter unserem Namen? +" [ref=e480] [cursor=pointer]
+      - group [ref=e481]:
+        - generic "Ist Telefonakquise im B2B erlaubt? +" [ref=e482] [cursor=pointer]
+      - group [ref=e483]:
+        - generic "Wie kommen Sie am Vorzimmer vorbei? +" [ref=e484] [cursor=pointer]
+      - group [ref=e485]:
+        - generic "Was ist ein qualifizierter Termin? +" [ref=e486] [cursor=pointer]
+      - group [ref=e487]:
+        - generic "Bekommen wir Gesprächsnotizen? +" [ref=e488] [cursor=pointer]
+      - group [ref=e489]:
+        - generic "Wie viele Termine pro Woche sind realistisch? +" [ref=e490] [cursor=pointer]
+      - group [ref=e491]:
+        - generic "Was unterscheidet Sie von einem Callcenter? +" [ref=e492] [cursor=pointer]
+      - group [ref=e493]:
+        - generic "Übernehmen Sie auch die Terminbestätigung? +" [ref=e494] [cursor=pointer]
+    - generic [ref=e497]:
+      - heading "Telefonakquise klar einordnen" [level=2] [ref=e498]
+      - paragraph [ref=e499]:
+        - text: Im Erstgespräch klären wir Zielgruppe, Anlass, Termin-Kriterien und ob Telefonie passt. Sie erreichen uns auch über unseren
+        - link "Kontakt" [ref=e500] [cursor=pointer]:
+          - /url: /kontakt/
+        - text: .
+      - generic [ref=e501]:
+        - link "+49 160 966 787 17" [ref=e502] [cursor=pointer]:
+          - /url: tel:+4916096678717
+        - link "hello@deal-makers.de" [ref=e503] [cursor=pointer]:
+          - /url: mailto:hello@deal-makers.de
+        - link "Termin im Kalender wählen" [ref=e504] [cursor=pointer]:
+          - /url: https://calendar.app.google/CUn3btn6t7fnfRjt8
+  - contentinfo [ref=e505]:
+    - generic [ref=e506]:
+      - generic [ref=e507]:
+        - generic [ref=e508]:
+          - link "DEALMAKERS" [ref=e509] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e510]: B2B-Vertrieb aus Berlin und Unterfranken. Seit 2021.
+          - paragraph [ref=e511]: Am Postbahnhof 23, 10243 Berlin Kissinger Straße 19, 97714 Oerlenbach
+          - paragraph [ref=e512]:
+            - link "+49 160 966 787 17" [ref=e513] [cursor=pointer]:
+              - /url: tel:+4916096678717
+            - link "hello@deal-makers.de" [ref=e514] [cursor=pointer]:
+              - /url: mailto:hello@deal-makers.de
+        - generic [ref=e515]:
+          - heading "Vertrieb auslagern" [level=3] [ref=e516]
+          - list [ref=e517]:
+            - listitem [ref=e518]:
+              - link "Vertriebsoutsourcing" [ref=e519] [cursor=pointer]:
+                - /url: /vertriebsoutsourcing/
+            - listitem [ref=e520]:
+              - link "Vertrieb auslagern" [ref=e521] [cursor=pointer]:
+                - /url: /vertrieb-auslagern/
+            - listitem [ref=e522]:
+              - link "Externer Vertrieb" [ref=e523] [cursor=pointer]:
+                - /url: /externer-vertrieb/
+            - listitem [ref=e524]:
+              - link "Kosten & Modelle" [ref=e525] [cursor=pointer]:
+                - /url: /vertriebsoutsourcing-kosten/
+        - generic [ref=e526]:
+          - heading "Neukunden gewinnen" [level=3] [ref=e527]
+          - list [ref=e528]:
+            - listitem [ref=e529]:
+              - link "Kaltakquise-Agentur" [ref=e530] [cursor=pointer]:
+                - /url: /kaltakquise-agentur/
+            - listitem [ref=e531]:
+              - link "Telefonakquise-Agentur" [ref=e532] [cursor=pointer]:
+                - /url: /telefonakquise-agentur/
+            - listitem [ref=e533]:
+              - link "Neukundenakquise" [ref=e534] [cursor=pointer]:
+                - /url: /neukundenakquise-agentur/
+            - listitem [ref=e535]:
+              - link "Leadgenerierung" [ref=e536] [cursor=pointer]:
+                - /url: /leadgenerierung-agentur/
+            - listitem [ref=e537]:
+              - link "B2B-Vertriebsagentur" [ref=e538] [cursor=pointer]:
+                - /url: /b2b-vertriebsagentur/
+        - generic [ref=e539]:
+          - heading "Beratung & Training" [level=3] [ref=e540]
+          - list [ref=e541]:
+            - listitem [ref=e542]:
+              - link "Vertriebsberatung" [ref=e543] [cursor=pointer]:
+                - /url: /vertriebsberatung/
+            - listitem [ref=e544]:
+              - link "B2B Vertriebstraining" [ref=e545] [cursor=pointer]:
+                - /url: /vertriebstraining-b2b/
+            - listitem [ref=e546]:
+              - link "Vertriebscoaching" [ref=e547] [cursor=pointer]:
+                - /url: /vertriebscoaching/
+            - listitem [ref=e548]:
+              - link "Alle Leistungen" [ref=e549] [cursor=pointer]:
+                - /url: /leistungen/
+            - listitem [ref=e550]:
+              - link "Kontakt" [ref=e551] [cursor=pointer]:
+                - /url: /kontakt/
+        - generic [ref=e552]:
+          - heading "Ratgeber" [level=3] [ref=e553]
+          - list [ref=e554]:
+            - listitem [ref=e555]:
+              - link "Alle Ratgeber" [ref=e556] [cursor=pointer]:
+                - /url: /ratgeber/
+            - listitem [ref=e557]:
+              - link "Anlässe & Signale" [ref=e558] [cursor=pointer]:
+                - /url: /signal-based-selling/
+            - listitem [ref=e559]:
+              - link "Kaltakquise" [ref=e560] [cursor=pointer]:
+                - /url: /kaltakquise/
+            - listitem [ref=e561]:
+              - link "Telefonakquise" [ref=e562] [cursor=pointer]:
+                - /url: /telefonakquise/
+            - listitem [ref=e563]:
+              - link "Neukundengewinnung" [ref=e564] [cursor=pointer]:
+                - /url: /neukundengewinnung/
+            - listitem [ref=e565]:
+              - 'link "Akquise: Definition" [ref=e566] [cursor=pointer]':
+                - /url: /akquise/
+            - listitem [ref=e567]:
+              - link "B2B-Vertrieb" [ref=e568] [cursor=pointer]:
+                - /url: /b2b-vertrieb/
+            - listitem [ref=e569]:
+              - link "Einwandbehandlung" [ref=e570] [cursor=pointer]:
+                - /url: /einwandbehandlung/
+            - listitem [ref=e571]:
+              - link "Fragetechniken" [ref=e572] [cursor=pointer]:
+                - /url: /fragetechniken/
+            - listitem [ref=e573]:
+              - link "Verkaufspsychologie" [ref=e574] [cursor=pointer]:
+                - /url: /verkaufspsychologie/
+            - listitem [ref=e575]:
+              - link "Preisverhandlung" [ref=e576] [cursor=pointer]:
+                - /url: /preisverhandlung/
+      - generic [ref=e577]:
+        - generic [ref=e578]: © 2026 DEALMAKERS – Digitale Vertriebsagentur
+        - generic [ref=e579]:
+          - link "Impressum" [ref=e580] [cursor=pointer]:
+            - /url: /impressum/
+          - text: ·
+          - link "Datenschutz" [ref=e581] [cursor=pointer]:
+            - /url: /datenschutz/
+          - text: ·
+          - button "Cookie-Einstellungen" [ref=e582] [cursor=pointer]
+          - text: ·
+          - link "PrioX" [ref=e583] [cursor=pointer]:
+            - /url: https://priox.ai/
+  - dialog "Hinweis zu Cookies und Messung" [ref=e584]:
+    - generic [ref=e585]:
+      - paragraph [ref=e586]:
+        - strong [ref=e587]: Kurz zu Cookies.
+        - text: Diese Website kommt ohne Werbe-Netzwerke, ohne Tracking-Dienste und ohne Profilbildung aus – technisch notwendig ist hier nichts weiter als Ihre Entscheidung auf dieser Leiste, die wir lokal in Ihrem Browser merken. Falls wir später eine einfache Reichweitenmessung einsetzen, gilt dafür, was Sie hier auswählen. Details in der
+        - link "Datenschutzerklärung" [ref=e588] [cursor=pointer]:
+          - /url: /datenschutz/
+        - text: .
+      - generic [ref=e589]:
+        - button "Nur notwendige" [ref=e590] [cursor=pointer]
+        - button "Einverstanden" [ref=e591] [cursor=pointer]
