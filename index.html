@@ -227,6 +227,19 @@
 </script>
 </head>
 <body>
+<svg class="dm-defs" aria-hidden="true" focusable="false" width="0" height="0"><defs>
+  <linearGradient id="dmGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0d199"/><stop offset=".55" stop-color="#c9ba77"/><stop offset="1" stop-color="#b5a55e"/></linearGradient>
+  <linearGradient id="dmGoldSoft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9ba77" stop-opacity=".30"/><stop offset="1" stop-color="#b5a55e" stop-opacity=".06"/></linearGradient>
+  <linearGradient id="dmPanel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171a2e"/><stop offset="1" stop-color="#0c1230"/></linearGradient>
+  <linearGradient id="dmSteel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c8ab5"/><stop offset=".55" stop-color="#5a6a9a"/><stop offset="1" stop-color="#3e4a75"/></linearGradient>
+  <linearGradient id="dmFade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9ba77" stop-opacity=".18"/><stop offset=".22" stop-color="#c9ba77" stop-opacity=".85"/><stop offset=".78" stop-color="#e0d199"/><stop offset="1" stop-color="#e0d199" stop-opacity=".55"/></linearGradient>
+  <radialGradient id="dmHalo" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#e0d199" stop-opacity=".42"/><stop offset=".55" stop-color="#c9ba77" stop-opacity=".14"/><stop offset="1" stop-color="#c9ba77" stop-opacity="0"/></radialGradient>
+  <filter id="dmGlow" x="-45%" y="-45%" width="190%" height="190%"><feGaussianBlur stdDeviation="7" result="dmB"/><feMerge><feMergeNode in="dmB"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="dmShadow" x="-25%" y="-25%" width="150%" height="165%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity=".45"/></filter>
+  <pattern id="dmGrid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0v40" fill="none" stroke="#222a4d" stroke-width="1"/></pattern>
+  <marker id="dmArrow" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 11 6 1 11z" fill="#5a6a9a"/></marker>
+  <marker id="dmArrowGold" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 11 6 1 11z" fill="#c9ba77"/></marker>
+</defs></svg>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 
 <div class="dm-preloader" data-dm-preloader aria-hidden="true">
@@ -270,7 +283,7 @@
 
 <main id="main">
 
-<section class="hero">
+<section class="hero hero--air">
   <canvas class="dm-dots" data-dm-dots aria-hidden="true"></canvas>
   <div class="dm-ghost" data-dm-ghost aria-hidden="true">DEALMAKERS</div>
   <div class="wrap" style="max-width:900px" data-dm-hero-inner>
@@ -279,11 +292,6 @@
       <h1 class="h1-wechsel" data-dm-split>Vertriebsagentur für planbaren Vertrieb statt <span class="dm-clip"><span class="h1-rot" data-dm-rotator='["Bauchgefühl.","Hoffnung.","Zufallsumsatz.","Kaltstartchaos."]'>Bauchgefühl.</span></span><span class="dm-sweep" data-dm-sweep aria-hidden="true"></span></h1>
       <p class="lead">Wir übernehmen Ihre Neukundenakquise – bis der Termin im Kalender
         Ihres Vertriebs steht, auf Wunsch bis zur Unterschrift.</p>
-      <p>Sie sagen uns, wer Ihr Wunschkunde ist. Wir recherchieren die Firmen, finden den
-        zuständigen Entscheider, rufen an und übergeben den Termin mit Protokoll: was
-        gesagt wurde, was der Kunde braucht, warum er zugesagt hat. Angerufen wird, wenn dort
-        gerade etwas passiert ist, das den Anruf rechtfertigt – nicht nach Liste von oben
-        nach unten. Ihr Vertrieb macht das, wofür er da ist: verkaufen.</p>
       <div class="btn-row">
         <a class="btn btn-primary" data-dm-magnet href="/kontakt/">Erstgespräch vereinbaren</a>
         <a class="btn btn-ghost" data-dm-magnet href="/leistungen/">Leistungen ansehen</a>
@@ -300,6 +308,13 @@
 </section>
 
 <section class="tight bg-soft">
+  <div class="wrap">
+    <p data-dm-reveal style="max-width:780px;margin:0 auto 2.6rem">Sie sagen uns, wer Ihr Wunschkunde ist. Wir recherchieren die Firmen, finden den
+      zuständigen Entscheider, rufen an und übergeben den Termin mit Protokoll: was
+      gesagt wurde, was der Kunde braucht, warum er zugesagt hat. Angerufen wird, wenn dort
+      gerade etwas passiert ist, das den Anruf rechtfertigt – nicht nach Liste von oben
+      nach unten. Ihr Vertrieb macht das, wofür er da ist: verkaufen.</p>
+  </div>
   <div class="wrap center">
     <p class="eyebrow" data-dm-scramble style="margin-bottom:.4rem">Stationen und Projekte unseres Gründers</p>
     <p class="small muted" style="max-width:640px;margin:0 auto 1.9rem">
@@ -610,31 +625,41 @@
 
     <figure class="fig" data-dm-reveal>
       <div class="fig-box">
-        <svg viewBox="0 0 560 250" role="img" aria-label="Vergleich zweier Gesprächseinstiege: ohne Anlass und mit einem öffentlich nachprüfbaren Anlass">
+        <svg class="dmg-canvas" viewBox="0 0 1120 560" role="img" aria-label="Vergleich zweier Gesprächseinstiege: ohne Anlass und mit einem öffentlich nachprüfbaren Anlass">
           <title>Der Einstieg ohne Anlass und der Einstieg mit Anlass im Vergleich</title>
-          <g font-family="sans-serif">
-            <text x="0" y="14" font-size="11.5" fill="#e08585" letter-spacing="1.2">OHNE ANLASS</text>
-            <rect x="0" y="26" width="265" height="128" rx="8" fill="#0c1230" stroke="#222a4d"/>
-            <rect x="0" y="26" width="4" height="128" rx="2" fill="#e08585"/>
-            <text x="18" y="54" font-size="12.5" fill="#cdd4e6">„Guten Tag, wir helfen</text>
-            <text x="18" y="74" font-size="12.5" fill="#cdd4e6">Unternehmen wie Ihrem dabei,</text>
-            <text x="18" y="94" font-size="12.5" fill="#cdd4e6">effizienter zu werden.“</text>
-            <text x="18" y="124" font-size="11.5" fill="#96a0bb">Austauschbar. Der Gegenüber</text>
-            <text x="18" y="139" font-size="11.5" fill="#96a0bb">hat keinen Grund für ein Jetzt.</text>
+          <circle class="dmg-pulse" cx="830" cy="210" r="250" fill="url(#dmHalo) none"/>
+          <g class="dmg-pop">
+            <text x="40" y="42" font-family="Archivo, system-ui, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6" fill="#7c8ab5">OHNE ANLASS</text>
+            <rect x="40" y="64" width="500" height="292" rx="14" fill="url(#dmPanel) #0c1230" stroke="#222a4d" stroke-width="1.5"/>
+            <g font-family="Manrope, system-ui, sans-serif">
+              <text x="104" y="124" font-size="24" fill="#f2f3f8">„Guten Tag, wir helfen</text>
+              <text x="104" y="160" font-size="24" fill="#f2f3f8">Unternehmen wie Ihrem dabei,</text>
+              <text x="104" y="196" font-size="24" fill="#f2f3f8">effizienter zu werden.“</text>
+              <text x="104" y="256" font-size="20" fill="#96a0bb">Austauschbar. Der Gegenüber</text>
+              <text x="104" y="288" font-size="20" fill="#96a0bb">hat keinen Grund für ein Jetzt.</text>
+            </g>
+            <rect class="dmg-grow" x="72" y="100" width="8" height="216" rx="4" fill="url(#dmSteel) #5a6a9a"/>
+          </g>
 
-            <text x="295" y="14" font-size="11.5" fill="#4fb183" letter-spacing="1.2">MIT ANLASS</text>
-            <rect x="295" y="26" width="265" height="128" rx="8" fill="#201d11" stroke="#c9ba77"/>
-            <rect x="295" y="26" width="4" height="128" rx="2" fill="#4fb183"/>
-            <text x="313" y="54" font-size="12.5" fill="#cdd4e6">„Sie bauen gerade Vertrieb in</text>
-            <text x="313" y="74" font-size="12.5" fill="#cdd4e6">Österreich auf – zwei Stellen</text>
-            <text x="313" y="94" font-size="12.5" fill="#cdd4e6">sind seit letzter Woche online.“</text>
-            <text x="313" y="124" font-size="11.5" fill="#96a0bb">Überprüfbar, konkret, und eine</text>
-            <text x="313" y="139" font-size="11.5" fill="#96a0bb">Frage, die man beantworten will.</text>
+          <g class="dmg-pop">
+            <text x="580" y="42" font-family="Archivo, system-ui, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6" fill="#e0d199">MIT ANLASS</text>
+            <rect x="580" y="64" width="500" height="292" rx="14" fill="#0c1230" filter="url(#dmShadow)"/>
+            <rect x="580" y="64" width="500" height="292" rx="14" fill="url(#dmGoldSoft) #171a2e" stroke="url(#dmGold) #c9ba77" stroke-width="1.5"/>
+            <g font-family="Manrope, system-ui, sans-serif">
+              <text x="644" y="124" font-size="24" fill="#f2f3f8">„Sie bauen gerade Vertrieb in</text>
+              <text x="644" y="160" font-size="24" fill="#f2f3f8">Österreich auf – zwei Stellen</text>
+              <text x="644" y="196" font-size="24" fill="#f2f3f8">sind seit letzter Woche online.“</text>
+              <text x="644" y="256" font-size="20" fill="#96a0bb">Überprüfbar, konkret, und eine</text>
+              <text x="644" y="288" font-size="20" fill="#96a0bb">Frage, die man beantworten will.</text>
+            </g>
+            <rect class="dmg-grow" x="612" y="100" width="8" height="216" rx="4" fill="url(#dmGold) #c9ba77" filter="url(#dmGlow)"/>
+          </g>
 
-            <line x1="0" y1="172" x2="560" y2="172" stroke="#222a4d" stroke-width="1"/>
-            <text x="0" y="196" font-size="12.5" font-weight="700" fill="#f2f3f8">Derselbe Anrufer. Dieselbe Liste. Dieselbe Uhrzeit.</text>
-            <text x="0" y="216" font-size="12.5" fill="#96a0bb">Nur der erste Satz ist ein anderer.</text>
-            <text x="0" y="240" font-size="11.5" fill="#8790a8">Beispielhafte Formulierungen aus laufenden Projekten, sinngemäß wiedergegeben.</text>
+          <line class="dmg-sweep" x1="40" y1="404" x2="1080" y2="404" stroke="#2c355e" stroke-width="1.5"/>
+          <g class="dmg-pop">
+            <text x="40" y="452" font-family="Archivo, system-ui, sans-serif" font-size="26" font-weight="700" fill="#f2f3f8">Derselbe Anrufer. Dieselbe Liste. Dieselbe Uhrzeit.</text>
+            <text x="40" y="490" font-family="Manrope, system-ui, sans-serif" font-size="24" fill="#96a0bb">Nur der erste Satz ist ein anderer.</text>
+            <text x="40" y="536" font-family="Manrope, system-ui, sans-serif" font-size="20" fill="#96a0bb">Beispielhafte Formulierungen aus laufenden Projekten, sinngemäß wiedergegeben.</text>
           </g>
         </svg>
       </div>

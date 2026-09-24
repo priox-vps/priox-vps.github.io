@@ -1363,10 +1363,208 @@
     });
   }
 
+  /* ------------------------------------------------------------------
+   * 23. Grafiksystem — Bewegung in den Inline-SVGs
+   *
+   *     <figure class="fig">
+   *       <div class="fig-box">
+   *         <svg class="dmg-canvas" viewBox="0 0 1120 560">
+   *           <path   class="dmg-draw">   Linie zeichnet sich
+   *           <rect   class="dmg-grow">   Balken waechst von unten
+   *           <rect   class="dmg-sweep">  Balken waechst von links
+   *           <g      class="dmg-pop">    Karte blendet ein und steigt
+   *           <tspan  class="dmg-count">  Zahl zaehlt hoch
+   *           <circle class="dmg-pulse">  ruhiger Dauerpuls (nur CSS)
+   *
+   *     OBERSTES GESETZ: Im Quelltext steht immer der fertige Zustand.
+   *     Die Startwerte setzt ausschliesslich dieses Modul zur Laufzeit.
+   *     Ohne JavaScript, ohne IntersectionObserver oder bei reduzierter
+   *     Bewegung passiert hier gar nichts — dann bleibt jede Grafik
+   *     vollstaendig sichtbar stehen.
+   *
+   *     Reihenfolge je Figur ist wichtig:
+   *       1. Startwerte per Inline-Style setzen
+   *       2. Reflow erzwingen (void fig.offsetWidth)
+   *       3. erst danach data-dm-graphic="on" setzen
+   *     Andersherum laeuft die Grafik beim Setzen der Startwerte
+   *     rueckwaerts.
+   *
+   *     Die Zahl im Quelltext ist der Zielwert. Das Modul merkt sie
+   *     sich und schreibt am Ende exakt den Originaltext zurueck.
+   * ---------------------------------------------------------------- */
+  function graphics() {
+    if (reducedMotion() || !global.IntersectionObserver) return;
+
+    var figs = doc.querySelectorAll("figure.fig");
+    if (!figs.length) return;
+
+    var STEP = 90;
+    var CAP = 720;
+    var groups = [];
+
+    function kindOf(el) {
+      var c = " " + (el.getAttribute("class") || "") + " ";
+      if (c.indexOf(" dmg-draw ") > -1) return "draw";
+      if (c.indexOf(" dmg-grow ") > -1) return "grow";
+      if (c.indexOf(" dmg-sweep ") > -1) return "sweep";
+      if (c.indexOf(" dmg-pop ") > -1) return "pop";
+      if (c.indexOf(" dmg-count ") > -1) return "count";
+      return "";
+    }
+
+    function setStart(it) {
+      var s = it.el.style;
+      if (it.kind === "draw") {
+        s.strokeDasharray = it.len + " " + it.len;
+        s.strokeDashoffset = String(it.len);
+      } else if (it.kind === "grow") {
+        s.transform = "scaleY(0)";
+      } else if (it.kind === "sweep") {
+        s.transform = "scaleX(0)";
+      } else if (it.kind === "pop") {
+        s.opacity = "0";
+        s.transform = "translateY(14px)";
+      } else if (it.kind === "count") {
+        it.el.textContent = "0";
+      }
+    }
+
+    /* Endzustand = Inline-Startwert wieder entfernen. Dann gilt exakt
+       das, was im Quelltext steht — auch bei Elementen mit eigenem
+       opacity-Attribut. */
+    function setEnd(it) {
+      var s = it.el.style;
+      if (it.kind === "draw") {
+        s.strokeDashoffset = "0";
+      } else if (it.kind === "grow" || it.kind === "sweep") {
+        s.removeProperty("transform");
+      } else if (it.kind === "pop") {
+        s.removeProperty("opacity");
+        s.removeProperty("transform");
+      } else if (it.kind === "count") {
+        countUp(it);
+      }
+    }
+
+    function countUp(it) {
+      if (!global.requestAnimationFrame) {
+        it.el.textContent = it.text;
+        return;
+      }
+      var t0 = 0;
+      var run = function (ts) {
+        if (!t0) t0 = ts;
+        var p = (ts - t0) / 900;
+        if (p >= 1) {
+          it.el.textContent = it.text;
+          return;
+        }
+        var e = 1 - Math.pow(1 - p, 3);
+        it.el.textContent = String(Math.round(it.to * e));
+        global.requestAnimationFrame(run);
+      };
+      if (it.delay > 0) {
+        global.setTimeout(function () { global.requestAnimationFrame(run); }, it.delay);
+      } else {
+        global.requestAnimationFrame(run);
+      }
+    }
+
+    function collect(fig) {
+      var nodes = fig.querySelectorAll(".dmg-draw, .dmg-grow, .dmg-sweep, .dmg-pop, .dmg-count");
+      if (!nodes.length) return null;
+      var items = [];
+      var i, el, kind, item, len, digits;
+
+      for (i = 0; i < nodes.length; i++) {
+        el = nodes[i];
+        kind = kindOf(el);
+        if (!kind) continue;
+        item = { el: el, kind: kind, delay: 0 };
+
+        if (kind === "draw") {
+          /* getTotalLength wirft bei nicht gerenderten Elementen. Dann
+             wird dieses Element uebersprungen und bleibt sichtbar. */
+          len = 0;
+          try { len = el.getTotalLength(); } catch (e) { len = 0; }
+          if (!len || !isFinite(len)) continue;
+          item.len = Math.ceil(len);
+        } else if (kind === "count") {
+          item.text = el.textContent;
+          digits = (el.getAttribute("data-dm-to") || item.text).replace(/[^0-9]/g, "");
+          item.to = parseInt(digits, 10);
+          if (!item.to || item.to < 1) continue;
+        }
+        items.push(item);
+      }
+      if (!items.length) return null;
+
+      for (i = 0; i < items.length; i++) {
+        items[i].delay = Math.min(i * STEP, CAP);
+        items[i].el.style.setProperty("--dmg-d", items[i].delay + "ms");
+        setStart(items[i]);
+      }
+      return { fig: fig, items: items, done: false };
+    }
+
+    function reveal(group) {
+      if (group.done) return;
+      group.done = true;
+      for (var i = 0; i < group.items.length; i++) setEnd(group.items[i]);
+    }
+
+    function find(node) {
+      for (var i = 0; i < groups.length; i++) {
+        if (groups[i].fig === node) return groups[i];
+      }
+      return null;
+    }
+
+    var io = new global.IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (!entries[i].isIntersecting) continue;
+        var seen = find(entries[i].target);
+        io.unobserve(entries[i].target);
+        if (seen) reveal(seen);
+      }
+    }, { threshold: 0.2, rootMargin: "0px 0px -8% 0px" });
+
+    for (var f = 0; f < figs.length; f++) {
+      var group = collect(figs[f]);
+      if (!group) continue;
+      void group.fig.offsetWidth;
+      group.fig.setAttribute("data-dm-graphic", "on");
+      groups.push(group);
+      io.observe(group.fig);
+    }
+
+    if (!groups.length) {
+      io.disconnect();
+      return;
+    }
+
+    addCleanup(function () {
+      io.disconnect();
+      groups.forEach(function (group) {
+        reveal(group);
+        group.fig.removeAttribute("data-dm-graphic");
+        group.items.forEach(function (it) {
+          it.el.style.removeProperty("--dmg-d");
+          if (it.kind === "draw") {
+            it.el.style.removeProperty("stroke-dasharray");
+            it.el.style.removeProperty("stroke-dashoffset");
+          }
+          if (it.kind === "count") it.el.textContent = it.text;
+        });
+      });
+    });
+  }
+
   function boot() {
     try { field(); } catch (e) {}
     try { splitHeads(); } catch (e) {}
     try { pointerPlay(); } catch (e) {}
+    try { graphics(); } catch (e) {}
   }
 
   if (doc.readyState === "loading") {

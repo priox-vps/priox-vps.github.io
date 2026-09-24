@@ -241,6 +241,19 @@
 </script>
 </head>
 <body>
+<svg class="dm-defs" aria-hidden="true" focusable="false" width="0" height="0"><defs>
+  <linearGradient id="dmGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0d199"/><stop offset=".55" stop-color="#c9ba77"/><stop offset="1" stop-color="#b5a55e"/></linearGradient>
+  <linearGradient id="dmGoldSoft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9ba77" stop-opacity=".30"/><stop offset="1" stop-color="#b5a55e" stop-opacity=".06"/></linearGradient>
+  <linearGradient id="dmPanel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171a2e"/><stop offset="1" stop-color="#0c1230"/></linearGradient>
+  <linearGradient id="dmSteel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c8ab5"/><stop offset=".55" stop-color="#5a6a9a"/><stop offset="1" stop-color="#3e4a75"/></linearGradient>
+  <linearGradient id="dmFade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9ba77" stop-opacity=".18"/><stop offset=".22" stop-color="#c9ba77" stop-opacity=".85"/><stop offset=".78" stop-color="#e0d199"/><stop offset="1" stop-color="#e0d199" stop-opacity=".55"/></linearGradient>
+  <radialGradient id="dmHalo" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#e0d199" stop-opacity=".42"/><stop offset=".55" stop-color="#c9ba77" stop-opacity=".14"/><stop offset="1" stop-color="#c9ba77" stop-opacity="0"/></radialGradient>
+  <filter id="dmGlow" x="-45%" y="-45%" width="190%" height="190%"><feGaussianBlur stdDeviation="7" result="dmB"/><feMerge><feMergeNode in="dmB"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="dmShadow" x="-25%" y="-25%" width="150%" height="165%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity=".45"/></filter>
+  <pattern id="dmGrid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0v40" fill="none" stroke="#222a4d" stroke-width="1"/></pattern>
+  <marker id="dmArrow" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 11 6 1 11z" fill="#5a6a9a"/></marker>
+  <marker id="dmArrowGold" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 11 6 1 11z" fill="#c9ba77"/></marker>
+</defs></svg>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 <div class="dm-progress" aria-hidden="true"><div data-dm-progress></div></div>
 <div class="dm-glow" data-dm-glow aria-hidden="true"></div>
@@ -343,7 +356,34 @@
       <div class="sec-head"><p class="eyebrow" data-dm-scramble>Abgrenzung</p><h2 data-dm-reveal="head" id="agentur-oder-callcenter" data-dm-split>Telefonakquise-Agentur oder Callcenter: Der Unterschied beginnt vor dem Anruf</h2></div>
       <p>Ein Callcenter organisiert Reichweite. Das kann für Service oder einfache Abfragen passen. In der B2B-Terminierung für erklärungsbedürftige Angebote liegt die Arbeit jedoch im Gespräch: Anlass verstehen, Rollen einordnen, Rückfragen aufnehmen und nach dem zweiten Einwand nicht in den nächsten Datensatz wechseln. Dafür braucht es Menschen mit eigener Vertriebspraxis.</p>
       <p>Bei DEALMAKERS arbeiten feste Vertriebspartner aus dem eigenen Netzwerk. Sie haben jahrelange eigene B2B-Vertriebserfahrung. Es gibt keine kurzfristig eingelernten Kräfte, keine Anwahlmaschine und keine Vorgabe für Gespräche pro Stunde. Wer nur den nächsten Haken sucht, hört den Unterschied zwischen einem endgültigen und einem noch unklaren Nein nicht.</p>
-      <figure class="fig" data-dm-reveal><div class="fig-box"><svg viewBox="0 0 560 280" role="img" aria-label="Gegenüberstellung von Agentur und Callcenter anhand von Gesprächsführung, Vorbereitung und Erfolgsmessung"><title>Agentur und Callcenter im Vergleich</title><g font-family="sans-serif"><rect x="15" y="22" width="250" height="228" rx="8" fill="#201d11" stroke="#c9ba77"/><rect x="295" y="22" width="250" height="228" rx="8" fill="#0c1230" stroke="#222a4d"/><text x="35" y="50" font-size="15" font-weight="700" fill="#f2f3f8">DEALMAKERS</text><text x="315" y="50" font-size="15" font-weight="700" fill="#f2f3f8">Callcenter-Modell</text><g font-size="12" fill="#cdd4e6"><text x="35" y="82">Anlass vor dem Anruf</text><text x="35" y="112">erfahrene B2B-Vertriebspraxis</text><text x="35" y="142">Gesprächsrahmen, kein Skript</text><text x="35" y="172">Pausen und Rückfragen möglich</text><text x="35" y="202">Terminqualität und Notizen</text><text x="35" y="232">feste Partner, kein Schichtbetrieb</text><text x="315" y="82">Liste und Anwahlvolumen zuerst</text><text x="315" y="112">kurze Einarbeitung möglich</text><text x="315" y="142">Wortfolge vorgegeben</text><text x="315" y="172">Taktung vor Gespräch</text><text x="315" y="202">Anzahl Kontakte im Fokus</text><text x="315" y="232">wechselnde Schichten möglich</text></g></g></svg></div><figcaption>Telefonakquise wird dann zur Vertriebsarbeit, wenn Vorbereitung und Gesprächsführung mehr zählen als bloße Anwahlmenge.</figcaption></figure>
+      <figure class="fig" data-dm-reveal><div class="fig-box"><svg class="dmg-canvas" viewBox="0 0 1120 640" role="img" aria-label="Gegenüberstellung von Agentur und Callcenter anhand von Gesprächsführung, Vorbereitung und Erfolgsmessung"><title>Agentur und Callcenter im Vergleich</title>
+        <circle class="dmg-pulse" cx="290" cy="324" r="290" fill="url(#dmHalo) none"/>
+        <g class="dmg-pop">
+          <rect x="30" y="44" width="520" height="560" rx="14" fill="#070b22" filter="url(#dmShadow)"/>
+          <rect x="30" y="44" width="520" height="560" rx="14" fill="url(#dmGoldSoft) #171a2e" stroke="url(#dmGold) #c9ba77" stroke-width="1.5"/>
+          <text x="56" y="96" font-family="Archivo, system-ui, sans-serif" font-size="28" font-weight="700" fill="#f2f3f8">DEALMAKERS</text>
+          <line x1="56" y1="122" x2="524" y2="122" stroke="#2c355e" stroke-width="1.5"/>
+        </g>
+        <g class="dmg-pop">
+          <rect x="570" y="44" width="520" height="560" rx="14" fill="url(#dmPanel) #0c1230" stroke="#222a4d" stroke-width="1.5"/>
+          <text x="596" y="96" font-family="Archivo, system-ui, sans-serif" font-size="28" font-weight="700" fill="#f2f3f8">Callcenter-Modell</text>
+          <line x1="596" y1="122" x2="1064" y2="122" stroke="#222a4d" stroke-width="1.5"/>
+        </g>
+        <g font-family="Manrope, system-ui, sans-serif" font-size="22" fill="#f2f3f8">
+          <g class="dmg-pop"><path class="dmg-draw" d="M56 172 l9 10 17-22" fill="none" stroke="url(#dmGold) #c9ba77" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="96" y="176">Anlass vor dem Anruf</text></g>
+          <g class="dmg-pop"><path class="dmg-draw" d="M56 244 l9 10 17-22" fill="none" stroke="url(#dmGold) #c9ba77" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="96" y="248">erfahrene B2B-Vertriebspraxis</text></g>
+          <g class="dmg-pop"><path class="dmg-draw" d="M56 316 l9 10 17-22" fill="none" stroke="url(#dmGold) #c9ba77" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="96" y="320">Gesprächsrahmen, kein Skript</text></g>
+          <g class="dmg-pop"><path class="dmg-draw" d="M56 388 l9 10 17-22" fill="none" stroke="url(#dmGold) #c9ba77" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="96" y="392">Pausen und Rückfragen möglich</text></g>
+          <g class="dmg-pop"><path class="dmg-draw" d="M56 460 l9 10 17-22" fill="none" stroke="url(#dmGold) #c9ba77" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="96" y="464">Terminqualität und Notizen</text></g>
+          <g class="dmg-pop"><path class="dmg-draw" d="M56 532 l9 10 17-22" fill="none" stroke="url(#dmGold) #c9ba77" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="96" y="536">feste Partner, kein Schichtbetrieb</text></g>
+          <g class="dmg-pop" fill="#96a0bb"><path class="dmg-draw" d="M596 166 h24" fill="none" stroke="#5a6a9a" stroke-width="3" stroke-linecap="round"/><text x="636" y="176">Liste und Anwahlvolumen zuerst</text></g>
+          <g class="dmg-pop" fill="#96a0bb"><path class="dmg-draw" d="M596 238 h24" fill="none" stroke="#5a6a9a" stroke-width="3" stroke-linecap="round"/><text x="636" y="248">kurze Einarbeitung möglich</text></g>
+          <g class="dmg-pop" fill="#96a0bb"><path class="dmg-draw" d="M596 310 h24" fill="none" stroke="#5a6a9a" stroke-width="3" stroke-linecap="round"/><text x="636" y="320">Wortfolge vorgegeben</text></g>
+          <g class="dmg-pop" fill="#96a0bb"><path class="dmg-draw" d="M596 382 h24" fill="none" stroke="#5a6a9a" stroke-width="3" stroke-linecap="round"/><text x="636" y="392">Taktung vor Gespräch</text></g>
+          <g class="dmg-pop" fill="#96a0bb"><path class="dmg-draw" d="M596 454 h24" fill="none" stroke="#5a6a9a" stroke-width="3" stroke-linecap="round"/><text x="636" y="464">Anzahl Kontakte im Fokus</text></g>
+          <g class="dmg-pop" fill="#96a0bb"><path class="dmg-draw" d="M596 526 h24" fill="none" stroke="#5a6a9a" stroke-width="3" stroke-linecap="round"/><text x="636" y="536">wechselnde Schichten möglich</text></g>
+        </g>
+      </svg></div><figcaption>Telefonakquise wird dann zur Vertriebsarbeit, wenn Vorbereitung und Gesprächsführung mehr zählen als bloße Anwahlmenge.</figcaption></figure>
       <div class="table-scroll" data-dm-reveal><table><thead><tr><th scope="col">Merkmal</th><th scope="col">Telefonakquise-Agentur</th><th scope="col">Callcenter-Logik</th></tr></thead><tbody><tr><td>Ausgangspunkt</td><td>Konkreter Anlass und Zielbild</td><td>Liste und Kontaktmenge</td></tr><tr><td>Besetzung</td><td>Erfahrene B2B-Vertriebsleute</td><td>Häufig wechselnde Schichten</td></tr><tr><td>Gespräch</td><td>Rahmen mit eigenen Formulierungen</td><td>Skript mit vorgegebener Wortfolge</td></tr><tr><td>Tempo</td><td>Folgt dem Gespräch</td><td>Folgt der Taktung</td></tr><tr><td>Zweiter Einwand</td><td>Wird inhaltlich eingeordnet</td><td>Führt oft zum Abbruchpfad</td></tr><tr><td>Zugang zum Entscheider</td><td>Person, Thema und oft die Durchwahl sind vorab bekannt</td><td>Durchstellung als Kennzahl</td></tr><tr><td>Erfolg</td><td>Qualifizierter Termin und Kontext</td><td>Kontakt, Gespräch oder Anwahl</td></tr><tr><td>Dokumentation</td><td>Notiz für den nächsten Schritt</td><td>Abschlusscode im System</td></tr></tbody></table></div>
       <p>Wenn Sie Akquise als Gesamtprozess mit Kanalwahl und rechtlichem Rahmen aufsetzen wollen, passt unsere <a href="/kaltakquise-agentur/">Kaltakquise-Agentur für B2B</a>. Diese Seite bleibt bewusst beim Handwerk am Hörer.</p>
     </div>
@@ -379,7 +419,27 @@
       <p>Und wenn doch jemand dazwischensteht, entscheidet kein Trick, sondern der Anlass. „Es geht um die Vertriebsstelle für Wien, die seit Montag ausgeschrieben ist“ ist für eine Assistenz etwas völlig anderes als „Ich hätte da mal eine Frage zum Thema Vertrieb“. Ein konkreter, überprüfbarer Grund gibt ihr eine Grundlage zu entscheiden – und genau dieser Grund trägt später auch den Termin. Kein falscher Name, kein erfundener Rückruf: Wer so etwas braucht, hat keinen Anlass.</p>
       <h3 id="stimme">Die Stimme entscheidet mit – in den ersten drei Sekunden</h3>
       <p>Bevor Ihr Gegenüber den ersten Satz inhaltlich bewertet hat, hat er den Anrufer längst einsortiert. Das läuft über die Tonhöhe am Satzende. Geht sie nach oben, klingt jeder Satz wie eine Bitte um Erlaubnis – der typische Klang des 0815-Verkäufers, der selbst nicht sicher ist, ob er stören darf. Wir arbeiten bewusst mit der abfallenden Stimmführung, der <strong>Downwards Inflection</strong>: Der Satz endet tiefer, als er begonnen hat. Das ist der Tonfall, in dem Menschen Auskunft geben, statt um etwas zu bitten.</p>
-      <figure class="fig" data-dm-reveal><div class="fig-box"><svg viewBox="0 0 560 262" role="img" aria-label="Zwei Tonhöhenverläufe: oben steigt die Stimme am Satzende an, unten fällt sie ab"><title>Steigende und fallende Stimmführung am Satzende</title><g font-family="sans-serif"><text x="30" y="20" font-size="12" fill="#96a0bb">DERSELBE SATZ, ZWEI TONHÖHENVERLÄUFE</text><text x="30" y="48" font-size="12.5" fill="#cdd4e6">0815-Verkäufer: Stimme steigt am Satzende</text><path d="M30 86 C 90 92, 150 78, 220 86 S 340 88, 400 84 C 450 80, 490 58, 524 42" fill="none" stroke="#6b7699" stroke-width="3"/><text x="30" y="118" font-size="11.5" fill="#96a0bb">wirkt wie eine Bitte um Erlaubnis – leicht abzulehnen</text><text x="30" y="162" font-size="12.5" fill="#cdd4e6">Downwards Inflection: Stimme fällt am Satzende</text><path d="M30 196 C 90 190, 150 204, 220 196 S 340 194, 400 198 C 450 202, 490 220, 524 234" fill="none" stroke="#c9ba77" stroke-width="3"/><!-- Letzte Zeile mit Abstand zur Unterkante, sonst werden die Unterlaengen abgeschnitten. --><text x="30" y="252" font-size="11.5" fill="#96a0bb">wirkt wie ein Vorschlag unter Berufstätigen – wird eher angenommen</text></g></svg></div><figcaption>„Passt Ihnen Dienstag um zehn?“ – derselbe Wortlaut, zwei völlig verschiedene Antworten. Die Tonhöhe am Satzende entscheidet, ob es nach Bitte oder nach Vorschlag klingt.</figcaption></figure>
+      <figure class="fig" data-dm-reveal><div class="fig-box"><svg class="dmg-canvas" viewBox="0 0 1120 560" role="img" aria-label="Zwei Tonhöhenverläufe: oben steigt die Stimme am Satzende an, unten fällt sie ab"><title>Steigende und fallende Stimmführung am Satzende</title>
+        <text x="30" y="34" font-family="Archivo, system-ui, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6" fill="#96a0bb">DERSELBE SATZ, ZWEI TONHÖHENVERLÄUFE</text>
+        <g class="dmg-pop">
+          <rect x="30" y="56" width="1060" height="224" rx="14" fill="url(#dmPanel) #0c1230" stroke="#222a4d" stroke-width="1.5"/>
+          <rect x="31" y="57" width="1058" height="222" rx="13" fill="url(#dmGrid) none" opacity=".35"/>
+          <text x="60" y="100" font-family="Manrope, system-ui, sans-serif" font-size="24" fill="#f2f3f8">0815-Verkäufer: Stimme steigt am Satzende</text>
+          <path class="dmg-draw" d="M60 200 C 190 208, 320 192, 460 200 S 700 202, 820 196 C 910 190, 990 168, 1058 138" fill="none" stroke="url(#dmSteel) #5a6a9a" stroke-width="5" stroke-linecap="round"/>
+          <text x="60" y="258" font-family="Manrope, system-ui, sans-serif" font-size="20" fill="#96a0bb">wirkt wie eine Bitte um Erlaubnis – leicht abzulehnen</text>
+        </g>
+        <g class="dmg-pop">
+          <rect x="30" y="300" width="1060" height="224" rx="14" fill="#070b22" filter="url(#dmShadow)"/>
+          <rect x="30" y="300" width="1060" height="224" rx="14" fill="url(#dmGoldSoft) #171a2e" stroke="url(#dmGold) #c9ba77" stroke-width="1.5"/>
+          <rect x="31" y="301" width="1058" height="222" rx="13" fill="url(#dmGrid) none" opacity=".35"/>
+          <text x="60" y="344" font-family="Manrope, system-ui, sans-serif" font-size="24" fill="#f2f3f8">Downwards Inflection: Stimme fällt am Satzende</text>
+          <circle class="dmg-pulse" cx="1058" cy="452" r="58" fill="url(#dmHalo) none"/>
+          <path class="dmg-draw" d="M60 396 C 190 388, 320 404, 460 396 S 700 394, 820 400 C 910 406, 990 428, 1058 452" fill="none" stroke="url(#dmGold) #c9ba77" stroke-width="5" stroke-linecap="round" filter="url(#dmGlow)"/>
+          <circle cx="1058" cy="452" r="9" fill="url(#dmGold) #c9ba77"/>
+          <!-- Letzte Zeile mit Abstand zur Unterkante, sonst werden die Unterlaengen abgeschnitten. -->
+          <text x="60" y="502" font-family="Manrope, system-ui, sans-serif" font-size="20" fill="#96a0bb">wirkt wie ein Vorschlag unter Berufstätigen – wird eher angenommen</text>
+        </g>
+      </svg></div><figcaption>„Passt Ihnen Dienstag um zehn?“ – derselbe Wortlaut, zwei völlig verschiedene Antworten. Die Tonhöhe am Satzende entscheidet, ob es nach Bitte oder nach Vorschlag klingt.</figcaption></figure>
       <p>Chris Voss, jahrelang Verhandlungsführer des FBI, nennt die ruhige, warme, nach unten geführte Variante die „Late-Night-FM-DJ-Stimme“: langsam, warm, fallend. Sie nimmt Tempo aus dem Gespräch, statt es hochzudrehen – und ein ruhiges Gegenüber ist die Voraussetzung dafür, dass überhaupt zugehört wird. Drei Stellen machen dabei den Unterschied: die eigene Namensnennung, der Anlasssatz und die Terminfrage. Besonders die Terminfrage. Das lässt sich nicht als Skript ausgeben, das muss jemand können – und es ist einer der Gründe, warum bei uns keine Aushilfe am Hörer sitzt.</p>
     </div>
   </section>
@@ -388,7 +448,41 @@
     <div class="wrap">
       <div class="sec-head"><p class="eyebrow" data-dm-scramble>Der Hebel vor dem Anruf</p><h2 data-dm-reveal="head" id="erreichbarkeit" data-dm-split>Wir rufen an, wenn jemand wirklich am Platz ist</h2></div>
       <p>Der häufigste Grund, warum ein Anruf scheitert, ist nicht der Mensch am anderen Ende, sondern der Zeitpunkt. Wer eine Liste von oben nach unten durchwählt, trifft einen großen Teil seiner Zielgruppe mitten im Termin. Deshalb raten wir nicht, wann jemand frei ist – wir prüfen es. Wir setzen Werkzeuge ein, die Kalenderverfügbarkeiten auch fremder Kalender auslesen, und legen den Anruf gezielt in ein offenes Fenster.</p>
-      <figure class="fig" data-dm-reveal><div class="fig-box"><svg viewBox="0 0 560 230" role="img" aria-label="Tagesleiste eines Entscheiders mit belegten Terminblöcken und einem freien Fenster, in das der Anruf gelegt wird"><title>Anruf im freien Kalenderfenster</title><g font-family="sans-serif"><text x="0" y="20" font-size="12" fill="#96a0bb">KALENDER DES ENTSCHEIDERS, DIENSTAG</text><rect x="20" y="86" width="120" height="34" rx="4" fill="#222a4d"/><rect x="146" y="86" width="86" height="34" rx="4" fill="#201d11" stroke="#c9ba77" stroke-dasharray="4 3"/><rect x="238" y="86" width="150" height="34" rx="4" fill="#222a4d"/><rect x="394" y="86" width="60" height="34" rx="4" fill="#201d11" stroke="#c9ba77" stroke-dasharray="4 3"/><rect x="460" y="86" width="80" height="34" rx="4" fill="#222a4d"/><g font-size="11" fill="#96a0bb"><text x="20" y="140">9:00</text><text x="146" y="140">10:30</text><text x="238" y="140">11:15</text><text x="394" y="140">14:00</text><text x="460" y="140">15:00</text></g><g font-size="11.5" fill="#cdd4e6"><text x="80" y="108" text-anchor="middle">belegt</text><text x="313" y="108" text-anchor="middle">belegt</text><text x="500" y="108" text-anchor="middle">belegt</text></g><path d="M189 72 V52" stroke="#c9ba77" stroke-width="2"/><path d="M189 72 l-6 -10 h12 z" fill="#c9ba77"/><text x="189" y="44" font-size="12.5" font-weight="700" fill="#c9ba77" text-anchor="middle">Anruf: 10:40</text><text x="0" y="182" font-size="11.5" fill="#cdd4e6">Freie Fenster sind golden umrandet. Dort klingelt das Telefon, nicht davor und nicht mitten im Meeting.</text><text x="0" y="204" font-size="11.5" fill="#96a0bb">Beispieltag zur Verdeutlichung – Ihre Zielgruppe hat andere Rhythmen.</text></g></svg></div><figcaption>Ein Anruf im freien Fenster erreicht jemanden am Schreibtisch, kein Freizeichen und keine Mailbox.</figcaption></figure>
+      <figure class="fig" data-dm-reveal><div class="fig-box"><svg class="dmg-canvas" viewBox="0 0 1120 560" role="img" aria-label="Tagesleiste eines Entscheiders mit belegten Terminblöcken und einem freien Fenster, in das der Anruf gelegt wird"><title>Anruf im freien Kalenderfenster</title>
+        <text x="40" y="38" font-family="Archivo, system-ui, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6" fill="#96a0bb">KALENDER DES ENTSCHEIDERS, DIENSTAG</text>
+        <circle class="dmg-pulse" cx="378" cy="128" r="190" fill="url(#dmHalo) none"/>
+        <g class="dmg-pop">
+          <rect x="250" y="96" width="256" height="56" rx="14" fill="#070b22" filter="url(#dmShadow)"/>
+          <rect x="250" y="96" width="256" height="56" rx="14" fill="url(#dmGoldSoft) #171a2e" stroke="url(#dmGold) #c9ba77" stroke-width="1.5"/>
+          <text x="378" y="133" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="26" font-weight="700" fill="#e0d199">Anruf: 10:40</text>
+          <path d="M378 156 V192" fill="none" stroke="url(#dmGold) #c9ba77" stroke-width="3" marker-end="url(#dmArrowGold)"/>
+        </g>
+        <g>
+          <rect class="dmg-sweep" x="40" y="210" width="240" height="76" rx="10" fill="url(#dmPanel) #0c1230" stroke="#222a4d" stroke-width="1.5"/>
+          <rect class="dmg-sweep" x="292" y="210" width="172" height="76" rx="10" fill="url(#dmGoldSoft) #171a2e" stroke="url(#dmGold) #c9ba77" stroke-width="1.5" stroke-dasharray="8 6"/>
+          <rect class="dmg-sweep" x="476" y="210" width="300" height="76" rx="10" fill="url(#dmPanel) #0c1230" stroke="#222a4d" stroke-width="1.5"/>
+          <rect class="dmg-sweep" x="788" y="210" width="120" height="76" rx="10" fill="url(#dmGoldSoft) #171a2e" stroke="url(#dmGold) #c9ba77" stroke-width="1.5" stroke-dasharray="8 6"/>
+          <rect class="dmg-sweep" x="920" y="210" width="160" height="76" rx="10" fill="url(#dmPanel) #0c1230" stroke="#222a4d" stroke-width="1.5"/>
+        </g>
+        <g class="dmg-pop" font-family="Manrope, system-ui, sans-serif" font-size="20" fill="#f2f3f8" text-anchor="middle">
+          <text x="160" y="256">belegt</text>
+          <text x="626" y="256">belegt</text>
+          <text x="1000" y="256">belegt</text>
+        </g>
+        <path class="dmg-draw" d="M40 316 H1050" fill="none" stroke="url(#dmFade) #c9ba77" stroke-width="3" marker-end="url(#dmArrowGold)"/>
+        <g class="dmg-pop" font-family="Manrope, system-ui, sans-serif" font-size="20" fill="#96a0bb" font-variant-numeric="tabular-nums">
+          <text x="40" y="356">9:00</text>
+          <text x="292" y="356">10:30</text>
+          <text x="476" y="356">11:15</text>
+          <text x="788" y="356">14:00</text>
+          <text x="920" y="356">15:00</text>
+        </g>
+        <g class="dmg-pop" font-family="Manrope, system-ui, sans-serif">
+          <text x="40" y="424" font-size="20" fill="#f2f3f8">Freie Fenster sind golden umrandet. Dort klingelt das Telefon,</text>
+          <text x="40" y="456" font-size="20" fill="#f2f3f8">nicht davor und nicht mitten im Meeting.</text>
+          <text x="40" y="506" font-size="20" fill="#96a0bb">Beispieltag zur Verdeutlichung – Ihre Zielgruppe hat andere Rhythmen.</text>
+        </g>
+      </svg></div><figcaption>Ein Anruf im freien Fenster erreicht jemanden am Schreibtisch, kein Freizeichen und keine Mailbox.</figcaption></figure>
       <p>Zusammen mit der Durchwahl oder Mobilnummer ist das der eigentliche Hebel hinter unserer Call-to-Connect-Rate: Wer gerade nicht in einem Meeting sitzt und dessen Telefon direkt klingelt, geht in aller Regel ran. Ob aus dem Gespräch ein Termin wird, entscheidet danach der Anlass – aber zuerst muss überhaupt jemand abnehmen. Was das in Zahlen bedeutet, steht im nächsten Abschnitt.</p>
     </div>
   </section>
@@ -422,7 +516,26 @@
       <div class="sec-head"><p class="eyebrow" data-dm-scramble>Der Unterschied in Zahlen</p><h2 data-dm-reveal="head" id="quoten" data-dm-split>Standardagentur und DEALMAKERS: gleicher Tag, andere Zahlen</h2></div>
       <p>Eine klassische Telefonakquise-Agentur arbeitet eine Liste ab: Zentrale anrufen, Vorzimmer überzeugen, Pitch aufsagen, nächste Nummer. So braucht es 60 bis 100 Wählversuche, um auf 8 bis 20 Gespräche und ein bis drei Termine am Tag zu kommen. Das ist der ehrliche Branchenwert – und der Grund, warum Telefonakquise als reines Zahlenspiel gilt.</p>
       <p>Wir drehen drei Stellschrauben, bevor überhaupt gewählt wird: Wir rufen nur an, wenn die Person gerade erreichbar ist. Wir haben Durchwahl oder Mobilnummer, also keine Zentrale dazwischen. Und wir haben einen Anlass, der den Termin von allein trägt. Wo alle drei zusammenkommen, erreichen wir teilweise 60 Prozent der Angerufenen – und aus 40 Prozent dieser Gespräche wird ein Termin.</p>
-      <figure class="fig" data-dm-reveal><div class="fig-box"><svg viewBox="0 0 560 310" role="img" aria-label="Vergleich aus 100 Wählversuchen: Standardagentur erreicht 15 Personen und 2 Termine, DEALMAKERS erreicht 60 Personen und 24 Termine"><title>Standardagentur und DEALMAKERS aus 100 Wählversuchen</title><g font-family="sans-serif"><text x="0" y="20" font-size="12" fill="#c9ba77" letter-spacing="1.2">AUS 100 WÄHLVERSUCHEN AN EINEM TAG</text><text x="0" y="56" font-size="13.5" fill="#f2f3f8">Personen erreicht</text><rect x="0" y="70" width="45" height="26" rx="3" fill="#222a4d"/><text x="57" y="88" font-size="12.5" fill="#cdd4e6">15 – Standardagentur</text><rect x="0" y="106" width="180" height="26" rx="3" fill="#c9ba77"/><text x="192" y="124" font-size="12.5" font-weight="700" fill="#f2f3f8">60 – DEALMAKERS</text><text x="0" y="176" font-size="13.5" fill="#f2f3f8">Termine daraus</text><rect x="0" y="190" width="7" height="26" rx="2" fill="#222a4d"/><text x="19" y="208" font-size="12.5" fill="#cdd4e6">2 – Standardagentur</text><rect x="0" y="226" width="72" height="26" rx="3" fill="#c9ba77"/><text x="84" y="244" font-size="12.5" font-weight="700" fill="#f2f3f8">24 – DEALMAKERS</text><text x="0" y="288" font-size="11.5" fill="#96a0bb">Spitzenwerte aus Projekten mit Anlass, Direktnummer und freiem Kalenderfenster – kein Durchschnitt.</text></g></svg></div><figcaption>Nicht mehr wählen, sondern anders wählen: Derselbe Aufwand ergibt ein anderes Ergebnis, wenn Zeitpunkt, Nummer und Anlass vorher stimmen.</figcaption></figure>
+      <figure class="fig" data-dm-reveal><div class="fig-box"><svg class="dmg-canvas" viewBox="0 0 1120 640" role="img" aria-label="Vergleich aus 100 Wählversuchen: Standardagentur erreicht 15 Personen und 2 Termine, DEALMAKERS erreicht 60 Personen und 24 Termine"><title>Standardagentur und DEALMAKERS aus 100 Wählversuchen</title>
+        <text x="30" y="40" font-family="Archivo, system-ui, sans-serif" font-size="20" font-weight="700" letter-spacing="2.6" fill="#c9ba77">AUS 100 WÄHLVERSUCHEN AN EINEM TAG</text>
+        <rect x="30" y="64" width="1060" height="520" rx="14" fill="url(#dmPanel) #0c1230" stroke="#222a4d" stroke-width="1.5"/>
+        <rect x="31" y="65" width="1058" height="518" rx="13" fill="url(#dmGrid) none" opacity=".35"/>
+        <circle class="dmg-pulse" cx="240" cy="248" r="250" fill="url(#dmHalo) none"/>
+        <g font-family="Manrope, system-ui, sans-serif">
+          <text x="60" y="124" font-family="Archivo, system-ui, sans-serif" font-size="24" font-weight="700" fill="#f2f3f8">Personen erreicht</text>
+          <rect class="dmg-sweep" x="60" y="150" width="90" height="52" rx="8" fill="url(#dmSteel) #5a6a9a"/>
+          <text class="dmg-pop" x="174" y="186" font-size="22" fill="#96a0bb" font-variant-numeric="tabular-nums"><tspan class="dmg-count">15</tspan> – Standardagentur</text>
+          <rect class="dmg-sweep" x="60" y="222" width="360" height="52" rx="8" fill="url(#dmGold) #c9ba77" filter="url(#dmShadow)"/>
+          <text class="dmg-pop" x="444" y="258" font-size="22" font-weight="700" fill="#f2f3f8" font-variant-numeric="tabular-nums"><tspan class="dmg-count">60</tspan> – DEALMAKERS</text>
+          <text x="60" y="346" font-family="Archivo, system-ui, sans-serif" font-size="24" font-weight="700" fill="#f2f3f8">Termine daraus</text>
+          <rect class="dmg-sweep" x="60" y="372" width="12" height="52" rx="4" fill="url(#dmSteel) #5a6a9a"/>
+          <text class="dmg-pop" x="96" y="408" font-size="22" fill="#96a0bb" font-variant-numeric="tabular-nums"><tspan class="dmg-count">2</tspan> – Standardagentur</text>
+          <rect class="dmg-sweep" x="60" y="444" width="144" height="52" rx="8" fill="url(#dmGold) #c9ba77" filter="url(#dmShadow)"/>
+          <text class="dmg-pop" x="228" y="480" font-size="22" font-weight="700" fill="#f2f3f8" font-variant-numeric="tabular-nums"><tspan class="dmg-count">24</tspan> – DEALMAKERS</text>
+          <line class="dmg-sweep" x1="60" y1="524" x2="1060" y2="524" stroke="#2c355e" stroke-width="1.5"/>
+          <text x="60" y="560" font-size="20" fill="#96a0bb">Spitzenwerte aus Projekten mit Anlass, Direktnummer und freiem Kalenderfenster – kein Durchschnitt.</text>
+        </g>
+      </svg></div><figcaption>Nicht mehr wählen, sondern anders wählen: Derselbe Aufwand ergibt ein anderes Ergebnis, wenn Zeitpunkt, Nummer und Anlass vorher stimmen.</figcaption></figure>
       <div class="table-scroll" data-dm-reveal><table><thead><tr><th scope="col">Was den Tag bestimmt</th><th scope="col">Standardagentur</th><th scope="col">DEALMAKERS</th></tr></thead><tbody>
         <tr><td>Zugang zur Person</td><td>Zentrale und Vorzimmer, Name oft unbekannt</td><td>Person namentlich bekannt, meist Durchwahl oder Mobilnummer</td></tr>
         <tr><td>Zeitpunkt des Anrufs</td><td>Liste von oben nach unten</td><td>gezielt in ein freies Fenster im Kalender des Entscheiders</td></tr>
