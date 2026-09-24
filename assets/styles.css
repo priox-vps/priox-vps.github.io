@@ -72,7 +72,9 @@ body {
   font-size: 17px;
   line-height: 1.7;
   color: var(--text);
-  background: var(--bg);
+  /* Kein eigener Hintergrund: die Seitenfarbe steht auf <html>. Saetze man sie
+     hier zusaetzlich, wuerde <body> ueber der festen Hintergrundebene
+     (z-index:-1) liegen und sie komplett verdecken. */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -114,6 +116,14 @@ h1, h2, h3, h4 { hyphens: manual; -webkit-hyphens: manual; }
    sie wird stattdessen kleiner skaliert, siehe dm-effects.css. */
 @media (max-width: 700px) {
   h2, h3, h4 { hyphens: auto; -webkit-hyphens: auto; }
+}
+/* Dasselbe fuer den Fliesstext: auf breiten Spalten passt jedes deutsche Wort,
+   der Browser trennte trotzdem ("mit demselben Ri-siko" im Vorspann von
+   /vertriebstraining-b2b/, gemessen bei 1280px). Tabellenzellen bleiben
+   ausgenommen - die sind auch auf dem Desktop schmal und brauchen Trennung. */
+p, li, figcaption, blockquote, dd, dt { hyphens: manual; -webkit-hyphens: manual; }
+@media (max-width: 700px) {
+  p, li, figcaption, blockquote, dd, dt { hyphens: auto; -webkit-hyphens: auto; }
 }
 h1 { font-size: clamp(2.05rem, 1.35rem + 2.8vw, 3.3rem); font-weight: 800;
      letter-spacing: -.03em; }

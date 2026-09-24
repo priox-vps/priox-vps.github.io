@@ -85,8 +85,7 @@
         "Vertriebspriorisierung"
       ],
       "sameAs": [
-        "https://www.linkedin.com/company/dealmakers-germany/",
-        "https://www.facebook.com/DealMakers4.0"
+        "https://www.linkedin.com/company/dealmakers-germany/"
       ],
       "logo": "https://deal-makers.de/assets/logo-mark.png",
       "founder": {
@@ -231,6 +230,8 @@
 </script>
 </head>
 <body>
+<!-- Pipeline-Hintergrund: liegt per z-index:-1 unter jedem Abschnitts-
+     hintergrund, Staerke ueber data-bg am <main>. -->
 <svg class="dm-defs" aria-hidden="true" focusable="false" width="0" height="0"><defs>
   <linearGradient id="dmGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0d199"/><stop offset=".55" stop-color="#c9ba77"/><stop offset="1" stop-color="#b5a55e"/></linearGradient>
   <linearGradient id="dmGoldSoft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9ba77" stop-opacity=".30"/><stop offset="1" stop-color="#b5a55e" stop-opacity=".06"/></linearGradient>
@@ -1012,5 +1013,6 @@ function ccOpen(){document.getElementById('cookie-hinweis').hidden=false;}
 </script>
 <script src="/assets/dm-effects.js" defer></script>
 <script src="/assets/dm-konsole.js" defer></script>
+<script>window.DM_PIPELINE = { accent: "#b5a55e", count: 95, defaultIntensity: 0.30 };</script>
 </body>
 </html>

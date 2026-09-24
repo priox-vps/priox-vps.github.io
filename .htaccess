@@ -8,6 +8,15 @@ Options -Indexes
 # Adressen mit identischem Inhalt erreichbar (Duplikat fuer Google).
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # http auf https zwingen. Bisher hat das WordPress erledigt - nach dem Upload
+  # liegt dort nur noch HTML, also muss die Regel hier stehen. Beide Bedingungen
+  # muessen zutreffen (UND), sonst entsteht bei Strato eine Endlosschleife,
+  # wenn die Verschluesselung vorgelagert beendet wird.
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://deal-makers.de%{REQUEST_URI} [R=301,L]
+
   RewriteCond %{HTTP_HOST} ^www\.deal-makers\.de$ [NC]
   RewriteRule ^(.*)$ https://deal-makers.de/$1 [R=301,L]
 </IfModule>
