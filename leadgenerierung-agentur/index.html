@@ -22,6 +22,7 @@
 <meta name="twitter:description" content="Leadgenerierung für B2B: Was ein Lead wirklich wert ist, wie Qualität statt Menge entsteht und warum die Übergabe an den Vertrieb über den Erfolg entscheidet.">
 <link rel="stylesheet" href="/assets/styles.css">
 <link rel="stylesheet" href="/assets/dm-effects.css">
+<link rel="stylesheet" href="/assets/dm-module.css">
 <link rel="icon" href="/assets/favicon.png" sizes="48x48">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -248,7 +249,20 @@
 }
 </script>
 </head>
-<body>
+<body data-dm-cta="Erstgespräch zur Leadgenerierung" data-dm-cta-href="tel:+4916096678717" data-dm-cta-label="+49 160 966 787 17" data-dm-cta-end="#erstgespraech">
+<svg class="dm-defs" aria-hidden="true" focusable="false" width="0" height="0"><defs>
+  <linearGradient id="dmGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0d199"/><stop offset=".55" stop-color="#c9ba77"/><stop offset="1" stop-color="#b5a55e"/></linearGradient>
+  <linearGradient id="dmGoldSoft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9ba77" stop-opacity=".30"/><stop offset="1" stop-color="#b5a55e" stop-opacity=".06"/></linearGradient>
+  <linearGradient id="dmPanel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171a2e"/><stop offset="1" stop-color="#0c1230"/></linearGradient>
+  <linearGradient id="dmSteel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c8ab5"/><stop offset=".55" stop-color="#5a6a9a"/><stop offset="1" stop-color="#3e4a75"/></linearGradient>
+  <linearGradient id="dmFade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9ba77" stop-opacity=".18"/><stop offset=".22" stop-color="#c9ba77" stop-opacity=".85"/><stop offset=".78" stop-color="#e0d199"/><stop offset="1" stop-color="#e0d199" stop-opacity=".55"/></linearGradient>
+  <radialGradient id="dmHalo" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#e0d199" stop-opacity=".42"/><stop offset=".55" stop-color="#c9ba77" stop-opacity=".14"/><stop offset="1" stop-color="#c9ba77" stop-opacity="0"/></radialGradient>
+  <filter id="dmGlow" x="-45%" y="-45%" width="190%" height="190%"><feGaussianBlur stdDeviation="7" result="dmB"/><feMerge><feMergeNode in="dmB"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="dmShadow" x="-25%" y="-25%" width="150%" height="165%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity=".45"/></filter>
+  <pattern id="dmGrid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0v40" fill="none" stroke="#222a4d" stroke-width="1"/></pattern>
+  <marker id="dmArrow" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 11 6 1 11z" fill="#5a6a9a"/></marker>
+  <marker id="dmArrowGold" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 11 6 1 11z" fill="#c9ba77"/></marker>
+</defs></svg>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 <div class="dm-progress" aria-hidden="true"><div data-dm-progress></div></div>
 <div class="dm-glow" data-dm-glow aria-hidden="true"></div>
@@ -272,6 +286,7 @@
       <a href="/vertriebsberatung/">Beratung</a>
       <a href="/vertriebstraining-b2b/">Training</a>
       <a href="/ratgeber/">Ratgeber</a>
+      <span class="lang" role="group" aria-label="Sprache / Language"><a class="lang__a lang__a--on" href="/leadgenerierung-agentur/" hreflang="de" lang="de" aria-current="true">DE</a><a class="lang__a" href="/en/" hreflang="en" lang="en">EN</a></span>
       <a href="/kontakt/" class="btn btn-primary btn-sm">Gespräch vereinbaren</a>
     </nav>
     <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false"
@@ -306,11 +321,25 @@
   <section class="tight">
     <div class="wrap">
       <div class="sec-head" style="max-width:880px"><p class="eyebrow" data-dm-scramble>Erfahrung im Vertrieb</p><h2 data-dm-reveal="head" id="zahlen-dahinter" data-dm-split>Die Zahlen dahinter</h2></div>
-      <div class="grid g4" data-dm-tilt-scope>
-        <div class="card" data-dm-reveal data-dm-stagger="0" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>20 Jahre B2B</h3><p>Aufbau, Führung, Training und eigene Quote im Vertrieb.</p></div>
-        <div class="card" data-dm-reveal data-dm-stagger="1" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>200 % Zielerreichung</h3><p>In Spitzenzeiträumen knapp 400 % und mehrfach ausgezeichnet.</p></div>
-        <div class="card" data-dm-reveal data-dm-stagger="2" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>20+ Kunden</h3><p>Seit 2021 in SaaS, Beratung und Fintech betreut.</p></div>
-        <div class="card" data-dm-reveal data-dm-stagger="3" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>60 % erreicht</h3><p>In passenden Projekten mit Anlass, Direktnummer und Kalenderfenster.</p></div>
+      <div class="dm-band" data-dm-band>
+        <div class="dm-band__inner">
+          <div class="dm-band__item">
+            <p class="dm-band__head"><span class="dm-band__num"><span class="dm-band__count" data-dm-to="20">20</span></span><span class="dm-band__key">Jahre B2B</span></p>
+            <p class="dm-band__text">Aufbau, Führung, Training und eigene Quote im Vertrieb.</p>
+          </div>
+          <div class="dm-band__item">
+            <p class="dm-band__head"><span class="dm-band__num"><span class="dm-band__count" data-dm-to="200">200</span><span class="dm-band__unit"> %</span></span><span class="dm-band__key">Zielerreichung</span></p>
+            <p class="dm-band__text">In Spitzenzeiträumen knapp 400 % und mehrfach ausgezeichnet.</p>
+          </div>
+          <div class="dm-band__item">
+            <p class="dm-band__head"><span class="dm-band__num"><span class="dm-band__count" data-dm-to="20">20</span><span class="dm-band__unit">+</span></span><span class="dm-band__key">Kunden</span></p>
+            <p class="dm-band__text">Seit 2021 in SaaS, Beratung und Fintech betreut.</p>
+          </div>
+          <div class="dm-band__item">
+            <p class="dm-band__head"><span class="dm-band__num"><span class="dm-band__count" data-dm-to="60">60</span><span class="dm-band__unit"> %</span></span><span class="dm-band__key">erreicht</span></p>
+            <p class="dm-band__text">In passenden Projekten mit Anlass, Direktnummer und Kalenderfenster.</p>
+          </div>
+        </div>
       </div>
       <p class="small muted" style="margin-top:1.6rem">Spitzenwerte, kein Durchschnitt. Nachweise und Werdegang: <a href="/warum-wir/">Warum wir</a>.</p>
     </div>
@@ -343,6 +372,7 @@
         <p class="eyebrow" data-dm-scramble>Begriffe ohne Nebel</p>
         <h2 id="was-ein-lead-ist" data-dm-reveal="head">Was ein Lead ist – und was nur eine Adresse ist</h2>
         <p>Eine gekaufte Tabelle kann 10.000 Firmen enthalten. Sie beantwortet nicht, wer gerade zuständig ist und ob der Moment passt. Eine Adresse ohne Anlass ist nur eine Zeile in einer Tabelle: nützlich für Recherche, zu wenig als qualifizierter Lead.</p>
+        <div class="dm-zitat" data-dm-zitat><span class="dm-zitat__bar" aria-hidden="true"></span><p class="dm-zitat__text">Eine Adresse ohne Anlass ist nur eine <span class="dm-zitat__hi">Zeile</span> in einer Tabelle.</p></div>
         <p>Ein B2B-Lead hat einen Gesprächsgrund. Bei aktiver Ansprache ist das oft ein öffentlich sichtbares Ereignis: Stelle, Produktlinie, Standort oder Führungswechsel. Das sind Beispiele, nicht als abschließende Liste. Der Anlass macht den Kontakt heute wertvoller als vorige Woche.</p>
         <p class="small muted"><strong>Das ist ein Beispiel-Set; die Konfiguration bauen wir immer individuell.</strong> Im Prinzip lässt sich alles als Anlass nutzen, was irgendwo öffentlich sichtbar ist.</p>
         <p>Wir nennen das <a href="/signal-based-selling/">Signal Based Selling</a>: Nicht die Liste bestimmt den Anruf, sondern das Ereignis. Unser <a href="https://priox.ai/" rel="noopener">Central-Sales-Intelligence-System</a> arbeitet aus Millionen von Quellen mit relevanten Daten und findet mehr als 40 Anlässe – und wenn es 100 sein müssen, sind es 100.</p>
@@ -355,6 +385,37 @@
     <div class="wrap">
       <div class="sec-head"><p class="eyebrow" data-dm-scramble>Erreichbarkeit und Anlass</p><h2 data-dm-reveal="head" id="vergleich" data-dm-split>Standardagentur und DEALMAKERS: derselbe Markt, anderer Ansatz</h2></div>
       <p>Branchenüblich entstehen aus 100 Wählversuchen etwa 10 bis 20 Netto-Gespräche und ein bis drei Termine. Wir setzen davor an: Wir wählen erst, wenn die Zielperson laut Kalender am Platz ist, und nutzen Durchwahl oder Mobilnummer statt der Zentrale. Der konkrete Anlass hebt danach die Terminquote.</p>
+<figure class="dm-vgl" data-dm-vgl>
+        <p class="dm-vgl__tags" aria-hidden="true"><span>Standardagentur</span><span>DEALMAKERS</span></p>
+        <div class="dm-vgl__stage">
+          <div class="dm-vgl__layer dm-vgl__layer--b">
+<svg viewBox="0 0 480 400" role="img" aria-label="Hundert Punkte für hundert Wählversuche, sechzig davon werden zu Gesprächen" preserveAspectRatio="xMidYMid meet">
+<title>DEALMAKERS: teilweise 60 % erreicht</title>
+<rect x="0" y="0" width="480" height="400" fill="#04061a"/>
+<text x="34" y="44" font-family="JetBrains Mono, ui-monospace, monospace" font-size="15" letter-spacing="2" fill="#e0d199">DEALMAKERS</text>
+<text x="34" y="70" font-family="Manrope, system-ui, sans-serif" font-size="14" fill="#96a0bb">100 Wählversuche, ein Punkt je Versuch</text>
+<circle cx="64" cy="112" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="103" cy="112" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="142" cy="112" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="181" cy="112" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="220" cy="112" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="259" cy="112" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="298" cy="112" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="337" cy="112" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="376" cy="112" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="415" cy="112" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="64" cy="138" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="103" cy="138" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="142" cy="138" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="181" cy="138" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="220" cy="138" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="259" cy="138" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="298" cy="138" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="337" cy="138" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="376" cy="138" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="415" cy="138" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="64" cy="164" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="103" cy="164" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="142" cy="164" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="181" cy="164" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="220" cy="164" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="259" cy="164" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="298" cy="164" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="337" cy="164" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="376" cy="164" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="415" cy="164" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="64" cy="190" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="103" cy="190" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="142" cy="190" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="181" cy="190" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="220" cy="190" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="259" cy="190" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="298" cy="190" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="337" cy="190" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="376" cy="190" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="415" cy="190" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="64" cy="216" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="103" cy="216" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="142" cy="216" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="181" cy="216" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="220" cy="216" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="259" cy="216" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="298" cy="216" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="337" cy="216" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="376" cy="216" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="415" cy="216" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="64" cy="242" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="103" cy="242" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="142" cy="242" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="181" cy="242" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="220" cy="242" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="259" cy="242" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="298" cy="242" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="337" cy="242" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="376" cy="242" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="415" cy="242" r="7" fill="url(#dmGold) #c9ba77" stroke="#b5a55e" stroke-width="1.5"/><circle cx="64" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="103" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="142" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="181" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="220" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="259" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="298" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="337" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="376" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="415" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="64" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="103" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="142" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="181" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="220" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="259" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="298" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="337" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="376" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="415" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="64" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="103" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="142" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="181" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="220" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="259" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="298" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="337" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="376" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="415" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="64" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="103" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="142" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="181" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="220" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="259" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="298" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="337" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="376" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="415" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/>
+<text x="34" y="374" font-family="Archivo, system-ui, sans-serif" font-size="17" font-weight="700" fill="#f2f3f8">Teilweise 60 % erreicht</text>
+<text x="34" y="394" font-family="Manrope, system-ui, sans-serif" font-size="13" fill="#96a0bb">Aus diesen Gesprächen 40 % Termine.</text>
+</svg>
+</div>
+          <div class="dm-vgl__layer dm-vgl__layer--a">
+<svg viewBox="0 0 480 400" role="img" aria-label="Hundert Punkte für hundert Wählversuche, zehn bis zwanzig davon werden zu Gesprächen" preserveAspectRatio="xMidYMid meet">
+<title>Standardagentur: 10 bis 20 Netto-Gespräche</title>
+<rect x="0" y="0" width="480" height="400" fill="#04061a"/>
+<text x="34" y="44" font-family="JetBrains Mono, ui-monospace, monospace" font-size="15" letter-spacing="2" fill="#7c8ab5">STANDARDAGENTUR</text>
+<text x="34" y="70" font-family="Manrope, system-ui, sans-serif" font-size="14" fill="#96a0bb">100 Wählversuche, ein Punkt je Versuch</text>
+<circle cx="64" cy="112" r="7" fill="#5a6a9a" stroke="#7c8ab5" stroke-width="1.5"/><circle cx="103" cy="112" r="7" fill="#5a6a9a" stroke="#7c8ab5" stroke-width="1.5"/><circle cx="142" cy="112" r="7" fill="#5a6a9a" stroke="#7c8ab5" stroke-width="1.5"/><circle cx="181" cy="112" r="7" fill="#5a6a9a" stroke="#7c8ab5" stroke-width="1.5"/><circle cx="220" cy="112" r="7" fill="#5a6a9a" stroke="#7c8ab5" stroke-width="1.5"/><circle cx="259" cy="112" r="7" fill="#5a6a9a" stroke="#7c8ab5" stroke-width="1.5"/><circle cx="298" cy="112" r="7" fill="#5a6a9a" stroke="#7c8ab5" stroke-width="1.5"/><circle cx="337" cy="112" r="7" fill="#5a6a9a" stroke="#7c8ab5" stroke-width="1.5"/><circle cx="376" cy="112" r="7" fill="#5a6a9a" stroke="#7c8ab5" stroke-width="1.5"/><circle cx="415" cy="112" r="7" fill="#5a6a9a" stroke="#7c8ab5" stroke-width="1.5"/><circle cx="64" cy="138" r="7" fill="#04061a" stroke="#5a6a9a" stroke-width="1.5"/><circle cx="103" cy="138" r="7" fill="#04061a" stroke="#5a6a9a" stroke-width="1.5"/><circle cx="142" cy="138" r="7" fill="#04061a" stroke="#5a6a9a" stroke-width="1.5"/><circle cx="181" cy="138" r="7" fill="#04061a" stroke="#5a6a9a" stroke-width="1.5"/><circle cx="220" cy="138" r="7" fill="#04061a" stroke="#5a6a9a" stroke-width="1.5"/><circle cx="259" cy="138" r="7" fill="#04061a" stroke="#5a6a9a" stroke-width="1.5"/><circle cx="298" cy="138" r="7" fill="#04061a" stroke="#5a6a9a" stroke-width="1.5"/><circle cx="337" cy="138" r="7" fill="#04061a" stroke="#5a6a9a" stroke-width="1.5"/><circle cx="376" cy="138" r="7" fill="#04061a" stroke="#5a6a9a" stroke-width="1.5"/><circle cx="415" cy="138" r="7" fill="#04061a" stroke="#5a6a9a" stroke-width="1.5"/><circle cx="64" cy="164" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="103" cy="164" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="142" cy="164" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="181" cy="164" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="220" cy="164" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="259" cy="164" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="298" cy="164" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="337" cy="164" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="376" cy="164" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="415" cy="164" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="64" cy="190" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="103" cy="190" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="142" cy="190" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="181" cy="190" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="220" cy="190" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="259" cy="190" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="298" cy="190" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="337" cy="190" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="376" cy="190" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="415" cy="190" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="64" cy="216" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="103" cy="216" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="142" cy="216" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="181" cy="216" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="220" cy="216" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="259" cy="216" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="298" cy="216" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="337" cy="216" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="376" cy="216" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="415" cy="216" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="64" cy="242" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="103" cy="242" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="142" cy="242" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="181" cy="242" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="220" cy="242" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="259" cy="242" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="298" cy="242" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="337" cy="242" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="376" cy="242" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="415" cy="242" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="64" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="103" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="142" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="181" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="220" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="259" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="298" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="337" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="376" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="415" cy="268" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="64" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="103" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="142" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="181" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="220" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="259" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="298" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="337" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="376" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="415" cy="294" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="64" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="103" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="142" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="181" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="220" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="259" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="298" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="337" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="376" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="415" cy="320" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="64" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="103" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="142" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="181" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="220" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="259" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="298" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="337" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="376" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/><circle cx="415" cy="346" r="7" fill="#0c1230" stroke="#222a4d" stroke-width="1.5"/>
+<text x="34" y="374" font-family="Archivo, system-ui, sans-serif" font-size="17" font-weight="700" fill="#f2f3f8">10–20 Netto-Gespräche</text>
+<text x="34" y="394" font-family="Manrope, system-ui, sans-serif" font-size="13" fill="#96a0bb">Daraus ein bis drei Termine.</text>
+</svg>
+</div>
+          <input class="dm-vgl__range" type="range" min="0" max="100" step="5" value="50" aria-label="Schieber zwischen Standardagentur und DEALMAKERS">
+          <span class="dm-vgl__bar" aria-hidden="true"></span>
+          <span class="dm-vgl__knob" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 6 4 12l6 6M14 6l6 6-6 6" fill="none" stroke="#c9ba77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <figcaption>Hundert Punkte, hundert Wählversuche: Links bleiben die meisten dunkel, rechts wird der Zeitpunkt vorher geprüft. Ziehen Sie den Schieber, um beide Seiten zu vergleichen.</figcaption>
+      </figure>
       <div class="table-scroll" data-dm-reveal>
         <table>
           <thead><tr><th scope="col">Was den Tag bestimmt</th><th scope="col">Standardagentur</th><th scope="col">DEALMAKERS</th></tr></thead>
@@ -394,7 +455,7 @@
             <title>Vier Reifegrade eines B2B-Leads</title>
             <g font-family="sans-serif">
               <path d="M34 222 H150 V170 H270 V118 H390 V66 H526" fill="none" stroke="#c9ba77" stroke-width="5" stroke-linejoin="round"/>
-              <rect x="34" y="178" width="112" height="44" rx="6" fill="#201d11"/><rect x="154" y="126" width="112" height="44" rx="6" fill="#201d11"/><rect x="274" y="74" width="112" height="44" rx="6" fill="#c9ba77"/><rect x="394" y="22" width="132" height="44" rx="6" fill="#f2f3f8"/>
+              <rect x="34" y="178" width="112" height="44" rx="6" fill="#171a2e"/><rect x="154" y="126" width="112" height="44" rx="6" fill="#171a2e"/><rect x="274" y="74" width="112" height="44" rx="6" fill="#c9ba77"/><rect x="394" y="22" width="132" height="44" rx="6" fill="#f2f3f8"/>
               <text x="90" y="205" text-anchor="middle" font-size="13" fill="#cdd4e6">Kontakt</text><text x="210" y="146" text-anchor="middle" font-size="12" fill="#cdd4e6">interessiert</text><text x="330" y="94" text-anchor="middle" font-size="12" fill="#070b22">qualifiziert</text><text x="460" y="49" text-anchor="middle" font-size="13" fill="#070b22">Termin</text>
               <text x="34" y="246" font-size="11" fill="#96a0bb">Mehr Prüfung, mehr Verbindlichkeit – nicht einfach mehr Datensätze.</text>
             </g>
@@ -442,6 +503,7 @@
         </div>
         <figcaption>Skalierbarkeit und Qualität laufen nicht parallel. Direktansprache gewinnt erst durch einen geprüften Anlass an Qualität.</figcaption>
       </figure>
+      <p class="dm-soft-cta"><a href="/neukundenakquise-agentur/">Wie wir die Direktansprache aufbauen<span class="dm-soft-cta__arrow" aria-hidden="true">&rarr;</span></a></p>
       <p class="small muted"><strong>Die Kanalwahl ist ein Beispiel, keine Schablone.</strong> Wir richten sie an Ihrem Angebot, Markt und verfügbaren Anlass aus.</p>
     </div>
   </section>
@@ -451,6 +513,25 @@
       <p class="eyebrow" data-dm-scramble>Der falsche Einkauf</p>
       <h2 id="gekaufte-listen" data-dm-reveal="head" data-dm-split>Warum gekaufte Listen fast immer enttäuschen</h2>
       <p>Eine externe Datenquelle kann Marktabdeckung schaffen. Für den Vertrieb fehlt ihr oft der aktuelle Gesprächsgrund: Rollen ändern sich, Daten altern, und eine Zeile erklärt nicht, warum ein Unternehmen gerade jetzt zuhören sollte. Der Preis pro Datensatz lässt diese Nacharbeit leicht verschwinden.</p>
+      <div class="dm-zitat" data-dm-zitat><span class="dm-zitat__bar" aria-hidden="true"></span><p class="dm-zitat__text">Eine Zeile erklärt nicht, warum ein Unternehmen <span class="dm-zitat__hi">gerade&nbsp;jetzt</span> zuhören sollte.</p></div>
+      <figure class="fig" data-dm-reveal>
+        <div class="fig-box">
+          <svg viewBox="0 0 560 250" role="img" aria-label="Links eine Tabellenzeile mit Stammdaten, rechts derselbe Kontakt mit Anlass, Datum und Quelle"><title>Von der Tabellenzeile zum Gesprächsgrund</title>
+          <g font-family="sans-serif">
+            <text x="24" y="28" font-size="12" letter-spacing="1.5" fill="#7c8ab5">GEKAUFTE ZEILE</text>
+            <rect x="24" y="42" width="232" height="150" rx="10" fill="#0c1230" stroke="#222a4d" stroke-width="2"/>
+            <g fill="#3e4a75"><rect x="44" y="66" width="120" height="10" rx="5"/><rect x="44" y="94" width="176" height="10" rx="5"/><rect x="44" y="122" width="96" height="10" rx="5"/><rect x="44" y="150" width="140" height="10" rx="5"/></g>
+            <text x="44" y="182" font-size="12" fill="#5a6a9a">Firma, Adresse, irgendeine Nummer</text>
+            <path d="M268 118 H300" stroke="#c9ba77" stroke-width="3" marker-end="url(#dmArrowGold)"/>
+            <text x="304" y="28" font-size="12" letter-spacing="1.5" fill="#e0d199">GEPRÜFTER LEAD</text>
+            <rect x="304" y="42" width="232" height="150" rx="10" fill="#171a2e" stroke="url(#dmGold) #c9ba77" stroke-width="2"/>
+            <g font-size="13" fill="#f2f3f8"><text x="324" y="72">Zuständige Person mit Rolle</text><text x="324" y="100">Anlass mit Datum</text><text x="324" y="128">Quelle, öffentlich nachprüfbar</text><text x="324" y="156">Nächster Schritt</text></g>
+            <g fill="url(#dmGold) #c9ba77"><circle cx="314" cy="68" r="3"/><circle cx="314" cy="96" r="3"/><circle cx="314" cy="124" r="3"/><circle cx="314" cy="152" r="3"/></g>
+            <text x="24" y="228" font-size="11.5" fill="#96a0bb">Dieselbe Firma, zwei Zustände: Die Zeile ist Ausgangspunkt, der Gesprächsgrund entsteht erst durch Recherche.</text>
+          </g></svg>
+        </div>
+        <figcaption>Eine gekaufte Zeile liefert Stammdaten; erst Rolle, Anlass, Quelle und nächster Schritt machen daraus eine Gesprächschance.</figcaption>
+      </figure>
       <p>Als Ausgangspunkt für Recherche kann eine Liste sinnvoll sein. Für eine belastbare Gesprächschance ergänzen wir Zielbild, Anlass und zuständige Person. Wer <a href="/neukundenakquise-agentur/">Neukundenakquise</a> plant, sollte genau diese Übergänge definieren.</p>
     </div>
   </section>
@@ -461,6 +542,50 @@
         <p class="eyebrow" data-dm-scramble>Priorität mit Grund</p>
         <h2 data-dm-reveal="head" id="qualifizierung" data-dm-split>Qualifizierung: nach welchen Kriterien wir Leads bewerten</h2>
         <p class="lead">Entscheidend sind dauerhafte Passung, frischer Anlass, erreichbare Seniorität und ein nächster Schritt für den Vertrieb.</p>
+      </div>
+      <div class="dm-pin" data-dm-pin>
+        <div class="dm-pin__sticky">
+          <figure class="dm-pin__fig">
+            <svg viewBox="0 0 460 640" role="img" aria-label="Vier Bewertungskriterien: dauerhafte Passung, frischer Anlass, erreichbare Seniorität und ein nächster Schritt">
+              <title>Die vier Kriterien der Lead-Bewertung</title>
+  <g class="dm-pin__part" data-dm-pin-part="1">
+    <rect x="26" y="24" width="408" height="136" rx="14" fill="#171a2e" stroke="#2c355e" stroke-width="2"/>
+    <g transform="translate(58 52)"><circle cx="40" cy="40" r="38" fill="none" stroke="#3e4a75" stroke-width="2"/><circle cx="40" cy="40" r="24" fill="none" stroke="#5a6a9a" stroke-width="2"/><circle cx="40" cy="40" r="11" fill="url(#dmGold) #c9ba77"/></g>
+    <text x="176" y="64" font-family="JetBrains Mono, ui-monospace, monospace" font-size="13" letter-spacing="2" fill="#e0d199">KRITERIUM 1</text>
+    <text x="176" y="96" font-family="Archivo, system-ui, sans-serif" font-size="21" font-weight="700" fill="#f2f3f8">Dauerhafte Passung</text>
+    <text x="176" y="126" font-family="Manrope, system-ui, sans-serif" font-size="15" fill="#96a0bb">Branche, Größe, Region und Angebot</text>
+  </g>
+  <g class="dm-pin__part" data-dm-pin-part="2">
+    <rect x="26" y="176" width="408" height="136" rx="14" fill="#171a2e" stroke="#2c355e" stroke-width="2"/>
+    <g transform="translate(58 204)"><circle cx="40" cy="40" r="36" fill="none" stroke="#3e4a75" stroke-width="2"/><path d="M40 40 V14" stroke="url(#dmGold) #c9ba77" stroke-width="4" stroke-linecap="round"/><path d="M40 40 L60 52" stroke="url(#dmGold) #c9ba77" stroke-width="4" stroke-linecap="round"/><circle cx="40" cy="40" r="4" fill="#f2f3f8"/></g>
+    <text x="176" y="216" font-family="JetBrains Mono, ui-monospace, monospace" font-size="13" letter-spacing="2" fill="#e0d199">KRITERIUM 2</text>
+    <text x="176" y="248" font-family="Archivo, system-ui, sans-serif" font-size="21" font-weight="700" fill="#f2f3f8">Frischer Anlass</text>
+    <text x="176" y="278" font-family="Manrope, system-ui, sans-serif" font-size="15" fill="#96a0bb">Ein öffentliches Ereignis mit Zeitfenster</text>
+  </g>
+  <g class="dm-pin__part" data-dm-pin-part="3">
+    <rect x="26" y="328" width="408" height="136" rx="14" fill="#171a2e" stroke="#2c355e" stroke-width="2"/>
+    <g transform="translate(58 356)"><rect x="6" y="8" width="68" height="18" rx="6" fill="url(#dmGold) #c9ba77"/><rect x="6" y="34" width="52" height="18" rx="6" fill="#5a6a9a"/><rect x="6" y="60" width="36" height="18" rx="6" fill="#3e4a75"/></g>
+    <text x="176" y="368" font-family="JetBrains Mono, ui-monospace, monospace" font-size="13" letter-spacing="2" fill="#e0d199">KRITERIUM 3</text>
+    <text x="176" y="400" font-family="Archivo, system-ui, sans-serif" font-size="21" font-weight="700" fill="#f2f3f8">Erreichbare Seniorität</text>
+    <text x="176" y="430" font-family="Manrope, system-ui, sans-serif" font-size="15" fill="#96a0bb">Entscheiden, beeinflussen oder weiterführen</text>
+  </g>
+  <g class="dm-pin__part" data-dm-pin-part="4">
+    <rect x="26" y="480" width="408" height="136" rx="14" fill="#171a2e" stroke="#2c355e" stroke-width="2"/>
+    <g transform="translate(58 508)"><rect x="6" y="10" width="68" height="60" rx="8" fill="#0c1230" stroke="#3e4a75" stroke-width="2"/><path d="M6 28 H74" stroke="#3e4a75" stroke-width="2"/><path d="M22 4 V16 M58 4 V16" stroke="#5a6a9a" stroke-width="4" stroke-linecap="round"/><path d="M22 50 H58" stroke="url(#dmGold) #c9ba77" stroke-width="4" marker-end="url(#dmArrowGold)"/></g>
+    <text x="176" y="520" font-family="JetBrains Mono, ui-monospace, monospace" font-size="13" letter-spacing="2" fill="#e0d199">KRITERIUM 4</text>
+    <text x="176" y="552" font-family="Archivo, system-ui, sans-serif" font-size="21" font-weight="700" fill="#f2f3f8">Nächster Schritt</text>
+    <text x="176" y="582" font-family="Manrope, system-ui, sans-serif" font-size="15" fill="#96a0bb">Ein Termin mit Zweck statt einer Notiz</text>
+  </g>
+            </svg>
+            <figcaption>Vier Kriterien entscheiden über die Reihenfolge; erst wenn alle vier stehen, ist ein Lead ein Termin wert.</figcaption>
+          </figure>
+        </div>
+        <ol class="dm-pin__steps">
+          <li class="dm-pin__step" data-dm-pin-step="1"><h3>1. Dauerhafte Passung</h3><p>Branche, Größe, Region und Angebot beschreiben die grundsätzliche Eignung. Dieser Teil verändert sich selten und trägt deshalb keine Dringlichkeit.</p></li>
+          <li class="dm-pin__step" data-dm-pin-step="2"><h3>2. Frischer Anlass</h3><p>Ein öffentlich sichtbares Ereignis mit eigenem Zeitfenster beantwortet die Frage nach dem Wann. Ohne ihn bleibt jede Priorität eine Behauptung.</p></li>
+          <li class="dm-pin__step" data-dm-pin-step="3"><h3>3. Erreichbare Seniorität</h3><p>Wir prüfen, wer entscheiden, beeinflussen oder den Termin intern sinnvoll platzieren kann – nicht, wer den größten Titel trägt.</p></li>
+          <li class="dm-pin__step" data-dm-pin-step="4"><h3>4. Nächster Schritt</h3><p>Ein Lead ist erst übergabefähig, wenn ein konkreter nächster Schritt für Ihren Vertrieb feststeht.</p></li>
+        </ol>
       </div>
       <div class="table-scroll" data-dm-reveal>
         <table>
@@ -511,7 +636,7 @@
             <g font-family="sans-serif">
               <line x1="62" y1="32" x2="62" y2="220" stroke="#96a0bb"/><line x1="62" y1="220" x2="524" y2="220" stroke="#96a0bb"/>
               <path d="M72 54 C140 66,176 98,236 134 S376 194,510 208" fill="none" stroke="#b5a55e" stroke-width="5"/>
-              <path d="M72 54 C140 66,176 98,236 134 S376 194,510 208 L510 220 L72 220 Z" fill="#201d11"/>
+              <path d="M72 54 C140 66,176 98,236 134 S376 194,510 208 L510 220 L72 220 Z" fill="#171a2e"/>
               <g fill="#cdd4e6" font-size="12"><text x="68" y="242">sofort</text><text x="190" y="242">gleicher Tag</text><text x="338" y="242">mehrere Tage</text><text x="468" y="242">Wochen</text><text x="8" y="45">hoch</text><text x="8" y="218">niedrig</text></g>
               <text x="60" y="18" font-size="12" fill="#96a0bb">Nutzbarkeit des Anlasses</text><text x="552" y="272" font-size="11" fill="#96a0bb" text-anchor="end">Schema: Der konkrete Wert hängt von Anlass und Angebot ab.</text>
             </g>
@@ -519,6 +644,31 @@
         </div>
         <figcaption>Ein Anlass altert. Schnelle, vorbereitete Übergabe schützt den Gesprächsgrund, den die Recherche erst geschaffen hat.</figcaption>
       </figure>
+      <div class="dm-talk" data-dm-talk>
+        <div class="dm-talk__cols">
+          <section class="dm-talk__col dm-talk__col--cold" aria-label="Rückruf Wochen nach dem Anlass">
+            <p class="dm-talk__label">Der Lead lag drei Wochen</p>
+            <h3 style="margin:0 0 1rem;font-size:clamp(17px,1.6vw,20px)">Anlass verfallen</h3>
+            <ol class="dm-talk__list">
+              <li class="dm-talk__b dm-talk__b--us"><span class="dm-talk__who">Wir</span>„Sie hatten vor einigen Wochen zwei Vertriebsstellen ausgeschrieben.“</li>
+              <li class="dm-talk__b dm-talk__b--them"><span class="dm-talk__who">Gegenüber</span>„Die sind längst besetzt. Worum geht es?“</li>
+            </ol>
+            <p class="dm-talk__end">Der Gesprächsgrund ist abgelaufen</p>
+          </section>
+          <section class="dm-talk__col dm-talk__col--warm" aria-label="Rückruf im selben Arbeitstag">
+            <p class="dm-talk__label">Derselbe Arbeitstag</p>
+            <h3 style="margin:0 0 1rem;font-size:clamp(17px,1.6vw,20px)">Anlass frisch</h3>
+            <ol class="dm-talk__list">
+              <li class="dm-talk__b dm-talk__b--us"><span class="dm-talk__who">Wir</span>„Seit heute Vormittag sind zwei Vertriebsstellen für Wien online. Wie soll die Pipeline aussehen, wenn die beiden starten?“</li>
+              <li class="dm-talk__b dm-talk__b--them"><span class="dm-talk__who">Gegenüber</span>„Gute Frage – genau das besprechen wir gerade intern.“</li>
+              <li class="dm-talk__b dm-talk__b--us"><span class="dm-talk__who">Wir</span>„Dann stelle ich Ihnen dazu zwei kurze Fragen.“</li>
+              <li class="dm-talk__b dm-talk__b--them"><span class="dm-talk__who">Gegenüber</span>„Legen Sie los.“</li>
+            </ol>
+            <p class="dm-talk__end">Der Anlass trägt das Gespräch</p>
+          </section>
+        </div>
+        <p class="dm-talk__cap">Beispielgespräch. Sinngemäß, nicht wörtlich protokolliert.</p>
+      </div>
       <p>Auf Wunsch gehen wir bis zur Unterschrift: Angebot, Nachfassen, Verhandlung und Abschluss im freigegebenen Preisrahmen. Für tiefe Produktdemos holen wir die Fachleute Ihres Unternehmens dazu. Nur die Pflege Ihrer Bestandskunden übernehmen wir nicht – das ist Account-Management.</p>
     </div>
   </section>
@@ -533,6 +683,7 @@
       <div style="max-width:760px">
         <p>Rechnen Sie Recherche, Ansprache, Medienkosten sowie Qualifizierung und Nachverfolgung zusammen. Teilen Sie durch qualifizierte Leads, dann durch Termine und gewonnene Kunden. So werden Kanäle vergleichbar. Externe Kapazität: <a href="/vertriebsoutsourcing-kosten/">Kosten für Vertriebsoutsourcing</a>.</p>
         <p><strong>Beispielrechnung, keine Preiszusage:</strong> 4.000 Euro Gesamtkosten erzeugen 20 qualifizierte Leads, also 200 Euro je Lead. Daraus werden fünf Termine und ein Abschluss: 4.000 Euro pro Abschluss. Ein anderer Kanal liefert 100 unqualifizierte Kontakte für 8.000 Euro, also 80 Euro pro Kontakt, ebenfalls fünf Termine und einen Abschluss. Der billigere Kontakt kostet im Ergebnis 8.000 Euro.</p>
+        <p class="dm-soft-cta"><a href="/leistungen/">Rechnen wir Ihre Zahlen im Erstgespräch durch<span class="dm-soft-cta__arrow" aria-hidden="true">&rarr;</span></a></p>
       </div>
       <figure class="fig" data-dm-reveal>
         <div class="fig-box">
@@ -541,8 +692,8 @@
             <g font-family="sans-serif">
               <text x="80" y="28" font-size="13" font-weight="700" fill="#f2f3f8">Kosten je Kontakt</text><text x="330" y="28" font-size="13" font-weight="700" fill="#f2f3f8">Kosten je Abschluss</text>
               <line x1="80" y1="246" x2="246" y2="246" stroke="#222a4d"/><line x1="330" y1="246" x2="510" y2="246" stroke="#222a4d"/>
-              <rect x="102" y="182" width="48" height="64" fill="#96a0bb"/><rect x="174" y="86" width="48" height="160" fill="#c9ba77"/>
-              <rect x="356" y="54" width="48" height="192" fill="#e08585"/><rect x="428" y="150" width="48" height="96" fill="#4fb183"/>
+              <rect x="102" y="182" width="48" height="64" fill="#5a6a9a"/><rect x="174" y="86" width="48" height="160" fill="url(#dmGold) #c9ba77"/>
+              <rect x="356" y="54" width="48" height="192" fill="#5a6a9a"/><rect x="428" y="150" width="48" height="96" fill="url(#dmGold) #c9ba77"/>
               <g font-size="12" fill="#cdd4e6"><text x="126" y="174" text-anchor="middle">80 €</text><text x="198" y="78" text-anchor="middle">200 €</text><text x="380" y="46" text-anchor="middle">8.000 €</text><text x="452" y="142" text-anchor="middle">4.000 €</text><text x="126" y="266" text-anchor="middle">Liste</text><text x="198" y="266" text-anchor="middle">qualifiziert</text><text x="380" y="266" text-anchor="middle">Liste</text><text x="452" y="266" text-anchor="middle">qualifiziert</text></g>
               <text x="280" y="300" text-anchor="middle" font-size="11" fill="#96a0bb">Beispielrechnung: 100 Listen-Kontakte für 8.000 € bzw. 20 qualifizierte Leads für 4.000 €, jeweils ein Abschluss.</text>
             </g>
@@ -685,5 +836,6 @@ function ccOpen(){document.getElementById('cookie-hinweis').hidden=false;}
   if(!w){document.getElementById('cookie-hinweis').hidden=false;}else if(w==='ja'){ccStart();}})();
 </script>
 <script src="/assets/dm-effects.js" defer></script>
+<script src="/assets/dm-module.js" defer></script>
 </body>
 </html>

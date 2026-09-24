@@ -6,6 +6,9 @@
 <title>Kontakt – DEALMAKERS Vertriebsagentur</title>
 <meta name="description" content="Sprechen Sie direkt mit uns: Telefon, E-Mail oder Termin im Kalender. Standorte Berlin und Oerlenbach. Erstgespräch 30 Minuten, kostenfrei und unverbindlich.">
 <link rel="canonical" href="https://deal-makers.de/kontakt/">
+<link rel="alternate" hreflang="de" href="https://deal-makers.de/kontakt/">
+<link rel="alternate" hreflang="en" href="https://deal-makers.de/en/contact/">
+<link rel="alternate" hreflang="x-default" href="https://deal-makers.de/kontakt/">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
@@ -22,6 +25,7 @@
 <meta name="twitter:description" content="Sprechen Sie direkt mit uns: Telefon, E-Mail oder Termin im Kalender. Standorte Berlin und Oerlenbach. Erstgespräch 30 Minuten, kostenfrei und unverbindlich.">
 <link rel="stylesheet" href="/assets/styles.css">
 <link rel="stylesheet" href="/assets/dm-effects.css">
+<link rel="stylesheet" href="/assets/dm-module.css">
 <link rel="icon" href="/assets/favicon.png" sizes="48x48">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -164,6 +168,19 @@
 </script>
 </head>
 <body>
+<svg class="dm-defs" aria-hidden="true" focusable="false" width="0" height="0"><defs>
+  <linearGradient id="dmGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0d199"/><stop offset=".55" stop-color="#c9ba77"/><stop offset="1" stop-color="#b5a55e"/></linearGradient>
+  <linearGradient id="dmGoldSoft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9ba77" stop-opacity=".30"/><stop offset="1" stop-color="#b5a55e" stop-opacity=".06"/></linearGradient>
+  <linearGradient id="dmPanel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171a2e"/><stop offset="1" stop-color="#0c1230"/></linearGradient>
+  <linearGradient id="dmSteel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c8ab5"/><stop offset=".55" stop-color="#5a6a9a"/><stop offset="1" stop-color="#3e4a75"/></linearGradient>
+  <linearGradient id="dmFade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9ba77" stop-opacity=".18"/><stop offset=".22" stop-color="#c9ba77" stop-opacity=".85"/><stop offset=".78" stop-color="#e0d199"/><stop offset="1" stop-color="#e0d199" stop-opacity=".55"/></linearGradient>
+  <radialGradient id="dmHalo" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#e0d199" stop-opacity=".42"/><stop offset=".55" stop-color="#c9ba77" stop-opacity=".14"/><stop offset="1" stop-color="#c9ba77" stop-opacity="0"/></radialGradient>
+  <filter id="dmGlow" x="-45%" y="-45%" width="190%" height="190%"><feGaussianBlur stdDeviation="7" result="dmB"/><feMerge><feMergeNode in="dmB"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="dmShadow" x="-25%" y="-25%" width="150%" height="165%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity=".45"/></filter>
+  <pattern id="dmGrid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0v40" fill="none" stroke="#222a4d" stroke-width="1"/></pattern>
+  <marker id="dmArrow" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 11 6 1 11z" fill="#5a6a9a"/></marker>
+  <marker id="dmArrowGold" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 11 6 1 11z" fill="#c9ba77"/></marker>
+</defs></svg>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 <div class="dm-progress" aria-hidden="true"><div data-dm-progress></div></div>
 <div class="dm-glow" data-dm-glow aria-hidden="true"></div>
@@ -187,6 +204,7 @@
       <a href="/vertriebsberatung/">Beratung</a>
       <a href="/vertriebstraining-b2b/">Training</a>
       <a href="/ratgeber/">Ratgeber</a>
+      <span class="lang" role="group" aria-label="Sprache / Language"><a class="lang__a lang__a--on" href="/kontakt/" hreflang="de" lang="de" aria-current="true">DE</a><a class="lang__a" href="/en/contact/" hreflang="en" lang="en">EN</a></span>
       <a href="/kontakt/" class="btn btn-primary btn-sm" aria-current="page">Gespräch vereinbaren</a>
     </nav>
     <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false"
@@ -248,7 +266,7 @@
       <div class="sec-head">
         <p class="eyebrow" data-dm-scramble>Erstkontakt</p>
         <h2 data-dm-reveal="head" id="drei-wege-zu-uns" data-dm-split>Drei Wege zu uns</h2>
-        <p class="lead">Sie wählen den Kanal, der gerade passt. Einen Fragebogen gibt es nicht. Nach dem ersten Kontakt vereinbaren wir einen Termin, Rückruf oder nächsten Schritt.</p>
+        <p class="lead" data-dm-reveal>Sie wählen den Kanal, der gerade passt. Einen Fragebogen gibt es nicht. Nach dem ersten Kontakt vereinbaren wir einen Termin, Rückruf oder nächsten Schritt.</p>
       </div>
       <div class="grid g3" data-dm-tilt-scope>
         <div class="card" data-dm-reveal data-dm-stagger="0" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span>
@@ -275,7 +293,7 @@
       <div class="sec-head">
         <p class="eyebrow" data-dm-scramble>Die Weiche</p>
         <h2 data-dm-reveal="head" id="was-passt-zu-ihrer-situation" data-dm-split>Was passt zu Ihrer Situation?</h2>
-        <p class="lead">Nicht jedes Vertriebsproblem braucht dieselbe Antwort. Ordnen Sie sich zuerst selbst ein; das macht die 30 Minuten nützlicher.</p>
+        <p class="lead" data-dm-reveal>Nicht jedes Vertriebsproblem braucht dieselbe Antwort. Ordnen Sie sich zuerst selbst ein; das macht die 30 Minuten nützlicher.</p>
       </div>
       <figure class="fig" data-dm-reveal>
         <div class="fig-box">
@@ -329,7 +347,7 @@
       <div class="sec-head">
         <p class="eyebrow" data-dm-scramble>Vorbereitung</p>
         <h2 data-dm-reveal="head" id="was-sie-bereithalten-sollten" data-dm-split>Was Sie zum Erstgespräch bereithalten sollten</h2>
-        <p class="lead">Sie brauchen keine Präsentation. Fünf kurze Antworten reichen für ein konkretes Gespräch.</p>
+        <p class="lead" data-dm-reveal>Sie brauchen keine Präsentation. Fünf kurze Antworten reichen für ein konkretes Gespräch.</p>
       </div>
       <div class="grid g2" data-dm-tilt-scope>
         <div>
@@ -340,7 +358,7 @@
             <li>Der bisherige Weg: Was funktioniert bereits, was bleibt liegen?</li>
             <li>Ein Beispiel für einen typischen Auftrag und den Grund, warum er gewonnen oder verloren wurde.</li>
           </ol>
-          <p>Wenn bei Ihnen gerade Expansion, eine neue Produktlinie oder ein neues Team ansteht, sagen Sie es im ersten Gespräch. Das ist der Ansatzpunkt. Für <a href="/vertriebsberatung/">Vertriebsberatung</a> hilft zudem die Einordnung: Zielkunden, Gespräch oder Prozess?</p>
+          <p data-dm-reveal>Wenn bei Ihnen gerade Expansion, eine neue Produktlinie oder ein neues Team ansteht, sagen Sie es im ersten Gespräch. Das ist der Ansatzpunkt. Für <a href="/vertriebsberatung/">Vertriebsberatung</a> hilft zudem die Einordnung: Zielkunden, Gespräch oder Prozess?</p>
         </div>
         <div class="note">
           <p><strong>Signal Based Selling</strong> heißt: Nicht die Liste bestimmt, wen man anruft, sondern das Ereignis. Diese anlassbezogene Ansprache nutzt öffentlich sichtbare Veränderungen; den Rahmen finden Sie im <a href="/signal-based-selling/">Signalkatalog auf der Startseite</a>. Ausgewertet werden ausschließlich öffentliche Quellen.</p>
@@ -371,8 +389,13 @@
         </table>
       </div>
       <p class="small muted">Beispiele, keine abschließende Liste.</p>
-      <p>Wunsch-Signale entstehen im jeweiligen Markt: ein auslaufender Rahmenvertrag, eine verlorene Zertifizierung, eine Normänderung oder der Wegfall einer Förderung. Entscheidend ist nur, ob sie für Ihr Angebot einen Gesprächsgrund schaffen.</p>
-      <p>So könnte ein Eröffnungssatz lauten: „Sie haben letzte Woche zwei Stellen für den Vertrieb in Wien ausgeschrieben. Wie planen Sie die ersten Zielkunden dort anzusprechen?“ Oder: „Ihre neue Produktlinie ist für November angekündigt. Steht die Liste für die ersten Gespräche bereits?“</p>
+      <p data-dm-reveal>Wunsch-Signale entstehen im jeweiligen Markt: ein auslaufender Rahmenvertrag, eine verlorene Zertifizierung, eine Normänderung oder der Wegfall einer Förderung. Entscheidend ist nur, ob sie für Ihr Angebot einen Gesprächsgrund schaffen.</p>
+      <p data-dm-reveal>So könnte ein Eröffnungssatz lauten: „Sie haben letzte Woche zwei Stellen für den Vertrieb in Wien ausgeschrieben. Wie planen Sie die ersten Zielkunden dort anzusprechen?“ Oder: „Ihre neue Produktlinie ist für November angekündigt. Steht die Liste für die ersten Gespräche bereits?“</p>
+
+      <div class="dm-zitat" data-dm-zitat>
+        <span class="dm-zitat__bar" aria-hidden="true"></span>
+        <p class="dm-zitat__text">Nicht die Liste bestimmt, wen man anruft, sondern <span class="dm-zitat__hi">das&nbsp;Ereignis</span>.</p>
+      </div>
     </div>
   </section>
 
@@ -381,7 +404,7 @@
       <div class="sec-head">
         <p class="eyebrow" data-dm-scramble>Ablauf</p>
         <h2 data-dm-reveal="head" id="was-im-erstgespraech-passiert" data-dm-split>Was im Erstgespräch passiert – und was nicht</h2>
-        <p class="lead">Wir ordnen Ihre Situation ein und prüfen die Entscheidung zwischen externer Ausführung und besserer Priorisierung. Kein Pitch, keine Präsentation.</p>
+        <p class="lead" data-dm-reveal>Wir ordnen Ihre Situation ein und prüfen die Entscheidung zwischen externer Ausführung und besserer Priorisierung. Kein Pitch, keine Präsentation.</p>
       </div>
       <figure class="fig" data-dm-reveal>
         <div class="fig-box">
@@ -404,6 +427,55 @@
         <div class="card" data-dm-reveal data-dm-stagger="0" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>Wir klären</h3><p>Wir klären Zielkunden, Angebot, Anlass und Gesprächsziel. So wird sichtbar, ob eine <a href="/kaltakquise-agentur/">Kaltakquise-Agentur</a>, Vertriebsaufbau oder eine nachgeschärfte Reihenfolge nötig ist.</p></div>
         <div class="card" data-dm-reveal data-dm-stagger="1" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>Wir lassen weg</h3><p>Keine Präsentation über uns, keine pauschale Erfolgszusage und kein Druck, noch im Gespräch zu entscheiden. Wenn die Voraussetzungen nicht passen, sagen wir das. Sie nehmen in jedem Fall eine klarere Beschreibung Ihres Engpasses mit.</p></div>
       </div>
+      <figure class="fig" data-dm-reveal>
+        <div class="fig-box">
+          <svg viewBox="0 0 560 300" role="img" aria-label="Oben vier Felder, die im Erstgespräch geklärt werden: Zielkunden, Angebot, Anlass und Gesprächsziel. Darunter drei Felder mit dem, was weggelassen wird: keine Präsentation über uns, keine pauschale Erfolgszusage und kein Druck, im Gespräch zu entscheiden.">
+            <title>Was im Erstgespräch geklärt wird – und was weggelassen wird</title>
+            <g font-family="sans-serif">
+              <text x="20" y="26" font-size="12.5" font-weight="700" fill="url(#dmGold) #c9ba77">Wir klären</text>
+              <path d="M20 34 H540" stroke="url(#dmFade) #c9ba77" stroke-width="1.5"/>
+
+              <rect x="20" y="46" width="115" height="86" rx="6" fill="url(#dmPanel) #171a2e" stroke="#c9ba77"/>
+              <text x="34" y="72" font-size="12.5" font-weight="700" fill="#f2f3f8">Zielkunden</text>
+              <text x="34" y="94" font-size="11" fill="#96a0bb">Branche, Rolle,</text>
+              <text x="34" y="111" font-size="11" fill="#96a0bb">Größenordnung</text>
+
+              <rect x="155" y="46" width="115" height="86" rx="6" fill="url(#dmPanel) #171a2e" stroke="#c9ba77"/>
+              <text x="169" y="72" font-size="12.5" font-weight="700" fill="#f2f3f8">Angebot</text>
+              <text x="169" y="94" font-size="11" fill="#96a0bb">Wofür Kunden</text>
+              <text x="169" y="111" font-size="11" fill="#96a0bb">heute zahlen</text>
+
+              <rect x="290" y="46" width="115" height="86" rx="6" fill="url(#dmPanel) #171a2e" stroke="#c9ba77"/>
+              <text x="304" y="72" font-size="12.5" font-weight="700" fill="#f2f3f8">Anlass</text>
+              <text x="304" y="94" font-size="11" fill="#96a0bb">Was bei Ihnen</text>
+              <text x="304" y="111" font-size="11" fill="#96a0bb">gerade ansteht</text>
+
+              <rect x="425" y="46" width="115" height="86" rx="6" fill="url(#dmPanel) #171a2e" stroke="#c9ba77"/>
+              <text x="439" y="72" font-size="12.5" font-weight="700" fill="#f2f3f8">Gesprächsziel</text>
+              <text x="439" y="94" font-size="11" fill="#96a0bb">Termin, Analyse,</text>
+              <text x="439" y="111" font-size="11" fill="#96a0bb">Angebot</text>
+
+              <text x="20" y="168" font-size="12.5" font-weight="700" fill="#7c8ab5">Wir lassen weg</text>
+              <path d="M20 176 H540" stroke="#2c355e" stroke-width="1.5"/>
+
+              <rect x="20" y="188" width="160" height="64" rx="6" fill="#0c1230" stroke="#3e4a75"/>
+              <text x="34" y="214" font-size="11.5" fill="#f2f3f8">Keine Präsentation</text>
+              <text x="34" y="232" font-size="11.5" fill="#f2f3f8">über uns</text>
+
+              <rect x="200" y="188" width="160" height="64" rx="6" fill="#0c1230" stroke="#3e4a75"/>
+              <text x="214" y="214" font-size="11.5" fill="#f2f3f8">Keine pauschale</text>
+              <text x="214" y="232" font-size="11.5" fill="#f2f3f8">Erfolgszusage</text>
+
+              <rect x="380" y="188" width="160" height="64" rx="6" fill="#0c1230" stroke="#3e4a75"/>
+              <text x="394" y="214" font-size="11.5" fill="#f2f3f8">Kein Druck, noch im</text>
+              <text x="394" y="232" font-size="11.5" fill="#f2f3f8">Gespräch zu entscheiden</text>
+
+              <text x="20" y="282" font-size="11.5" fill="#96a0bb">Sie nehmen in jedem Fall eine klarere Beschreibung Ihres Engpasses mit.</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption>Vier Punkte werden im Erstgespräch geklärt; alles, was sonst in einen Vertriebstermin gehört, bleibt bewusst weg.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -412,7 +484,7 @@
       <div class="sec-head">
         <p class="eyebrow" data-dm-scramble>Vor Ort</p>
         <h2 data-dm-reveal="head" id="standorte" data-dm-split>Standorte in Berlin und Oerlenbach</h2>
-        <p class="lead">Wir arbeiten für Unternehmen in Deutschland, Österreich und der Schweiz. Erstgespräche finden telefonisch oder per Kalendertermin statt.</p>
+        <p class="lead" data-dm-reveal>Wir arbeiten für Unternehmen in Deutschland, Österreich und der Schweiz. Erstgespräche finden telefonisch oder per Kalendertermin statt.</p>
       </div>
       <div class="grid g2" data-dm-tilt-scope>
         <div class="card" data-dm-reveal data-dm-stagger="2" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>Berlin</h3><p>DEALMAKERS – Digitale Vertriebsagentur<br>Am Postbahnhof 23<br>10243 Berlin</p></div>
@@ -435,13 +507,47 @@
         <details><summary>Wie geht es nach dem Erstgespräch weiter?</summary><div><p>Wenn die Aufgabe passt, halten wir Zielgruppe, Anlass, Gesprächsziel und die Rollen auf beiden Seiten fest. Danach prüfen wir die Ausgangslage und formulieren den nächsten Schritt, etwa eine Zusammenarbeit im Vertrieb oder eine Nachschärfung der Priorisierung. Passt die Aufgabe nicht, benennen wir das klar. Es gibt keine automatische Beauftragung und keinen Druck zur Entscheidung.</p></div></details>
         <details><summary>Warum gibt es kein Kontaktformular?</summary><div><p>Ein Formular sammelt oft Angaben, ohne die eigentliche Frage zu klären. Telefon, E-Mail oder ein fester Kalendereintrag führen schneller zu einem Gespräch mit Kontext. Sie entscheiden selbst, wie direkt Sie starten möchten. Damit wir uns vorbereiten können, reichen Angebot, Zielkunden und der Anlass, der bei Ihnen gerade ansteht, völlig aus.</p></div></details>
       </div>
+      <figure class="fig" data-dm-reveal>
+        <div class="fig-box">
+          <svg viewBox="0 0 560 300" role="img" aria-label="Nach dem Erstgespräch zwei Wege: Passt die Aufgabe, werden Zielgruppe, Anlass, Gesprächsziel und Rollen festgehalten, danach die Ausgangslage geprüft und der nächste Schritt formuliert. Passt die Aufgabe nicht, wird das klar benannt, ohne automatische Beauftragung und ohne Druck.">
+            <title>Die beiden Wege nach dem Erstgespräch</title>
+            <g font-family="sans-serif">
+              <rect x="155" y="14" width="250" height="46" rx="6" fill="url(#dmPanel) #171a2e" stroke="#c9ba77"/>
+              <text x="280" y="43" text-anchor="middle" font-size="13" font-weight="700" fill="#f2f3f8">Erstgespräch geführt</text>
+
+              <path d="M280 60 V76 M145 76 H415 M145 76 V88" fill="none" stroke="url(#dmFade) #c9ba77" stroke-width="2"/>
+              <path d="M415 76 V88" fill="none" stroke="#3e4a75" stroke-width="2"/>
+
+              <text x="20" y="104" font-size="12.5" font-weight="700" fill="url(#dmGold) #c9ba77">Die Aufgabe passt</text>
+              <rect x="20" y="114" width="250" height="52" rx="6" fill="url(#dmPanel) #171a2e" stroke="#c9ba77"/>
+              <text x="34" y="138" font-size="11.5" fill="#f2f3f8">Zielgruppe, Anlass, Gesprächsziel</text>
+              <text x="34" y="156" font-size="11.5" fill="#f2f3f8">und die Rollen festhalten</text>
+              <rect x="20" y="174" width="250" height="40" rx="6" fill="#0c1230" stroke="#2c355e"/>
+              <text x="34" y="199" font-size="11.5" fill="#f2f3f8">Ausgangslage prüfen</text>
+              <rect x="20" y="222" width="250" height="40" rx="6" fill="#0c1230" stroke="#2c355e"/>
+              <text x="34" y="247" font-size="11.5" fill="#f2f3f8">Nächsten Schritt formulieren</text>
+
+              <text x="290" y="104" font-size="12.5" font-weight="700" fill="#7c8ab5">Die Aufgabe passt nicht</text>
+              <rect x="290" y="114" width="250" height="52" rx="6" fill="#0c1230" stroke="#3e4a75"/>
+              <text x="304" y="138" font-size="11.5" fill="#f2f3f8">Passt die Aufgabe nicht,</text>
+              <text x="304" y="156" font-size="11.5" fill="#f2f3f8">benennen wir das klar</text>
+              <rect x="290" y="174" width="250" height="52" rx="6" fill="#0c1230" stroke="#3e4a75"/>
+              <text x="304" y="198" font-size="11.5" fill="#f2f3f8">Keine automatische Beauftragung,</text>
+              <text x="304" y="216" font-size="11.5" fill="#f2f3f8">kein Druck zur Entscheidung</text>
+
+              <text x="20" y="288" font-size="11.5" fill="#96a0bb">Ein Angebot entsteht erst, wenn die Aufgabe klar und ein nächster Schritt erkennbar ist.</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption>Nach dem Erstgespräch gibt es zwei Wege – und der zweite endet mit einer klaren Absage statt mit einem Angebot.</figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="cta">
     <div class="wrap">
       <h2 id="jetzt-sprechen" data-dm-reveal="head" data-dm-split>Jetzt direkt sprechen</h2>
-      <p class="lead" style="color:#cdd4e6;max-width:620px;margin:0 auto">Telefon oder E-Mail genügen für den ersten Schritt.</p>
+      <p class="lead" style="color:#cdd4e6;max-width:620px;margin:0 auto" data-dm-reveal>Telefon oder E-Mail genügen für den ersten Schritt.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="tel:+4916096678717" data-dm-magnet>+49 160 966 787 17</a>
         <a class="btn btn-ghost" href="mailto:hello@deal-makers.de" data-dm-magnet>hello@deal-makers.de</a>
@@ -547,5 +653,6 @@ function ccOpen(){document.getElementById('cookie-hinweis').hidden=false;}
   if(!w){document.getElementById('cookie-hinweis').hidden=false;}else if(w==='ja'){ccStart();}})();
 </script>
 <script src="/assets/dm-effects.js" defer></script>
+<script src="/assets/dm-module.js" defer></script>
 </body>
 </html>

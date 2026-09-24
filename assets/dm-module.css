@@ -476,40 +476,66 @@ a.dm-pin__step {
 a.dm-pin__step:hover { border-left-color: var(--gold, #c9ba77); }
 
 /* Hervorhebung. Greift erst, wenn JS die Klasse dm-pin--on gesetzt hat —
-   ohne JS sind alle Schritte und alle Grafikteile gleichberechtigt hell. */
+   ohne JS sind alle Schritte und alle Grafikteile gleichberechtigt hell.
+   Die Goldlinie am Rand zeigt ueberall, wo man gerade ist. Das Abdunkeln der
+   uebrigen Schritte und Grafikteile steht dagegen weiter unten im
+   Zweispalter-Block: Es ergibt nur Sinn, solange die Grafik am Fensterrand
+   haftet und man Text und Bild gleichzeitig sieht. Untereinander gestapelt
+   (unter 1280px) wuerde es bloss Text auf 40 % und eine zu 74 % unsichtbare
+   Grafik erzeugen — ein Lesefehler auf Tablet und Handy. */
 .dm-pin--on .dm-pin__step {
-  opacity: .4;
   transition: opacity 420ms var(--dm-mod-ease), border-color 420ms var(--dm-mod-ease);
 }
 
 .dm-pin--on .dm-pin__step.is-on {
-  opacity: 1;
   border-left-color: var(--gold, #c9ba77);
 }
 
 .dm-pin__part { transition: opacity 420ms var(--dm-mod-ease); }
 
-.dm-pin--on .dm-pin__part { opacity: .26; }
-.dm-pin--on .dm-pin__part.is-on { opacity: 1; }
-
-@media (min-width: 901px) {
+/* Zwei Spalten erst ab 1280px.
+   Fehlerbehebung 24.09.2026: Die Grafiken zeichnen auf 1120 Einheiten Breite
+   und brauchen darum rund 664px Platz, damit die kleinste Schrift lesbar
+   bleibt (.fig-box svg.dmg-canvas { min-width: 640px }). Der alte
+   Umbruchpunkt 901px gab der Grafikspalte je nach Fenster nur 462–578px —
+   die Grafik passte also nie hinein und erzwang unter sich einen
+   Scroll-Balken. Darum zwei Aenderungen: der Umbruchpunkt steigt auf 1280px,
+   und ab dort tritt der Block aus der 1120er-Spalte heraus auf 94% der
+   Fensterbreite. Unterhalb von 1280px liegen Grafik und Text untereinander,
+   die Grafik hat die volle Spaltenbreite (>1000px) und scrollt nicht. */
+@media (min-width: 1280px) {
   .dm-pin {
-    grid-template-columns: minmax(0, 1.04fr) minmax(0, 1fr);
+    /* aus der Textspalte heraus in die volle Fensterbreite */
+    width: min(1460px, 94vw);
+    margin-left: calc(50% - min(730px, 47vw));
+    margin-right: calc(50% - min(730px, 47vw));
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
     align-items: start;
-    gap: clamp(28px, 3.4vw, 52px);
+    gap: clamp(36px, 3.4vw, 52px);
   }
-  .dm-pin--wide { grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr); }
+  .dm-pin--wide { grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); }
   .dm-pin__sticky {
     position: sticky;
     top: 96px;
   }
-  .dm-pin__steps { gap: clamp(30px, 4vw, 44px); }
+  /* Der Kasten um die Grafik wird hier schmaler gepolstert, damit die
+     Zeichenflaeche die noetigen 640px behaelt. */
+  .dm-pin__sticky .fig-box { padding: 14px; }
+  .dm-pin__steps { gap: clamp(18px, 1.8vw, 26px); }
+  /* Frueher 44vh = 396px Kasten fuer 79px Text, also ueber 300px Leere
+     zwischen zwei Absaetzen. Jetzt nur noch so viel Hoehe, dass der
+     Haftungseffekt genug Scrollweg hat. */
   .dm-pin__step {
-    min-height: 44vh;
+    min-height: clamp(150px, 19vh, 205px);
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+  /* Nur hier abdunkeln — siehe Erklaerung oben. */
+  .dm-pin--on .dm-pin__step { opacity: .4; }
+  .dm-pin--on .dm-pin__step.is-on { opacity: 1; }
+  .dm-pin--on .dm-pin__part { opacity: .26; }
+  .dm-pin--on .dm-pin__part.is-on { opacity: 1; }
 }
 
 
@@ -695,4 +721,20 @@ a.dm-pin__step:hover { border-left-color: var(--gold, #c9ba77); }
   .dm-talk__typing i { animation: none !important; }
   .dm-pin--on .dm-pin__step,
   .dm-pin--on .dm-pin__part { opacity: 1; }
+}
+
+/* ---------------------------------------------------------------------------
+   Lesbarkeit der Kleinst-Beschriftungen auf dem Handy
+   ---------------------------------------------------------------------------
+   Gemessen am 24.09.2026 auf 390 px Breite: die Mono-Etiketten der Gespraechs-
+   und Vergleichsbausteine landeten bei 10,2 bis 11,2 px. Am Schreibtisch ist
+   das eine feine Beschriftung, auf dem Handy ist es zu klein. Auf schmalen
+   Geraeten werden sie daher angehoben, der Laufweite wird etwas Luft genommen,
+   damit sie trotzdem in eine Zeile passen. Am Desktop bleibt alles wie es war. */
+@media (max-width: 760px) {
+  .dm-talk__who   { font-size: .74rem; letter-spacing: .1em; }
+  .dm-talk__label { font-size: .76rem; letter-spacing: .13em; }
+  .dm-talk__end   { font-size: .76rem; letter-spacing: .09em; }
+  .dm-vgl__tags   { font-size: .76rem; letter-spacing: .09em; }
+  .dm-zitat__src  { font-size: .78rem; }
 }

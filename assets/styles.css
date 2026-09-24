@@ -92,6 +92,15 @@ a:hover { color: var(--gold); }
 
 h1, h2, h3, h4 { font-family: var(--font-head); color: var(--ink); line-height: 1.16;
                  letter-spacing: -.02em; margin: 0 0 .5em; font-weight: 700; }
+/* Lange deutsche Woerter duerfen notfalls umbrechen. Ohne diese Regel schob
+   z. B. "Verbraucherinformationen" das Impressum auf dem Handy seitlich aus
+   dem Bild (gemessen 24.09.2026: 387px Wortbreite in 346px Spalte).
+   hyphens greift nur dort, wo das Wort ohnehin nicht passt. */
+h1, h2, h3, h4, p, li, td, th, figcaption, blockquote, dd, dt {
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
 h1 { font-size: clamp(2.05rem, 1.35rem + 2.8vw, 3.3rem); font-weight: 800;
      letter-spacing: -.03em; }
 h2 { font-size: clamp(1.55rem, 1.15rem + 1.6vw, 2.25rem); margin-top: 0; }
@@ -156,6 +165,21 @@ ul.ticks li::before {
 .nav a[aria-current="page"] { color: var(--gold); background: var(--gold-pale); }
 
 .nav-toggle { display: none; }
+
+/* ---------- Sprachumschalter ------------------------------------------
+   Zwei echte Links, kein Schalter: DE fuehrt auf die deutsche, EN auf die
+   englische Fassung derselben Seite. Wo es keine englische Schwester gibt,
+   zeigt EN auf die englische Startseite. Die aktive Sprache ist golden
+   hinterlegt und traegt aria-current.                                     */
+.lang { display: inline-flex; align-items: center; margin: 0 6px 0 4px;
+        border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+.nav .lang__a { padding: 7px 10px; border-radius: 0;
+                font-family: var(--font-mono, monospace); font-size: .72rem;
+                font-weight: 700; letter-spacing: .08em; color: var(--muted); }
+.nav .lang__a + .lang__a { border-left: 1px solid var(--line); }
+.nav .lang__a:hover { background: var(--surface-2); color: var(--ink); }
+.nav .lang__a--on,
+.nav .lang__a--on:hover { background: var(--gold-pale); color: var(--gold); }
 
 /* ---------- Buttons ---------------------------------------------------- */
 
@@ -256,23 +280,74 @@ section.tight { padding: clamp(32px, 3.5vw, 52px) 0; }
 table { width: 100%; border-collapse: collapse; font-size: .96rem; min-width: 560px; }
 th, td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--line);
          vertical-align: top; }
+/* Spaltenueberschriften duerfen umbrechen. Frueher stand hier nowrap: eine
+   einzige lange Ueberschrift zwang dann die ganze Tabelle in den
+   Seitwaertsschub, obwohl der Platz gereicht haette (gemessen 24.09.2026 auf
+   /externer-vertrieb/: 1.101px Bedarf in einem 1.074px breiten Kasten). */
 thead th { background: var(--surface-2); font-family: var(--font-head); font-size: .78rem;
            letter-spacing: .09em; text-transform: uppercase; color: var(--muted);
-           font-weight: 700; white-space: nowrap; }
+           font-weight: 700; white-space: normal; }
 tbody tr:last-child td { border-bottom: 0; }
+/* Auf schmalen Fenstern sitzen die Zellen zusaetzlich enger. */
+@media (max-width: 900px) {
+  th, td { padding: 11px 12px; }
+}
+/* Auf dem Handy darf die Tabelle in die Spalte hineinpassen, statt den
+   Leser zum Schieben zu zwingen. Die Mindestbreite von 560px ergibt nur auf
+   groesseren Geraeten Sinn; darunter ist eine enge, aber vollstaendig
+   sichtbare Tabelle besser lesbar als eine, von der man die Haelfte sucht. */
+@media (max-width: 620px) {
+  table { min-width: 0; font-size: .87rem; }
+  th, td { padding: 9px 8px; hyphens: auto; }
+  /* .68rem waren gemessene 10,9 px - auf dem Handy zu klein zum Lesen. */
+  thead th { font-size: .76rem; letter-spacing: .04em; }
+}
 td.yes { color: var(--green); font-weight: 700; }
 td.no  { color: var(--red); }
 
 /* ---------- Grafiken (eigene Inline-SVGs) ------------------------------ */
 
 figure.fig { margin: 2rem 0; }
-.fig-box { border: 1px solid var(--line); border-radius: var(--radius);
-           background: var(--surface); padding: 22px;
+.fig-box { --fig-bg: var(--surface);
+           border: 1px solid var(--line); border-radius: var(--radius);
+           background-color: var(--fig-bg); padding: 22px;
            overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.bg-soft .fig-box, .bg-dark .fig-box { background: var(--bg); }
+.bg-soft .fig-box, .bg-dark .fig-box { --fig-bg: var(--bg); }
 .fig-box svg { display: block; min-width: 560px; width: 100%; height: auto; }
 figure.fig figcaption { margin-top: .8rem; font-size: .9rem; color: var(--muted);
                         line-height: 1.55; }
+
+/* ---------- Seitlich schiebbare Kaesten: Rand statt Balken -------------
+   Grafiken und Tabellen koennen auf schmalen Geraeten breiter sein als das
+   Fenster. Der graue Standard-Rollbalken sieht dort wie ein Fehler aus.
+   Stattdessen: ein duenner, farblich passender Balken und ein goldener
+   Schleier an der Kante, der nur erscheint, solange es in diese Richtung
+   noch weitergeht. Ist nichts zu schieben, ist auch nichts zu sehen.       */
+.fig-box, .table-scroll { --sc-bg: var(--fig-bg, var(--surface)); }
+.table-scroll { --sc-bg: var(--surface); }
+.bg-soft .table-scroll, .bg-dark .table-scroll { --sc-bg: var(--bg); }
+
+.fig-box, .table-scroll {
+  background-image:
+    linear-gradient(to right,  var(--sc-bg), rgba(4, 6, 26, 0)),
+    linear-gradient(to left,   var(--sc-bg), rgba(4, 6, 26, 0)),
+    linear-gradient(to right,  rgba(201, 186, 119, .32), rgba(201, 186, 119, 0)),
+    linear-gradient(to left,   rgba(201, 186, 119, .32), rgba(201, 186, 119, 0));
+  background-position: left center, right center, left center, right center;
+  background-repeat: no-repeat;
+  background-size: 26px 100%, 26px 100%, 13px 100%, 13px 100%;
+  background-attachment: local, local, scroll, scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-2, #2c355e) transparent;
+}
+.fig-box::-webkit-scrollbar,
+.table-scroll::-webkit-scrollbar { height: 6px; }
+.fig-box::-webkit-scrollbar-track,
+.table-scroll::-webkit-scrollbar-track { background: transparent; }
+.fig-box::-webkit-scrollbar-thumb,
+.table-scroll::-webkit-scrollbar-thumb { background: #2c355e; border-radius: 3px; }
+.fig-box:hover::-webkit-scrollbar-thumb,
+.table-scroll:hover::-webkit-scrollbar-thumb { background: #3e4a75; }
 
 /* ---------- Zitat / Hinweis -------------------------------------------- */
 
@@ -431,15 +506,29 @@ blockquote cite { display: block; margin-top: .6rem; font-style: normal;
 
 
 /* ---------- Hauptnavigation: ab wann das Klappmenue greift -------------
-   Die volle Leiste braucht rund 1.230 px. Darunter wird sie enger, unter
-   1.080 px ersetzt der Menueknopf sie ganz - sonst schoebe sie sich beim
-   Tablet quer aus dem Bild. */
-@media (max-width: 1280px) and (min-width: 1081px) {
+   Unter 1.080 px ersetzt der Menueknopf die Leiste ganz - sonst schoebe sie
+   sich beim Tablet quer aus dem Bild.
+
+   Fehlerbehebung 24.09.2026: Darueber galten bisher zwei verschiedene
+   Groessen - eine enge bis 1.280 px und die volle darueber. Die volle Leiste
+   braucht aber 1.193 px, die Inhaltsspalte ist nur 1.076 px breit. Also ragte
+   die Navigation auf JEDEM breiten Bildschirm 117 px ueber den Rest der Seite
+   hinaus, und zwischen 1.281 und 1.310 px liess sich die ganze Seite sogar
+   seitlich verschieben. Jetzt gilt oberhalb von 1.080 px ueberall dieselbe
+   enge Leiste, und die Kopfzeile bekommt mit 1.240 px etwas mehr Raum als die
+   Textspalte - damit passt die Navigation an jeder Fensterbreite hinein und
+   springt beim Groesserziehen nicht mehr um. */
+@media (min-width: 1081px) {
+  .site-head .wrap, .topbar .wrap { max-width: 1240px; }
   .site-head .wrap { gap: 12px; }
   .nav { gap: 0; }
   .nav a { padding: 9px 8px; font-size: .9rem; }
   .nav .btn { padding: 10px 14px; font-size: .76rem; letter-spacing: .05em; }
   .brand { font-size: 1.06rem; }
+}
+/* Ganz knapp oberhalb der Klappgrenze reicht der Platz fuer den Zusatz
+   "Vertriebsagentur" neben dem Logo noch nicht. */
+@media (max-width: 1160px) and (min-width: 1081px) {
   .brand span { display: none; }
 }
 @media (max-width: 1080px) {
@@ -457,6 +546,10 @@ blockquote cite { display: block; margin-top: .6rem; font-style: normal;
     content: ""; position: absolute; left: 0; width: 20px; height: 2px; background: var(--ink); }
   .nav-toggle span::before { top: -6px; } .nav-toggle span::after { top: 6px; }
   .site-head.open .nav { display: flex; }
+  /* Im aufgeklappten Menue bleibt der Umschalter ein kleines Paar links,
+     statt sich ueber die volle Breite zu ziehen. */
+  .lang { align-self: flex-start; margin: 10px 0 4px; }
+  .nav .lang__a { padding: 10px 15px; font-size: .82rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -2,12 +2,53 @@ ErrorDocument 404 /404.html
 
 Options -Indexes
 
+# www.deal-makers.de auf deal-makers.de umleiten.
+# Bisher hat WordPress das erledigt. Nach dem Upload liegt dort nur noch HTML,
+# also muss die Weiterleitung hier stehen - sonst waere die Seite unter zwei
+# Adressen mit identischem Inhalt erreichbar (Duplikat fuer Google).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.deal-makers\.de$ [NC]
+  RewriteRule ^(.*)$ https://deal-makers.de/$1 [R=301,L]
+</IfModule>
+
 # Alte Adressen der bisherigen Website dauerhaft (301) auf die neuen Seiten umleiten.
 # Ohne diese Zeilen landen Besucher und Google nach dem Upload auf einer Fehlerseite.
-RedirectMatch 301 ^/vertriebsagentur/?$              /b2b-vertriebsagentur/
-RedirectMatch 301 ^/vertriebscoaching/?$             /vertriebstraining-b2b/
-RedirectMatch 301 ^/performance-marketing-agentur/?$ /leadgenerierung-agentur/
-RedirectMatch 301 ^/emotional-resonance/?$           /warum-wir/
+# Quelle der Liste: die Sitemaps der bisherigen WordPress-Seite, abgerufen am
+# 24.09.2026 (page-, post- und category-sitemap = 25 Adressen).
+
+# -- Seiten, die es unter neuem Namen gibt -------------------------------------
+RedirectMatch 301 ^/vertriebsagentur/?$               /b2b-vertriebsagentur/
+RedirectMatch 301 ^/vertriebscoaching/?$              /vertriebstraining-b2b/
+RedirectMatch 301 ^/verkaufstraining-online/?$        /vertriebstraining-b2b/
+RedirectMatch 301 ^/training-coaching/?$              /vertriebstraining-b2b/
+RedirectMatch 301 ^/performance-marketing-agentur/?$  /leadgenerierung-agentur/
+RedirectMatch 301 ^/conversion-optimierung-agentur/?$ /leadgenerierung-agentur/
+RedirectMatch 301 ^/marketing-automation-agentur/?$   /leadgenerierung-agentur/
+RedirectMatch 301 ^/leadgenerierung/?$                /leadgenerierung-agentur/
+RedirectMatch 301 ^/emotional-resonance/?$            /warum-wir/
+RedirectMatch 301 ^/unternehmen/?$                    /warum-wir/
+RedirectMatch 301 ^/mimikresonanz/?$                  /verkaufspsychologie/
+RedirectMatch 301 ^/vertrieb/?$                       /b2b-vertrieb/
+RedirectMatch 301 ^/marketing/?$                      /leistungen/
+RedirectMatch 301 ^/vertriebler-gesucht/?$            /kontakt/
+RedirectMatch 301 ^/haftungsausschluss/?$             /impressum/
+
+# -- Blog und Kategorien ------------------------------------------------------
+RedirectMatch 301 ^/blog/?$                           /ratgeber/
+RedirectMatch 301 ^/category/vertrieb/?$              /ratgeber/
+RedirectMatch 301 ^/category/.*$                      /ratgeber/
+
+# -- Reste der WordPress-Installation -----------------------------------------
+# Diese Adressen existieren nach dem Upload nicht mehr. Statt einer Fehlerseite
+# bekommen Besucher die Startseite.
+RedirectMatch 301 ^/jet-menu/.*$                      /
+RedirectMatch 301 ^/wp-admin/?.*$                     /
+RedirectMatch 301 ^/feed/?$                           /ratgeber/
+RedirectMatch 301 ^/(.*)/feed/?$                      /ratgeber/
+# Die alten Sitemap-Adressen kennt Google noch - auf die neue zeigen lassen.
+RedirectMatch 301 ^/sitemap_index\.xml$               /sitemap.xml
+RedirectMatch 301 ^/(page|post|category|jet-menu)-sitemap\.xml$ /sitemap.xml
 
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript image/svg+xml
