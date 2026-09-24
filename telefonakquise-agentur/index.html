@@ -22,6 +22,7 @@
 <meta name="twitter:description" content="Telefonakquise-Agentur für B2B: Wir recherchieren den Anlass, rufen die zuständige Person an und übergeben qualifizierte Termine. Erfahrene Vertriebsleute statt Callcenter-Skript.">
 <link rel="stylesheet" href="/assets/styles.css">
 <link rel="stylesheet" href="/assets/dm-effects.css">
+<link rel="stylesheet" href="/assets/dm-module.css">
 <link rel="icon" href="/assets/favicon.png" sizes="48x48">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -240,7 +241,7 @@
 }
 </script>
 </head>
-<body>
+<body data-dm-cta="Erstgespräch zur Telefonakquise" data-dm-cta-href="tel:+4916096678717" data-dm-cta-label="+49 160 966 787 17" data-dm-cta-end="#erstgespraech">
 <svg class="dm-defs" aria-hidden="true" focusable="false" width="0" height="0"><defs>
   <linearGradient id="dmGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0d199"/><stop offset=".55" stop-color="#c9ba77"/><stop offset="1" stop-color="#b5a55e"/></linearGradient>
   <linearGradient id="dmGoldSoft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9ba77" stop-opacity=".30"/><stop offset="1" stop-color="#b5a55e" stop-opacity=".06"/></linearGradient>
@@ -313,11 +314,25 @@
   <section class="tight">
     <div class="wrap">
       <div class="sec-head" style="max-width:880px"><p class="eyebrow" data-dm-scramble>Wer hier anruft</p><h2 data-dm-reveal="head" id="warum-wir-am-hoerer" data-dm-split>Die Zahlen dahinter</h2></div>
-      <div class="grid g4" data-dm-tilt-scope>
-        <div class="card" data-dm-reveal data-dm-stagger="0" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>20 Jahre B2B</h3><p>Aufbau, Führung, Training, eigene Quote am Hörer.</p></div>
-        <div class="card" data-dm-reveal data-dm-stagger="1" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>über 200 % Quote</h3><p>In Spitzenzeiträumen knapp 400 %, mehrfach Spot-Award als Top-Sales-Performer DACH.</p></div>
-        <div class="card" data-dm-reveal data-dm-stagger="2" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>20+ Kunden seit 2021</h3><p>Dealgrößen von 30.000 bis 500.000 EUR. Bei einem Kunden Umsatz in 10 Monaten verdoppelt.</p></div>
-        <div class="card" data-dm-reveal data-dm-stagger="3" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>60 % erreicht, 40 % Termin</h3><p>Wo Anlass, Direktnummer und freies Kalenderfenster zusammenkommen. <a href="#quoten">Wie das geht</a>.</p></div>
+      <div class="dm-band" data-dm-band>
+        <div class="dm-band__inner">
+          <div class="dm-band__item">
+            <h3 class="dm-band__head"><span class="dm-band__num"><span class="dm-band__count" data-dm-to="20">20</span></span><span class="dm-band__key">Jahre B2B</span></h3>
+            <p class="dm-band__text">Aufbau, Führung, Training, eigene Quote am Hörer.</p>
+          </div>
+          <div class="dm-band__item">
+            <h3 class="dm-band__head"><span class="dm-band__num"><span class="dm-band__pre">über </span><span class="dm-band__count" data-dm-to="200">200</span><span class="dm-band__unit"> %</span></span><span class="dm-band__key">Quote</span></h3>
+            <p class="dm-band__text">In Spitzenzeiträumen knapp 400 %, mehrfach Spot-Award als Top-Sales-Performer DACH.</p>
+          </div>
+          <div class="dm-band__item">
+            <h3 class="dm-band__head"><span class="dm-band__num"><span class="dm-band__count" data-dm-to="20">20</span><span class="dm-band__unit">+</span></span><span class="dm-band__key">Kunden seit 2021</span></h3>
+            <p class="dm-band__text">Dealgrößen von 30.000 bis 500.000 EUR. Bei einem Kunden Umsatz in 10 Monaten verdoppelt.</p>
+          </div>
+          <div class="dm-band__item">
+            <h3 class="dm-band__head"><span class="dm-band__num"><span class="dm-band__count" data-dm-to="60">60</span><span class="dm-band__unit"> %</span></span><span class="dm-band__key">erreicht, 40 % Termin</span></h3>
+            <p class="dm-band__text">Wo Anlass, Direktnummer und freies Kalenderfenster zusammenkommen. <a href="#quoten">Wie das geht</a>.</p>
+          </div>
+        </div>
       </div>
       <p class="small muted" style="margin-top:1.6rem">Spitzenwerte, kein Durchschnitt. Nachweise und Werdegang: <a href="/warum-wir/">Warum wir</a>.</p>
     </div>
@@ -391,13 +406,42 @@
 
   <section class="bg-soft">
     <div class="wrap">
+      <div class="dm-zitat" data-dm-zitat>
+        <span class="dm-zitat__bar" aria-hidden="true"></span>
+        <p class="dm-zitat__text">Wir rufen nicht nach Liste an, sondern <span class="dm-zitat__hi">nach&nbsp;Anlass</span>.</p>
+      </div>
       <div class="sec-head"><p class="eyebrow" data-dm-scramble>Anlass vor Liste</p><h2 data-dm-reveal="head" id="telefon-im-b2b" data-dm-split>Warum das Telefon im B2B weiterhin funktioniert</h2></div>
       <p>Ein Telefonat klärt in wenigen Sätzen, ob ein Thema jetzt, später oder gar nicht relevant ist. Das funktioniert nicht durch Lautstärke oder Hartnäckigkeit, sondern wenn der Einstieg ein öffentliches Ereignis nachvollziehbar mit dem Angebot verbindet.</p>
-      <p>Wir rufen nicht nach Liste an, sondern nach Anlass. Welche Firma gerade dran ist, meldet unser eigenes Central-Sales-Intelligence-System: Es wertet laufend Millionen von Quellen mit relevanten Daten aus und erkennt mehr als 40 Arten von Anlässen – und wenn Ihr Markt 100 davon braucht, werden es 100. Wie diese Ebene arbeitet, zeigt <a href="https://priox.ai/" rel="noopener">PrioX</a>; die Software haben wir selbst gebaut. Der Ansatz dahinter heißt <a href="/signal-based-selling/">Signal Based Selling</a>.</p>
+      <p>Welche Firma gerade dran ist, meldet unser eigenes Central-Sales-Intelligence-System: Es wertet laufend Millionen von Quellen mit relevanten Daten aus und erkennt mehr als 40 Arten von Anlässen – und wenn Ihr Markt 100 davon braucht, werden es 100. Wie diese Ebene arbeitet, zeigt <a href="https://priox.ai/" rel="noopener">PrioX</a>; die Software haben wir selbst gebaut. Der Ansatz dahinter heißt <a href="/signal-based-selling/">Signal Based Selling</a>.</p>
       <p>Der erste Satz nennt nur dieses einzelne, offen sichtbare Ereignis, nie ein beobachtetes Muster. Etwa: „Sie haben letzte Woche zwei Stellen für den Vertrieb in Wien ausgeschrieben. Wer verantwortet bei Ihnen die Entscheidung, wie die ersten Gespräche dort entstehen?“ Oder: „Auf Ihrer Website ist die neue Produktlinie seit Montag angekündigt. Ist die Pipeline dafür bereits ein Thema bei Ihnen?“ Beide Sätze bleiben beim Anlass und überziehen ihn nicht mit einer Deutung.</p>
       <div class="table-scroll" data-dm-reveal><table><thead><tr><th scope="col">Öffentlich sichtbares Signal</th><th scope="col">Was es in der Regel bedeutet</th><th scope="col">Typisches Zeitfenster</th></tr></thead><tbody><tr><td>Zwei neue Vertriebsstellen ausgeschrieben</td><td>Vertriebskapazität wird aufgebaut</td><td>2–8 Wochen</td></tr><tr><td>Neue Stelle für Sales Operations</td><td>Prozess und Pipeline werden strukturierter</td><td>1–3 Monate</td></tr><tr><td>Vertriebsleitung öffentlich neu besetzt</td><td>Agenda und Prioritäten werden neu gesetzt</td><td>erste 90 Tage</td></tr><tr><td>Neuer Standort eröffnet</td><td>Region, Team oder Lieferanten werden aufgebaut</td><td>1–4 Monate</td></tr><tr><td>Neue Produktlinie angekündigt</td><td>Es braucht erste Marktgespräche</td><td>1–3 Monate</td></tr><tr><td>Kapitalerhöhung veröffentlicht</td><td>Investitionen können zeitnah anstehen</td><td>1–6 Monate</td></tr><tr><td>Rahmenvertrag öffentlich ausgeschrieben</td><td>Konkreter Bedarf mit Frist</td><td>bis zur Frist</td></tr></tbody></table></div>
       <p class="small muted"><strong>Das ist ein Beispiel-Set, keine Liste, die wir abarbeiten.</strong> Welche Anlässe für Sie zählen, legen wir vor dem Start gemeinsam fest – Ihre Konfiguration sieht mit hoher Wahrscheinlichkeit völlig anders aus als diese Tabelle. Der Grundsatz dahinter ist einfach: Was irgendwo öffentlich sichtbar ist, lässt sich als Anlass nutzen. Stellenanzeige, Pressemitteilung, Handelsregister, Messeauftritt, Podcast, Beitrag auf einem Karrierenetzwerk, geänderte Preisseite, neue Zertifizierung. Wenn Sie uns sagen, worauf Ihr Markt reagiert, nehmen wir es auf.</p>
       <p>Dazu kommen Ihre Wunsch-Signale, die nur in Ihrem Markt etwas bedeuten: ein auslaufender Rahmenvertrag, eine verlorene Zertifizierung, eine Normänderung, der Wegfall einer Förderung. Sagen Sie uns, worauf Ihr Markt reagiert – wir nehmen es auf.</p>
+      <div class="dm-talk" data-dm-talk>
+        <div class="dm-talk__cols">
+          <section class="dm-talk__col dm-talk__col--cold" aria-label="Anruf ohne Anlass">
+            <p class="dm-talk__label">So läuft es meistens</p>
+            <h3 style="margin:0 0 1rem;font-size:clamp(17px,1.6vw,20px)">Anruf ohne Anlass</h3>
+            <ol class="dm-talk__list">
+              <li class="dm-talk__b dm-talk__b--us"><span class="dm-talk__who">Wir</span>„Guten Tag, ich rufe an, weil wir Unternehmen im B2B-Vertrieb unterstützen. Haben Sie kurz zwei Minuten?“</li>
+              <li class="dm-talk__b dm-talk__b--them"><span class="dm-talk__who">Gegenüber</span>„Kein Interesse, danke.“</li>
+            </ol>
+            <p class="dm-talk__end">Gespräch beendet</p>
+          </section>
+          <section class="dm-talk__col dm-talk__col--warm" aria-label="Anruf mit Anlass">
+            <p class="dm-talk__label">So läuft es bei uns</p>
+            <h3 style="margin:0 0 1rem;font-size:clamp(17px,1.6vw,20px)">Anruf mit Anlass</h3>
+            <ol class="dm-talk__list">
+              <li class="dm-talk__b dm-talk__b--us"><span class="dm-talk__who">Wir</span>„Sie haben letzte Woche den Standort Leipzig angekündigt. Wer entscheidet bei Ihnen, wie die ersten Kundengespräche dort entstehen?“</li>
+              <li class="dm-talk__b dm-talk__b--them"><span class="dm-talk__who">Gegenüber</span>„Das läuft über mich. Worum geht es konkret?“</li>
+              <li class="dm-talk__b dm-talk__b--us"><span class="dm-talk__who">Wir</span>„Um genau diese ersten Gespräche. Darf ich Ihnen dazu zwei kurze Fragen stellen?“</li>
+              <li class="dm-talk__b dm-talk__b--them"><span class="dm-talk__who">Gegenüber</span>„Fragen Sie.“</li>
+            </ol>
+            <p class="dm-talk__end">Gespräch läuft weiter</p>
+          </section>
+        </div>
+        <p class="dm-talk__cap">Beispielgespräch. Sinngemäß, nicht wörtlich protokolliert.</p>
+      </div>
     </div>
   </section>
 
@@ -406,9 +450,76 @@
       <div class="sec-head"><p class="eyebrow" data-dm-scramble>Das Handwerk</p><h2 data-dm-reveal="head" id="gespraechsaufbau" data-dm-split>Der Gesprächsaufbau in fünf Phasen</h2></div>
       <p class="small muted" style="border-left:3px solid var(--gold);padding-left:14px"><strong>Wir bleiben im Beispiel von oben</strong> – der ausgeschriebenen Vertriebsstelle für den neuen Standort. Die Sätze in den folgenden Karten dienen nur der Verdeutlichung; in Ihrem Fall steht dort ein anderer Anlass, eine andere Rolle und eine andere Frage. Der Ablauf bleibt, die Inhalte werden für Ihren Markt neu geschrieben.</p>
       <p>Ein gutes Erstgespräch braucht keinen Monolog, sondern einen Rahmen. Die ersten zwanzig Sekunden schaffen Erlaubnis, nicht Abschlussdruck. Erst wenn Rolle und Anlass bestätigt oder korrigiert sind, ist eine Terminfrage sinnvoll.</p>
-      <div class="grid g2" data-dm-tilt-scope><div class="card" data-dm-reveal data-dm-stagger="0" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>1. Anlass nennen: 0:00–0:20</h3><p>Der Satz ist kurz und überprüfbar: „Sie haben die Leitung für den neuen Standort ausgeschrieben.“ Dann folgt die Frage nach Zuständigkeit. Keine versteckte Rechercheleistung, keine Bewertung des Unternehmens.</p></div><div class="card" data-dm-reveal data-dm-stagger="1" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>2. Erlaubnis holen: 0:20–0:40</h3><p>„Habe ich Sie für zwei kurze Fragen zur Vertriebsseite erwischt?“ Das gibt dem Gesprächspartner eine Ausstiegsmöglichkeit. Wer sie nicht gibt, bekommt selten brauchbare Antworten.</p></div><div class="card" data-dm-reveal data-dm-stagger="2" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>3. Lage klären: 0:40–1:30</h3><p>Eine offene Frage reicht: „Wie gewinnen Sie für die neue Region aktuell Ersttermine?“ Dann zuhören. Die Pause nach der Frage ist Teil des Gesprächs, kein Fehler.</p></div><div class="card" data-dm-reveal data-dm-stagger="3" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>4. Einwand verstehen: 1:30–3:00</h3><p>„Kein Bedarf“ kann heißen: falscher Zeitpunkt, falsche Rolle oder echte Absage. Erfahrung zeigt sich darin, erst nachzufragen und nicht sofort den nächsten Satz des Skripts abzulesen.</p></div><div class="card" data-dm-reveal data-dm-stagger="0" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>5. Nächsten Schritt vereinbaren: bis 4:00</h3><p>Wenn Thema und Rolle passen, wird der Termin konkret: Teilnehmer, Dauer, Fragestellung und Zeitpunkt. Wenn nicht, wird ein späteres Fenster oder ein sauberer Abschluss notiert.</p></div><div class="card" data-dm-reveal data-dm-stagger="1" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span><h3>Stimme, Tempo, Pause</h3><p>Eine ruhige Stimme ersetzt keine Substanz, macht sie aber hörbar. Menschen mit Vertriebserfahrung variieren Tempo und Formulierung, statt jede Pause mit einem Argument zuzuschütten.</p></div></div>
+      <div class="dm-pin" data-dm-pin>
+      <div class="dm-pin__sticky">
+        <figure class="dm-pin__fig">
+          <svg viewBox="0 0 460 600" role="img" aria-label="Zeitachse eines Erstgesprächs mit fünf Phasen: Anlass nennen bis 0:20, Erlaubnis holen bis 0:40, Lage klären bis 1:30, Einwand verstehen bis 3:00, nächster Schritt bis 4:00">
+            <title>Die fünf Phasen eines Erstgesprächs</title>
+            <path d="M56 70 V518" fill="none" stroke="url(#dmFade) #c9ba77" stroke-width="3" stroke-linecap="round"/>
+            <text x="104" y="34" font-family="JetBrains Mono, ui-monospace, monospace" font-size="17" letter-spacing="2" fill="#5a6a9a">MINUTE 0:00</text>
+            <text x="104" y="576" font-family="JetBrains Mono, ui-monospace, monospace" font-size="17" letter-spacing="2" fill="#5a6a9a">MINUTE 4:00</text>
+        <g class="dm-pin__part" data-dm-pin-part="1">
+          <circle cx="56" cy="70" r="25" fill="url(#dmPanel) #0c1230" stroke="url(#dmGold) #c9ba77" stroke-width="2"/>
+          <text x="56" y="78" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="23" font-weight="700" fill="#e0d199">1</text>
+          <text x="104" y="66" font-family="Archivo, system-ui, sans-serif" font-size="24" font-weight="700" fill="#f2f3f8">Anlass nennen</text>
+          <text x="104" y="92" font-family="Manrope, system-ui, sans-serif" font-size="19" fill="#96a0bb">0:00–0:20</text>
+        </g>
+        <g class="dm-pin__part" data-dm-pin-part="2">
+          <circle cx="56" cy="182" r="25" fill="url(#dmPanel) #0c1230" stroke="url(#dmGold) #c9ba77" stroke-width="2"/>
+          <text x="56" y="190" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="23" font-weight="700" fill="#e0d199">2</text>
+          <text x="104" y="178" font-family="Archivo, system-ui, sans-serif" font-size="24" font-weight="700" fill="#f2f3f8">Erlaubnis holen</text>
+          <text x="104" y="204" font-family="Manrope, system-ui, sans-serif" font-size="19" fill="#96a0bb">0:20–0:40</text>
+        </g>
+        <g class="dm-pin__part" data-dm-pin-part="3">
+          <circle cx="56" cy="294" r="25" fill="url(#dmPanel) #0c1230" stroke="url(#dmGold) #c9ba77" stroke-width="2"/>
+          <text x="56" y="302" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="23" font-weight="700" fill="#e0d199">3</text>
+          <text x="104" y="290" font-family="Archivo, system-ui, sans-serif" font-size="24" font-weight="700" fill="#f2f3f8">Lage klären</text>
+          <text x="104" y="316" font-family="Manrope, system-ui, sans-serif" font-size="19" fill="#96a0bb">0:40–1:30</text>
+        </g>
+        <g class="dm-pin__part" data-dm-pin-part="4">
+          <circle cx="56" cy="406" r="25" fill="url(#dmPanel) #0c1230" stroke="url(#dmGold) #c9ba77" stroke-width="2"/>
+          <text x="56" y="414" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="23" font-weight="700" fill="#e0d199">4</text>
+          <text x="104" y="402" font-family="Archivo, system-ui, sans-serif" font-size="24" font-weight="700" fill="#f2f3f8">Einwand verstehen</text>
+          <text x="104" y="428" font-family="Manrope, system-ui, sans-serif" font-size="19" fill="#96a0bb">1:30–3:00</text>
+        </g>
+        <g class="dm-pin__part" data-dm-pin-part="5">
+          <circle cx="56" cy="518" r="25" fill="url(#dmPanel) #0c1230" stroke="url(#dmGold) #c9ba77" stroke-width="2"/>
+          <text x="56" y="526" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="23" font-weight="700" fill="#e0d199">5</text>
+          <text x="104" y="514" font-family="Archivo, system-ui, sans-serif" font-size="24" font-weight="700" fill="#f2f3f8">Nächster Schritt</text>
+          <text x="104" y="540" font-family="Manrope, system-ui, sans-serif" font-size="19" fill="#96a0bb">bis 4:00</text>
+        </g>
+          </svg>
+          <figcaption>Die fünf Phasen eines Erstgesprächs auf der Zeitachse. Hervorgehoben ist die Phase, die rechts gerade beschrieben wird.</figcaption>
+        </figure>
+      </div>
+      <ol class="dm-pin__steps">
+        <li class="dm-pin__step" data-dm-pin-step="1">
+          <h3>1. Anlass nennen: 0:00–0:20</h3>
+          <p>Der Satz ist kurz und überprüfbar: „Sie haben die Leitung für den neuen Standort ausgeschrieben.“ Dann folgt die Frage nach Zuständigkeit. Keine versteckte Rechercheleistung, keine Bewertung des Unternehmens.</p>
+        </li>
+        <li class="dm-pin__step" data-dm-pin-step="2">
+          <h3>2. Erlaubnis holen: 0:20–0:40</h3>
+          <p>„Habe ich Sie für zwei kurze Fragen zur Vertriebsseite erwischt?“ Das gibt dem Gesprächspartner eine Ausstiegsmöglichkeit. Wer sie nicht gibt, bekommt selten brauchbare Antworten.</p>
+        </li>
+        <li class="dm-pin__step" data-dm-pin-step="3">
+          <h3>3. Lage klären: 0:40–1:30</h3>
+          <p>Eine offene Frage reicht: „Wie gewinnen Sie für die neue Region aktuell Ersttermine?“ Dann zuhören. Die Pause nach der Frage ist Teil des Gesprächs, kein Fehler.</p>
+        </li>
+        <li class="dm-pin__step" data-dm-pin-step="4">
+          <h3>4. Einwand verstehen: 1:30–3:00</h3>
+          <p>„Kein Bedarf“ kann heißen: falscher Zeitpunkt, falsche Rolle oder echte Absage. Erfahrung zeigt sich darin, erst nachzufragen und nicht sofort den nächsten Satz des Skripts abzulesen.</p>
+        </li>
+        <li class="dm-pin__step" data-dm-pin-step="5">
+          <h3>5. Nächsten Schritt vereinbaren: bis 4:00</h3>
+          <p>Wenn Thema und Rolle passen, wird der Termin konkret: Teilnehmer, Dauer, Fragestellung und Zeitpunkt. Wenn nicht, wird ein späteres Fenster oder ein sauberer Abschluss notiert.</p>
+        </li>
+      </ol>
+      </div>
+      <h3>Stimme, Tempo, Pause</h3>
+      <p>Eine ruhige Stimme ersetzt keine Substanz, macht sie aber hörbar. Menschen mit Vertriebserfahrung variieren Tempo und Formulierung, statt jede Pause mit einem Argument zuzuschütten.</p>
       <p>Das ist ein anderer Auftrag als <a href="/neukundenakquise-agentur/">Neukundenakquise als Gesamtleistung</a>: Hier wird besonders sichtbar, ob die Person am Hörer fachlich führen kann. Ein erfahrener Anrufer reagiert auf den zweiten Einwand mit einer Frage oder einem ehrlichen Abbruch. Ein Skript liefert oft nur den nächsten vorformulierten Satz.</p>
       <p>Wir hören auch nicht zwingend beim Termin auf. Auf Wunsch führen wir den Zyklus weiter: Angebot begleiten, nachfassen, verhandeln und innerhalb des Preisrahmens abschließen, den Sie freigeben. Für tiefe fachliche Fragen holen wir Ihre Leute dazu. Nur die Betreuung Ihrer Bestandskunden übernehmen wir nicht – das ist Account-Management und lebt von Historie und gewachsener Beziehung.</p>
+      <p class="dm-soft-cta"><a href="/leistungen/">Welcher dieser Wege zu Ihrem Engpass passt, steht in der Leistungsübersicht<span class="dm-soft-cta__arrow" aria-hidden="true">&rarr;</span></a></p>
     </div>
   </section>
 
@@ -679,5 +790,6 @@ function ccOpen(){document.getElementById('cookie-hinweis').hidden=false;}
   if(!w){document.getElementById('cookie-hinweis').hidden=false;}else if(w==='ja'){ccStart();}})();
 </script>
 <script src="/assets/dm-effects.js" defer></script>
+<script src="/assets/dm-module.js" defer></script>
 </body>
 </html>

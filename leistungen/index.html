@@ -22,6 +22,7 @@
 <meta name="twitter:description" content="Vertriebsoutsourcing, Kaltakquise, Vertriebsberatung und B2B-Vertriebstraining: Wir übernehmen Ansprache, Qualifizierung und Termine – auf Wunsch bis zum Abschluss.">
 <link rel="stylesheet" href="/assets/styles.css">
 <link rel="stylesheet" href="/assets/dm-effects.css">
+<link rel="stylesheet" href="/assets/dm-module.css">
 <link rel="icon" href="/assets/favicon.png" sizes="48x48">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -200,7 +201,7 @@
 }
 </script>
 </head>
-<body>
+<body data-dm-cta="Erstgespräch zu Ihren Vertriebsleistungen" data-dm-cta-href="/kontakt/" data-dm-cta-label="Gespräch vereinbaren" data-dm-cta-end="#gespraech">
 <svg class="dm-defs" aria-hidden="true" focusable="false" width="0" height="0"><defs>
   <linearGradient id="dmGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0d199"/><stop offset=".55" stop-color="#c9ba77"/><stop offset="1" stop-color="#b5a55e"/></linearGradient>
   <linearGradient id="dmGoldSoft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9ba77" stop-opacity=".30"/><stop offset="1" stop-color="#b5a55e" stop-opacity=".06"/></linearGradient>
@@ -287,6 +288,8 @@
         <h2 data-dm-reveal="head" id="entscheidungshilfe" data-dm-split>Welches Problem haben Sie gerade?</h2>
         <p class="lead">Entscheiden Sie nicht nach dem Namen der Leistung, sondern nach dem Engpass. Die drei Situationen verlangen unterschiedliche Arbeit.</p>
       </div>
+      <div class="dm-pin dm-pin--wide" data-dm-pin>
+      <div class="dm-pin__sticky">
       <figure class="fig" data-dm-reveal>
         <div class="fig-box">
           <svg class="dmg-canvas" viewBox="0 0 1120 560" role="img" aria-label="Entscheidungsbaum mit drei Vertriebsproblemen und den jeweils passenden Leistungen">
@@ -305,41 +308,51 @@
               <path d="M400 280 H462" fill="none" stroke="url(#dmGold) #c9ba77" stroke-width="3" marker-end="url(#dmArrowGold)"/>
               <path d="M400 462 H462" fill="none" stroke="url(#dmGold) #c9ba77" stroke-width="3" marker-end="url(#dmArrowGold)"/>
             </g>
+            <g class="dm-pin__part" data-dm-pin-part="1">
             <g class="dmg-pop">
               <rect x="480" y="36" width="600" height="124" rx="14" fill="#070b22" filter="url(#dmShadow)"/>
               <rect x="480" y="36" width="600" height="124" rx="14" fill="url(#dmGoldSoft) #171a2e" stroke="url(#dmGold) #c9ba77" stroke-width="1.5"/>
               <text x="512" y="90" font-family="Archivo, system-ui, sans-serif" font-size="26" font-weight="700" fill="#f2f3f8">Noch kein Vertriebsteam</text>
               <text x="512" y="128" font-family="Manrope, system-ui, sans-serif" font-size="22" fill="#96a0bb">Vertriebsoutsourcing</text>
             </g>
+            </g>
+            <g class="dm-pin__part" data-dm-pin-part="2">
             <g class="dmg-pop">
               <rect x="480" y="218" width="600" height="124" rx="14" fill="url(#dmPanel) #0c1230" stroke="#222a4d" stroke-width="1.5"/>
               <text x="512" y="272" font-family="Archivo, system-ui, sans-serif" font-size="26" font-weight="700" fill="#f2f3f8">Team, aber zu wenig Termine</text>
               <text x="512" y="310" font-family="Manrope, system-ui, sans-serif" font-size="22" fill="#96a0bb">Neukundenakquise</text>
             </g>
+            </g>
+            <g class="dm-pin__part" data-dm-pin-part="3">
             <g class="dmg-pop">
               <rect x="480" y="400" width="600" height="124" rx="14" fill="url(#dmPanel) #0c1230" stroke="#222a4d" stroke-width="1.5"/>
               <text x="512" y="454" font-family="Archivo, system-ui, sans-serif" font-size="26" font-weight="700" fill="#f2f3f8">Termine, aber zu wenig Gewinne</text>
               <text x="512" y="492" font-family="Manrope, system-ui, sans-serif" font-size="22" fill="#96a0bb">Beratung und Training</text>
             </g>
+            </g>
           </svg>
         </div>
         <figcaption>Kapazität, Pipeline und Gesprächsqualität sind drei verschiedene Engpässe. Erst die Einordnung macht eine Leistung sinnvoll.</figcaption>
       </figure>
-      <div class="grid g3" data-dm-tilt-scope>
-        <a class="card card-link" href="/vertriebsoutsourcing/" data-dm-reveal data-dm-stagger="0" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span>
+      </div>
+      <div class="dm-pin__steps">
+        <a class="dm-pin__step" href="/vertriebsoutsourcing/" data-dm-pin-step="1">
           <h3>Sie haben noch kein Vertriebsteam</h3>
           <p>Dann brauchen Sie eine externe Vertriebsabteilung statt einzelner Maßnahmen. <span class="more">Vertriebsoutsourcing einordnen &rarr;</span></p>
         </a>
-        <a class="card card-link" href="/kaltakquise-agentur/" data-dm-reveal data-dm-stagger="1" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span>
+        <a class="dm-pin__step" href="/kaltakquise-agentur/" data-dm-pin-step="2">
           <h3>Sie haben ein Team, aber zu wenig Termine</h3>
           <p>Dann fehlt qualifizierte Pipeline. <span class="more">Kaltakquise und Terminierung ansehen &rarr;</span></p>
         </a>
-        <a class="card card-link" href="/vertriebsberatung/" data-dm-reveal data-dm-stagger="2" data-dm-phase-card><span class="dm-card__line" data-dm-phase-line aria-hidden="true"></span>
+        <a class="dm-pin__step" href="/vertriebsberatung/" data-dm-pin-step="3">
           <h3>Sie haben Termine, gewinnen aber zu wenig</h3>
           <p>Dann stehen Gespräche, Angebot oder Steuerung im Mittelpunkt. <span class="more">Vertriebsberatung prüfen &rarr;</span></p>
         </a>
+        <div class="dm-pin__step" data-dm-pin-step="all">
+          <p>Wenn sich Ihr Fall nicht sauber zuordnen lässt, klären wir ihn auf der <a href="/kontakt/">Kontaktseite</a> im Erstgespräch.</p>
+        </div>
       </div>
-      <p style="max-width:760px;margin-top:1.6rem">Wenn sich Ihr Fall nicht sauber zuordnen lässt, klären wir ihn auf der <a href="/kontakt/">Kontaktseite</a> im Erstgespräch.</p>
+      </div>
     </div>
   </section>
 
@@ -348,7 +361,11 @@
       <div class="sec-head">
         <p class="eyebrow" data-dm-scramble>Anlass vor Adresse</p>
         <h2 data-dm-reveal="head" id="signal-based-selling" data-dm-split>Wir rufen an, wenn es bei Ihrem Zielkunden gerade passt</h2>
-        <p>Wen wir anrufen, entscheidet nicht die Liste, sondern der Moment. Unser <a href="https://priox.ai/" rel="noopener">Central-Sales-Intelligence-System</a> wertet dafür laufend Millionen von Quellen aus und meldet uns, bei welcher Zielfirma gerade etwas passiert – mehr als 40 Anlässe, und wenn Ihr Markt 100 braucht, werden es 100.</p>
+        <p>Unser <a href="https://priox.ai/" rel="noopener">Central-Sales-Intelligence-System</a> wertet dafür laufend Millionen von Quellen aus und meldet uns, bei welcher Zielfirma gerade etwas passiert – mehr als 40 Anlässe, und wenn Ihr Markt 100 braucht, werden es 100.</p>
+      </div>
+      <div class="dm-zitat" data-dm-zitat>
+        <span class="dm-zitat__bar" aria-hidden="true"></span>
+        <p class="dm-zitat__text">Wen wir anrufen, entscheidet nicht die Liste, sondern <span class="dm-zitat__hi">der&nbsp;Moment</span>.</p>
       </div>
       <div class="table-scroll" data-dm-reveal>
         <table>
@@ -384,6 +401,119 @@
           <p>Die Gespräche führen Verkäufer mit über 20 Jahren eigener B2B-Erfahrung und Ausbildung in Verkaufspsychologie. Sie fragen fachlich nach, ordnen einen Einwand ein und vereinbaren den nächsten Schritt – statt ein Skript im Callcenter-Takt abzulesen.</p>
         </div>
       </div>
+      <figure class="dm-vgl" data-dm-vgl>
+        <p class="dm-vgl__tags" aria-hidden="true"><span>Liste abtelefonieren</span><span>Nach Anlass priorisiert</span></p>
+        <div class="dm-vgl__stage">
+          <div class="dm-vgl__layer dm-vgl__layer--b">
+          <svg viewBox="0 0 480 360" role="img" aria-label="Dasselbe Raster, drei Punkte gross und golden nach vorn geholt, der Rest zurueckgenommen" preserveAspectRatio="xMidYMid meet">
+            <title>Nach Anlass priorisiert</title>
+            <rect x="0" y="0" width="480" height="360" fill="#04061a"/>
+            <circle cx="58" cy="72" r="8" fill="#1c2444"/>
+            <circle cx="110" cy="72" r="8" fill="#1c2444"/>
+            <circle cx="162" cy="72" r="8" fill="#1c2444"/>
+            <circle cx="214" cy="72" r="8" fill="#1c2444"/>
+            <circle cx="266" cy="72" r="8" fill="#1c2444"/>
+            <circle cx="58" cy="128" r="8" fill="#1c2444"/>
+            <circle cx="110" cy="128" r="8" fill="#1c2444"/>
+            <circle cx="162" cy="128" r="8" fill="#1c2444"/>
+            <circle cx="214" cy="128" r="8" fill="#1c2444"/>
+            <circle cx="266" cy="128" r="8" fill="#1c2444"/>
+            <circle cx="318" cy="128" r="8" fill="#1c2444"/>
+            <circle cx="370" cy="128" r="8" fill="#1c2444"/>
+            <circle cx="422" cy="128" r="8" fill="#1c2444"/>
+            <circle cx="58" cy="184" r="8" fill="#1c2444"/>
+            <circle cx="110" cy="184" r="8" fill="#1c2444"/>
+            <circle cx="162" cy="184" r="8" fill="#1c2444"/>
+            <circle cx="214" cy="184" r="8" fill="#1c2444"/>
+            <circle cx="266" cy="184" r="8" fill="#1c2444"/>
+            <circle cx="318" cy="184" r="8" fill="#1c2444"/>
+            <circle cx="370" cy="184" r="8" fill="#1c2444"/>
+            <circle cx="422" cy="184" r="8" fill="#1c2444"/>
+            <circle cx="58" cy="240" r="8" fill="#1c2444"/>
+            <circle cx="110" cy="240" r="8" fill="#1c2444"/>
+            <circle cx="162" cy="240" r="8" fill="#1c2444"/>
+            <circle cx="214" cy="240" r="8" fill="#1c2444"/>
+            <circle cx="266" cy="240" r="8" fill="#1c2444"/>
+            <circle cx="318" cy="240" r="8" fill="#1c2444"/>
+            <circle cx="370" cy="240" r="8" fill="#1c2444"/>
+            <circle cx="422" cy="240" r="8" fill="#1c2444"/>
+            <circle cx="58" cy="296" r="8" fill="#1c2444"/>
+            <circle cx="110" cy="296" r="8" fill="#1c2444"/>
+            <circle cx="162" cy="296" r="8" fill="#1c2444"/>
+            <circle cx="214" cy="296" r="8" fill="#1c2444"/>
+            <circle cx="266" cy="296" r="8" fill="#1c2444"/>
+            <circle cx="318" cy="296" r="8" fill="#1c2444"/>
+            <circle cx="370" cy="296" r="8" fill="#1c2444"/>
+            <circle cx="422" cy="296" r="8" fill="#1c2444"/>
+            <circle cx="318" cy="72" r="25" fill="#c9ba77" fill-opacity=".12"/>
+            <circle cx="318" cy="72" r="18" fill="#c9ba77" stroke="#e0d199" stroke-width="1.5"/>
+            <text x="318" y="79" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="20" font-weight="700" fill="#070b22" font-variant-numeric="tabular-nums">1</text>
+            <circle cx="370" cy="72" r="25" fill="#c9ba77" fill-opacity=".12"/>
+            <circle cx="370" cy="72" r="18" fill="#c9ba77" stroke="#e0d199" stroke-width="1.5"/>
+            <text x="370" y="79" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="20" font-weight="700" fill="#070b22" font-variant-numeric="tabular-nums">2</text>
+            <circle cx="422" cy="72" r="25" fill="#c9ba77" fill-opacity=".12"/>
+            <circle cx="422" cy="72" r="18" fill="#c9ba77" stroke="#e0d199" stroke-width="1.5"/>
+            <text x="422" y="79" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="20" font-weight="700" fill="#070b22" font-variant-numeric="tabular-nums">3</text>
+            <text x="460" y="340" text-anchor="end" font-family="Manrope, system-ui, sans-serif" font-size="17" fill="#96a0bb">Drei mit Anlass zuerst</text>
+          </svg>
+          </div>
+          <div class="dm-vgl__layer dm-vgl__layer--a">
+          <svg viewBox="0 0 480 360" role="img" aria-label="Raster aus lauter gleich aussehenden Punkten, vier davon abgehakt" preserveAspectRatio="xMidYMid meet">
+            <title>Liste abtelefonieren</title>
+            <rect x="0" y="0" width="480" height="360" fill="#0c1230"/>
+            <circle cx="58" cy="72" r="11" fill="#3e4a75"/>
+            <circle cx="110" cy="72" r="17" fill="none" stroke="#5a6a9a" stroke-width="1.5"/>
+            <circle cx="110" cy="72" r="11" fill="#3e4a75"/>
+            <circle cx="162" cy="72" r="11" fill="#3e4a75"/>
+            <circle cx="214" cy="72" r="11" fill="#3e4a75"/>
+            <circle cx="266" cy="72" r="11" fill="#3e4a75"/>
+            <circle cx="318" cy="72" r="11" fill="#3e4a75"/>
+            <circle cx="370" cy="72" r="11" fill="#3e4a75"/>
+            <circle cx="422" cy="72" r="11" fill="#3e4a75"/>
+            <circle cx="58" cy="128" r="11" fill="#3e4a75"/>
+            <circle cx="110" cy="128" r="11" fill="#3e4a75"/>
+            <circle cx="162" cy="128" r="11" fill="#3e4a75"/>
+            <circle cx="214" cy="128" r="11" fill="#3e4a75"/>
+            <circle cx="266" cy="128" r="17" fill="none" stroke="#5a6a9a" stroke-width="1.5"/>
+            <circle cx="266" cy="128" r="11" fill="#3e4a75"/>
+            <circle cx="318" cy="128" r="11" fill="#3e4a75"/>
+            <circle cx="370" cy="128" r="11" fill="#3e4a75"/>
+            <circle cx="422" cy="128" r="11" fill="#3e4a75"/>
+            <circle cx="58" cy="184" r="11" fill="#3e4a75"/>
+            <circle cx="110" cy="184" r="11" fill="#3e4a75"/>
+            <circle cx="162" cy="184" r="11" fill="#3e4a75"/>
+            <circle cx="214" cy="184" r="11" fill="#3e4a75"/>
+            <circle cx="266" cy="184" r="11" fill="#3e4a75"/>
+            <circle cx="318" cy="184" r="11" fill="#3e4a75"/>
+            <circle cx="370" cy="184" r="11" fill="#3e4a75"/>
+            <circle cx="422" cy="184" r="11" fill="#3e4a75"/>
+            <circle cx="58" cy="240" r="11" fill="#3e4a75"/>
+            <circle cx="110" cy="240" r="11" fill="#3e4a75"/>
+            <circle cx="162" cy="240" r="17" fill="none" stroke="#5a6a9a" stroke-width="1.5"/>
+            <circle cx="162" cy="240" r="11" fill="#3e4a75"/>
+            <circle cx="214" cy="240" r="11" fill="#3e4a75"/>
+            <circle cx="266" cy="240" r="11" fill="#3e4a75"/>
+            <circle cx="318" cy="240" r="11" fill="#3e4a75"/>
+            <circle cx="370" cy="240" r="11" fill="#3e4a75"/>
+            <circle cx="422" cy="240" r="11" fill="#3e4a75"/>
+            <circle cx="58" cy="296" r="11" fill="#3e4a75"/>
+            <circle cx="110" cy="296" r="11" fill="#3e4a75"/>
+            <circle cx="162" cy="296" r="11" fill="#3e4a75"/>
+            <circle cx="214" cy="296" r="11" fill="#3e4a75"/>
+            <circle cx="266" cy="296" r="11" fill="#3e4a75"/>
+            <circle cx="318" cy="296" r="11" fill="#3e4a75"/>
+            <circle cx="370" cy="296" r="17" fill="none" stroke="#5a6a9a" stroke-width="1.5"/>
+            <circle cx="370" cy="296" r="11" fill="#3e4a75"/>
+            <circle cx="422" cy="296" r="11" fill="#3e4a75"/>
+            <text x="20" y="340" text-anchor="start" font-family="Manrope, system-ui, sans-serif" font-size="17" fill="#96a0bb">Alle gleich behandelt</text>
+          </svg>
+          </div>
+          <input class="dm-vgl__range" type="range" min="0" max="100" step="5" value="50" aria-label="Schieber zwischen Liste abtelefonieren und nach Anlass priorisiert. Mit den Pfeiltasten in Fuenf-Prozent-Schritten bewegen.">
+          <span class="dm-vgl__bar" aria-hidden="true"></span>
+          <span class="dm-vgl__knob" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 6 4 12l6 6M14 6l6 6-6 6" fill="none" stroke="#c9ba77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <figcaption>Ziehen Sie den Griff: links stehen alle Zielfirmen gleichberechtigt nebeneinander, rechts stehen die drei vorn, bei denen gerade etwas passiert.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -530,6 +660,7 @@
         </div>
         <figcaption>Die Vorbereitung schafft den Anlass und die Übergabe. Die Auswertung hält die Arbeit am tatsächlichen Engpass.</figcaption>
       </figure>
+      <p class="dm-soft-cta"><a href="/warum-wir/">Wer die Gespräche führt und woher die Erfahrung kommt<span class="dm-soft-cta__arrow" aria-hidden="true">&rarr;</span></a></p>
     </div>
   </section>
 
@@ -658,5 +789,6 @@ function ccOpen(){document.getElementById('cookie-hinweis').hidden=false;}
   if(!w){document.getElementById('cookie-hinweis').hidden=false;}else if(w==='ja'){ccStart();}})();
 </script>
 <script src="/assets/dm-effects.js" defer></script>
+<script src="/assets/dm-module.js" defer></script>
 </body>
 </html>

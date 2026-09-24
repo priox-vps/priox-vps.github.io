@@ -20,6 +20,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/assets/styles.css">
 <link rel="stylesheet" href="/assets/dm-effects.css">
+<link rel="stylesheet" href="/assets/dm-konsole.css">
 <link rel="icon" href="/assets/favicon.png" sizes="48x48">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -623,6 +624,126 @@
         sieht man einer Firma nicht an, was wir dabei gefunden haben.</p>
     </div>
 
+    <!-- ================= Signal-Konsole (kompakte Fassung) ================= -->
+    <figure class="dm-konsole-block dm-konsole-block--klein" data-dm-konsole-block>
+      <p class="dm-konsole-intro">So entsteht bei uns ein Anruf: Draußen verändert sich etwas
+        Öffentliches, wir übersetzen, was es heißt – und rufen an, solange es gilt.<br>
+        <a class="dm-konsole-mehr" href="/signal-based-selling/">Wie das funktioniert →</a></p>
+      <div class="dm-konsole-raster">
+
+        <aside class="dm-konsole dm-konsole--klein" aria-label="Signal-Konsole">
+
+          <div class="dm-konsole-kopf">
+            <span class="dm-konsole-kopf__links">
+              <span class="dm-konsole-punkt" aria-hidden="true"></span>
+              <span class="dm-konsole-kopf__titel">Signal-Konsole</span>
+            </span>
+            <span class="dm-konsole-marke">ausgewertet mit <a href="https://priox.ai/" target="_blank" rel="noopener">PrioX</a></span>
+          </div>
+
+          <!-- Radar wie in der grossen Fassung: gleiche Ringe, gleicher Suchstrahl,
+               gleiche sechs Punkte mit denselben Verzoegerungen, gleiche Mitte.
+               Die sechs Beschriftungen entfallen hier: bei 200 px Breite laegen sie
+               unter 6 px und waeren unlesbar. Der Ausschnitt ist auf den aeusseren
+               Ring beschnitten (viewBox 30 30 300 300), damit die Mitte lesbar bleibt. -->
+          <div class="dm-konsole-teil dm-konsole-radar" data-dm-teil="radar" aria-hidden="true">
+            <div class="dm-konsole-radar__inner">
+              <svg class="dm-radar" viewBox="30 30 300 300" focusable="false">
+                <circle cx="180" cy="180" r="140" fill="none" stroke="#222a4d" stroke-width="1" stroke-dasharray="4 7"/>
+                <circle cx="180" cy="180" r="96" fill="none" stroke="#222a4d" stroke-width="1"/>
+                <circle cx="180" cy="180" r="52" fill="none" stroke="#222a4d" stroke-width="1"/>
+                <path d="M40 180H320M180 40V320" fill="none" stroke="#222a4d" stroke-width="1" opacity=".6"/>
+                <g class="dm-radar__strahl">
+                  <circle cx="180" cy="180" r="140" fill="none"/>
+                  <path d="M180 180 320 180A140 140 0 0 0 254.19 61.27Z" fill="url(#dmFade) none" opacity=".55"/>
+                </g>
+                <g class="dm-radar__punkt">
+                  <circle cx="230.9" cy="98.6" r="4.5" fill="#5a6a9a"/>
+                  <g class="dm-radar__auf" style="--dm-verzug:-2.26s">
+                    <circle cx="230.9" cy="98.6" r="21" fill="url(#dmHalo) none"/>
+                    <circle cx="230.9" cy="98.6" r="5" fill="url(#dmGold) #c9ba77" filter="url(#dmGlow)"/>
+                  </g>
+                </g>
+                <g class="dm-radar__punkt">
+                  <circle cx="306.9" cy="239.2" r="4.5" fill="#5a6a9a"/>
+                  <g class="dm-radar__auf" style="--dm-verzug:-13.03s">
+                    <circle cx="306.9" cy="239.2" r="21" fill="url(#dmHalo) none"/>
+                    <circle cx="306.9" cy="239.2" r="5" fill="url(#dmGold) #c9ba77" filter="url(#dmGlow)"/>
+                  </g>
+                </g>
+                <g class="dm-radar__punkt">
+                  <circle cx="209.7" cy="271.3" r="4.5" fill="#5a6a9a"/>
+                  <g class="dm-radar__auf" style="--dm-verzug:-11.20s">
+                    <circle cx="209.7" cy="271.3" r="21" fill="url(#dmHalo) none"/>
+                    <circle cx="209.7" cy="271.3" r="5" fill="url(#dmGold) #c9ba77" filter="url(#dmGlow)"/>
+                  </g>
+                </g>
+                <g class="dm-radar__punkt">
+                  <circle cx="86.3" cy="284" r="4.5" fill="#5a6a9a"/>
+                  <g class="dm-radar__auf" style="--dm-verzug:-8.87s">
+                    <circle cx="86.3" cy="284" r="21" fill="url(#dmHalo) none"/>
+                    <circle cx="86.3" cy="284" r="5" fill="url(#dmGold) #c9ba77" filter="url(#dmGlow)"/>
+                  </g>
+                </g>
+                <g class="dm-radar__punkt">
+                  <circle cx="87.7" cy="153.5" r="4.5" fill="#5a6a9a"/>
+                  <g class="dm-radar__auf" style="--dm-verzug:-6.38s">
+                    <circle cx="87.7" cy="153.5" r="21" fill="url(#dmHalo) none"/>
+                    <circle cx="87.7" cy="153.5" r="5" fill="url(#dmGold) #c9ba77" filter="url(#dmGlow)"/>
+                  </g>
+                </g>
+                <g class="dm-radar__punkt">
+                  <circle cx="132.1" cy="48.4" r="4.5" fill="#5a6a9a"/>
+                  <g class="dm-radar__auf" style="--dm-verzug:-4.28s">
+                    <circle cx="132.1" cy="48.4" r="21" fill="url(#dmHalo) none"/>
+                    <circle cx="132.1" cy="48.4" r="5" fill="url(#dmGold) #c9ba77" filter="url(#dmGlow)"/>
+                  </g>
+                </g>
+                <text x="180" y="185" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="18" letter-spacing="0.3" fill="url(#dmGold) #c9ba77">DACH · B2B</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="dm-konsole-teil dm-konsole-feed" data-dm-teil="feed" aria-hidden="true">
+            <p class="dm-konsole-label">EINGEHEND ▸ ANLÄSSE</p>
+            <div class="dm-feed-box">
+              <span class="dm-feed-fade dm-feed-fade--oben"></span>
+              <span class="dm-feed-fade dm-feed-fade--unten"></span>
+              <ul class="dm-feed-liste">
+                <li><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">STELLEN</span><span class="dm-feed-firma">Nordtakt Systeme</span></span><span class="dm-feed-fenster">sofort</span></li>
+                <li><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">WACHSTUM</span><span class="dm-feed-firma">Brehmer Logistik</span></span><span class="dm-feed-fenster">1–4 Monate</span></li>
+                <li><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">FÜHRUNG</span><span class="dm-feed-firma">Hallert Industrieservice</span></span><span class="dm-feed-fenster">erste 90 Tage</span></li>
+                <li><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">FINANZIERUNG</span><span class="dm-feed-firma">Veltmann Kunststofftechnik</span></span><span class="dm-feed-fenster">1–6 Monate</span></li>
+                <li><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">REGISTER</span><span class="dm-feed-firma">Osterloh Medizintechnik</span></span><span class="dm-feed-fenster">3–9 Monate</span></li>
+                <li><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">STELLEN</span><span class="dm-feed-firma">Kirchmoor Antriebstechnik</span></span><span class="dm-feed-fenster">2–8 Wochen</span></li>
+                <li><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">MARKT</span><span class="dm-feed-firma">Saatweide Verfahrenstechnik</span></span><span class="dm-feed-fenster">1–3 Monate</span></li>
+                <li><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">DRUCK</span><span class="dm-feed-firma">Dehlbrügge Anlagenbau</span></span><span class="dm-feed-fenster">1–6 Monate</span></li>
+                <li aria-hidden="true"><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">STELLEN</span><span class="dm-feed-firma">Nordtakt Systeme</span></span><span class="dm-feed-fenster">sofort</span></li>
+                <li aria-hidden="true"><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">WACHSTUM</span><span class="dm-feed-firma">Brehmer Logistik</span></span><span class="dm-feed-fenster">1–4 Monate</span></li>
+                <li aria-hidden="true"><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">FÜHRUNG</span><span class="dm-feed-firma">Hallert Industrieservice</span></span><span class="dm-feed-fenster">erste 90 Tage</span></li>
+                <li aria-hidden="true"><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">FINANZIERUNG</span><span class="dm-feed-firma">Veltmann Kunststofftechnik</span></span><span class="dm-feed-fenster">1–6 Monate</span></li>
+                <li aria-hidden="true"><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">REGISTER</span><span class="dm-feed-firma">Osterloh Medizintechnik</span></span><span class="dm-feed-fenster">3–9 Monate</span></li>
+                <li aria-hidden="true"><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">STELLEN</span><span class="dm-feed-firma">Kirchmoor Antriebstechnik</span></span><span class="dm-feed-fenster">2–8 Wochen</span></li>
+                <li aria-hidden="true"><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">MARKT</span><span class="dm-feed-firma">Saatweide Verfahrenstechnik</span></span><span class="dm-feed-fenster">1–3 Monate</span></li>
+                <li aria-hidden="true"><span class="dm-feed-links"><span class="dm-feed-punkt"></span><span class="dm-feed-art">DRUCK</span><span class="dm-feed-firma">Dehlbrügge Anlagenbau</span></span><span class="dm-feed-fenster">1–6 Monate</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dm-konsole-teil dm-konsole-auswert" data-dm-teil="auswertung">
+            <p class="dm-konsole-label">AUSWERTUNG ▸ GRUND FÜR DEN ANRUF</p>
+            <div class="dm-auswertung-box">
+              <p class="dm-konsole-auswertung"><span data-dm-tippen>Nordtakt Systeme schreibt dieselbe Vertriebsstelle nach sechs Wochen erneut aus. Heißt: Die Besetzung hat nicht gehalten, das Problem ist ungelöst. Fenster: sofort. Zuständig: Leitung Vertrieb.</span><span class="dm-auswertung-cursor" aria-hidden="true"></span></p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+      <figcaption class="dm-konsole-fuss">Beispieldaten zur Veranschaulichung. Die Firmennamen sind erfunden, die
+        Anlässe und Zeitfenster sind echt – sie stammen aus unserem Signalkatalog.</figcaption>
+    </figure>
+    <!-- =============== Ende Signal-Konsole (kompakte Fassung) ============== -->
+
     <figure class="fig" data-dm-reveal>
       <div class="fig-box">
         <svg class="dmg-canvas" viewBox="0 0 1120 560" role="img" aria-label="Vergleich zweier Gesprächseinstiege: ohne Anlass und mit einem öffentlich nachprüfbaren Anlass">
@@ -886,5 +1007,6 @@ function ccOpen(){document.getElementById('cookie-hinweis').hidden=false;}
   if(!w){document.getElementById('cookie-hinweis').hidden=false;}else if(w==='ja'){ccStart();}})();
 </script>
 <script src="/assets/dm-effects.js" defer></script>
+<script src="/assets/dm-konsole.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,440 @@
+/* ======================================================================
+   DEALMAKERS — Signal-Konsole
+   Eigenstaendiges Stylesheet. Greift NICHT in styles.css oder
+   dm-effects.css ein und wird von beiden nicht gebraucht.
+
+   Grundgesetz H1: Der hier definierte Zustand ist IMMER der fertige,
+   voll sichtbare Zustand. Jede Bewegung haengt an einem Attribut, das
+   erst JS zur Laufzeit setzt:
+     [data-dm-konsole="js"]      -> JS ist da (Takt-Hervorhebung, Dimmen)
+     [data-dm-bewegung="an"]     -> Bewegung ist erlaubt (Animationen)
+   Ohne JavaScript steht alles still und ist vollstaendig lesbar.
+
+   Palette (verbindlich, SPEC-GRAFIK Abschnitt 2):
+     #04061a #070b22 #0c1230 #171a2e #222a4d #2c355e
+     Gold #e0d199 #c9ba77 #b5a55e | Text #f2f3f8 #96a0bb
+     Stahl #7c8ab5 #5a6a9a #3e4a75
+   ====================================================================== */
+
+/* ---------- Rahmen: Figure + zweispaltiges Raster --------------------- */
+
+.dm-konsole-block { margin: 2.4rem 0; }
+
+.dm-konsole-raster {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.4rem, 2.6vw, 2.4rem);
+  align-items: start;
+}
+
+.dm-konsole-block--klein .dm-konsole-raster { grid-template-columns: minmax(0, 1fr); }
+
+/* ---------- Takt-Spalte ------------------------------------------------ */
+
+.dm-takte { display: grid; gap: 10px; }
+
+.dm-takt {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  width: 100%;
+  margin: 0;
+  padding: 14px 16px;
+  text-align: left;
+  font-family: inherit;
+  color: #f2f3f8;
+  background: #0c1230;
+  border: 1px solid #222a4d;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 1;
+  transition: border-color 400ms cubic-bezier(.16,.86,.24,1),
+              background-color 400ms cubic-bezier(.16,.86,.24,1),
+              opacity 400ms cubic-bezier(.16,.86,.24,1);
+}
+
+.dm-takt__ziffer {
+  display: block;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: .12em;
+  color: #c9ba77;
+  padding-top: 2px;
+}
+
+.dm-takt__kopf {
+  display: block;
+  font-family: Archivo, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: #f2f3f8;
+}
+
+.dm-takt__text {
+  display: block;
+  margin-top: 5px;
+  font-size: .92rem;
+  line-height: 1.55;
+  color: #96a0bb;
+}
+
+/* Hervorhebung und Dimmen erst, wenn JS laeuft. */
+[data-dm-konsole="js"] .dm-takt { opacity: .62; }
+[data-dm-konsole="js"] .dm-takt.is-aktiv {
+  opacity: 1;
+  background: #171a2e;
+  border-color: #c9ba77;
+}
+[data-dm-konsole="js"] .dm-takt.is-aktiv .dm-takt__text { color: #cdd4e6; }
+
+.dm-takt:hover { border-color: #2c355e; opacity: 1; }
+.dm-takt:focus-visible,
+.dm-takt:focus {
+  outline: 2px solid #e0d199;
+  outline-offset: 3px;
+  opacity: 1;
+}
+
+/* ---------- Konsolen-Panel -------------------------------------------- */
+
+.dm-konsole {
+  display: block;
+  background: #0c1230;
+  border: 1px solid #222a4d;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .45);
+  overflow: hidden;
+}
+
+.dm-konsole-kopf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 18px;
+  background: linear-gradient(180deg, #171a2e 0%, #131836 100%);
+  border-bottom: 1px solid #222a4d;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #96a0bb;
+}
+
+.dm-konsole-kopf__links { display: inline-flex; align-items: center; gap: 9px; min-width: 0; }
+.dm-konsole-kopf__titel { color: #f2f3f8; }
+
+.dm-konsole-punkt {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #c9ba77;
+  box-shadow: 0 0 0 3px rgba(201, 186, 119, .16);
+}
+
+[data-dm-bewegung="an"] .dm-konsole-punkt {
+  animation: dm-punkt-puls 2.4s ease-in-out infinite;
+}
+
+@keyframes dm-punkt-puls {
+  0%, 100% { opacity: .5; }
+  50%      { opacity: 1; }
+}
+
+.dm-konsole-marke { white-space: nowrap; letter-spacing: .1em; }
+.dm-konsole-marke a { color: #c9ba77; text-decoration: none; border-bottom: 1px solid rgba(201, 186, 119, .45); }
+.dm-konsole-marke a:hover { color: #e0d199; border-bottom-color: #e0d199; }
+
+/* Bausteine des Panels; die Kopplung markiert genau einen davon. */
+.dm-konsole-teil {
+  --dm-panel: #0c1230;
+  background-color: var(--dm-panel);
+  box-shadow: inset 0 0 0 0 rgba(201, 186, 119, 0);
+  transition: box-shadow 400ms cubic-bezier(.16,.86,.24,1),
+              background-color 400ms cubic-bezier(.16,.86,.24,1);
+}
+.dm-konsole-teil.is-markiert {
+  --dm-panel: #171a2e;
+  box-shadow: inset 0 0 0 1px #c9ba77;
+}
+
+.dm-konsole-label {
+  margin: 0;
+  padding: 13px 18px 0;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #5a6a9a;
+}
+
+/* ---------- Radar ------------------------------------------------------ */
+
+.dm-konsole-radar { padding: 16px 18px 12px; }
+.dm-konsole-radar__inner { max-width: 300px; margin: 0 auto; }
+
+.dm-radar { display: block; width: 100%; height: auto; }
+
+/* Der Strahl steht still, bis JS Bewegung erlaubt. */
+.dm-radar__strahl {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+[data-dm-bewegung="an"] .dm-radar__strahl {
+  animation: dm-radar-lauf 14s linear infinite;
+}
+
+@keyframes dm-radar-lauf {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Grundzustand: alle Punkte leuchten. Erst die Animation dimmt sie
+   zwischen zwei Durchlaeufen des Strahls ab. */
+.dm-radar__auf { opacity: 1; }
+[data-dm-bewegung="an"] .dm-radar__auf {
+  animation: dm-radar-treffer 14s linear infinite;
+  animation-delay: var(--dm-verzug, 0s);
+}
+
+@keyframes dm-radar-treffer {
+  0%    { opacity: .16; }
+  0.4%  { opacity: 1; }
+  8.5%  { opacity: 1; }
+  15%   { opacity: .16; }
+  100%  { opacity: .16; }
+}
+
+/* ---------- Feed ------------------------------------------------------- */
+
+.dm-konsole-feed { padding: 0 0 14px; }
+
+.dm-feed-box {
+  position: relative;
+  margin-top: 6px;
+  height: 7.5rem;
+  overflow: hidden;
+}
+
+.dm-feed-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 28px;
+  pointer-events: none;
+  z-index: 2;
+}
+.dm-feed-fade--oben  { top: 0;    background: linear-gradient(180deg, var(--dm-panel) 0%, rgba(12, 18, 48, 0) 100%); }
+.dm-feed-fade--unten { bottom: 0; background: linear-gradient(0deg,   var(--dm-panel) 0%, rgba(12, 18, 48, 0) 100%); }
+
+.dm-feed-liste {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  will-change: transform;
+}
+[data-dm-bewegung="an"] .dm-feed-liste {
+  animation: dm-feed-lauf 36s linear infinite;
+}
+
+@keyframes dm-feed-lauf {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+
+/* margin: 0 hebt "li { margin-bottom: .5em }" aus styles.css auf — sonst
+   passt die Zeilenhoehe nicht mehr zur -50 %-Distanz des Keyframes. */
+.dm-feed-liste li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+  height: 28px;
+  padding: 0 18px;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11.5px;
+  line-height: 16px;
+}
+
+.dm-feed-links { display: flex; align-items: center; gap: 9px; min-width: 0; }
+
+.dm-feed-punkt {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #c9ba77;
+}
+
+.dm-feed-art {
+  flex: 0 0 auto;
+  width: 6.6rem;
+  color: #c9ba77;
+  letter-spacing: .06em;
+}
+
+.dm-feed-firma {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #f2f3f8;
+}
+
+.dm-feed-fenster { flex: 0 0 auto; color: #96a0bb; white-space: nowrap; }
+
+/* ---------- Auswertung ------------------------------------------------- */
+
+.dm-konsole-auswert { padding: 0 0 16px; border-top: 1px solid #222a4d; }
+
+.dm-auswertung-box {
+  margin-top: 6px;
+  padding: 0 18px;
+  min-height: 7rem;
+}
+
+.dm-konsole-auswertung {
+  margin: 0;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #cdd4e6;
+}
+.dm-konsole-auswertung b,
+.dm-konsole-auswertung strong { color: #e0d199; font-weight: 600; }
+
+.dm-auswertung-cursor {
+  display: inline-block;
+  width: .5em;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: #c9ba77;
+  opacity: 1;
+}
+[data-dm-bewegung="an"] .dm-auswertung-cursor {
+  animation: dm-cursor-blinken 1s steps(1) infinite;
+}
+
+/* Der Wert 0.0 steht nur in diesem Keyframe, nie im Grundzustand:
+   der Cursor ist ohne JS dauerhaft sichtbar. */
+@keyframes dm-cursor-blinken {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0.0; }
+}
+
+/* ---------- Bildunterschrift + kompakte Fassung ------------------------ */
+
+.dm-konsole-fuss {
+  margin: .9rem 0 0;
+  font-size: .9rem;
+  line-height: 1.6;
+  color: #96a0bb;
+}
+
+.dm-konsole-intro {
+  margin: 0 0 1.2rem;
+  max-width: 62ch;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #cdd4e6;
+}
+.dm-konsole-mehr {
+  display: inline-block;
+  margin-top: .3rem;
+  font-family: Archivo, system-ui, sans-serif;
+  font-size: .95rem;
+  color: #c9ba77;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 186, 119, .45);
+}
+.dm-konsole-mehr:hover { color: #e0d199; border-bottom-color: #e0d199; }
+
+/* Kompakte Fassung (Startseite): Radar links, Feed + Auswertung rechts
+   daneben. Der Kopf laeuft ueber beide Spalten, das Radar belegt beide
+   Inhaltszeilen. Das Radar ist niedriger als Feed + Auswertung zusammen —
+   die Konsole wird durch das Radar also nicht hoeher, nur breiter. */
+.dm-konsole--klein {
+  max-width: 820px;
+  display: grid;
+  grid-template-columns: minmax(0, 236px) minmax(0, 1fr);
+  grid-template-areas:
+    "kopf  kopf"
+    "radar feed"
+    "radar auswert";
+  align-content: start;
+}
+.dm-konsole--klein > .dm-konsole-kopf    { grid-area: kopf; }
+.dm-konsole--klein > .dm-konsole-radar   { grid-area: radar; }
+.dm-konsole--klein > .dm-konsole-feed    { grid-area: feed; }
+.dm-konsole--klein > .dm-konsole-auswert { grid-area: auswert; }
+
+.dm-konsole--klein > .dm-konsole-radar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  border-right: 1px solid #222a4d;
+}
+.dm-konsole--klein .dm-konsole-radar__inner { width: 100%; max-width: 200px; }
+
+.dm-konsole--klein .dm-feed-box { height: 7.5rem; }
+.dm-konsole--klein .dm-auswertung-box { min-height: 6rem; }
+
+/* ---------- Enge Viewports -------------------------------------------- */
+
+@media (max-width: 900px) {
+  .dm-konsole-raster { grid-template-columns: minmax(0, 1fr); }
+  .dm-takte { order: 2; }
+}
+
+/* Unter 760 px steht in der kompakten Fassung das Radar ueber dem Feed. */
+@media (max-width: 760px) {
+  .dm-konsole--klein { display: block; max-width: 640px; }
+  .dm-konsole--klein > .dm-konsole-radar {
+    padding: 12px 14px;
+    border-right: 0;
+    border-bottom: 1px solid #222a4d;
+  }
+  .dm-konsole--klein .dm-konsole-radar__inner { max-width: 170px; }
+}
+
+@media (max-width: 560px) {
+  .dm-feed-art { width: 5.4rem; }
+  .dm-feed-liste li { padding: 0 14px; font-size: 11px; }
+  .dm-konsole-kopf { padding: 12px 14px; font-size: 10px; letter-spacing: .1em; }
+  .dm-konsole-label,
+  .dm-auswertung-box { padding-left: 14px; padding-right: 14px; }
+  .dm-konsole-radar { padding: 14px 14px 10px; }
+}
+
+@media (max-width: 420px) {
+  .dm-konsole-radar__inner { max-width: 220px; }
+  .dm-konsole-kopf { flex-wrap: wrap; row-gap: 6px; }
+  .dm-takt { grid-template-columns: 1.6rem minmax(0, 1fr); gap: 10px; padding: 12px 13px; }
+}
+
+/* ---------- Bewegung aus ---------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .dm-konsole,
+  .dm-konsole *,
+  .dm-konsole-block,
+  .dm-konsole-block * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .dm-feed-liste { transform: none !important; }
+  .dm-radar__strahl { transform: none !important; }
+  .dm-radar__auf { opacity: 1 !important; }
+  .dm-auswertung-cursor { opacity: 1 !important; }
+}
