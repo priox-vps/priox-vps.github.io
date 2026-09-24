@@ -230,6 +230,9 @@ section.tight { padding: clamp(32px, 3.5vw, 52px) 0; }
 .grid + p, .grid + .table-scroll, .grid + figure,
 .grid + h2, .grid + h3, .grid + .sec-head { margin-top: 2.4rem; }
 .grid + .small { margin-top: 2rem; }
+/* Gleiche Luft, wenn statt eines Absatzes ein Textblock im DIV folgt.
+   .note und .btn-row bringen ihren eigenen Abstand mit und bleiben ausgenommen. */
+.grid + div:not(.note):not(.btn-row) { margin-top: 2.4rem; }
 .bg-soft .card, .bg-dark .card { background: var(--bg); }
 .card-link { display: block; text-decoration: none; color: inherit;
              transition: transform .2s var(--ease), box-shadow .2s var(--ease),
@@ -571,3 +574,9 @@ h1, h2 { position: relative; }
    etwas flachere Schriftgrößen-Kurve als bei den übrigen Überschriften. */
 .hero h1.h1-wechsel { font-size: clamp(1.95rem, 1.2rem + 2.65vw, 3.2rem); }
 
+
+/* Inhaltsverzeichnis des Methodenhandbuchs auf der Trainingsseite: zweispaltig,
+   sobald genug Breite da ist; ein Kapitel darf nie über den Spaltenumbruch reißen. */
+ol.buch-toc { columns: 17rem; column-gap: 2.6rem; padding-left: 1.3rem; margin: 1rem 0 0; }
+ol.buch-toc li { break-inside: avoid; margin: 0 0 .55em; padding-left: .2rem; }
+ol.buch-toc li span { color: var(--muted, #96a0bb); }
