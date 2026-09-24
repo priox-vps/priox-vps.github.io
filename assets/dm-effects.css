@@ -45,12 +45,16 @@
 
 /* --- 1 Intro-Vorhang -------------------------------------------- */
 
+/* Fehlerbehebung 24.09.2026: Der Vorhang ist im Grundzustand NICHT sichtbar.
+   Ohne JavaScript verdeckte er sonst dauerhaft die ganze Seite. Eingeblendet
+   wird er erst durch .dm-js am <html> - die Klasse setzt dm-effects.js. Siehe
+   den Block "EFFEKTPAKET" am Dateiende. */
 .dm-preloader {
   position: fixed;
   inset: 0;
   z-index: 99;
   background: var(--dm-bg);
-  display: grid;
+  display: none;
   grid-template-rows: 1fr auto;
   padding: clamp(20px, 4vw, 56px);
   will-change: transform;
@@ -318,4 +322,357 @@
   .dm-ghost,
   .dm-sweep { display: none !important; }
   .dm-preloader { display: none !important; }
+}
+
+/* === SCHAUSTUECK: Zeitachse "So laeuft der Start" (Startseite) =========
+ *
+ * Gehoert zu Modul 18 in dm-effects.js.
+ *
+ * GRUNDZUSTAND (dieses Stylesheet allein, ohne JavaScript):
+ *   Linie vollstaendig gezeichnet, alle vier Schritte in voller Deckkraft.
+ *   Hier steht bewusst keine Regel, die Text abdunkelt oder versteckt.
+ *
+ * BEWEGUNG:
+ *   ausschliesslich unter [data-dm-timeline="on"]. Dieses Attribut setzt
+ *   nur das JavaScript zur Laufzeit. Animiert werden nur transform und
+ *   opacity; die kleinste Deckkraft fuer Text ist 0.62 - gedaempft, aber
+ *   lesbar. Nie display:none, visibility:hidden oder opacity:0.
+ *
+ * LAYOUT:
+ *   ab 900 px waagerecht (Linie quer), darunter senkrecht (Linie links).
+ *   Kein festes Mindestmass, kein Querscrollen, Text bleibt Text.
+ * ====================================================================== */
+
+.dm-tl { margin: clamp(2rem, 3.4vw, 3rem) 0 0; }
+
+.dm-tl__plate {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(26px, 3.4vw, 46px) clamp(20px, 3vw, 44px);
+  background:
+    radial-gradient(118% 150% at 12% 0%, rgba(201, 186, 119, .11), rgba(201, 186, 119, 0) 58%),
+    linear-gradient(180deg, var(--surface-2), var(--surface));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .42), inset 0 1px 0 rgba(255, 255, 255, .05);
+}
+
+/* Feine Goldkante links - dasselbe Motiv wie bei der Buchplatte. */
+.dm-tl__plate::before {
+  content: "";
+  position: absolute;
+  left: -1px; top: 14%; bottom: 14%;
+  width: 2px;
+  background: linear-gradient(180deg,
+    rgba(201, 186, 119, 0), var(--gold), rgba(201, 186, 119, 0));
+}
+
+.dm-tl__kicker {
+  margin: 0 0 clamp(22px, 2.6vw, 32px);
+  padding-bottom: clamp(14px, 1.8vw, 20px);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.55;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.dm-tl__steps {
+  --dm-tl-gap: clamp(18px, 2.4vw, 34px);
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 var(--dm-tl-gap);
+  margin: 0;
+  padding: 0;
+}
+
+.dm-tl__step { position: relative; margin: 0; }
+
+/* Schiene zwischen zwei Ziffernkreisen. Der vierte Schritt hat keine -
+   sie steht deshalb gar nicht erst im HTML, statt sie auszublenden. */
+.dm-tl__rail {
+  position: absolute;
+  top: 21px;
+  left: 56px;
+  right: calc(12px - var(--dm-tl-gap));
+  height: 2px;
+  background: var(--line);
+}
+
+.dm-tl__fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold));
+  will-change: transform;
+}
+
+.dm-tl__node {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: var(--gold);
+  color: var(--deep);
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 1;
+  transition: background .45s var(--ease), border-color .45s var(--ease),
+              color .45s var(--ease), box-shadow .45s var(--ease),
+              transform .45s var(--ease);
+}
+
+.dm-tl__title {
+  margin: clamp(16px, 1.7vw, 22px) 0 .3rem;
+  font-size: clamp(1.02rem, .94rem + .3vw, 1.22rem);
+  line-height: 1.22;
+}
+
+.dm-tl__meta {
+  margin: 0 0 .5rem;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: .04em;
+  color: var(--gold);
+}
+
+.dm-tl__desc {
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.dm-tl__foot {
+  margin: clamp(26px, 3vw, 38px) 0 0;
+  padding-top: clamp(16px, 2vw, 22px);
+  border-top: 1px solid var(--line);
+  font-size: .9rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* ---- Unter 900 px: senkrechte Achse, Linie links ---------------------- */
+@media (max-width: 899px) {
+  .dm-tl__steps {
+    --dm-tl-gap: clamp(26px, 5vw, 38px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--dm-tl-gap) 0;
+  }
+  .dm-tl__step { padding-left: 62px; min-height: 44px; }
+  .dm-tl__node { position: absolute; left: 0; top: 0; }
+  .dm-tl__rail {
+    top: 56px;
+    left: 21px;
+    right: auto;
+    bottom: calc(12px - var(--dm-tl-gap));
+    width: 2px;
+    height: auto;
+  }
+  .dm-tl__fill {
+    transform-origin: top center;
+    background: linear-gradient(180deg, var(--gold-deep), var(--gold));
+  }
+  .dm-tl__title { margin-top: .3rem; }
+}
+
+/* ---- Nur mit JavaScript: Fortschritt, Abdunklung, Aktivierung --------
+   Alles ab hier haengt am Attribut, das dm-effects.js setzt. Faellt das
+   JavaScript aus, greift keine einzige dieser Regeln. --dm-tl-f ist der
+   Fuellgrad einer Schiene zwischen 0 und 1. */
+[data-dm-timeline="on"] .dm-tl__fill {
+  transform: scaleX(var(--dm-tl-f, 0));
+  transition: transform .28s linear;
+}
+@media (max-width: 899px) {
+  [data-dm-timeline="on"] .dm-tl__fill { transform: scaleY(var(--dm-tl-f, 0)); }
+}
+
+/* Noch nicht erreichte Schritte: gedaempft, aber vollstaendig lesbar. */
+[data-dm-timeline="on"] .dm-tl__step {
+  opacity: 0.62;
+  transition: opacity .5s var(--ease);
+}
+[data-dm-timeline="on"] .dm-tl__node {
+  background: var(--gold-pale);
+  border-color: rgba(201, 186, 119, .35);
+  color: var(--gold);
+}
+
+/* Erreichter Schritt: voller Text, gefuellter Ziffernkreis mit weichem Schein. */
+[data-dm-timeline="on"] .dm-tl__step.is-on { opacity: 1; }
+[data-dm-timeline="on"] .dm-tl__step.is-on .dm-tl__node {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--deep);
+  box-shadow: 0 0 0 6px rgba(201, 186, 119, .09), 0 10px 26px rgba(201, 186, 119, .22);
+  transform: scale(1.05);
+}
+
+/* Bewegungsreduktion: Endzustand, statisch. Das JavaScript setzt das
+   Attribut in diesem Fall gar nicht erst - dies ist nur das Sicherheitsnetz
+   fuer den Fall, dass die Einstellung nach dem Laden umgestellt wird. */
+@media (prefers-reduced-motion: reduce) {
+  [data-dm-timeline="on"] .dm-tl__fill { transform: none; }
+  [data-dm-timeline="on"] .dm-tl__step { opacity: 1; }
+  [data-dm-timeline="on"] .dm-tl__node {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--deep);
+    transform: none;
+  }
+}
+
+/* === EFFEKTPAKET: Partikelfeld, Überschriften-Einzug, Maßstab, Zeiger ====
+ *
+ * Gehört zu den Modulen 19-22 in dm-effects.js.
+ *
+ * GRUNDZUSTAND (dieses Stylesheet allein, ohne JavaScript):
+ *   Die Seite ist fertig. Kein Vorhang, kein Canvas, keine Zeichenaufspaltung,
+ *   keine Ausblendung. Alle Startzustände der Animationen (Versatz,
+ *   Transparenz, Drehung) setzt ausschließlich das JavaScript zur Laufzeit
+ *   als Inline-Stil - hier steht keine einzige Regel, die etwas versteckt.
+ *
+ * SCHALTER:
+ *   .dm-js       am <html>, gesetzt vom Skript ganz oben in dm-effects.js.
+ *   [data-dm-split="on"]  setzt das Skript auf eine Überschrift, nachdem es
+ *                sie in Wörter und Zeichen zerlegt hat.
+ *   [data-dm-magnet="on"] setzt das Skript, solange der Zeiger in der Nähe
+ *                einer Hauptschaltfläche steht.
+ *
+ * FARBEN: nur die vorhandenen Töne. Nichts aufgehellt.
+ * ====================================================================== */
+
+/* --- E  Ladevorhang: nur mit JavaScript ---------------------------------
+   Ohne .dm-js bleibt .dm-preloader auf display:none (siehe oben im
+   Grundstylesheet). Erst das Skript blendet ihn ein - damit sieht ein
+   Besucher ohne JavaScript sofort den Inhalt statt einer leeren Fläche. */
+.dm-js .dm-preloader { display: grid; }
+
+/* --- A  Partikelfeld ----------------------------------------------------
+   Das Canvas legt das Skript selbst an; ohne JavaScript existiert es nicht.
+   Es liegt hinter allem (z-index -1) und fängt nichts ab.
+   Damit es überhaupt sichtbar wird, muss der Seitenkörper durchsichtig
+   sein: die Grundfarbe trägt ohnehin das <html>-Element, beide haben
+   denselben Ton (--bg). Optisch ändert sich dadurch nichts. */
+.dm-js body { background-color: transparent; }
+
+.dm-field {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Der Hero trägt einen eigenen Verlauf und würde das Feld komplett
+   zudecken. Er behält exakt dieselben drei Farbstopps, bekommt aber
+   Durchlass. Weil der Grund darunter (--bg #070b22) dunkler ist als die
+   unteren Stopps, wird der Hero dadurch minimal DUNKLER - nie heller. */
+.dm-js .hero {
+  background-image: linear-gradient(170deg,
+    rgba(4, 6, 26, .88) 0%,
+    rgba(11, 17, 48, .62) 56%,
+    rgba(19, 27, 64, .46) 100%);
+}
+
+/* --- B  Überschriften ziehen zeichenweise ein --------------------------
+   Nur Bühne und Endzustand. Der Startzustand jedes Zeichens (opacity 0,
+   translateY, rotateX) steht als Inline-Stil im DOM und wird nur vom
+   Skript gesetzt. */
+[data-dm-split="on"] {
+  perspective: 820px;
+  perspective-origin: 50% 60%;
+}
+[data-dm-split="on"] .dm-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+[data-dm-split="on"] .dm-char {
+  display: inline-block;
+  transform-origin: 50% 80%;
+  will-change: transform, opacity;
+}
+
+/* --- C  Typografie auf Maßstab ----------------------------------------
+   Greift über das Auszeichnungsattribut, nicht über den Elementnamen -
+   so ändert sich nur, was ausdrücklich ausgezeichnet wurde (heute die
+   Startseite), und nicht die restlichen 28 Seiten, die dieselbe Datei
+   laden. Die untere Grenze ist bewusst kleiner als in der Spec genannt:
+   bei 360 px Breite ragt "Vertriebsagentur" sonst aus dem Bild. */
+h1[data-dm-split] {
+  font-size: clamp(2.2rem, 7vw, 5.5rem);
+  line-height: .95;
+  letter-spacing: -.03em;
+}
+.hero h1[data-dm-split].h1-wechsel {
+  font-size: clamp(2.2rem, 7vw, 5.5rem);
+}
+h2[data-dm-split] {
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  line-height: 1.02;
+  letter-spacing: -.02em;
+}
+
+/* --- D  Magnetische Hauptschaltflächen ---------------------------------
+   Das Skript schreibt nur zwei Zahlen in --dm-mx / --dm-my. Der Versatz
+   selbst steht hier, damit die vorhandene Hover-Anhebung der Schaltfläche
+   erhalten bleibt (sie würde von einem Inline-transform überschrieben). */
+.dm-js [data-dm-magnet] {
+  transform: translate(var(--dm-mx, 0px), var(--dm-my, 0px));
+  transition: transform .45s var(--dm-ease), background .2s ease, border-color .2s ease;
+}
+.dm-js [data-dm-magnet]:hover {
+  transform: translate(var(--dm-mx, 0px), calc(var(--dm-my, 0px) - 2px));
+}
+.dm-js [data-dm-magnet="on"] {
+  transition: transform .11s linear, background .2s ease, border-color .2s ease;
+}
+
+/* --- D  Lichtkante auf Karten ------------------------------------------
+   Wiederverwendung des vorhandenen Glanz-Overlays .dm-sweep (Modul 11):
+   gleiches Bauteil, andere Füllung. Das Element hängt das Skript zur
+   Laufzeit in die Karte - ohne JavaScript gibt es keines.
+   isolation:isolate macht die Karte zum eigenen Stapelkontext; erst dadurch
+   liegt der Schimmer über dem Kartengrund, aber unter dem Text. */
+.dm-js [data-dm-phase-card] { isolation: isolate; }
+
+.dm-sweep--pointer {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: inherit;
+  mix-blend-mode: normal;
+  background: radial-gradient(220px 220px at var(--dm-sx, 50%) var(--dm-sy, 50%),
+    rgba(201, 186, 119, .13),
+    rgba(201, 186, 119, .05) 42%,
+    rgba(201, 186, 119, 0) 72%);
+  transition: opacity .35s ease;
+}
+
+/* --- Bewegungsreduktion: Sicherheitsnetz -------------------------------
+   Das Skript startet die Effekte in diesem Fall gar nicht erst. Falls die
+   Einstellung nach dem Laden umgestellt wird, greift das hier. */
+@media (prefers-reduced-motion: reduce) {
+  .dm-field { display: none !important; }
+  .dm-sweep--pointer { display: none !important; }
+  .dm-js [data-dm-magnet] { transform: none !important; }
+  [data-dm-split="on"] .dm-char {
+    transform: none !important;
+    opacity: 1 !important;
+  }
 }

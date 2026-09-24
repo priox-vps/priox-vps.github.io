@@ -102,7 +102,7 @@ strong { color: var(--ink); font-weight: 700; }
 
 .lead { font-size: clamp(1.1rem, 1.02rem + .45vw, 1.32rem); line-height: 1.6;
         color: var(--text); }
-.eyebrow { display: inline-block; font-family: var(--font-mono); font-size: .7rem;
+.eyebrow { display: inline-block; font-family: var(--font-mono); font-size: .8rem;
            font-weight: 400; letter-spacing: .22em; text-transform: uppercase;
            color: var(--gold); margin: 0 0 .9rem; }
 .muted { color: var(--muted); }
@@ -136,7 +136,7 @@ ul.ticks li::before {
 .brand { display: flex; align-items: center; gap: .55rem; text-decoration: none;
          font-family: var(--font-head); font-weight: 800; letter-spacing: .06em;
          font-size: 1.1rem; color: var(--ink); margin-right: auto; }
-.brand span { color: var(--gold); font-size: .62rem; letter-spacing: .18em;
+.brand span { color: var(--gold); font-size: .8rem; letter-spacing: .18em;
               font-weight: 700; text-transform: uppercase; align-self: center;
               margin-top: .18em; }
 .brand-mark { display: block; flex: none; width: 36px; height: 36px; }

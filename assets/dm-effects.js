@@ -16,6 +16,32 @@
   var ACCENT = "#B5A55E";
   var EASE = "cubic-bezier(.16,.86,.24,1)";
 
+  /* --- Frühstart (Nachtrag 24.09.2026) -----------------------------
+   * Diese paar Zeilen müssen laufen, BEVOR init() startet. Das Skript
+   * ist mit defer eingebunden; document.readyState steht dann schon auf
+   * "interactive", weshalb init() weiter unten sofort aufgerufen wird
+   * und nicht erst bei DOMContentLoaded. Alles andere des Nachtrags
+   * steht angehängt am Dateiende im Block "EFFEKTPAKET".
+   *
+   *   a) .dm-js am <html> blendet den Ladevorhang ein. Ohne JavaScript
+   *      bleibt .dm-preloader auf display:none und verdeckt nichts mehr
+   *      (Fehlerbehebung Ladevorhang).
+   *   b) h1/h2 mit data-dm-split gehören Modul 21. Der Vermerk
+   *      data-split-done hält Modul 10 davon ab, dieselbe Überschrift
+   *      per textContent="" zu leeren — das würde das rotierende
+   *      Goldwort im Hero zerstören. data-dm-reveal fällt weg, damit
+   *      Modul 14 die Überschrift nicht ein zweites Mal aufdeckt; ohne
+   *      das Attribut ist sie schlicht sichtbar, also im Grundzustand.
+   * ---------------------------------------------------------------- */
+  document.documentElement.classList.add("dm-js");
+  if (document.body) {
+    document.querySelectorAll("h1[data-dm-split], h2[data-dm-split]").forEach(function (el) {
+      el.dataset.splitDone = "1";
+      el.removeAttribute("data-dm-reveal");
+      el.setAttribute("data-dm-claimed", "1");
+    });
+  }
+
   function DM() {
     this.cleanups = [];
     this.pointer = null;
@@ -741,5 +767,611 @@
     document.addEventListener("DOMContentLoaded", function () { instance.init(); });
   } else {
     instance.init();
+  }
+})(window);
+
+/* ======================================================================
+ * 18 — Schaustück: scrollgekoppelte Zeitachse "So läuft der Start."
+ *
+ * Eigenständiges Modul, hängt an keiner Funktion oben drüber. Es setzt
+ * am Wurzelelement [data-dm-timeline] zur Laufzeit data-dm-timeline="on";
+ * erst dadurch greifen die Bewegungsregeln in dm-effects.css. Ohne
+ * JavaScript passiert nichts — die Zeitachse steht dann fertig gezeichnet
+ * und in voller Deckkraft da.
+ *
+ * Kopplung: Der Fortschritt wird in jedem Frame neu aus
+ * getBoundingClientRect() berechnet (nie aufsummiert, deshalb driftet
+ * nichts und Sprünge per Ankerlink stimmen sofort). Ein Wert zwischen 0
+ * und 1 wird auf die drei Streckenabschnitte verteilt und je Abschnitt als
+ * CSS-Variable --dm-tl-f geschrieben; CSS macht daraus scaleX bzw. scaleY.
+ * Kein Pinning, kein Eingriff ins Scrollen, nur transform und opacity.
+ * ====================================================================== */
+(function (global) {
+  "use strict";
+
+  var ATTR = "data-dm-timeline";
+  var START_AT = 0.90;   /* Elementoberkante bei 90 % Fensterhöhe: Start */
+  var END_AT = 0.62;     /* Elementunterkante bei 62 % Fensterhöhe: Ende  */
+  var MAX_OVER = 0.45;   /* Deckel für sehr hohe Elemente (Handy)         */
+  var LEAD = 0.92;       /* Ziffernkreis leuchtet kurz vor Abschnittsende */
+
+  function boot() {
+    var root = document.querySelector("[" + ATTR + "]");
+    if (!root) return;
+
+    /* Ältere Browser oder Bewegungsreduktion: Endzustand stehen lassen. */
+    if (!global.requestAnimationFrame || !global.matchMedia) return;
+    if (!global.CSS || !global.CSS.supports || !global.CSS.supports("--dm-tl-f", "0")) return;
+    if (global.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    var steps = [].slice.call(root.querySelectorAll("[data-dm-tl-step]"));
+    if (steps.length < 2) return;
+
+    var fills = [].slice.call(root.querySelectorAll(".dm-tl__fill"));
+    var segs = Math.max(1, steps.length - 1);
+    var seg = 1 / segs;
+
+    var from = 0, to = 1, last = -1, lastOn = -1;
+
+    function clamp(v) { return v < 0 ? 0 : (v > 1 ? 1 : v); }
+
+    function measure() {
+      var r = root.getBoundingClientRect();
+      var vh = global.innerHeight || document.documentElement.clientHeight || 800;
+      from = vh * START_AT;
+      to = Math.max(vh * END_AT - r.height, vh * -MAX_OVER);
+      if (to >= from) to = from - 1;
+      last = -1;
+      lastOn = -1;
+      update();
+    }
+
+    function apply(p) {
+      if (p !== last) {
+        last = p;
+        for (var i = 0; i < fills.length; i++) {
+          var f = clamp((p - i * seg) / seg);
+          fills[i].style.setProperty("--dm-tl-f", f.toFixed(3));
+        }
+      }
+      /* Zahl der erreichten Schritte */
+      var n = 1;
+      for (var k = 1; k < steps.length; k++) {
+        if (p >= k * seg * LEAD) n = k + 1;
+      }
+      if (n === lastOn) return;
+      lastOn = n;
+      for (var s = 0; s < steps.length; s++) {
+        steps[s].classList.toggle("is-on", s < n);
+      }
+    }
+
+    function update() {
+      var top = root.getBoundingClientRect().top;
+      apply(clamp((from - top) / (from - to)));
+    }
+
+    var framed = (function () {
+      var tick = false;
+      return function () {
+        if (tick) return;
+        tick = true;
+        global.requestAnimationFrame(function () { tick = false; update(); });
+      };
+    })();
+
+    root.setAttribute(ATTR, "on");
+    measure();
+
+    var onScroll = framed;
+    var onResize = function () { measure(); };
+    global.addEventListener("scroll", onScroll, { passive: true });
+    global.addEventListener("resize", onResize, { passive: true });
+    global.addEventListener("orientationchange", onResize, { passive: true });
+
+    /* Schriften laden nach — danach stimmt die Höhe erst wirklich. */
+    var t1 = global.setTimeout(measure, 300);
+    var t2 = global.setTimeout(measure, 1500);
+    if (document.fonts && document.fonts.ready && document.fonts.ready.then) {
+      document.fonts.ready.then(measure).catch(function () {});
+    }
+
+    /* An den vorhandenen Aufräummechanismus anhängen, falls vorhanden. */
+    if (global.DMEffects && global.DMEffects.cleanups) {
+      global.DMEffects.cleanups.push(function () {
+        global.removeEventListener("scroll", onScroll);
+        global.removeEventListener("resize", onResize);
+        global.removeEventListener("orientationchange", onResize);
+        global.clearTimeout(t1);
+        global.clearTimeout(t2);
+        root.setAttribute(ATTR, "");
+      });
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})(window);
+
+/* ======================================================================
+ * EFFEKTPAKET 24.09.2026 — Module 19–22
+ *
+ *   19  Grundschalter .dm-js + Anspruch auf die Überschriften
+ *   20  Partikelfeld hinter der Seite (A)
+ *   21  Überschriften ziehen zeichenweise ein (B)
+ *   22  Magnetische Schaltflächen + Lichtkante auf Karten (D)
+ *
+ * Eigene Kapselung, damit der Block oben nichts anfasst. Vanilla JS,
+ * keine Abhängigkeit, keine externe Ressource, kein fetch.
+ *
+ * GRUNDSATZ: Ohne dieses Skript ist die Seite fertig und vollständig
+ * sichtbar. Jeder Startzustand einer Animation (opacity 0, Versatz,
+ * Drehung) wird hier zur Laufzeit gesetzt — nie im Stylesheet.
+ * ==================================================================== */
+(function (global) {
+  "use strict";
+
+  var doc = global.document;
+  var root = doc.documentElement;
+  var EASE_OUT = "cubic-bezier(0.16, 1, 0.3, 1)";
+  var GOLD = "201, 186, 119";
+
+  function reducedMotion() {
+    return !!(global.matchMedia && global.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  }
+  function finePointer() {
+    return !!(global.matchMedia && global.matchMedia("(pointer: fine)").matches) &&
+           !(global.matchMedia && global.matchMedia("(hover: none)").matches);
+  }
+  function addCleanup(fn) {
+    if (global.DMEffects && global.DMEffects.cleanups) global.DMEffects.cleanups.push(fn);
+  }
+  /* rAF-Drossel: mehrere Zeigerereignisse pro Bild ergeben eine Rechnung. */
+  function framed(fn) {
+    var tick = false;
+    return function () {
+      if (tick) return;
+      tick = true;
+      global.requestAnimationFrame(function () { tick = false; fn(); });
+    };
+  }
+
+  /* ------------------------------------------------------------------
+   * 19. Liste der beanspruchten Überschriften
+   *
+   * Der eigentliche Anspruch wird ganz oben im Frühstart angemeldet —
+   * er muss vor init() stehen, sonst kommt Modul 10 zuerst an die
+   * Überschrift. Hier wird nur eingesammelt, was dort vermerkt wurde;
+   * der zweite Durchlauf ist die Rückfallebene, falls das Skript einmal
+   * ohne defer eingebunden wird.
+   * ---------------------------------------------------------------- */
+  var claimed = [];
+  (function collect() {
+    root.classList.add("dm-js");
+    if (!doc.body) return;
+    var heads = doc.querySelectorAll("h1[data-dm-split], h2[data-dm-split]");
+    for (var i = 0; i < heads.length; i++) {
+      heads[i].dataset.splitDone = "1";
+      heads[i].removeAttribute("data-dm-reveal");
+      claimed.push(heads[i]);
+    }
+  })();
+
+  /* ------------------------------------------------------------------
+   * 20. Partikelfeld (Aufgabe A)
+   *
+   * Ein festes Canvas hinter der ganzen Seite: feiner Staub aus weißen
+   * und goldenen Punkten, langsame Drift, Zeiger-Parallaxe (max 12 px)
+   * und ein weicher Goldschein am Zeiger.
+   *
+   * Sparsamkeit: 90 Punkte ab 1024 px, sonst 40. Nur eine Zeichnung pro
+   * Bild, Pixelverhältnis bei 2 gedeckelt, Pause sobald der Reiter in
+   * den Hintergrund geht. Grobe Zeiger (Touch) bekommen keine Reaktion.
+   * ---------------------------------------------------------------- */
+  function field() {
+    if (reducedMotion()) return;
+    if (!doc.body || doc.querySelector(".dm-field")) return;
+
+    var cv = doc.createElement("canvas");
+    cv.className = "dm-field";
+    cv.setAttribute("aria-hidden", "true");
+    var ctx = cv.getContext && cv.getContext("2d");
+    if (!ctx) return;
+    doc.body.insertBefore(cv, doc.body.firstChild);
+
+    var fine = finePointer();
+    var w = 0, h = 0, dpr = 1, dots = [], raf = 0, running = false;
+    var t0 = global.performance && global.performance.now ? global.performance.now() : Date.now();
+
+    /* Zeigerzustand: Ziel (px/py) und gedämpfter Istwert (cx/cy). */
+    var px = 0, py = 0, cx = 0, cy = 0, glow = 0, glowTo = 0;
+
+    function build() {
+      var r = Math.max(1, Math.min(2, global.devicePixelRatio || 1));
+      w = global.innerWidth;
+      h = global.innerHeight;
+      dpr = r;
+      cv.width = Math.round(w * r);
+      cv.height = Math.round(h * r);
+      ctx.setTransform(r, 0, 0, r, 0, 0);
+
+      var n = w >= 1024 ? 90 : 40;
+      dots = [];
+      for (var i = 0; i < n; i++) {
+        var gold = Math.random() < 0.32;
+        dots.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: 0.5 + Math.random() * 1.3,                 /* 0,5–1,8 px   */
+          a: 0.15 + Math.random() * 0.5,                /* 0,15–0,65    */
+          vx: (Math.random() - 0.5) * 0.10,             /* träge Drift  */
+          vy: -0.04 - Math.random() * 0.12,             /* leicht nach oben */
+          ph: Math.random() * 6.283,                    /* Flimmerphase */
+          fq: 0.0004 + Math.random() * 0.0008,
+          d: 0.35 + Math.random() * 0.65,               /* Parallaxentiefe */
+          c: gold ? GOLD : "255, 255, 255"
+        });
+      }
+    }
+
+    function draw(now) {
+      raf = 0;
+      var t = (now || 0) - t0;
+
+      /* Dämpfung 0,06 — der Versatz läuft dem Zeiger weich hinterher. */
+      cx += (px - cx) * 0.06;
+      cy += (py - cy) * 0.06;
+      glow += (glowTo - glow) * 0.06;
+
+      ctx.clearRect(0, 0, w, h);
+
+      for (var i = 0; i < dots.length; i++) {
+        var p = dots[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.y < -4) { p.y = h + 4; p.x = Math.random() * w; }
+        if (p.x < -4) p.x = w + 4;
+        else if (p.x > w + 4) p.x = -4;
+
+        var a = p.a * (0.72 + 0.28 * Math.sin(t * p.fq + p.ph));
+        ctx.globalAlpha = a < 0 ? 0 : a;
+        ctx.fillStyle = "rgb(" + p.c + ")";
+        ctx.beginPath();
+        ctx.arc(p.x + cx * p.d, p.y + cy * p.d, p.r, 0, 6.283185);
+        ctx.fill();
+      }
+
+      /* Goldschein am Zeiger — Spitzenwert 0,10, Radius 320 px. */
+      if (fine && glow > 0.01) {
+        var gx = px + w / 2, gy = py + h / 2;
+        var g = ctx.createRadialGradient(gx, gy, 0, gx, gy, 320);
+        g.addColorStop(0, "rgba(" + GOLD + ", " + (0.10 * glow).toFixed(3) + ")");
+        g.addColorStop(0.55, "rgba(" + GOLD + ", " + (0.035 * glow).toFixed(3) + ")");
+        g.addColorStop(1, "rgba(" + GOLD + ", 0)");
+        ctx.globalAlpha = 1;
+        ctx.fillStyle = g;
+        ctx.fillRect(gx - 320, gy - 320, 640, 640);
+      }
+
+      ctx.globalAlpha = 1;
+      if (running) raf = global.requestAnimationFrame(draw);
+    }
+
+    function start() {
+      if (running) return;
+      running = true;
+      if (!raf) raf = global.requestAnimationFrame(draw);
+    }
+    function stop() {
+      running = false;
+      if (raf) { global.cancelAnimationFrame(raf); raf = 0; }
+    }
+
+    var onMove = null, onLeave = null;
+    if (fine) {
+      /* Rohwerte im Ereignis, Rechnung im Bild — so bleibt die Drossel. */
+      var rawX = 0, rawY = 0;
+      var apply = framed(function () {
+        var mx = (rawX / global.innerWidth - 0.5) * 2;   /* -1 … 1 */
+        var my = (rawY / global.innerHeight - 0.5) * 2;
+        px = mx * 12;                                    /* max 12 px */
+        py = my * 12;
+        glowTo = 1;
+      });
+      onMove = function (e) { rawX = e.clientX; rawY = e.clientY; apply(); };
+      onLeave = function () { glowTo = 0; px = 0; py = 0; };
+      doc.addEventListener("pointermove", onMove, { passive: true });
+      doc.addEventListener("pointerleave", onLeave, { passive: true });
+    }
+
+    var onResize = (function () {
+      var id = 0;
+      return function () {
+        global.clearTimeout(id);
+        id = global.setTimeout(build, 180);
+      };
+    })();
+    var onVis = function () { if (doc.hidden) stop(); else start(); };
+
+    global.addEventListener("resize", onResize, { passive: true });
+    global.addEventListener("orientationchange", onResize, { passive: true });
+    doc.addEventListener("visibilitychange", onVis);
+
+    build();
+    if (!doc.hidden) start();
+
+    addCleanup(function () {
+      stop();
+      global.removeEventListener("resize", onResize);
+      global.removeEventListener("orientationchange", onResize);
+      doc.removeEventListener("visibilitychange", onVis);
+      if (onMove) doc.removeEventListener("pointermove", onMove);
+      if (onLeave) doc.removeEventListener("pointerleave", onLeave);
+      if (cv.parentNode) cv.parentNode.removeChild(cv);
+    });
+  }
+
+  /* ------------------------------------------------------------------
+   * 21. Überschriften ziehen zeichenweise ein (Aufgabe B)
+   *
+   * Zerlegung erst zur Laufzeit: im Quelltext steht der normale Satz.
+   * Wörter bleiben als Einheit zusammen (.dm-word, nowrap), damit der
+   * Zeilenumbruch stimmt. Vorhandene Kindelemente — etwa die Maske mit
+   * dem rotierenden Goldwort — werden NICHT zerlegt, sondern als ein
+   * Stück mitanimiert.
+   *
+   * Zugänglichkeit: die Überschrift bekommt ihren ursprünglichen Satz
+   * als aria-label, damit Vorlesewerkzeuge nicht Buchstabe für
+   * Buchstabe stolpern.
+   * ---------------------------------------------------------------- */
+  function splitHeads() {
+    if (!claimed.length) return;
+
+    /* Kein IntersectionObserver oder Bewegung reduziert: alles bleibt
+       so, wie es im Quelltext steht. Der Anspruch aus Modul 19 gilt
+       weiter, das alte Modul 14 deckt die h2 wie bisher auf. */
+    if (reducedMotion() || !global.IntersectionObserver) return;
+
+    var io = new global.IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        run(en.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+
+    claimed.forEach(function (el) {
+      /* Sicherung gegen abgeschnittene Überschriften: Der Urzustand wird
+         gemerkt. Ragt die zerlegte Fassung aus ihrem Kasten - das kann bei
+         langen Wörtern auf schmalen Bildschirmen passieren -, wird die
+         Zerlegung vollständig zurückgenommen. Eine lesbare Überschrift ist
+         mehr wert als ihre Animation. */
+      var urzustand = el.innerHTML;
+      var hatteLabel = el.hasAttribute("aria-label");
+      var parts = carve(el);
+      if (!parts.length) return;
+      if (el.scrollWidth > el.clientWidth + 1) {
+        el.innerHTML = urzustand;
+        if (!hatteLabel) el.removeAttribute("aria-label");
+        return;
+      }
+      /* Startzustand — ausschließlich hier, zur Laufzeit. */
+      parts.forEach(function (n) {
+        n.style.opacity = "0";
+        n.style.transform = "translateY(20px) rotateX(-40deg)";
+      });
+      el.setAttribute("data-dm-split", "on");
+      el._dmParts = parts;
+      io.observe(el);
+    });
+
+    function carve(el) {
+      var label = (el.textContent || "").replace(/\s+/g, " ").trim();
+      var parts = [];
+      var kids = [].slice.call(el.childNodes);
+
+      kids.forEach(function (node) {
+        if (node.nodeType === 3) {
+          var words = node.nodeValue.split(/(\s+)/);
+          var frag = doc.createDocumentFragment();
+          words.forEach(function (word) {
+            if (!word) return;
+            if (/^\s+$/.test(word)) { frag.appendChild(doc.createTextNode(" ")); return; }
+            /* Deutsche Komposita brechen am Bindestrich um. Eine Worteinheit
+               ist nowrap, also muss dort getrennt werden - sonst steht
+               "Neukundenakquise-Agentur:" auf 360 px als ein einziger Block
+               und ragt aus dem Kasten. Der Bindestrich bleibt links. */
+            var stuecke = [], rest = word, k;
+            while (true) {
+              k = rest.indexOf("-");
+              if (k < 0 || k === rest.length - 1) { stuecke.push(rest); break; }
+              stuecke.push(rest.slice(0, k + 1));
+              rest = rest.slice(k + 1);
+            }
+            stuecke.forEach(function (st) {
+              if (!st) return;
+              /* Sehr lange Wörter gar nicht zerlegen: einzeln gesetzte
+                 Buchstaben werden spürbar breiter und haben keine
+                 Umbruchstelle mehr, der Rand schneidet sie dann ab.
+                 Lesbarkeit geht vor Animation. */
+              if (st.length > 14) { frag.appendChild(doc.createTextNode(st)); return; }
+              var wrap = doc.createElement("span");
+              wrap.className = "dm-word";
+              for (var i = 0; i < st.length; i++) {
+                var ch = doc.createElement("span");
+                ch.className = "dm-char";
+                ch.textContent = st.charAt(i);
+                wrap.appendChild(ch);
+                parts.push(ch);
+              }
+              frag.appendChild(wrap);
+            });
+          });
+          el.replaceChild(frag, node);
+        } else if (node.nodeType === 1) {
+          /* Leere Hilfselemente (Lichtstreif) nicht animieren. */
+          if (!(node.textContent || "").trim()) return;
+          node.classList.add("dm-piece");
+          parts.push(node);
+        }
+      });
+
+      if (parts.length && label) el.setAttribute("aria-label", label);
+      return parts;
+    }
+
+    function run(el) {
+      var parts = el._dmParts || [];
+      parts.forEach(function (n, i) {
+        var delay = i * 15;
+        var from = { opacity: 0, transform: "translateY(20px) rotateX(-40deg)" };
+        var to = { opacity: 1, transform: "translateY(0) rotateX(0deg)" };
+        if (n.animate) {
+          n.animate([from, to], { duration: 600, delay: delay, easing: EASE_OUT, fill: "both" });
+        }
+        /* Endzustand hart nachziehen — nichts darf unsichtbar hängen. */
+        global.setTimeout(function () {
+          n.style.opacity = "1";
+          n.style.transform = "none";
+          n.style.willChange = "auto";
+        }, delay + 660);
+      });
+    }
+
+    addCleanup(function () {
+      io.disconnect();
+      claimed.forEach(function (el) {
+        (el._dmParts || []).forEach(function (n) {
+          n.style.opacity = "1";
+          n.style.transform = "none";
+        });
+      });
+    });
+  }
+
+  /* ------------------------------------------------------------------
+   * 22. Magnet und Lichtkante (Aufgabe D)
+   *
+   * Schaltflächen mit data-dm-magnet ziehen den Zeiger im Umkreis von
+   * 90 px an, höchstens 8 px weit, und federn danach zurück. Der
+   * Versatz wandert über zwei Rechenwerte (--dm-mx/--dm-my) ins
+   * Stylesheet, damit die vorhandene Hover-Anhebung erhalten bleibt.
+   *
+   * Karten bekommen die vorhandene Glanzfläche .dm-sweep (Modul 11) in
+   * einer zweiten Füllung: ein goldener Lichtfleck, der dem Zeiger
+   * folgt. Kein neues Bauteil, nur ein Modifikator.
+   *
+   * Beides nur bei feinem Zeiger und nur ohne Bewegungsreduktion.
+   * ---------------------------------------------------------------- */
+  function pointerPlay() {
+    if (reducedMotion() || !finePointer() || !doc.body) return;
+
+    /* --- Magnet ---------------------------------------------------- */
+    var mags = [].slice.call(doc.querySelectorAll("[data-dm-magnet]"));
+    var boxes = [];
+    var RADIUS = 90, MAX = 8;
+    var mx = -9999, my = -9999;
+
+    function measure() {
+      boxes = mags.map(function (el) {
+        var r = el.getBoundingClientRect();
+        return { el: el, x: r.left + r.width / 2, y: r.top + r.height / 2, w: r.width, h: r.height };
+      });
+    }
+
+    var pull = framed(function () {
+      for (var i = 0; i < boxes.length; i++) {
+        var b = boxes[i];
+        var dx = mx - b.x, dy = my - b.y;
+        /* Umkreis = halbe Schaltfläche plus 90 px Fangbereich. */
+        var reach = RADIUS + Math.max(b.w, b.h) / 2;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < reach) {
+          var k = (1 - dist / reach) * MAX;
+          var len = dist || 1;
+          b.el.style.setProperty("--dm-mx", (dx / len * k).toFixed(2) + "px");
+          b.el.style.setProperty("--dm-my", (dy / len * k).toFixed(2) + "px");
+          b.el.setAttribute("data-dm-magnet", "on");
+        } else if (b.el.getAttribute("data-dm-magnet") === "on") {
+          b.el.setAttribute("data-dm-magnet", "");
+          b.el.style.setProperty("--dm-mx", "0px");
+          b.el.style.setProperty("--dm-my", "0px");
+        }
+      }
+    });
+
+    var onMove = function (e) { mx = e.clientX; my = e.clientY; pull(); };
+    var onScroll = framed(measure);
+
+    if (mags.length) {
+      measure();
+      doc.addEventListener("pointermove", onMove, { passive: true });
+      global.addEventListener("scroll", onScroll, { passive: true });
+      global.addEventListener("resize", onScroll, { passive: true });
+    }
+
+    /* --- Lichtkante auf Karten ------------------------------------- */
+    var cards = [].slice.call(doc.querySelectorAll("[data-dm-phase-card]"));
+    var cardCleanups = [];
+
+    cards.forEach(function (card) {
+      if (card.querySelector(".dm-sweep--pointer")) return;
+      var shine = doc.createElement("i");
+      shine.className = "dm-sweep dm-sweep--pointer";
+      shine.setAttribute("aria-hidden", "true");
+      card.appendChild(shine);
+
+      var sx = 50, sy = 50;
+      var paint = framed(function () {
+        shine.style.setProperty("--dm-sx", sx.toFixed(1) + "%");
+        shine.style.setProperty("--dm-sy", sy.toFixed(1) + "%");
+      });
+      var move = function (e) {
+        var r = card.getBoundingClientRect();
+        if (!r.width || !r.height) return;
+        sx = ((e.clientX - r.left) / r.width) * 100;
+        sy = ((e.clientY - r.top) / r.height) * 100;
+        paint();
+      };
+      var enter = function (e) { move(e); shine.style.opacity = "1"; };
+      var leave = function () { shine.style.opacity = "0"; };
+
+      card.addEventListener("pointerenter", enter);
+      card.addEventListener("pointermove", move, { passive: true });
+      card.addEventListener("pointerleave", leave);
+      cardCleanups.push(function () {
+        card.removeEventListener("pointerenter", enter);
+        card.removeEventListener("pointermove", move);
+        card.removeEventListener("pointerleave", leave);
+        if (shine.parentNode) shine.parentNode.removeChild(shine);
+      });
+    });
+
+    addCleanup(function () {
+      doc.removeEventListener("pointermove", onMove);
+      global.removeEventListener("scroll", onScroll);
+      global.removeEventListener("resize", onScroll);
+      mags.forEach(function (el) {
+        el.setAttribute("data-dm-magnet", "");
+        el.style.removeProperty("--dm-mx");
+        el.style.removeProperty("--dm-my");
+      });
+      cardCleanups.forEach(function (fn) { fn(); });
+    });
+  }
+
+  function boot() {
+    try { field(); } catch (e) {}
+    try { splitHeads(); } catch (e) {}
+    try { pointerPlay(); } catch (e) {}
+  }
+
+  if (doc.readyState === "loading") {
+    doc.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
   }
 })(window);
