@@ -101,6 +101,20 @@ h1, h2, h3, h4, p, li, td, th, figcaption, blockquote, dd, dt {
   hyphens: auto;
   -webkit-hyphens: auto;
 }
+/* Ueberschriften werden NICHT automatisch getrennt (Korrektur 24.09.2026).
+   Der Browser zog sonst lange Komposita auf die Zeile hoch und zerschnitt sie:
+   "B2B Vertriebstrai-ning", "Vertriebsout-sourcing". Ohne hyphens rutscht das
+   ganze Wort in die naechste Zeile. overflow-wrap bleibt als Notbremse stehen,
+   damit ueberlange Woerter die Spalte weiterhin nicht seitlich aufsprengen. */
+h1, h2, h3, h4 { hyphens: manual; -webkit-hyphens: manual; }
+/* Auf Telefonen sind die Spalten so schmal, dass einzelne Komposita selbst bei
+   27px nicht mehr hineinpassen ("Verbraucherinformationen" 387px in 346px,
+   gemessen 24.09.2026). Dort ist eine saubere Trennung mit Strich besser als
+   ein Bruch mitten im Wort. Die grosse Hero-Zeile (h1) bleibt ausgenommen -
+   sie wird stattdessen kleiner skaliert, siehe dm-effects.css. */
+@media (max-width: 700px) {
+  h2, h3, h4 { hyphens: auto; -webkit-hyphens: auto; }
+}
 h1 { font-size: clamp(2.05rem, 1.35rem + 2.8vw, 3.3rem); font-weight: 800;
      letter-spacing: -.03em; }
 h2 { font-size: clamp(1.55rem, 1.15rem + 1.6vw, 2.25rem); margin-top: 0; }

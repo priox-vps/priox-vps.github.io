@@ -83,11 +83,17 @@
   color: var(--gold, #c9ba77);
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum" 1;
-  white-space: nowrap;
+  /* Korrektur 24.09.2026: nowrap lag frueher auf der ganzen Zeile. Bei langen
+     Werten ("60 % und 40 %") ragte die Zeile dadurch aus ihrer Spalte heraus
+     (gemessen 390px: 163px Spalte, Inhalt breiter; 320px: 5px ueber den
+     Bildrand). Jetzt darf zwischen Zahl und Einheit umbrochen werden, die
+     Zahl selbst und die Einheit bleiben je fuer sich zusammen. */
+  white-space: normal;
 }
 
 .dm-band__pre,
 .dm-band__unit {
+  white-space: nowrap;
   font-size: .46em;
   letter-spacing: .01em;
   color: var(--gold-deep, #b5a55e);

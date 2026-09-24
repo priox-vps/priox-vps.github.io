@@ -610,15 +610,33 @@
    so ändert sich nur, was ausdrücklich ausgezeichnet wurde (heute die
    Startseite), und nicht die restlichen 28 Seiten, die dieselbe Datei
    laden. Die untere Grenze ist bewusst kleiner als in der Spec genannt:
-   bei 360 px Breite ragt "Vertriebsagentur" sonst aus dem Bild. */
+   bei 360 px Breite ragt "Vertriebsagentur" sonst aus dem Bild.
+   Korrektur 24.09.2026: 2,2rem (35,2px) waren immer noch zu gross. Seit
+   Ueberschriften nicht mehr automatisch getrennt werden, zerschnitt der
+   Browser lange Komposita stattdessen ohne Trennstrich ("Vertriebsoutsourci
+   ng"). Gemessen bei 320px Fensterbreite: der laengste untrennbare Wortteil
+   der Seite ist "Neukundengewinnung" und passt erst ab 25,9px. 1,55rem
+   (24,8px) liegt darunter, greift nur unterhalb von ~355px Fensterbreite
+   und wird ab dort sofort wieder von 7vw ueberholt. */
 h1[data-dm-split] {
-  font-size: clamp(2.2rem, 7vw, 5.5rem);
+  font-size: clamp(1.55rem, 7vw, 5.5rem);
   line-height: .95;
   letter-spacing: -.03em;
 }
 .hero h1[data-dm-split].h1-wechsel {
-  font-size: clamp(2.2rem, 7vw, 5.5rem);
+  font-size: clamp(1.55rem, 7vw, 5.5rem);
 }
+/* Lange Hero-Ueberschriften (Korrektur 24.09.2026): 5,5rem sind fuer die kurze
+   Startseiten-Schlagzeile gedacht. Saetze ab etwa 60 Zeichen liefen damit auf
+   fuenf Zeilen und rissen den Hero auf ueber 900 px auf - gemessen 24.09.2026:
+   /einwandbehandlung/ 1338 px, /kaltakquise-agentur/ 1053 px. Mit dieser
+   flacheren Kurve bleiben sie bei drei bis vier Zeilen. Wird pro Seite von Hand
+   gesetzt, weil CSS die Laenge einer Ueberschrift nicht kennt. */
+.hero h1[data-dm-split].h1-lang,
+h1[data-dm-split].h1-lang {
+  font-size: clamp(1.7rem, 5.2vw, 4.1rem);
+}
+
 h2[data-dm-split] {
   font-size: clamp(2rem, 4.2vw, 3.4rem);
   line-height: 1.02;

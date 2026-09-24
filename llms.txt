@@ -13,7 +13,8 @@ Startseite: https://deal-makers.de/ – Vertriebsagentur für B2B: Wir rufen an,
 
 Kontakt: hello@deal-makers.de · +49 160 96678717 · https://deal-makers.de/kontakt/
 
-Alle Inhalte sind auf Deutsch. Die Website nutzt kein Tracking und lädt keine externen Dienste.
+Die Inhalte sind auf Deutsch; sechs Kernseiten gibt es zusätzlich auf Englisch unter /en/.
+Die Website nutzt kein Tracking und lädt keine externen Dienste.
 
 ## Leistungen
 
@@ -52,3 +53,12 @@ Alle Inhalte sind auf Deutsch. Die Website nutzt kein Tracking und lädt keine e
 - [Kontakt – DEALMAKERS Vertriebsagentur](https://deal-makers.de/kontakt/): Sprechen Sie direkt mit uns: Telefon, E-Mail oder Termin im Kalender. Standorte Berlin und Oerlenbach. Erstgespräch 30 Minuten, kostenfrei und unverbindlich.
 - [Impressum](https://deal-makers.de/impressum/): Impressum der DEALMAKERS – Digitale Vertriebsagentur: Anbieterkennzeichnung nach § 5 DDG, Pflichtangaben, Haftungsausschluss und Urheberrecht.
 - [Datenschutzerklärung](https://deal-makers.de/datenschutz/): Datenschutzerklärung der DEALMAKERS: welche Daten beim Besuch dieser Website anfallen, wie wir Anfragen verarbeiten und welche Rechte Sie dabei haben.
+
+## English pages
+
+- [B2B Sales Agency | DEALMAKERS](https://deal-makers.de/en/): English version of the home page: how we find a public trigger at your target accounts and turn it into a first meeting.
+- [B2B sales services](https://deal-makers.de/en/services/): Sales outsourcing, cold calling, sales consulting and B2B sales training - the full English overview of what we do.
+- [Cold calling agency for B2B meetings](https://deal-makers.de/en/cold-calling-agency/): How we open the call, get past the front desk, handle objections and hand over qualified meetings.
+- [Signal Based Selling](https://deal-makers.de/en/signal-based-selling/): What Signal Based Selling is, which public triggers we watch and how a trigger becomes a conversation.
+- [Why DEALMAKERS](https://deal-makers.de/en/why-us/): Who actually does the work, which experience backs it and what you can measure us against.
+- [Contact](https://deal-makers.de/en/contact/): Phone, e-mail or a slot in the calendar. Berlin and Oerlenbach. First call 30 minutes, free and without obligation.
