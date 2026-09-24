@@ -295,6 +295,8 @@
           <li><a href="#hypothese-statt-behauptung">Hypothese statt Behauptung</a></li>
           <li><a href="#autonomie">Autonomie und das Nein</a></li>
           <li><a href="#mimik-und-labeling">Mimik lesen und benennen</a></li>
+          <li><a href="#wer-entscheidet">Wer im Termin wirklich entscheidet</a></li>
+          <li><a href="#kundenworte">Die Worte des Kunden</a></li>
           <li><a href="#grenze-zur-taeuschung">Die Grenze zur Täuschung</a></li>
           <li><a href="#nicht-selbst-machen">Wenn Sie es nicht selbst machen wollen</a></li>
           <li><a href="#faq">Häufige Fragen</a></li>
@@ -361,16 +363,17 @@
       </div>
       <figure class="fig">
         <div class="fig-box">
-          <svg viewBox="0 0 560 250" role="img" aria-label="Zwei Pfeile: Druck vom Verkäufer endet an einer Mauer, Druck aus der Lage führt zu einer Entscheidung">
+          <svg viewBox="0 0 560 292" role="img" aria-label="Zwei Pfeile: Druck vom Verkäufer endet an einer Mauer, Druck aus der Lage führt zu einer Entscheidung">
             <title>Wo Druck eine Entscheidung ermöglicht</title>
             <g font-family="sans-serif">
               <text x="32" y="36" fill="#cdd4e6" font-size="14" font-weight="700">Druck vom Verkäufer</text>
               <path d="M32 94h170" stroke="#e08585" stroke-width="12"/><path d="M190 78l28 16-28 16" fill="#e08585"/>
               <rect x="248" y="55" width="42" height="80" fill="#111838" stroke="#e08585"/><path d="M258 55v80m12-80v80m10-80v80" stroke="#222a4d" stroke-width="3"/>
-              <text x="250" y="161" fill="#96a0bb" font-size="12">Abwehr</text>
+              <text x="269" y="161" text-anchor="middle" fill="#96a0bb" font-size="12">Abwehr</text>
               <text x="32" y="192" fill="#cdd4e6" font-size="14" font-weight="700">Druck aus der Lage</text>
-              <path d="M32 218h310" stroke="#b5a55e" stroke-width="12"/><path d="M330 202l28 16-28 16" fill="#b5a55e"/>
-              <circle cx="438" cy="218" r="38" fill="#201d11" stroke="#c9ba77"/><text x="438" y="214" text-anchor="middle" fill="#f2f3f8" font-size="13" font-weight="700">Eigene</text><text x="438" y="231" text-anchor="middle" fill="#f2f3f8" font-size="13" font-weight="700">Entscheidung</text>
+              <path d="M32 218h338" stroke="#b5a55e" stroke-width="12"/><path d="M358 202l28 16-28 16" fill="#b5a55e"/>
+              <!-- Kreis so gross, dass das laengste Wort hineinpasst. -->
+              <circle cx="460" cy="218" r="60" fill="#201d11" stroke="#c9ba77"/><text x="460" y="213" text-anchor="middle" fill="#f2f3f8" font-size="12.5" font-weight="700">Eigene</text><text x="460" y="231" text-anchor="middle" fill="#f2f3f8" font-size="12.5" font-weight="700">Entscheidung</text>
             </g>
           </svg>
         </div>
@@ -408,15 +411,22 @@
       </div>
       <figure class="fig">
         <div class="fig-box">
-          <svg viewBox="0 0 560 260" role="img" aria-label="Eine Waage, bei der der mögliche Verlust schwerer wiegt als ein möglicher Gewinn">
+          <svg viewBox="0 0 560 266" role="img" aria-label="Eine Waage, bei der der mögliche Verlust schwerer wiegt als ein möglicher Gewinn">
             <title>Die Konsequenz des Nichtstuns wiegt oft stärker</title>
             <g font-family="sans-serif">
-              <path d="M280 40v145m-96-25h192" stroke="#c9ba77" stroke-width="5" fill="none"/>
-              <path d="M170 110l110 50 110-10" stroke="#b5a55e" stroke-width="4" fill="none"/>
-              <path d="M170 110l-45 72h90z" fill="#111838" stroke="#222a4d"/><path d="M390 150l-45 72h90z" fill="#201d11" stroke="#c9ba77"/>
-              <text x="170" y="159" text-anchor="middle" fill="#cdd4e6" font-size="13">Möglicher</text><text x="170" y="177" text-anchor="middle" fill="#cdd4e6" font-size="13">Gewinn</text>
-              <text x="390" y="195" text-anchor="middle" fill="#f2f3f8" font-size="13" font-weight="700">Möglicher</text><text x="390" y="213" text-anchor="middle" fill="#f2f3f8" font-size="13" font-weight="700">Verlust</text>
-              <text x="280" y="246" text-anchor="middle" fill="#96a0bb" font-size="11">Die Frage macht die individuelle Folge sichtbar; sie erfindet keine.</text>
+              <!-- Staender: Auflager, Saeule, Fuss. Der Balken kippt zur schwereren Verlustseite. -->
+              <polygon points="280,78 264,106 296,106" fill="#c9ba77"/>
+              <line x1="280" y1="104" x2="280" y2="206" stroke="#c9ba77" stroke-width="5"/>
+              <rect x="238" y="206" width="84" height="7" rx="3" fill="#c9ba77"/>
+              <line x1="112" y1="51" x2="448" y2="105" stroke="#c9ba77" stroke-width="5"/>
+              <!-- Seile haengen senkrecht an den Balkenenden, die Schalen bleiben waagerecht. -->
+              <path d="M112 51 L72 95 M112 51 L152 95" stroke="#6c7596" stroke-width="2" fill="none"/>
+              <path d="M448 105 L408 149 M448 105 L488 149" stroke="#6c7596" stroke-width="2" fill="none"/>
+              <path d="M72 95 Q112 125 152 95" fill="#111838" stroke="#222a4d" stroke-width="2"/>
+              <path d="M408 149 Q448 179 488 149" fill="#201d11" stroke="#c9ba77" stroke-width="2"/>
+              <text x="112" y="132" text-anchor="middle" fill="#cdd4e6" font-size="13">Möglicher</text><text x="112" y="150" text-anchor="middle" fill="#cdd4e6" font-size="13">Gewinn</text>
+              <text x="448" y="192" text-anchor="middle" fill="#f2f3f8" font-size="13" font-weight="700">Möglicher</text><text x="448" y="210" text-anchor="middle" fill="#f2f3f8" font-size="13" font-weight="700">Verlust</text>
+              <text x="280" y="248" text-anchor="middle" fill="#96a0bb" font-size="11">Die Frage macht die individuelle Folge sichtbar; sie erfindet keine.</text>
             </g>
           </svg>
         </div>
@@ -495,6 +505,71 @@
         </div>
         <figcaption>Wahrnehmen, verstehen, benennen, bestätigen lassen: Erst der vierte Schritt macht aus einer Beobachtung eine belastbare Information.</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section class="bg-soft">
+    <div class="wrap">
+      <div style="max-width:760px">
+        <h2 id="wer-entscheidet" data-dm-reveal="head">Wer im Termin wirklich entscheidet</h2>
+        <p>Im B2B sitzt selten nur eine Person am Tisch, und die gesprächigste ist selten die entscheidende. Wer das übersieht, führt ein gutes Gespräch mit der falschen Person und wartet danach wochenlang auf eine Rückmeldung, die nie kommt.</p>
+        <p>Das erste Anzeichen ist beobachtbar: Blickt jemand vor oder nach seiner Antwort wiederholt zu einer bestimmten anderen Person, ist das ein Hinweis auf Abstimmung – nicht mehr. Machen Sie daraus keine Gewissheit, sondern einen Anlass, den Entscheidungsweg offen zu klären.</p>
+        <p>Der zweite Punkt ist die Falle, in die fast alle tappen: Kommt auf die Frage nach dem Ablauf eine ausweichende Antwort, bietet der Verkäufer hilfsbereit eine bequeme Deutung an, die der Kunde nur noch mit Ja bestätigen muss. Damit haben Sie eine Zustimmung und keine Information. Fragen Sie stattdessen dieselbe Lücke ruhig ein zweites Mal – präzise und ohne Vorwurf.</p>
+        <ul class="ticks">
+          <li>„Damit wir niemanden übergehen: Wer bewertet das am Ende mit, und wie wird bei Ihnen entschieden?“</li>
+          <li>„Damit ich Sie richtig verstehe: Was passiert nach diesem Gespräch als Nächstes bei Ihnen intern?“</li>
+          <li>„Damit ich nichts Wesentliches übersehe: Was habe ich noch nicht gefragt, das für Ihre Prioritäten gerade wichtig ist?“</li>
+        </ul>
+        <p>Die letzte Frage kostet zehn Sekunden und bringt regelmäßig das Thema hervor, das die ganze vorher geplante Fragenfolge nicht getroffen hat.</p>
+      </div>
+      <figure class="fig">
+        <div class="fig-box">
+          <svg viewBox="0 0 560 256" role="img" aria-label="Drei Schritte: Beobachtung, zweite präzise Nachfrage und offene Klärung des Entscheidungswegs">
+            <title>Vom Blick zur Seite zum geklärten Entscheidungsweg</title>
+            <g font-family="sans-serif">
+              <rect x="30" y="28" width="500" height="52" rx="4" fill="#0c1230" stroke="#222a4d"/>
+              <circle cx="58" cy="54" r="10" fill="#c9ba77"/><text x="54" y="59" fill="#04061a" font-size="13" font-weight="700">1</text>
+              <text x="82" y="50" fill="#f2f3f8" font-size="14" font-weight="700">Beobachtung</text>
+              <text x="82" y="70" fill="#96a0bb" font-size="12">Blick zur selben Person vor der Antwort</text>
+
+              <rect x="30" y="92" width="500" height="52" rx="4" fill="#0c1230" stroke="#222a4d"/>
+              <circle cx="58" cy="118" r="10" fill="#c9ba77"/><text x="54" y="123" fill="#04061a" font-size="13" font-weight="700">2</text>
+              <text x="82" y="114" fill="#f2f3f8" font-size="14" font-weight="700">Lücke nicht selbst füllen</text>
+              <text x="82" y="134" fill="#96a0bb" font-size="12">Keine bequeme Deutung anbieten</text>
+
+              <rect x="30" y="156" width="500" height="52" rx="4" fill="#111838" stroke="#b5a55e"/>
+              <circle cx="58" cy="182" r="10" fill="#4fb183"/><text x="54" y="187" fill="#04061a" font-size="13" font-weight="700">3</text>
+              <text x="82" y="178" fill="#f2f3f8" font-size="14" font-weight="700">Entscheidungsweg offen klären</text>
+              <text x="82" y="198" fill="#cdd4e6" font-size="12">„Wer bewertet das am Ende mit?“</text>
+
+              <text x="30" y="236" fill="#96a0bb" font-size="11">Der Blick ist ein Hinweis auf Abstimmung, keine Rollenzuweisung.</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption>Aus einer Beobachtung wird nie eine Rollenzuweisung, sondern immer eine offene Frage nach dem Entscheidungsweg.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div style="max-width:760px">
+        <h2 id="kundenworte" data-dm-reveal="head">Die Worte des Kunden sind Ihr Material</h2>
+        <p>Jeder Kunde liefert im Gespräch seinen eigenen Wortschatz mit: Begriffe, die er positiv besetzt, und Begriffe, die für ihn das Problem beschreiben. Wir schreiben beides mit. Diese Wörter später unverändert zurückzugeben, wirkt stärker als jede Formulierung aus einem Verkaufsskript – weil es seine Formulierung ist und nicht unsere.</p>
+        <p>Dazu kommen drei Handgriffe, die im Gespräch sofort Wirkung zeigen und die kaum jemand konsequent nutzt.</p>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th scope="col">Was Sie hören</th><th scope="col">Was Sie damit tun</th><th scope="col">Ein Satz dazu</th></tr></thead>
+            <tbody>
+              <tr><td>„Die Freigabe hängt noch fest.“</td><td>Die letzten wichtigen Wörter knapp wiederholen und dann schweigen.</td><td>„Die Freigabe hängt noch fest?“</td></tr>
+              <tr><td>Eine lange Schilderung der Lage</td><td>Statt der nächsten Frage eine ruhige Beobachtung anschließen.</td><td>„Das klingt nach einer ziemlich aufwendigen Umstellung.“</td></tr>
+              <tr><td>„Diese Stellen sind schwierig zu besetzen.“</td><td>Das Wort neutral präzisieren lassen, ohne eine Antwort vorzugeben.</td><td>„Wenn Sie ‚schwierig zu besetzen‘ sagen: Woran zeigt sich das im Ablauf konkret?“</td></tr>
+              <tr><td>„Wir brauchen keinen weiteren komplexen Prozess.“</td><td>Das negative Wort merken und die eigene Lösung daran ausrichten.</td><td>„Sie suchen also keinen weiteren komplexen Prozess, sondern eine wirklich schlanke Übergabe.“</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Am Ende zählt, was zuletzt gesagt wurde. Deshalb schließen wir nicht mit einer Zusammenfassung aller Punkte, sondern mit einem oder zwei Punkten, die der Kunde selbst bestätigt hat, plus dem nächsten Schritt: „Dann halten wir fest: Entscheidend sind für Sie die drei offenen Rollen bis Quartalsende. Ich schicke Ihnen dazu die zwei Beispiele, und Sie entscheiden danach in Ruhe, ob ein Termin sinnvoll ist.“</p>
+      </div>
     </div>
   </section>
 

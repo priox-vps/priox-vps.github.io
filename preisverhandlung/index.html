@@ -344,11 +344,12 @@
               <rect x="38" y="105" width="450" height="34" rx="5" fill="#111838" stroke="#222a4d"/>
               <rect x="38" y="105" width="300" height="34" rx="5" fill="#201d11"/>
               <rect x="38" y="105" width="120" height="34" rx="5" fill="#e08585" opacity=".85"/>
-              <line x1="458" y1="86" x2="458" y2="158" stroke="#c9ba77" stroke-width="3"/>
-              <line x1="338" y1="86" x2="338" y2="158" stroke="#c9ba77" stroke-width="3"/>
-              <line x1="218" y1="86" x2="218" y2="158" stroke="#c9ba77" stroke-width="3"/>
-              <line x1="158" y1="86" x2="158" y2="158" stroke="#e08585" stroke-width="3"/>
-              <g fill="#f2f3f8" font-size="12" text-anchor="middle"><text x="458" y="76">Wunschpreis</text><text x="338" y="76">Zielpreis</text><text x="218" y="76">Schmerzgrenze</text><text x="158" y="76">Ausstiegspunkt</text></g>
+              <!-- Beschriftungen auf zwei Hoehen: nebeneinander wuerden Ausstiegspunkt und Schmerzgrenze ueberlappen. -->
+              <line x1="458" y1="92" x2="458" y2="158" stroke="#c9ba77" stroke-width="3"/>
+              <line x1="338" y1="70" x2="338" y2="158" stroke="#c9ba77" stroke-width="3"/>
+              <line x1="218" y1="92" x2="218" y2="158" stroke="#c9ba77" stroke-width="3"/>
+              <line x1="158" y1="70" x2="158" y2="158" stroke="#e08585" stroke-width="3"/>
+              <g fill="#f2f3f8" font-size="12" text-anchor="middle"><text x="458" y="84">Wunschpreis</text><text x="338" y="62">Zielpreis</text><text x="218" y="84">Schmerzgrenze</text><text x="158" y="62">Ausstiegspunkt</text></g>
               <text x="98" y="191" fill="#e08585" font-size="12" text-anchor="middle">nicht verhandeln</text>
               <text x="278" y="191" fill="#cdd4e6" font-size="12" text-anchor="middle">nur gegen Gegenleistung</text>
               <text x="443" y="191" fill="#c9ba77" font-size="12" text-anchor="middle">guter Abschluss</text>
@@ -399,16 +400,19 @@
           <svg viewBox="0 0 560 250" role="img" aria-label="Waage mit Zugeständnis in der linken und Gegenleistung in der rechten Schale, die im Gleichgewicht sind">
             <title>Zugeständnis und Gegenleistung im Gleichgewicht</title>
             <g font-family="sans-serif">
-              <line x1="280" y1="48" x2="280" y2="192" stroke="#c9ba77" stroke-width="5"/>
-              <polygon points="280,40 266,66 294,66" fill="#c9ba77"/>
-              <line x1="90" y1="102" x2="470" y2="102" stroke="#c9ba77" stroke-width="5"/>
-              <line x1="130" y1="102" x2="90" y2="172" stroke="#222a4d" stroke-width="3"/><line x1="50" y1="102" x2="90" y2="172" stroke="#222a4d" stroke-width="3"/>
-              <line x1="510" y1="102" x2="470" y2="172" stroke="#222a4d" stroke-width="3"/><line x1="430" y1="102" x2="470" y2="172" stroke="#222a4d" stroke-width="3"/>
-              <path d="M35 172 Q90 210 145 172" fill="#201d11" stroke="#c9ba77" stroke-width="2"/>
-              <path d="M415 172 Q470 210 525 172" fill="#201d11" stroke="#c9ba77" stroke-width="2"/>
-              <text x="90" y="190" fill="#f2f3f8" font-size="14" text-anchor="middle">Zugeständnis</text>
-              <text x="470" y="190" fill="#f2f3f8" font-size="14" text-anchor="middle">Gegenleistung</text>
-              <text x="280" y="232" fill="#96a0bb" font-size="12" text-anchor="middle">Ohne Gegenleistung kippt nicht nur die Waage, sondern auch der Preisrahmen.</text>
+              <!-- Staender: Auflager, Saeule, Fuss. Der Balken liegt auf der Dreiecksspitze. -->
+              <polygon points="280,78 264,106 296,106" fill="#c9ba77"/>
+              <line x1="280" y1="104" x2="280" y2="190" stroke="#c9ba77" stroke-width="5"/>
+              <rect x="238" y="190" width="84" height="7" rx="3" fill="#c9ba77"/>
+              <line x1="110" y1="78" x2="450" y2="78" stroke="#c9ba77" stroke-width="5"/>
+              <!-- Seile setzen an den Balkenenden an, nicht daneben. -->
+              <path d="M110 78 L70 116 M110 78 L150 116 M450 78 L410 116 M450 78 L490 116" stroke="#6c7596" stroke-width="2" fill="none"/>
+              <path d="M70 116 Q110 146 150 116" fill="#201d11" stroke="#c9ba77" stroke-width="2"/>
+              <path d="M410 116 Q450 146 490 116" fill="#201d11" stroke="#c9ba77" stroke-width="2"/>
+              <!-- Beschriftung unter der Schale, sonst liegt sie darauf. -->
+              <text x="110" y="172" fill="#f2f3f8" font-size="14" text-anchor="middle">Zugeständnis</text>
+              <text x="450" y="172" fill="#f2f3f8" font-size="14" text-anchor="middle">Gegenleistung</text>
+              <text x="280" y="228" fill="#96a0bb" font-size="12" text-anchor="middle">Ohne Gegenleistung kippt nicht nur die Waage, sondern auch der Preisrahmen.</text>
             </g>
           </svg>
         </div>
