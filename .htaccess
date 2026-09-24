@@ -1,3 +1,8 @@
+# Immer die HTML-Startseite ausliefern. Sicherheitsnetz fuer den Fall, dass
+# im Webspace noch eine index.php der alten WordPress-Installation liegt -
+# ohne diese Zeile wuerde Strato weiter die alte Seite zeigen.
+DirectoryIndex index.html index.php
+
 ErrorDocument 404 /404.html
 
 Options -Indexes
