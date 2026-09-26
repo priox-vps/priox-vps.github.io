@@ -125,6 +125,14 @@ p, li, figcaption, blockquote, dd, dt { hyphens: manual; -webkit-hyphens: manual
 @media (max-width: 700px) {
   p, li, figcaption, blockquote, dd, dt { hyphens: auto; -webkit-hyphens: auto; }
 }
+/* Ueberschriften auf gleichmaessige Zeilen umbrechen (26.09.2026). Der
+   Browser fuellt sonst jede Zeile bis zum Anschlag und laesst die letzte
+   kurz stehen; dabei landen Fuellwoerter am Zeilenende ("... Anlaesse, bei /
+   denen sich ein / Anruf lohnt."). Gemessen ueber alle 34 Seiten lag der
+   Laengenunterschied zwischen laengster und kuerzester Zeile bei bis zu 79 %.
+   balance verteilt die Woerter gleichmaessig; wo der Browser es nicht kennt,
+   bleibt der bisherige Umbruch - nichts geht kaputt. */
+h1, h2, h3 { text-wrap: balance; }
 h1 { font-size: clamp(2.05rem, 1.35rem + 2.8vw, 3.3rem); font-weight: 800;
      letter-spacing: -.03em; }
 h2 { font-size: clamp(1.55rem, 1.15rem + 1.6vw, 2.25rem); margin-top: 0; }

@@ -758,3 +758,68 @@ a.dm-pin__step:hover { border-left-color: var(--gold, #c9ba77); }
   .dm-vgl__tags   { font-size: .76rem; letter-spacing: .09em; }
   .dm-zitat__src  { font-size: .78rem; }
 }
+
+/* ======================================================================
+   Autorenkarte mit Portrait (26.09.2026)
+   ----------------------------------------------------------------------
+   Das Portrait ist freigestellt, der Anzug traegt fast denselben Blauton
+   wie die Seite. Damit die Figur nicht im Hintergrund verschwindet, liegt
+   sie auf einem weichen Goldschein und bekommt ueber vier drop-shadow-
+   Durchgaenge eine duenne Goldkontur entlang der Alphakante. Das ist die
+   einzige Moeglichkeit, eine Kontur um eine freigestellte Form zu legen,
+   ohne eine zweite Bilddatei auszuliefern.
+   ====================================================================== */
+.dm-autor { display: grid; grid-template-columns: 200px 1fr; gap: 30px;
+            align-items: start; }
+.dm-autor__bild { margin: 0; position: relative; }
+/* Goldschein hinter der Figur; liegt im Kartenhintergrund, nicht auf dem Bild. */
+.dm-autor__bild::before {
+  content: ""; position: absolute; left: 50%; top: 6%;
+  width: 138%; height: 96%; transform: translateX(-50%);
+  background: radial-gradient(60% 55% at 50% 42%,
+              rgba(201,186,119,.20) 0%, rgba(201,186,119,.07) 45%,
+              rgba(201,186,119,0) 72%);
+  pointer-events: none;
+}
+/* Standflaeche: eine flache Ellipse, damit die Figur nicht schwebt. */
+.dm-autor__bild::after {
+  content: ""; position: absolute; left: 50%; bottom: 1.6rem;
+  width: 82%; height: 16px; transform: translateX(-50%);
+  background: radial-gradient(50% 50% at 50% 50%,
+              rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 70%);
+  pointer-events: none;
+}
+.dm-autor__bild picture { display: block; position: relative; }
+.dm-autor__bild img {
+  display: block; width: 100%; height: auto; position: relative;
+  filter:
+    drop-shadow( 1px  0   0 rgba(201,186,119,.55))
+    drop-shadow(-1px  0   0 rgba(201,186,119,.55))
+    drop-shadow( 0    1px 0 rgba(201,186,119,.40))
+    drop-shadow( 0   -1px 0 rgba(201,186,119,.55))
+    drop-shadow(0 16px 26px rgba(0,0,0,.55));
+}
+.dm-autor__bild figcaption {
+  margin-top: .7rem; text-align: center;
+  font-family: var(--font-mono); font-size: .74rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--gold);
+}
+.dm-autor__text > :first-child { margin-top: 0; }
+.dm-autor__text h2 { margin-top: 0; }
+
+/* Schmale Fenster: Bild ueber den Text, aber nicht auf volle Breite
+   aufgeblasen - ein Portrait in Kartenbreite erschlaegt den Text. */
+@media (max-width: 640px) {
+  .dm-autor { grid-template-columns: 1fr; gap: 18px; }
+  .dm-autor__bild { width: 168px; }
+  .dm-autor__bild::after { bottom: 1.4rem; }
+}
+
+/* Bewegungsarme Darstellung: der Schein bleibt, nur die Schatten flacher. */
+@media (prefers-reduced-motion: reduce) {
+  .dm-autor__bild img { filter:
+    drop-shadow( 1px  0 0 rgba(201,186,119,.55))
+    drop-shadow(-1px  0 0 rgba(201,186,119,.55))
+    drop-shadow( 0  1px 0 rgba(201,186,119,.40))
+    drop-shadow( 0 -1px 0 rgba(201,186,119,.55)); }
+}
