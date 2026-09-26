@@ -34,7 +34,7 @@
      Fallback 100vw; der Überhang wird von html{overflow-x:clip} gekappt. */
   --dm-vw: 100vw;
   /* Position der Trennkante im Vorher/Nachher-Schieber. */
-  --dm-vgl: 50%;
+  --dm-vgl: 100%;
   /* Abstand der CTA-Leiste vom unteren Rand (JS hebt sie über den Cookie-Hinweis). */
   --dm-cta-bottom: 0px;
   --dm-mod-ease: cubic-bezier(.16,.86,.24,1);
@@ -292,10 +292,18 @@
 
 .dm-vgl__stage {
   position: relative;
-  overflow: hidden;
+  /* sichtbar, damit der Griff auch am aeussersten Rand ganz zu sehen ist;
+     die Ebene A wird ohnehin per clip-path beschnitten */
+  overflow: visible;
   border: 1px solid var(--line, #222a4d);
   background: #04061a;
   line-height: 0;
+  /* Senkrechtes Wischen bleibt Scrollen, waagerechtes Wischen gehoert dem
+     Schieber. Ohne diese Zeile verschluckt der Browser die Zieh-Geste. */
+  touch-action: pan-y;
+  cursor: ew-resize;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .dm-vgl__layer--b { position: relative; }
@@ -303,7 +311,7 @@
 .dm-vgl__layer--a {
   position: absolute;
   inset: 0;
-  clip-path: inset(0 calc(100% - var(--dm-vgl, 50%)) 0 0);
+  clip-path: inset(0 calc(100% - var(--dm-vgl, 100%)) 0 0);
 }
 
 .dm-vgl__layer svg {
@@ -318,7 +326,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: var(--dm-vgl, 50%);
+  left: var(--dm-vgl, 100%);
   width: 2px;
   margin-left: -1px;
   background: var(--gold, #c9ba77);
@@ -328,7 +336,8 @@
 .dm-vgl__knob {
   position: absolute;
   top: 50%;
-  left: var(--dm-vgl, 50%);
+  /* am Rand bleibt der Griff komplett sichtbar */
+  left: clamp(12px, var(--dm-vgl, 100%), calc(100% - 12px));
   width: 46px;
   height: 46px;
   margin: -23px 0 0 -23px;
@@ -346,7 +355,12 @@
 .dm-vgl__knob svg { width: 26px; height: 26px; }
 
 /* Der Griff ist ein echtes <input type="range">, nur optisch umgebaut.
-   Er liegt über der gesamten Bühne: Maus, Finger und Tastatur bedienen ihn. */
+   Er liegt über der gesamten Bühne und bleibt für die Tastatur zuständig.
+   Maus und Finger bedient dm-module.js selbst (sonst verschiebt schon das
+   senkrechte Scrollen am Handy den Regler), darum nimmt die Klasse
+   .dm-vgl--zeiger dem Feld die eigene Zeiger-Bedienung ab. */
+.dm-vgl--zeiger .dm-vgl__range { pointer-events: none; }
+
 .dm-vgl__range {
   position: absolute;
   inset: 0;

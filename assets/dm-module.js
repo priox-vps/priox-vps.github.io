@@ -241,6 +241,64 @@
     range.addEventListener("input", apply);
     range.addEventListener("change", apply);
     apply();
+
+    /* Am Handy reagiert ein natives <input type="range"> nur, wenn der Finger
+       genau den Griff trifft — auf iPhones springt es beim Tippen daneben gar
+       nicht. Deshalb bedienen wir den Schieber zusaetzlich selbst: ueberall
+       auf der Buehne wischen oder tippen. Senkrechtes Wischen bleibt Scrollen,
+       darum entscheidet die erste Bewegungsrichtung, wer die Geste bekommt. */
+    var stage = fig.querySelector(".dm-vgl__stage");
+    if (!stage || !win.PointerEvent) return;
+
+    // Ab hier bedienen wir Maus und Finger selbst; das Eingabefeld bleibt
+    // nur noch fuer Tabulator und Pfeiltasten zustaendig.
+    addClass(fig, "dm-vgl--zeiger");
+
+    var pid = null, sx = 0, sy = 0, aktiv = false;
+
+    function setzeAusX(x) {
+      var r = stage.getBoundingClientRect();
+      if (!r.width) return;
+      var p = Math.round(((x - r.left) / r.width) * 100);
+      if (p < 0) p = 0;
+      if (p > 100) p = 100;
+      if (String(p) === String(range.value)) return;
+      range.value = p;
+      apply();
+    }
+
+    stage.addEventListener("pointerdown", function (e) {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      pid = e.pointerId; sx = e.clientX; sy = e.clientY; aktiv = false;
+    });
+
+    stage.addEventListener("pointermove", function (e) {
+      if (e.pointerId !== pid) return;
+      if (!aktiv) {
+        var dx = Math.abs(e.clientX - sx), dy = Math.abs(e.clientY - sy);
+        if (dx < 5) return;            // Richtung noch nicht erkennbar
+        if (dy > dx) { pid = null; return; }   // der Finger scrollt, nicht schiebt
+        aktiv = true;
+        try { stage.setPointerCapture(pid); } catch (err) {}
+      }
+      setzeAusX(e.clientX);
+      if (e.cancelable) e.preventDefault();
+    });
+
+    function ende(e) {
+      if (e.pointerId !== pid) return;
+      var getippt = !aktiv && e.type === "pointerup" &&
+        Math.abs(e.clientX - sx) < 5 && Math.abs(e.clientY - sy) < 5;
+      if (getippt) setzeAusX(e.clientX);   // kurzes Antippen springt an die Stelle
+      if (aktiv) { try { stage.releasePointerCapture(pid); } catch (err) {} }
+      // Wer eben geschoben hat, soll direkt mit den Pfeiltasten feinjustieren
+      // koennen. Nach einer Zeigergeste zeigt der Browser keinen Fokusrahmen.
+      if (aktiv || getippt) { try { range.focus({ preventScroll: true }); } catch (err) {} }
+      pid = null; aktiv = false;
+    }
+
+    stage.addEventListener("pointerup", ende);
+    stage.addEventListener("pointercancel", ende);
   }
 
   /* ------------------------------------------------------------------ 4

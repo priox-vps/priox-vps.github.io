@@ -20,9 +20,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kaltakquise-Agentur für B2B | DEALMAKERS">
 <meta name="twitter:description" content="Kaltakquise-Agentur für B2B: Wir recherchieren Ihre Zielkunden, erkennen per Signal den richtigen Moment und führen die Erstgespräche.">
-<link rel="stylesheet" href="/assets/styles.css">
-<link rel="stylesheet" href="/assets/dm-effects.css">
-<link rel="stylesheet" href="/assets/dm-module.css">
+<link rel="stylesheet" href="/assets/styles.css?v=20260926">
+<link rel="stylesheet" href="/assets/dm-effects.css?v=20260926">
+<link rel="stylesheet" href="/assets/dm-module.css?v=20260926">
+<link rel="stylesheet" href="/assets/dm-meta.css?v=20260926">
 <link rel="icon" href="/assets/favicon.png" sizes="48x48">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -555,6 +556,78 @@
         <p class="dm-talk__cap">Beispielgespräch. Sinngemäß, nicht wörtlich protokolliert.</p>
       </div>
       <p style="max-width:760px">Der erste Einstieg kann inhaltlich stimmen, beantwortet aber keine Frage nach dem Zeitpunkt. Der zweite nennt ein einzelnes, überprüfbares Ereignis und lässt dem Gegenüber jederzeit die Möglichkeit, das Gespräch zu beenden.</p>
+      <figure class="dm-fen" data-dm-reveal>
+        <div class="dm-meta-kopf">
+          <span class="dm-meta-kopf__marke">Das Fenster</span>
+          <span class="dm-meta-kopf__zusatz">Beispiel: neue Vertriebsleitung, acht Wochen im Blick</span>
+        </div>
+        <div class="dm-fen__platte">
+          <div class="dm-fen__band">
+            <div class="dm-fen__achsmarken">
+              <span class="dm-fen__ereignis">Anlass</span>
+            </div>
+          <svg viewBox="0 0 560 92" role="presentation" focusable="false" aria-hidden="true">
+            <defs>
+              <linearGradient id="dmFenWin" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#c9ba77" stop-opacity=".22"/>
+                <stop offset="1" stop-color="#c9ba77" stop-opacity=".04"/>
+              </linearGradient>
+            </defs>
+            <!-- Achse und Wochengrenzen -->
+            <line x1="0" y1="68" x2="560" y2="68" stroke="#222a4d" stroke-width="2"/>
+            <line x1="0" y1="62" x2="0" y2="74" stroke="#222a4d" stroke-width="2"/>
+            <line x1="70" y1="62" x2="70" y2="74" stroke="#222a4d" stroke-width="2"/>
+            <line x1="140" y1="62" x2="140" y2="74" stroke="#222a4d" stroke-width="2"/>
+            <line x1="210" y1="62" x2="210" y2="74" stroke="#222a4d" stroke-width="2"/>
+            <line x1="280" y1="62" x2="280" y2="74" stroke="#222a4d" stroke-width="2"/>
+            <line x1="350" y1="62" x2="350" y2="74" stroke="#222a4d" stroke-width="2"/>
+            <line x1="420" y1="62" x2="420" y2="74" stroke="#222a4d" stroke-width="2"/>
+            <line x1="490" y1="62" x2="490" y2="74" stroke="#222a4d" stroke-width="2"/>
+            <line x1="560" y1="62" x2="560" y2="74" stroke="#222a4d" stroke-width="2"/>
+            <!-- das offene Fenster: Woche 3 bis Mitte Woche 5 -->
+            <g class="dm-feng__fenster">
+              <rect x="140" y="28" width="175" height="40" rx="3" fill="url(#dmFenWin)" stroke="#c9ba77" stroke-width="1"/>
+              <line x1="140" y1="12" x2="140" y2="74" stroke="#c9ba77" stroke-width="2"/>
+              <path d="M140 12 l7 5 -7 5z" fill="#c9ba77"/>
+              <line x1="315" y1="28" x2="315" y2="74" stroke="#c9ba77" stroke-width="1" stroke-dasharray="3 4"/>
+            </g>
+            <!-- Laufzeiger -->
+            <g class="dm-feng__zeiger">
+              <line x1="0" y1="6" x2="0" y2="80" stroke="#6b79ad" stroke-width="1.5"/>
+              <circle cx="0" cy="68" r="4.5" fill="#cdd4e6"/>
+            </g>
+          </svg>
+            <div class="dm-fen__wochen">
+              <span>W1</span><span>W2</span><span class="ist-offen">W3</span><span class="ist-offen">W4</span><span class="ist-offen">W5</span><span>W6</span><span>W7</span><span>W8</span>
+            </div>
+          </div>
+          <ol class="dm-fen__anrufe">
+            <li class="dm-fen__anruf dm-fen__anruf--frueh">
+              <span class="dm-fen__wann">Woche 1 · zu früh</span>
+              <span class="dm-fen__satz">„Kein Bedarf.“</span>
+              <span class="dm-fen__folge">Es hat sich noch nichts verändert. Der Anruf trifft einen Alltag,
+                der gerade funktioniert.</span>
+            </li>
+            <li class="dm-fen__anruf dm-fen__anruf--treffer">
+              <span class="dm-fen__wann">Woche 4 · im Fenster</span>
+              <span class="dm-fen__satz">„Woher wissen Sie das?“</span>
+              <span class="dm-fen__folge">Die neue Führung sortiert ihre ersten Entscheidungen. Der Anruf
+                kommt mitten in eine offene Frage.</span>
+            </li>
+            <li class="dm-fen__anruf dm-fen__anruf--spaet">
+              <span class="dm-fen__wann">Woche 8 · zu spät</span>
+              <span class="dm-fen__satz">„Das haben wir vergeben.“</span>
+              <span class="dm-fen__folge">Die Entscheidung ist gefallen. Jemand anderes war vorher da –
+                oft nur um zwei Wochen.</span>
+            </li>
+          </ol>
+        </div>
+        <figcaption>Beispielhafter Verlauf. Derselbe Anruf, dieselbe Firma, dasselbe Angebot – nur zu drei
+          verschiedenen Zeitpunkten. Nicht jeder Anlass hält gleich lange: Eine neue Führungskraft ist
+          Wochen ansprechbar, eine ausgeschriebene Stelle Tage. Deshalb altern Anlässe bei uns, statt in
+          einer Liste liegen zu bleiben.</figcaption>
+      </figure>
+
       <h3 style="margin-top:2rem">Fünf mögliche Opener</h3>
       <ul class="ticks"><li>„Zu Ihrer Standorteröffnung in Graz habe ich eine kurze Frage: Wer verantwortet dort den Aufbau neuer B2B-Kundenkontakte?“</li><li>„Sie haben die neue Produktlinie für das dritte Quartal angekündigt. Ist die Ansprache der passenden Zielkunden bereits abgedeckt?“</li><li>„Ihre neue Vertriebsleitung wurde diese Woche vorgestellt. Darf ich fragen, ob das Team externe Unterstützung bei der Terminierung prüft?“</li><li>„Sie stellen auf der Messe nächste Woche aus. Wollen Sie die Gespräche danach mit zusätzlicher Akquise-Kapazität nachfassen?“</li><li>„Die ausgeschriebene öffentliche Vergabe endet am Freitag. Ist für die Umsetzung bereits ein Ansprechpartner für den Vertrieb vorgesehen?“</li></ul>
       <figure class="fig" data-dm-reveal><div class="fig-box"><svg viewBox="0 0 560 250" role="img" aria-label="Zeitachse für den Aufbau eines vierminütigen Erstgesprächs"><title>Aufbau eines Erstgesprächs über vier Minuten</title><g font-family="sans-serif"><line x1="42" y1="122" x2="520" y2="122" stroke="#222a4d" stroke-width="5"/><g><circle cx="55" cy="122" r="21" fill="#f2f3f8"/><text x="55" y="128" font-size="14" fill="#070b22" text-anchor="middle">0:00</text><text x="55" y="170" font-size="12" fill="#cdd4e6" text-anchor="middle">Anlass</text></g><g><circle cx="103" cy="122" r="21" fill="#c9ba77"/><text x="103" y="128" font-size="14" fill="#070b22" text-anchor="middle">0:30</text><text x="103" y="190" font-size="12" fill="#cdd4e6" text-anchor="middle">Erlaubnis</text></g><g><circle cx="199" cy="122" r="21" fill="#f2f3f8"/><text x="199" y="128" font-size="14" fill="#070b22" text-anchor="middle">1:30</text><text x="199" y="170" font-size="12" fill="#cdd4e6" text-anchor="middle">Fragen</text></g><g><circle cx="440" cy="122" r="21" fill="#c9ba77"/><text x="440" y="128" font-size="14" fill="#070b22" text-anchor="middle">4:00</text><text x="440" y="170" font-size="12" fill="#cdd4e6" text-anchor="middle">Nächster Schritt</text></g><text x="42" y="218" font-size="11" fill="#96a0bb">Kein Monolog: Anlass nennen, Relevanz prüfen, Einwand verstehen, nächsten Schritt vereinbaren.</text></g></svg></div><figcaption>Vier Minuten reichen häufig, um die Relevanz zu prüfen. Erst dann ist ein Termin sinnvoll.</figcaption></figure>
@@ -705,7 +778,7 @@
             <text x="30" y="322" font-family="Manrope, system-ui, sans-serif" font-size="15" fill="#96a0bb">Liste von oben nach unten, Zentrale dazwischen,</text><text x="30" y="344" font-family="Manrope, system-ui, sans-serif" font-size="15" fill="#96a0bb">kein Anlass im ersten Satz.</text>
           </svg>
           </div>
-          <input class="dm-vgl__range" type="range" min="0" max="100" step="5" value="50" aria-label="Schieber zwischen Standardagentur und DEALMAKERS">
+          <input class="dm-vgl__range" type="range" min="0" max="100" step="5" value="100" aria-label="Schieber zwischen Standardagentur und DEALMAKERS">
           <span class="dm-vgl__bar" aria-hidden="true"></span>
           <span class="dm-vgl__knob" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 6 4 12l6 6M14 6l6 6-6 6" fill="none" stroke="#c9ba77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </div>
@@ -857,7 +930,7 @@ function ccOpen(){document.getElementById('cookie-hinweis').hidden=false;}
 (function(){var w=null;try{w=localStorage.getItem('dm-consent');}catch(e){}
   if(!w){document.getElementById('cookie-hinweis').hidden=false;}else if(w==='ja'){ccStart();}})();
 </script>
-<script src="/assets/dm-effects.js" defer></script>
-<script src="/assets/dm-module.js" defer></script>
+<script src="/assets/dm-effects.js?v=20260926" defer></script>
+<script src="/assets/dm-module.js?v=20260926" defer></script>
 </body>
 </html>

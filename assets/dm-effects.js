@@ -557,12 +557,26 @@
     if (!ghost && !inner) return;
     var run = this.framed(function () {
       var y = global.scrollY;
-      if (y > global.innerHeight * 1.3) return;
-      if (ghost) ghost.style.transform = "translate3d(" + (-y * 0.5 - 40).toFixed(1) + "px,0,0)";
-      if (inner) {
-        inner.style.transform = "translate3d(0," + (y * 0.16).toFixed(1) + "px,0)";
-        inner.style.opacity = String(Math.max(0, 1 - y / (global.innerHeight * 0.85)));
+      var vh = global.innerHeight || 1;
+      if (ghost && y <= vh * 1.3) {
+        ghost.style.transform = "translate3d(" + (-y * 0.5 - 40).toFixed(1) + "px,0,0)";
       }
+      if (!inner) return;
+      inner.style.transform = "translate3d(0," + (y * 0.16).toFixed(1) + "px,0)";
+      /* Ausblenden ausschließlich beim Verlassen des Bildes.
+         Früher hing die Deckkraft allein an der Scrollhöhe (1 - y/(vh*0.85)).
+         Dadurch war der Text schon blass, während er noch komplett im Bild
+         stand — auf dem Handy nach einer einzigen Wischbewegung. Maßstab ist
+         jetzt die Unterkante des Blocks: solange noch ein Drittel Fensterhöhe
+         Hero-Inhalt zu sehen ist, bleibt alles voll deckend; erst der letzte
+         Rest blendet aus, und die Wurzel hält ihn dabei lange kräftig und
+         lässt ihn nur ganz am Schluss schnell verschwinden. Deshalb auch kein
+         fester Scroll-Deckel mehr — hohe Hero-Bereiche brauchen länger. */
+      var unten = inner.getBoundingClientRect().bottom;
+      var t = unten / (vh * 0.34);
+      if (t > 1) t = 1;
+      if (t < 0) t = 0;
+      inner.style.opacity = String(Math.sqrt(t));
     });
     this.on(global, "scroll", run, { passive: true });
     run();
@@ -967,9 +981,17 @@
    * und goldenen Punkten, langsame Drift, Zeiger-Parallaxe (max 12 px)
    * und ein weicher Goldschein am Zeiger.
    *
-   * Sparsamkeit: 90 Punkte ab 1024 px, sonst 40. Nur eine Zeichnung pro
+   * Sparsamkeit: 210 Punkte ab 1024 px, sonst 92. Nur eine Zeichnung pro
    * Bild, Pixelverhältnis bei 2 gedeckelt, Pause sobald der Reiter in
    * den Hintergrund geht. Grobe Zeiger (Touch) bekommen keine Reaktion.
+   *
+   * Nachgeschärft 26.09.2026. Gemessen war das Feld praktisch unsichtbar:
+   * die Punkte bedeckten 0,23 % der Bildpunkte, obwohl 83 % des Bildschirms
+   * sie durchlassen — das Feld war also nicht verdeckt, sondern zu zart.
+   * Erhöht wurden Anzahl, Durchmesser, Deckkraft, Hof und Drifttempo; das
+   * Ergebnis wird mit feld-messen.js nachgemessen. Die Bühne bleibt gleich:
+   * nur Canvas, nur transform/opacity, Pause im Hintergrund, und bei
+   * reduzierter Bewegung entsteht das Feld gar nicht.
    * ---------------------------------------------------------------- */
   function field() {
     if (reducedMotion()) return;
@@ -998,20 +1020,21 @@
       cv.height = Math.round(h * r);
       ctx.setTransform(r, 0, 0, r, 0, 0);
 
-      var n = w >= 1024 ? 90 : 40;
+      var n = w >= 1024 ? 210 : 92;
       dots = [];
       for (var i = 0; i < n; i++) {
-        var gold = Math.random() < 0.32;
+        var gold = Math.random() < 0.42;
         dots.push({
           x: Math.random() * w,
           y: Math.random() * h,
-          r: 0.5 + Math.random() * 1.3,                 /* 0,5–1,8 px   */
-          a: 0.15 + Math.random() * 0.5,                /* 0,15–0,65    */
-          vx: (Math.random() - 0.5) * 0.10,             /* träge Drift  */
-          vy: -0.04 - Math.random() * 0.12,             /* leicht nach oben */
+          r: 1 + Math.random() * 2,                     /* 1,0–3,0 px   */
+          a: 0.42 + Math.random() * 0.58,               /* 0,42–1,00    */
+          vx: (Math.random() - 0.5) * 0.24,             /* ruhige Drift */
+          vy: -0.1 - Math.random() * 0.24,             /* leicht nach oben */
           ph: Math.random() * 6.283,                    /* Flimmerphase */
           fq: 0.0004 + Math.random() * 0.0008,
           d: 0.35 + Math.random() * 0.65,               /* Parallaxentiefe */
+          g: gold,
           c: gold ? GOLD : "255, 255, 255"
         });
       }
@@ -1036,24 +1059,35 @@
         if (p.x < -4) p.x = w + 4;
         else if (p.x > w + 4) p.x = -4;
 
-        var a = p.a * (0.72 + 0.28 * Math.sin(t * p.fq + p.ph));
-        ctx.globalAlpha = a < 0 ? 0 : a;
+        var a = p.a * (0.62 + 0.38 * Math.sin(t * p.fq + p.ph));
+        if (a < 0) a = 0;
+        var dx = p.x + cx * p.d, dy = p.y + cy * p.d;
         ctx.fillStyle = "rgb(" + p.c + ")";
+        /* Goldpunkte bekommen einen flachen Hof: eine zweite, größere
+           Scheibe mit einem Bruchteil der Deckkraft. Kostet keinen
+           Verlauf und macht die Punkte trotzdem sichtbar weicher. */
+        if (p.g) {
+          ctx.globalAlpha = a * 0.3;
+          ctx.beginPath();
+          ctx.arc(dx, dy, p.r * 3, 0, 6.283185);
+          ctx.fill();
+        }
+        ctx.globalAlpha = a;
         ctx.beginPath();
-        ctx.arc(p.x + cx * p.d, p.y + cy * p.d, p.r, 0, 6.283185);
+        ctx.arc(dx, dy, p.r, 0, 6.283185);
         ctx.fill();
       }
 
-      /* Goldschein am Zeiger — Spitzenwert 0,10, Radius 320 px. */
+      /* Goldschein am Zeiger — Spitzenwert 0,16, Radius 380 px. */
       if (fine && glow > 0.01) {
         var gx = px + w / 2, gy = py + h / 2;
-        var g = ctx.createRadialGradient(gx, gy, 0, gx, gy, 320);
-        g.addColorStop(0, "rgba(" + GOLD + ", " + (0.10 * glow).toFixed(3) + ")");
-        g.addColorStop(0.55, "rgba(" + GOLD + ", " + (0.035 * glow).toFixed(3) + ")");
+        var g = ctx.createRadialGradient(gx, gy, 0, gx, gy, 380);
+        g.addColorStop(0, "rgba(" + GOLD + ", " + (0.16 * glow).toFixed(3) + ")");
+        g.addColorStop(0.55, "rgba(" + GOLD + ", " + (0.055 * glow).toFixed(3) + ")");
         g.addColorStop(1, "rgba(" + GOLD + ", 0)");
         ctx.globalAlpha = 1;
         ctx.fillStyle = g;
-        ctx.fillRect(gx - 320, gy - 320, 640, 640);
+        ctx.fillRect(gx - 380, gy - 380, 760, 760);
       }
 
       ctx.globalAlpha = 1;

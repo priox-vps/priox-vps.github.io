@@ -48,6 +48,27 @@ RedirectMatch 301 ^/marketing/?$                      /leistungen/
 RedirectMatch 301 ^/vertriebler-gesucht/?$            /kontakt/
 RedirectMatch 301 ^/haftungsausschluss/?$             /impressum/
 
+# -- Aeltere Seiten, die nicht mehr in der Sitemap standen ---------------------
+# Nachgetragen am 25.09.2026: Nach dem Livegang mit dem Internet-Archiv geprueft.
+# Diese 16 Adressen waren aus der WordPress-Sitemap bereits entfernt, sind aber
+# noch verlinkt und Google noch bekannt - ohne diese Zeilen liefen sie ins Leere.
+RedirectMatch 301 ^/vertriebstraining/?$              /vertriebstraining-b2b/
+RedirectMatch 301 ^/vertriebstraining-online/?$       /vertriebstraining-b2b/
+RedirectMatch 301 ^/lp-vertriebstraining/?$           /vertriebstraining-b2b/
+RedirectMatch 301 ^/high-end-closer/?$                /vertriebstraining-b2b/
+RedirectMatch 301 ^/vertriebsberatung-4-0/?$          /vertriebsberatung/
+RedirectMatch 301 ^/vertriebsagentur-4-0/?$           /b2b-vertriebsagentur/
+RedirectMatch 301 ^/sales-agency/?$                   /b2b-vertriebsagentur/
+RedirectMatch 301 ^/b2b-leadgenerierung/?$            /leadgenerierung-agentur/
+RedirectMatch 301 ^/leadmaschine/?$                   /leadgenerierung-agentur/
+RedirectMatch 301 ^/linkedin-agentur/?$               /leadgenerierung-agentur/
+RedirectMatch 301 ^/mimikresonanz3/?$                 /verkaufspsychologie/
+RedirectMatch 301 ^/die-dealmakers/?$                 /warum-wir/
+RedirectMatch 301 ^/author/.*$                        /warum-wir/
+RedirectMatch 301 ^/termin/?$                         /kontakt/
+RedirectMatch 301 ^/ai-recruiting/?$                  /leistungen/
+RedirectMatch 301 ^/vertriebspower/?$                 /leistungen/
+
 # -- Blog und Kategorien ------------------------------------------------------
 RedirectMatch 301 ^/blog/?$                           /ratgeber/
 RedirectMatch 301 ^/category/vertrieb/?$              /ratgeber/

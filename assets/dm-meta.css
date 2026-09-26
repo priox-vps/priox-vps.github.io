@@ -1,0 +1,675 @@
+/* ============================================================================
+   dm-meta.css — die drei Meta-Grafiken für Signal Based Selling
+   ----------------------------------------------------------------------------
+     1  .dm-mtr   Zahlentrichter    2.000 Firmen -> 11 Anrufe
+     2  .dm-fen   Das Fenster       Zeitstrahl mit offenem Anlass-Fenster
+     3  .dm-kar   Die Signalkarte   Werkzeugfenster mit einem Befund
+
+   OBERSTES GESETZ
+   ---------------
+   Der Grundzustand ist IMMER der fertige, voll sichtbare Zustand. Kein
+   opacity:0 und kein verschobener Startwert steht als Grundzustand in dieser
+   Datei. Alle Bewegung liegt ausschließlich in @keyframes, die aus dem
+   Endzustand heraus laufen. Diese Datei braucht KEIN JavaScript: ohne JS ist
+   jede Grafik vollständig lesbar, nur eben ohne Bewegung.
+
+   Bei prefers-reduced-motion: reduce steht alles still (Block am Dateiende).
+
+   Wird NACH styles.css geladen und nutzt nur deren Variablen.
+   Schrift steht im HTML, nicht im SVG — das SVG trägt nur Geometrie.
+   ========================================================================= */
+
+:root {
+  --dm-meta-ease: cubic-bezier(.16,.86,.24,1);
+}
+
+
+/* ==========================================================================
+   Gemeinsame Hülle
+   ========================================================================== */
+
+.dm-mtr,
+.dm-fen,
+.dm-kar {
+  margin: clamp(30px, 3.6vw, 48px) 0;
+  padding: 0;
+}
+
+.dm-mtr figcaption,
+.dm-fen figcaption,
+.dm-kar figcaption {
+  margin-top: .85rem;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.dm-meta-kopf {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  margin-bottom: 14px;
+}
+
+.dm-meta-kopf__marke {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.dm-meta-kopf__zusatz {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+
+/* ==========================================================================
+   1  Zahlentrichter — .dm-mtr
+   --------------------------------------------------------------------------
+   Vier gleich breite Spalten. Die Kopfzeile (HTML-Text) sitzt genau über den
+   vier Punktwolken des SVG, deren Mitten bei 70 / 210 / 350 / 490 von 560
+   liegen — also ebenfalls in Vierteln.
+   ========================================================================== */
+
+.dm-mtr__platte {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: clamp(16px, 2vw, 24px) clamp(12px, 1.6vw, 22px);
+}
+
+.dm-mtr__stufen {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.dm-mtr__stufe {
+  position: relative;
+  text-align: center;
+  padding: 0 4px;
+}
+
+.dm-mtr__stufe + .dm-mtr__stufe::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  border-left: 1px solid var(--line);
+}
+
+.dm-mtr__zahl {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: clamp(22px, 3.4vw, 40px);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #6b79ad;
+  font-variant-numeric: tabular-nums;
+}
+
+.dm-mtr__was {
+  display: block;
+  margin-top: 5px;
+  font-family: var(--font-head);
+  font-size: clamp(11px, 1.15vw, 14px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text);
+  hyphens: manual;
+}
+
+.dm-mtr__hinweis {
+  display: block;
+  margin-top: 3px;
+  font-family: var(--font-body);
+  font-size: clamp(10px, 1vw, 12px);
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+.dm-mtr__stufe--gold .dm-mtr__zahl { color: var(--gold); }
+.dm-mtr__stufe--gold .dm-mtr__was  { color: var(--ink); }
+
+/* ---------- Punktfeld ------------------------------------------------- */
+
+.dm-mtr__feld { margin: 12px 0 2px; }
+
+.dm-mtr__feld svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Der Suchstrahl wandert einmal je Runde von links nach rechts. */
+.dm-mtrg__strahl {
+  transform-box: fill-box;
+  opacity: .9;
+  animation: dm-mtr-strahl 7s linear infinite;
+}
+
+@keyframes dm-mtr-strahl {
+   0%   { transform: translateX(-30px); opacity: 0; }
+   8%   { opacity: .9; }
+  88%   { opacity: .9; }
+ 100%   { transform: translateX(560px); opacity: 0; }
+}
+
+/* Die elf Treffer atmen, jeder mit eigenem Verzug (im HTML gesetzt). */
+.dm-mtrg__treffer {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: dm-mtr-puls 3.2s var(--dm-meta-ease) infinite;
+  animation-delay: var(--dm-verzug, 0s);
+}
+
+@keyframes dm-mtr-puls {
+   0%, 100% { transform: scale(1);    opacity: 1; }
+  45%       { transform: scale(1.32); opacity: .82; }
+}
+
+/* Halo hinter den Treffern */
+.dm-mtrg__halo {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: dm-mtr-halo 3.2s var(--dm-meta-ease) infinite;
+  animation-delay: var(--dm-verzug, 0s);
+}
+
+@keyframes dm-mtr-halo {
+   0%, 100% { transform: scale(.7); opacity: .16; }
+  45%       { transform: scale(1);  opacity: .5; }
+}
+
+/* ---------- drei Beispielzeilen --------------------------------------- */
+
+.dm-mtr__liste {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.dm-mtr__zeile {
+  display: grid;
+  grid-template-columns: minmax(96px, 150px) 1fr auto;
+  align-items: baseline;
+  gap: 4px 14px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255,255,255,.055);
+}
+
+.dm-mtr__zeile:last-child { border-bottom: 0; padding-bottom: 0; }
+
+.dm-mtr__firma {
+  font-family: var(--font-head);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.dm-mtr__anlass {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.dm-mtr__wann {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: .04em;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .dm-mtr__zeile { grid-template-columns: 1fr auto; }
+  .dm-mtr__anlass { grid-column: 1 / -1; }
+  .dm-mtr__stufe--gold .dm-mtr__hinweis,
+  .dm-mtr__hinweis { font-size: 10px; }
+}
+
+
+/* ==========================================================================
+   2  Das Fenster — .dm-fen
+   ========================================================================== */
+
+.dm-fen__platte {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: clamp(16px, 2vw, 24px) clamp(14px, 1.8vw, 24px) clamp(14px, 1.8vw, 20px);
+}
+
+.dm-fen__band { position: relative; }
+
+.dm-fen__band svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Wochenbeschriftung: HTML-Text, in acht gleichen Feldern unter der Achse. */
+.dm-fen__wochen {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-top: 4px;
+}
+
+.dm-fen__wochen span {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: clamp(9.5px, 1vw, 11px);
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+
+.dm-fen__wochen span.ist-offen { color: var(--gold); }
+
+/* Marke des Ereignisses und Spanne des Fensters, HTML über dem Strahl. */
+.dm-fen__achsmarken {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-bottom: 6px;
+  min-height: 1.4em;
+}
+
+/* Sitzt bündig auf der Anlass-Marke: die Marke steht im SVG bei x=140,
+   also genau an der linken Kante der dritten von acht Spalten. */
+.dm-fen__ereignis {
+  grid-column: 3 / 5;
+  justify-self: start;
+  padding-left: 11px;
+  font-family: var(--font-mono);
+  font-size: clamp(9.5px, 1vw, 11px);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+/* Der Laufzeiger wandert über die acht Wochen. */
+.dm-feng__zeiger {
+  transform-box: fill-box;
+  animation: dm-fen-lauf 14s linear infinite;
+}
+
+@keyframes dm-fen-lauf {
+   0%  { transform: translateX(0); }
+ 100%  { transform: translateX(528px); }
+}
+
+/* Das Fenster leuchtet, während der Zeiger darin steht (Woche 3 bis 5,5). */
+.dm-feng__fenster {
+  animation: dm-fen-leuchten 14s linear infinite;
+}
+
+@keyframes dm-fen-leuchten {
+   0%,  22% { opacity: .3; }
+  26%,  56% { opacity: 1; }
+  62%, 100% { opacity: .3; }
+}
+
+/* ---------- die drei Anrufe ------------------------------------------- */
+
+.dm-fen__anrufe {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 18px 0 0;
+  padding: 0;
+}
+
+.dm-fen__anruf {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #090e26;
+  padding: 12px 13px 13px;
+}
+
+.dm-fen__anruf::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dm-fen__wann {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.dm-fen__satz {
+  display: block;
+  margin-top: 7px;
+  font-family: var(--font-head);
+  font-size: clamp(13px, 1.35vw, 16px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text);
+  hyphens: manual;
+}
+
+.dm-fen__folge {
+  display: block;
+  margin-top: 7px;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.dm-fen__anruf--treffer { background: #0d1130; }
+.dm-fen__anruf--treffer .dm-fen__wann  { color: var(--gold); }
+.dm-fen__anruf--treffer .dm-fen__satz  { color: var(--ink); }
+
+/* Jede Karte hebt sich in ihrem Zeitabschnitt hervor — gleiche Runde
+   wie der Laufzeiger, damit Zeiger und Karte zusammen sprechen. */
+/* Negativer Verzug = die Runde läuft schon. Bei Runde 14 s leuchtet eine
+   Karte zwischen 0,4 s und 2,8 s ihrer eigenen Runde; die Verzüge sind so
+   gewählt, dass der Laufzeiger dann gerade über der passenden Woche steht:
+   Karte 1 bei W1–W2, Karte 2 bei W4–W5, Karte 3 bei W7–W8. */
+.dm-fen__anruf--frueh::before   { animation: dm-fen-karte 14s linear infinite    0s; }
+.dm-fen__anruf--treffer::before { animation: dm-fen-karte 14s linear infinite -8.75s; }
+.dm-fen__anruf--spaet::before   { animation: dm-fen-karte 14s linear infinite  -2.9s; }
+
+@keyframes dm-fen-karte {
+   0%  { opacity: 0; }
+   3%  { opacity: .85; }
+  15%  { opacity: .85; }
+  20%  { opacity: 0; }
+ 100%  { opacity: 0; }
+}
+
+@media (max-width: 620px) {
+  .dm-fen__anrufe { grid-template-columns: 1fr; gap: 9px; }
+}
+
+
+/* ==========================================================================
+   3  Die Signalkarte — .dm-kar
+   ========================================================================== */
+
+.dm-kar__fenster {
+  border: 1px solid rgba(201,186,119,.34);
+  border-radius: 6px;
+  background: linear-gradient(180deg, #0d1330 0%, #080d24 100%);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  max-width: 640px;
+}
+
+.dm-kar__leiste {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--line);
+  background: #04061a;
+}
+
+.dm-kar__punkt {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex: none;
+  animation: dm-kar-blinken 2.6s ease-in-out infinite;
+}
+
+@keyframes dm-kar-blinken {
+   0%, 100% { opacity: 1; }
+  50%       { opacity: .3; }
+}
+
+.dm-kar__titel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.dm-kar__quelle {
+  margin-left: auto;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.dm-kar__quelle a { color: var(--gold); }
+
+/* ---------- Kopf: Firma ---------------------------------------------- */
+
+.dm-kar__firma {
+  padding: 15px 16px 13px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.dm-kar__name {
+  display: block;
+  font-family: var(--font-head);
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+  hyphens: manual;
+}
+
+.dm-kar__meta {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+/* ---------- zwei getrennte Werte ------------------------------------- */
+
+.dm-kar__werte {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+}
+
+.dm-kar__wert {
+  background: #090e26;
+  padding: 12px 16px 14px;
+}
+
+.dm-kar__wertkopf {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.dm-kar__wertzeile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.dm-kar__balken {
+  position: relative;
+  flex: 1 1 auto;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255,255,255,.08);
+  overflow: hidden;
+}
+
+.dm-kar__balken i {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--dm-w, 50%);
+  border-radius: 3px;
+  background: #4d5a90;
+  transform-origin: 0 50%;
+  animation: dm-kar-wachsen 1.5s var(--dm-meta-ease) .25s both;
+}
+
+@keyframes dm-kar-wachsen {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.dm-kar__zahl {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.dm-kar__wert--anlass .dm-kar__balken i { background: var(--gold); }
+.dm-kar__wert--anlass .dm-kar__zahl     { color: var(--gold); }
+
+/* ---------- Belege ---------------------------------------------------- */
+
+.dm-kar__belege {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0 6px;
+  border-top: 1px solid var(--line);
+}
+
+.dm-kar__beleg {
+  position: relative;
+  display: grid;
+  grid-template-columns: 54px 1fr auto;
+  align-items: baseline;
+  gap: 3px 12px;
+  padding: 9px 16px;
+}
+
+.dm-kar__beleg + .dm-kar__beleg {
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+
+/* Ein goldener Streifen wandert über die Belege — einer nach dem anderen. */
+.dm-kar__beleg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(201,186,119,.13), rgba(201,186,119,0) 72%);
+  border-left: 2px solid var(--gold);
+  opacity: 0;
+  pointer-events: none;
+  animation: dm-kar-streifen 8.4s linear infinite;
+  animation-delay: var(--dm-verzug, 0s);
+}
+
+@keyframes dm-kar-streifen {
+   0%  { opacity: 0; }
+   3%  { opacity: 1; }
+  22%  { opacity: 1; }
+  28%  { opacity: 0; }
+ 100%  { opacity: 0; }
+}
+
+.dm-kar__datum {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.dm-kar__text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.dm-kar__src {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ---------- Handlungsleiste ------------------------------------------ */
+
+.dm-kar__aktion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 14px;
+  padding: 12px 16px;
+  border-top: 1px solid rgba(201,186,119,.34);
+  background: var(--gold-pale);
+}
+
+.dm-kar__jetzt {
+  font-family: var(--font-head);
+  font-size: clamp(14px, 1.5vw, 17px);
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.dm-kar__frist {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: .04em;
+  color: #d8cd97;
+}
+
+.dm-kar__frist::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  vertical-align: middle;
+  animation: dm-kar-blinken 2.6s ease-in-out infinite;
+}
+
+@media (max-width: 520px) {
+  .dm-kar__werte { grid-template-columns: 1fr; }
+  .dm-kar__beleg { grid-template-columns: 50px 1fr; }
+  .dm-kar__src   { grid-column: 2; }
+}
+
+
+/* ==========================================================================
+   Bewegung aus
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .dm-mtr *, .dm-fen *, .dm-kar * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .dm-mtrg__strahl  { opacity: 0 !important; }
+  .dm-feng__zeiger  { opacity: 0 !important; }
+  .dm-feng__fenster { opacity: 1 !important; }
+  .dm-kar__balken i { transform: none !important; }
+}
