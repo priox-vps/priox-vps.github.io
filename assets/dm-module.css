@@ -764,10 +764,12 @@ a.dm-pin__step:hover { border-left-color: var(--gold, #c9ba77); }
    ----------------------------------------------------------------------
    Das Portrait ist freigestellt, der Anzug traegt fast denselben Blauton
    wie die Seite. Damit die Figur nicht im Hintergrund verschwindet, liegt
-   sie auf einem weichen Goldschein und bekommt ueber vier drop-shadow-
-   Durchgaenge eine duenne Goldkontur entlang der Alphakante. Das ist die
-   einzige Moeglichkeit, eine Kontur um eine freigestellte Form zu legen,
-   ohne eine zweite Bilddatei auszuliefern.
+   sie auf einem weichen Goldschein und bekommt ueber gestaffelte, weich
+   ausgeblendete drop-shadow-Durchgaenge einen Lichtsaum entlang der
+   Alphakante. Bewusst KEINE harten 1px-Versaetze mehr: die trafen sich in
+   schmalen Formen (Daumen, Finger) von beiden Seiten und faerbten sie
+   komplett gold. Ein geblurrter Schein hat dieses Problem nicht und laeuft
+   ausserdem weich in den Seitenhintergrund aus.
    ====================================================================== */
 .dm-autor { display: grid; grid-template-columns: 200px 1fr; gap: 30px;
             align-items: start; }
@@ -793,10 +795,9 @@ a.dm-pin__step:hover { border-left-color: var(--gold, #c9ba77); }
 .dm-autor__bild img {
   display: block; width: 100%; height: auto; position: relative;
   filter:
-    drop-shadow( 1px  0   0 rgba(201,186,119,.55))
-    drop-shadow(-1px  0   0 rgba(201,186,119,.55))
-    drop-shadow( 0    1px 0 rgba(201,186,119,.40))
-    drop-shadow( 0   -1px 0 rgba(201,186,119,.55))
+    drop-shadow(0 0  3px rgba(201,186,119,.30))
+    drop-shadow(0 0 10px rgba(201,186,119,.20))
+    drop-shadow(0 0 26px rgba(201,186,119,.12))
     drop-shadow(0 16px 26px rgba(0,0,0,.55));
 }
 .dm-autor__bild figcaption {
@@ -818,8 +819,7 @@ a.dm-pin__step:hover { border-left-color: var(--gold, #c9ba77); }
 /* Bewegungsarme Darstellung: der Schein bleibt, nur die Schatten flacher. */
 @media (prefers-reduced-motion: reduce) {
   .dm-autor__bild img { filter:
-    drop-shadow( 1px  0 0 rgba(201,186,119,.55))
-    drop-shadow(-1px  0 0 rgba(201,186,119,.55))
-    drop-shadow( 0  1px 0 rgba(201,186,119,.40))
-    drop-shadow( 0 -1px 0 rgba(201,186,119,.55)); }
+    drop-shadow(0 0  3px rgba(201,186,119,.30))
+    drop-shadow(0 0 10px rgba(201,186,119,.20))
+    drop-shadow(0 0 26px rgba(201,186,119,.12)); }
 }
